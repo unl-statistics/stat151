@@ -1,0 +1,325 @@
+---
+output: 
+  stevetemplates::syllabus:
+    latex_engine: xelatex
+    dev: cairo_pdf
+geometry: margin=1in
+
+title: "Stat 151: Introduction to Statistical Computing"
+author: Susan Vanderplas
+date: "Spring 2022"
+
+email: "susan.vanderplas@unl.edu"
+web: "srvanderplas.netlify.app"
+officehours: "https://calendly.com/drvanderplas/officehours"
+office: "Hardin 349A"
+classroom: "Hardin 49"
+classhours: "Wednesdays 2-2:50"
+
+fontfamily: mathpazo
+fontsize: 11pt
+header-includes:
+   - \usepackage[section]{placeins}
+    
+---
+
+
+```{r setup, include=FALSE}
+# knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+knitr::opts_chunk$set(cache=F,
+                      fig.path = 'figs/',
+                      cache.path='cache/',
+                      warning=F,
+                      message=F)
+
+knitr::opts_chunk$set(
+                  fig.process = function(x) {
+                      x2 = sub('-\\d+([.][a-z]+)$', '\\1', x)
+                      if (file.rename(x, x2)) x2 else x
+                      }
+                  )
+
+
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)
+}
+
+options(scipen=999)
+library(tidyverse)
+library(stevemisc)
+library(lubridate)
+
+# Create a calendar for your syllabus ----
+# Source: http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/
+
+# 1) what is the first Monday of the semester?
+# Any number of ways to identify dates in R, but we'll use {lubridate} and the ymd() function here.
+# Format: YYYYMMDD. In this example, 4 January 2022.
+
+# Weekday(s) of class
+class_wdays <- c("Wed")
+
+# Spring Break was 13 March 2022 to 20 March 2022.
+not_here_dates <- c(
+  ymd("20220117"),
+  # Spring Break
+  seq(ymd(20220313),ymd(20220319), by=1))
+
+# You can adjust this as you see fit. Basically: add assignment types (e.g. papers, quizzes).
+# My intro class was fairly simple: just exams.
+exam_dates <- c(ymd(20220309), ymd(20220512))
+
+# What are the full dates of the semester? Here, I'll exclude exam week as I like to do.
+# In this case: 6 January to 23 April
+semester_dates <- seq(ymd(20220117), ymd(20220513), by=1)
+
+exam_week <- seq(ymd(20220509), ymd(20220513), by = 1)
+
+# Custom function for treating the first day of the month as the first week 
+# of the month up until the first Sunday (unless Sunday was the start of the month)
+wom <- function(date) {
+    first <- wday(as.Date(paste(year(date),month(date),1,sep="-")))
+    return((mday(date)+(first-2)) %/% 7+1)
+  }
+
+# Create a data frame of dates, assign to Cal
+tibble(date = seq(ymd(20220101), ymd(20220530), by=1))  %>%
+  mutate(mon = lubridate::month(date, label=T, abbr=F), # get month label
+         wkdy = weekdays(date, abbreviate=T), # get weekday label
+         wkdy = fct_relevel(wkdy, "Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat"), # make sure Sunday comes first
+         semester = date %in% semester_dates, # is date part of the semester?
+         exams = date %in% exam_dates, # is it an exam?
+         not_here = date %in% not_here_dates, # is it a day off?
+         exam_wk = date %in% exam_week,
+         day = lubridate::mday(date), # get day of month to add later as a label
+         # Below: our custom wom() function
+         week = wom(date)) -> Cal
+
+# Create a category variable, for filling.
+# I can probably make this a case_when(), but this will work.
+
+Cal <- Cal %>%
+  mutate(category = case_when(
+    exams ~ "Exam",
+    not_here ~ "UNL holiday",
+    semester & wkdy %in% class_wdays & !not_here & !exam_wk ~ "Class Day",
+    semester ~ "Semester",
+    TRUE ~ "NA"
+  ))
+  # mutate(category = NA,
+  #        category = ifelse(semester == 1, "Semester", category),
+  #        category = ifelse(semester == 1 & wkdy %in% c("Wed"), "Class Day", category),
+  #        category = ifelse(exams == 1, "Exams", category),
+  #        category = ifelse(is.na(category) | (semester == 1 & not_here == 1), "NA", category)) -> Cal 
+
+class_cal <- Cal %>% 
+  ggplot(.,aes(wkdy, week)) +
+  # custom theme stuff below
+  # theme_steve_web() + 
+  theme_bw() +
+  theme(panel.grid.major.x = element_blank(),
+        legend.position = c(1, 0), legend.justification = c(1,0), legend.direction = "vertical", legend.title = element_blank(),
+        axis.title.y = element_blank(), axis.title.x = element_blank(), axis.ticks.y = element_blank(), axis.text.y = element_blank()) +
+  # geom_tile and facet_wrap will do all the heavy lifting
+  geom_tile(alpha=0.8, aes(fill=category), color="black", size=.45) +
+  facet_wrap(~mon, scales = "free", ncol=3) +
+  # fill in tiles to make it look more "calendary" (sic)
+  geom_text(aes(label=day, color = semester&(!not_here)),family="Open Sans") +
+  # put your y-axis down, flip it, and reverse it
+  scale_y_reverse(breaks=NULL) +
+  # manually fill scale colors to something you like...
+  scale_color_manual(values = c("FALSE" = "white", "TRUE" = "black"), guide = "none") + 
+  scale_fill_manual(values=c("Class Day"="purple", 
+                             "Semester"="white",
+                             "UNL holiday" = "grey10",
+                             "NA" = "white", # I like these whited out...
+                             "Exam"="orange"),
+                    #... but also suppress a label for a non-class semester day
+                    breaks=c("Semester", "UNL holiday", "Class Day","Exam"))
+# class_cal
+
+exam_days <- filter(Cal, category == "Exam") %>% 
+  mutate(topic = c("Midterm", "Final"),
+         time = c("In Class", "1-3 pm"))
+
+class_days <- filter(Cal, category == "Class Day") %>%
+  mutate(topic = c(
+    "Getting Started", 
+    "Scripts & Notebooks", 
+    "R & Python Intro", 
+    "Basic Data Types", 
+    "Vectors, Arrays, and Indexing", 
+    "Control Structures", 
+    "Data Structures", 
+    "Git and Github", 
+    "Reading in Data", 
+    "Functions", 
+    "Functions and Loops", 
+    "Statistics", 
+    "Modeling", 
+    "Simulation")) %>%
+  bind_rows(exam_days) %>%
+  arrange(date)
+
+```
+
+# Course Description
+
+Introduction to programming for statistical analysis. Covers basic programming concepts necessary for statistics, good computing practice, and use of built-in functions to complete basic statistical analyses.
+
+
+# Course Objectives
+At the end of this course, students will
+
+1. Be comfortable using R and/or python for statistical analysis
+2. Write basic programs using logic including for loops, control structures, and matrix arithmetic
+3. Implement basic data analyses in R or python
+4. Describe the sequence of logical or mathematical steps necessary to solve a simple problem
+5. Be familiar with good computing practices, such as version control and documentation
+
+
+# Textbook
+
+The primary textbook for this course is one that I have developed from other resources listed below. It is available for free at https://srvanderplas.github.io/Stat151/
+
+In addition, you may find it useful to reference some of the following resources that I have consulted while assembling the textbook. Most are available online for free, though some require an institutional email address.
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+- [Python for Everybody](https://www.py4e.com/html3/)
+
+- [Python for Data Analysis](https://www.oreilly.com/library/view/python-for-data/9781449323592/) - Available online for free if you register with your UNL email address.
+
+- [Python Data Science Handbook](https://learning.oreilly.com/library/view/python-data-science/9781491912126/) - Available online for free if you register with your UNL email address.
+
+- [Advanced R](http://adv-r.had.co.nz/)
+
+
+# Class Schedule & Topic Outline
+
+This schedule is tentative and subject to change. Students are expected to read the corresponding textbook chapter (linked in Canvas) prior to coming to class. For the most part, for each week's topic, there will be a corresponding textbook chapter. 
+
+```{r calendar, echo=F, eval=T,  warning=F, fig.width=8, fig.height=5, out.width = "90%", fig.align = "center"}
+class_cal
+```
+
+```{r schedule, eval = T, echo = F, fig.pos = 'h'}
+class_days %>% select(date, topic, time) %>%
+  mutate(time = ifelse(is.na(time), "", time)) %>%
+  mutate(date2 = format(date, "%b %e")) %>%
+  set_names(c("date", "Topic", "Time", "Date")) %>%
+  select(Date, Time, Topic) %>%
+kableExtra::kable(caption = "Tentative schedule of class topics")
+```
+
+# Course Policies
+
+## Assessment/Grading
+
+Assignments | Weight
+----- | -----
+Weekly Homework & Participation | 50% 
+Midterm Exam | 25%
+Final Exam | 25%
+
+
+Lower bounds for grade cutoffs are shown in the following table. I will not "round up" grades at the end of the semester beyond strict mathematical rules of rounding.
+
+Letter grade |	X + |  	X |	X - 
+-------- | ----- | ----- | -----
+A |	97 |	94 | 	90
+B |	87 |	84 |	80
+C |	77 |	74 |	70
+D |	67 |	64 |	61
+F |	$<$61 | |
+
+Interpretation of this table: A grade of 85 will receive a B. A grade of 77 will receive a C+. A grade of 70 will receive a C-. Anything below a 61 will receive an F. 
+
+### Homework
+
+Approximately 8-10 homework assignments will be made over the course of the semester. You will typically have one week to work on each of the assignments. The only way to learn statistics is to practice working problems, and homework is therefore an essential part of the course. Homework must be submitted in the file format specified, and should run or compile as submitted.
+
+
+### General Evaluation Criteria
+
+In every assignment, discussion, and written component of this class, you are expected to demonstrate that you are intellectually engaging with the material. I will evaluate you based on this engagement, which means that technically correct but low effort answers which do not demonstrate engagement or understanding will receive no credit.
+
+When you answer questions in this class, your goal is to show that you either understand the material or are actively engaging with it. If you did not achieve this goal, then your answer is incomplete, regardless of whether or not it is technically correct. This is not to encourage you to add unnecessary complexity to your answer - simple, elegant solutions are always preferable to unwieldly, complex solutions that accomplish the same task.
+
+While this is not an English class, grammar and spelling are important, as is your ability to communicate technical information in writing; both of these criteria will be used in addition to assignment-specific rubrics to evaluate your work.
+
+### Late Policy
+
+Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. I reserve the right not to grade any assignments received after the assignment due date.
+
+## Attendance
+
+You are expected to attend class and/or participate virtually. Consistent, repeated failure to attend class or actively participate in the online portions of the course will affect the participation portion of your grade.
+
+If you are feeling ill, please **do not come to class**. Instead, review the material and work on the homework assignment, and then schedule an appointment with me to meet virtually.
+
+
+## Expectations
+
+You can expect me to:
+
+- reply to emails within 48 hours during the week (72 hours on weekends)
+- be available in class to assist with assignments
+- be available by appointment for additional help or discussion
+
+I expect you to:
+
+- Read the module material and watch the videos before coming to class
+- Engage with the material and your classmates during class
+- Seek help when you do not understand the material
+- Communicate promptly if you anticipate that you will have trouble meeting deadlines or participating in a portion of the course.
+- Do your own troubleshooting before contacting me for help (and mention things you've already tried when you do ask for help!)
+- Be respectful and considerate of everyone in the class
+
+
+### Make Mistakes!
+
+Programming is the process of making a series of silly or stupid mistakes, and then slowly fixing each mistake (while adding a few more). The only way to know how to fix these mistakes (and avoid them in the future) is to make them. (Sometimes, you have to make the same mistake a few dozen times before you can avoid it in the future). At some point during the class, you will find that you've spent 30 minutes staring at an error caused by a typo, a space, a parenthesis in the wrong place. You may ask for help debugging this weird error, only to have someone immediately point out the problem... it is always easier to see these things in someone else's code. This is part of programming, it is normal, and you shouldn't feel embarrassed or sorry (unless you put no effort into troubleshooting the problem before you asked for help)
+
+If you manage to produce an error I haven't seen before, then congratulations. You have achieved something special, and that achievement should be celebrated. Each new and bizarre error is an opportunity to learn a bit more about the programming language, the operating system, or the interaction between the two.
+
+## Face Coverings
+
+An individual in this course has a documented need for face coverings to be required in this course. Without divulging personal or identifying information, such a documented need might be that a member of their household is unable to be vaccinated or has a health condition that makes vaccines less effective for them. As a result, the College of Agricultural Sciences and Natural Resources has determined that face coverings will be required in this course. If you are unwilling to comply with this requirement, please visit with your advisor about different sections or possible alternative courses that you might take in lieu of this one. 
+
+## Inclement Weather
+
+If in-person classes are canceled, you will be notified of the instructional continuity plan for this class by Canvas Announcement. In most circumstances, we will continue to hold class via Zoom. 
+\clearpage
+
+# Required University Information
+
+## Academic Integrity and Class Conduct
+
+You will be engaging with your classmates and me through in-person discussions, zoom meetings, and collaborative activities. It is expected that everyone will engage in these interactions civilly and in good faith. Discussion and disagreement are important parts of the learning process, but it is important that mutual respect prevail. Individuals who detract from an atmosphere of civility and respect will be removed from the conversation.
+
+Students are expected to adhere to guidelines concerning academic dishonesty outlined in [Article III B.1 of the University's Student Code of Conduct](http://stuafs.unl.edu/dos/code). The Statistics Department [academic integrity and grade appeal policy is available here](https://statistics.unl.edu/grade-appeals-and-academic-integrity-policy).
+
+You must be able to explain how the logic works for any code you turn in. This means that code you obtained from e.g. StackOverflow is fine to use if you can explain it and modify it for the purposes of this class, but if you cannot explain your code you will not get credit for the assignment. This is in line with what is generally considered acceptable behavior in programming - reuse is fine (subject to the code's license) but you must be able to fully explain and modify any code you did not write yourself. 
+
+
+## Disabilities
+The University strives to make all learning experiences as accessible as possible. If you anticipate or experience barriers based on your disability (including mental health, chronic or temporary medical conditions), please let me know immediately so that we can discuss options privately. To establish reasonable accommodations, I may request that you register with Services for Students with Disabilities (SSD). If you are eligible for services and register with their office, make arrangements with me as soon as possible to discuss your accommodations so they can be implemented in a timely manner.
+
+SSD contact information: 117 Louise Pound Hall Bldg.; 402-472-3787
+
+## Mental Health and Wellbeing Resources
+
+UNL offers a variety of options to students to aid them in dealing with stress and adversity. Counseling and Psychological & Services (CAPS) is a multidisciplinary team of psychologists and counselors that works collaboratively with Nebraska students to help them explore their feelings and thoughts and learn helpful ways to improve their mental, psychological and emotional well-being when issues arise. CAPS can be reached by calling 402-472-7450. 
+
+Big Red Resilience & Well-Being provides one-on-one well-being coaching to any student who wants to enhance their well-being. Trained well-being coaches help students create and be grateful for positive experiences, practice resilience and self-compassion, and find support as they need it. BRRWB can be reached by calling 402-472-8770.
+
+## Emergency Procedures
+
+Consult UNL emergency planning site for current emergency procedures: https://emergency.unl.edu/

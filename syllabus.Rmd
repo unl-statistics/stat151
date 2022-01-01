@@ -1,26 +1,24 @@
 ---
 output: 
-  stevetemplates::syllabus:
+  pdf_document:
+    template: "syllabus-template.tex"
     latex_engine: xelatex
     dev: cairo_pdf
 geometry: margin=1in
 
 title: "Stat 151: Introduction to Statistical Computing"
-author: Susan Vanderplas
+instructor: Susan Vanderplas
 date: "Spring 2022"
 
 email: "susan.vanderplas@unl.edu"
 web: "srvanderplas.netlify.app"
-officehours: "https://calendly.com/drvanderplas/officehours"
+officehours: "\\href{https://calendly.com/drvanderplas/officehours}{Schedule here}"
 office: "Hardin 349A"
 classroom: "Hardin 49"
 classhours: "Wednesdays 2-2:50"
 
 fontfamily: mathpazo
 fontsize: 11pt
-header-includes:
-   - \usepackage[section]{placeins}
-    
 ---
 
 
@@ -39,20 +37,7 @@ knitr::opts_chunk$set(
                       }
                   )
 
-
-advdate <- function(obj, adv) {
- tmon <- obj + 7*(adv-1)
- tfri <- obj + 4 + 7*(adv-1)
- tmon <- format(tmon, format="%m/%d")
- tfri <- format(tfri, format="%m/%d")
- zadv <- sprintf("%02d", adv)
- tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
- return(tmp)
-}
-
-options(scipen=999)
 library(tidyverse)
-library(stevemisc)
 library(lubridate)
 
 # Create a calendar for your syllabus ----
@@ -89,7 +74,7 @@ wom <- function(date) {
   }
 
 # Create a data frame of dates, assign to Cal
-tibble(date = seq(ymd(20220101), ymd(20220530), by=1))  %>%
+Cal <- tibble(date = seq(ymd(20220102), ymd(20220530), by=1))  %>%
   mutate(mon = lubridate::month(date, label=T, abbr=F), # get month label
          wkdy = weekdays(date, abbreviate=T), # get weekday label
          wkdy = fct_relevel(wkdy, "Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat"), # make sure Sunday comes first
@@ -99,7 +84,7 @@ tibble(date = seq(ymd(20220101), ymd(20220530), by=1))  %>%
          exam_wk = date %in% exam_week,
          day = lubridate::mday(date), # get day of month to add later as a label
          # Below: our custom wom() function
-         week = wom(date)) -> Cal
+         week = wom(date))
 
 # Create a category variable, for filling.
 # I can probably make this a case_when(), but this will work.
@@ -204,7 +189,7 @@ In addition, you may find it useful to reference some of the following resources
 # Class Schedule & Topic Outline
 
 This schedule is tentative and subject to change. Students are expected to read the corresponding textbook chapter (linked in Canvas) prior to coming to class. For the most part, for each week's topic, there will be a corresponding textbook chapter. 
-
+\FloatBarrier
 ```{r calendar, echo=F, eval=T,  warning=F, fig.width=8, fig.height=5, out.width = "90%", fig.align = "center"}
 class_cal
 ```
@@ -218,6 +203,7 @@ class_days %>% select(date, topic, time) %>%
 kableExtra::kable(caption = "Tentative schedule of class topics")
 ```
 
+\FloatBarrier
 # Course Policies
 
 ## Assessment/Grading

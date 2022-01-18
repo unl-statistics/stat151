@@ -171,7 +171,7 @@ At the end of this course, students will
 
 # Textbook
 
-The primary textbook for this course is one that I have developed from other resources listed below. It is available for free at https://srvanderplas.github.io/Stat151/
+The primary textbook for this course is one that I have developed from other resources listed below. It is available for free at https://srvanderplas.github.io/Stat151/. It is under construction/a work in progress, so it may be hard to work more than a couple of weeks ahead in this class using the primary textbook.
 
 In addition, you may find it useful to reference some of the following resources that I have consulted while assembling the textbook. Most are available online for free, though some require an institutional email address.
 
@@ -200,7 +200,7 @@ class_days %>% select(date, topic, time) %>%
   mutate(date2 = format(date, "%b %e")) %>%
   set_names(c("date", "Topic", "Time", "Date")) %>%
   select(Date, Time, Topic) %>%
-kableExtra::kable(caption = "Tentative schedule of class topics")
+kableExtra::kable(caption = "Tentative schedule of class topics", format = "simple")
 ```
 
 \FloatBarrier
@@ -229,7 +229,7 @@ Interpretation of this table: A grade of 85 will receive a B. A grade of 77 will
 
 ### Homework
 
-Approximately 8-10 homework assignments will be made over the course of the semester. You will typically have one week to work on each of the assignments. The only way to learn statistics is to practice working problems, and homework is therefore an essential part of the course. Homework must be submitted in the file format specified, and should run or compile as submitted.
+Approximately 8-12 homework assignments will be made over the course of the semester. You will typically have one week to work on each of the assignments. The only way to learn statistics is to practice working problems, and homework is therefore an essential part of the course. Homework must be submitted in the file format specified, and should run or compile as submitted.
 
 
 ### General Evaluation Criteria
@@ -281,10 +281,12 @@ An individual in this course has a documented need for face coverings to be requ
 
 ## Inclement Weather
 
-If in-person classes are canceled, you will be notified of the instructional continuity plan for this class by Canvas Announcement. In most circumstances, we will continue to hold class via Zoom. 
-\clearpage
+If in-person classes are canceled, you will be notified of the instructional continuity plan for this class by Canvas Announcement. In most circumstances where there is power in the Lincoln area, we will continue to hold class via Zoom. 
 
 # Required University Information
+
+See \url{https://executivevc.unl.edu/academic-excellence/teaching-resources/course-policies}.
+
 
 ## Academic Integrity and Class Conduct
 
@@ -293,19 +295,3 @@ You will be engaging with your classmates and me through in-person discussions, 
 Students are expected to adhere to guidelines concerning academic dishonesty outlined in [Article III B.1 of the University's Student Code of Conduct](http://stuafs.unl.edu/dos/code). The Statistics Department [academic integrity and grade appeal policy is available here](https://statistics.unl.edu/grade-appeals-and-academic-integrity-policy).
 
 You must be able to explain how the logic works for any code you turn in. This means that code you obtained from e.g. StackOverflow is fine to use if you can explain it and modify it for the purposes of this class, but if you cannot explain your code you will not get credit for the assignment. This is in line with what is generally considered acceptable behavior in programming - reuse is fine (subject to the code's license) but you must be able to fully explain and modify any code you did not write yourself. 
-
-
-## Disabilities
-The University strives to make all learning experiences as accessible as possible. If you anticipate or experience barriers based on your disability (including mental health, chronic or temporary medical conditions), please let me know immediately so that we can discuss options privately. To establish reasonable accommodations, I may request that you register with Services for Students with Disabilities (SSD). If you are eligible for services and register with their office, make arrangements with me as soon as possible to discuss your accommodations so they can be implemented in a timely manner.
-
-SSD contact information: 117 Louise Pound Hall Bldg.; 402-472-3787
-
-## Mental Health and Wellbeing Resources
-
-UNL offers a variety of options to students to aid them in dealing with stress and adversity. Counseling and Psychological & Services (CAPS) is a multidisciplinary team of psychologists and counselors that works collaboratively with Nebraska students to help them explore their feelings and thoughts and learn helpful ways to improve their mental, psychological and emotional well-being when issues arise. CAPS can be reached by calling 402-472-7450. 
-
-Big Red Resilience & Well-Being provides one-on-one well-being coaching to any student who wants to enhance their well-being. Trained well-being coaches help students create and be grateful for positive experiences, practice resilience and self-compassion, and find support as they need it. BRRWB can be reached by calling 402-472-8770.
-
-## Emergency Procedures
-
-Consult UNL emergency planning site for current emergency procedures: https://emergency.unl.edu/

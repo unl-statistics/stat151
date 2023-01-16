@@ -5,7 +5,7 @@ date: "Due: Feb 3, 2023"
 output: html_document
 ---
 
-[Download the starter qmd file here](01-scripts-notebooks.qmd)
+[Download the starter qmd file here](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/01-scripts-notebooks.qmd)
 
 ## What is the difference between a script and a notebook?
 

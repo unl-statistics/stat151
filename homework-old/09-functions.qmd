@@ -1,0 +1,53 @@
+---
+title: "Homework 9: FizzBuzz Returns!"
+author: "Your Name"
+format: html
+---
+
+## Part 1
+
+Write a FizzBuzz function named `fizzbuzz1`. Your function should take a single number and **return** (not print out) a single string evaluating the number that was passed in. Use input validation to ensure that you are given a number, and provide a useful error if you are not given a number as the function argument.
+
+(Do this in R or python - just pick a language for this assignment. If you choose python, just change the chunk type below.)
+
+```{r fizzbuzz-1}
+
+# Your code goes here
+
+
+
+```
+
+This code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!
+
+```{r testing-fizzbuzz-1, error = T, collapse = T}
+fizzbuzz1(3)
+fizzbuzz1(5)
+fizzbuzz1(7)
+fizzbuzz1(15)
+fizzbuzz1(0)
+fizzbuzz1("this should fail")
+```
+
+
+## Part 2
+
+Write a FizzBuzz function named `fizzbuzz` that can handle a vector of numbers and will **return** (not print out) a vector of character/string values. Check to ensure the input vector is numeric.
+
+Hint: You might use a loop and call your function from the previous part. 
+
+```{r fizzbuzz-2}
+
+
+```
+
+This code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!
+
+```{r testing-fizzbuzz-2, error = T, collapse = T}
+fizzbuzz(c(0, 3, 5, 7, 11, 15))
+
+fizzbuzz(month.name) # this should fail
+
+```
+
+

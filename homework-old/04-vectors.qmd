@@ -1,0 +1,118 @@
+---
+title: "Homework 4: Vectors and Control Structures"
+author: "Your Name"
+date: "Due: February 18, 2022"
+output: 
+  html_document:
+    self_contained: yes
+---
+
+```{r setup, echo = F}
+library(reticulate)
+```
+
+[Download the starter qmd file here](4-vectors.qmd)
+
+## Set-Up
+
+Running the following chunk will generate two files and save them to your current working directory.
+
+```{r create-data}
+set.seed(24038243)
+# Generate a vector of data for the problem
+x <- round(runif(100, 0, 1e6))
+y <- round(runif(100, 0, 1e6))
+
+# write it to a file
+writeLines(as.character(x), con = "hw4data-r.txt")
+writeLines(as.character(y), con = "hw4data-py.txt")
+```
+
+## Navigation
+
+The following problem is inspired by the first problem in the 2021 Advent of Code challenge.
+
+You're minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean! Before you know it, you're inside a submarine the Elves keep ready for situations like this.
+
+
+As the submarine drops below the surface of the ocean, it automatically performs a sonar sweep of the nearby sea floor. On a small screen, the sonar sweep report (your puzzle input) appears: each line is a measurement of the sea floor depth as the sweep looks further and further away from the submarine.
+
+For example, suppose you had the following report:
+
+```
+199
+200
+208
+210
+200
+207
+240
+269
+260
+263
+```
+
+This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.
+
+The first order of business is to figure out how quickly the depth increases, just so you know what you're dealing with - you never know if the keys will get carried into deeper water by an ocean current or a fish or something.
+
+To do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.) In the example above, the changes are as follows:
+
+```
+199 (N/A - no previous measurement)
+200 (increased)
+208 (increased)
+210 (increased)
+200 (decreased)
+207 (increased)
+240 (increased)
+269 (increased)
+260 (decreased)
+263 (increased)
+```
+
+In this example, there are 7 measurements that are larger than the previous measurement.
+
+How many measurements are larger than the previous measurement? 
+
+### Part 1 - Planning the solution
+
+Draw a program flow map to show how you plan to solve the problem. I used excalidraw.com to draw the maps in the book.
+
+Export your map to a png and include it here
+
+![](program-flow-map.png)
+
+
+### Part 2 - Writing the code
+
+
+You have two files, `hw4data-r.txt` and `hw4data-py.txt`. I have provided you with code to read the data in from these files (if they aren't in your current working directory, run the chunk in the Set-up section, which creates the files).
+
+#### R 
+
+```{r}
+x <- readLines("hw4data-r.txt")
+
+## Solve the problem below this comment
+
+
+nx <- NA # Your answer should be stored in the nx variable to make the line below this chunk work
+```
+
+There are `r nx` measurements larger than the previous measurement.
+
+#### Python
+
+```{python}
+import numpy as np
+x = np.loadtxt('hw4data-py.txt')
+
+## Solve the problem below this comment
+
+
+nx2 = 0 # your answer should be stored in the nx variable to make the line below this chunk work
+
+```
+
+There are `r py$nx2` measurements larger than the previous measurement.

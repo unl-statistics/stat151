@@ -1,0 +1,127 @@
+---
+title: "Homework 6: Data Frames"
+author: "Your Name"
+date: "Due: March 4, 2022"
+format:
+  html:
+    theme: default
+---
+
+
+
+## Steam Games
+
+This week's homework data is from TidyTuesday, an organization that provides datasets every Tuesday for people to practice their data tidying and manipulation skills. See the [readme](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-03-16/readme.md) for more information.
+
+**Data Dictionary**
+
+|variable      |class     |description |
+|:-------------|:---------|:-----------|
+|gamename      |character | Name of video games |
+|year          |double    | Year of measure |
+|month         |character | Month of measure |
+|avg           |double    | Average number of players at the same time|
+|gain          |double    | Gain (or loss) Difference in average compared to the previous month (NA = 1st month) |
+|peak          |double    | Highest number of players at the same time |
+|avg_peak_perc |character | Share of the average in the maximum value (avg / peak) in % |
+
+```{r steam-games-data-setup}
+games <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv')
+
+library(ggplot2) # load ggplot2 package
+```
+
+### R: Replicate the plot
+
+Your first goal (in R) is to get to this graph by breaking down the problem (replicating the graph) into smaller steps that make sense and that you can accomplish piece-by-piece.
+
+![Target plot to replicate](https://i.imgur.com/rbgdd3X.png)
+
+Useful hints:
+
+1. `month.name` is a vector containing month names that you can use to create a factor variable. Factor variables can be easily converted into numeric variables. This might help you get a numeric month, which might help you get to a fractional year.
+
+2. `subset()` is a function that will subset a data frame based on a logical condition. It might be easier to use than logical indexing (though you can use either)
+
+3. To get a line graph in ggplot2, use `geom_line()`. Using `aes(color = varname)` will color the lines by variable name.
+
+4. Some sample code to make a line graph in ggplot is provided below:
+
+```{r, message = F, warning = F}
+library(dplyr)
+# Get only january months so that there's one point a year
+jan_data <- filter(games, month == "January")
+
+# x axis is year, y axis is average players
+# group = gamename says draw one line for each game
+ggplot(data = jan_data, 
+       aes(x = year, y = avg, group = gamename)) + 
+  geom_line()
+```
+
+
+#### Problem Steps
+
+Make a list of steps that will be necessary to get the data you have into this form.
+
+
+
+
+
+#### Problem Code
+Provide code that sequentially works through your list of steps to produce the graph. You might put your steps as comments to remind yourself what you're doing at each point in the code. 
+
+```{r}
+# Code for step 1 goes here
+
+```
+
+
+
+### Python: Replicate a (different) plot
+
+```{r}
+# Run this if you haven't installed plotnine already
+reticulate::py_install("plotnine")
+```
+
+```{python, fig.width = 8, fig.height = 4, out.width = "100%"}
+import pandas as pd
+from plotnine import *
+
+games = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv')
+```
+
+![Plot to replicate](https://i.imgur.com/hoTGRKW.png)
+
+This plot shows the 5 games with the most average users in March of 2020. It is ok if you can replicate this plot to the point where the legend doesn't show up properly, as in this image:
+
+![Legend not quite right](https://i.imgur.com/t0wYCV8.png)
+
+Useful hints: 
+
+1. Pandas will let you sort a data frame in decreasing order of  variable `x` using `sort_values('x', ascending = False)`
+
+2. You can select rows of a python data frame that match a list using `.isin()` [demo](https://www.kite.com/python/answers/how-to-filter-a-pandas-dataframe-with-a-list-by-%60in%60-or-%60not-in%60-in-python)
+
+3. Using the `.assign()` function to create new variables will reduce the number of errors you run into. 
+
+4. Sample code to make a line plot is provided below:
+
+```{python, message = F, warning = F}
+# Get only january months so that there's one point a year
+jan_data = games.query('month == "January"')
+
+# x axis is year, y axis is average players
+# group = gamename says draw one line for each game
+ggplot(jan_data, aes(x ="year", y = "avg", group = "gamename")) + geom_line()
+```
+
+
+#### Problem Steps
+Make a list of steps below that will be necessary to get the data you have into this form.
+
+
+
+#### Problem Code
+Provide code that sequentially works through your list of steps to produce the necessary table of games. 

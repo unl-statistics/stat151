@@ -1,0 +1,69 @@
+---
+title: "Homework 10: Joins and Summaries"
+author: "Your Name"
+format: html
+---
+
+## Swiss Banknotes
+
+The R package `mclust` contains a data set called banknote, consisting of (physical) measurements on 200 Swiss bank notes, 100 of which are genuine, while the other half is counterfeit. Load this data set (you might have to install the package) using the code below.
+
+```{r, collapse = T}
+# install.packages("mclust")
+library(mclust) # if this throws an error of the form 'there is no package called mclust', uncomment the line above, run it once, then comment the line out again and run the code chunk again.
+data(banknote)
+banknote$Status <- factor(banknote$Status)
+```
+
+```{python}
+banknote = r.banknote # Copy data from R
+```
+
+For each of the three figures you create below, write a two-three sentence summary, describing the structure of the plot: what type of plot is it? Which variables are mapped to x, to y, and to the (fill) color? What is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot? Are there any anomalies or outliers?
+
+1. Use `ggplot2` or `plotnine` to draw a barchart of Status. Map Status to the fill color of the barchart. This will be a relatively boring chart (but that is ok)
+
+
+
+2. Use `ggplot2` or `plotnine`  to draw a histogram of one of the variables in the dataset that shows a distinction between genuine and counterfeit banknotes. Use fill color to show this difference. 
+
+
+3. Use `ggplot2` or `plotnine`  to draw a scatterplot of two (continuous) measurements, color by Status. Try to find a pair of measurements that allow you to separate perfectly between genuine and counterfeit banknotes.
+
+
+## Take everything you know, and use it for evil
+
+The textbook spent lots of time showing you how to create different types of graphics, but I spent a lot less time showing you all of the different ways you could customize graphics `ggplot2` or `plotnine`. In this problem, I want you to create the *ugliest* version of the following graphs you can, and then **explain why**, exactly, you made the decisions you did, and which principles of good graphics you've intentionally violated.
+
+Ugliness is subjective, so the goal here is for you to explore the different ways you can customize the finer details of graphics. Make sure your finished masterpiece has appropriate axis labels and a title (after all, even ugly plots need to be correctly labeled!). You are free to add additional variables and layers, modify the aesthetics used, and leverage other packages. I have provided this code as a starting point, not as a way to limit your creativity.
+
+I have provided some basic code to get you started. We'll use the `palmerpenguins` package, which has [fantastic documentation with really awesome artwork](https://allisonhorst.github.io/palmerpenguins/).
+
+```{r}
+if (!"palmerpenguins" %in% installed.packages()) {
+  remotes::install_github("allisonhorst/palmerpenguins")
+}
+library(palmerpenguins)
+library(ggplot2)
+
+head(penguins)
+
+ggplot(penguins, aes(x = body_mass_g, y = bill_length_mm, color = species)) +
+  geom_point()
+```
+
+```{python}
+penguins = r.penguins
+```
+
+
+
+
+### Useful References
+
+- [Customizing ggplot2 graphics](http://r-statistics.co/Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html)
+
+- [A group-created slideshow of awful graphics](https://docs.google.com/presentation/d/1ixRsGI8BWgT2zA5AbB61eMLUbJgObvBCZt-OnZDzvX4/edit?usp=sharing)
+
+- [An example of customizing plots in plotnine](https://t-redactyl.io/blog/2020/09/making-beautiful-boxplots-using-plotnine-in-python.html)
+

@@ -1,0 +1,73 @@
+---
+title: "Homework 3: Basic Data Types"
+author: "Your Name"
+date: "Due: February 11, 2022"
+output: html_document
+---
+
+[Download the starter qmd file here](3-data-types.qmd)
+
+## Pythagorean Theorem in R
+
+$$a^2 + b^2 = c^2$$
+
+Use the chunk below to define variables $a$, $b$, and $c$, where you set $a$ and $b$ and $c$ is determined mathematically. You may need to find the square root function in R to make this work.
+
+```{r pythagorean-theorem-r}
+# Your pythagorean theorem code goes here
+```
+
+
+## Quadratic Formula in Python
+
+$$x = -b \pm \frac{\sqrt{b^2 - 4ac}}{2a}$$
+
+
+Use the chunk below to define variables $a$, $b$, and $c$, and then define $x1$ and $x2$, the possible values for $x$.
+
+```{python quad-formula-py}
+# Your quadratic formula code goes here
+
+```
+
+
+
+## Debugging practice
+
+Look at the data frame below, which contains 3 columns: `Name`, `Salary`, and `Hire.Year`. You've read in this data from the [data file online](https://srvanderplas.github.io/stat151-homework/3-data.tsv) and ideally, you want to plot `Hire.Year` on the x-axis and `Salary` on the y-axis (code to do this is provided).
+
+Unfortunately, the data isn't reading in properly. Identify the problem, propose a solution, and try to implement your solution using functions on the R reference card. 
+
+Some things you may want to consider:
+- `gsub`
+- You can access columns in a data frame using `$`: `df$col1` will get you `col1` of the `df` object.
+- You can access items in a vector using `[]`: `x[1]` will get you the first item in `x`
+
+Note: You should be able to **identify** the problem given what you know about R from this chapter. You may not be able to implement a solution without some additional research, so if you don't get that far that's ok. 
+
+```{r}
+# This line reads in a tab-separated data file with a header naming the columns
+salary <- read.table("https://srvanderplas.github.io/stat151-homework/3-data.tsv", 
+                     sep = "\t", header = T)
+
+# This code plots labels for each individual at location (x, y)
+library(ggplot2)
+ggplot(salary, aes(x = Hire.Year, y = Salary, label = Name)) + 
+  geom_label()
+
+# This displays the salary object
+salary
+```
+
+-----------------
+
+The problem with the data is: 
+
+
+Here is how I solved the problem:
+
+```{r cleaning-the-data-r}
+# Your implementation code goes here
+
+```
+

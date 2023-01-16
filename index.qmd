@@ -1,0 +1,19 @@
+---
+title: "Stat 151"
+format: html
+listing:
+  id: hwlst
+  contents: homework
+  sort: "date desc"
+  type: table
+---
+
+# Homework Assignments
+
+
+::: {#hwlst}
+:::
+
+# Exams
+
+Coming soon!

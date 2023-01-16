@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stat 151",
+    "section": "",
+    "text": "Homework Assignments\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\n\n\nNo matching items\n\n\n\n\nExams\nComing soon!"
+  },
+  {
+    "objectID": "homework/01-scripts-notebooks.html",
+    "href": "homework/01-scripts-notebooks.html",
+    "title": "Homework 1: Scripts and Notebooks",
+    "section": "",
+    "text": "Download the starter qmd file here"
+  },
+  {
+    "objectID": "homework/01-scripts-notebooks.html#what-is-the-difference-between-a-script-and-a-notebook",
+    "href": "homework/01-scripts-notebooks.html#what-is-the-difference-between-a-script-and-a-notebook",
+    "title": "Homework 1: Scripts and Notebooks",
+    "section": "What is the difference between a script and a notebook?",
+    "text": "What is the difference between a script and a notebook?\nReplace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use markdown formatting as described in this cheat-sheet. You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages."
+  },
+  {
+    "objectID": "homework/01-scripts-notebooks.html#playing-with-code-in-notebooks",
+    "href": "homework/01-scripts-notebooks.html#playing-with-code-in-notebooks",
+    "title": "Homework 1: Scripts and Notebooks",
+    "section": "Playing with Code in Notebooks",
+    "text": "Playing with Code in Notebooks\nThe code chunk below defines a logarithmic spiral. Using this reference, modify the code so that it now plots Fermat’s spiral. Use \\(a = 1\\).\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta <- seq(0, 4*pi, .01) \n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta\nr <- seq(0, 5, length.out = length(theta))\n\n# Now define x and y in cartesian coordinates\nx <- r * cos(theta)\ny <- r * sin(theta)\n\nplot(x, y, type = \"l\")\n\n\n\n\nCan you do the same thing in Python? It may help to know that in Python, to raise something to a power, you use ** instead of ^.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta = np.arange(0, 4 * np.pi, 0.01)\n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta \n# (get length of theta with theta.size, \n#  and then divide 5 by that to get the increment)\nr = np.arange(0, 5, 5/theta.size)\n\n# Now define x and y in cartesian coordinates\nx = r * np.cos(theta)\ny = r * np.sin(theta)\n\n# Define the axes\nfig, ax = plt.subplots()\n# Plot the line\nax.plot(x, y)\nplt.show()"
+  }
+]

@@ -1,0 +1,28 @@
+---
+title: "Homework 2: Finding Your Way in R and Python"
+author: "Your Name"
+date: "Due: February 4, 2022"
+output: html_document
+---
+
+[Download the starter qmd file here](2-finding-your-way.qmd)
+
+## MadLibs
+### Running a Python Script at the command line
+
+Run the script [madlibs.py](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/madlibs.py) using the terminal to run the script (e.g. type `python3 madlibs.py` in the terminal). Do what it asks of you, and then copy the text after the initial command here, making use of the generic (no language) markdown code chunk below.
+
+```
+
+```
+
+Can you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens.
+
+
+## Thinking Critically
+
+Consider the 3 counting words examples in the [textbook module](https://srvanderplas.github.io/Stat151/finding-your-way.html#example-counting-words-in-r-within-rstudio). Look at the code, and then at the information provided for each example. What is different? What is the same? Create a table comparing script mode, interactive mode, and command-line mode. Address the specific differences in how the user interacts with the code, differences in any additional user inputs (if available), and any differences in the output.
+
+
+
+

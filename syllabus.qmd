@@ -8,7 +8,7 @@ geometry: margin=1in
 
 title: "Stat 151: Introduction to Statistical Computing"
 instructor: Susan Vanderplas
-date: "Spring 2023"
+semester: Spring 2023
 
 email: "susan.vanderplas@unl.edu"
 web: "srvanderplas.netlify.app"
@@ -171,7 +171,7 @@ At the end of this course, students will
 # Textbook
 
 The primary textbook for this course is one that I have developed from other resources listed below. 
-It is available for free at https://srvanderplas.github.io/stat-computing-r-python/. 
+It is available for free at \url{https://srvanderplas.github.io/stat-computing-r-python/}. 
 It is under construction/a work in progress, so it may be hard to work more than a couple of weeks ahead in this class using the primary textbook.
 
 In addition, you may find it useful to reference some of the following resources that I have consulted while assembling the textbook. Most are available online for free, though some require an institutional email address.
@@ -253,10 +253,24 @@ You will typically have one week to work on each of the assignments.
 The only way to learn statistics is to practice working problems, and homework is therefore an essential part of the course. 
 Homework must be submitted in the file format specified, and should run or compile as submitted.
 
+All students are expected to attend and fully participate in class activities. 
+Participation will be determined based on a combination of class attendance and activities.
+
+
 ### Late Policy
 
 Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. 
 I reserve the right not to grade any assignments received after the assignment due date.
+
+Two exams will be given during the course of the semester, on dates noted on the Tentative Course Outline on the last page. 
+
+### Exams
+
+Exams will require that you write code to solve problems utilizing the course material. 
+You are expected to take exams at the scheduled times. 
+If this is impossible due to extreme circumstances (illness, death in the family, previously scheduled activities vital to academic program), please notify me and provide appropriate documentation. 
+No make-up exams will be given if I am not notified prior to the examination. 
+You will be required to obtain a note from your physician or advisor explaining the nature of the conflict.
 
 ## Attendance
 

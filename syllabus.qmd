@@ -1,6 +1,6 @@
 ---
-output: 
-  pdf_document:
+format: 
+  pdf:
     template: "syllabus-template.tex"
     latex_engine: xelatex
     dev: cairo_pdf
@@ -105,8 +105,6 @@ Cal <- Cal %>%
 
 class_cal <- Cal %>% 
   ggplot(.,aes(wkdy, week)) +
-  # custom theme stuff below
-  # theme_steve_web() + 
   theme_bw() +
   theme(panel.grid.major.x = element_blank(),
         legend.position = c(1, 0), legend.justification = c(1,0), legend.direction = "vertical", legend.title = element_blank(),
@@ -115,7 +113,7 @@ class_cal <- Cal %>%
   geom_tile(alpha=0.8, aes(fill=category), color="black", linewidth=.45) +
   facet_wrap(~mon, scales = "free", ncol=3) +
   # fill in tiles to make it look more "calendary" (sic)
-  geom_text(aes(label=day, color = semester&(!not_here)),family="Open Sans") +
+  geom_text(aes(label=day, color = semester&(!not_here))) +
   # put your y-axis down, flip it, and reverse it
   scale_y_reverse(breaks=NULL) +
   # manually fill scale colors to something you like...
@@ -196,9 +194,21 @@ Students are expected to read the corresponding textbook chapter (linked in Canv
 For the most part, for each week's topic, there will be one or two corresponding textbook chapters. 
 
 \FloatBarrier
-```{r calendar, echo=F, eval=T,  warning=F, fig.width=8, fig.height=5, out.width = "90%", fig.align = "center"}
+
+```{r calendar}
+#| echo: false
+#| eval: true
+#| warning: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+#| fig-cap: "Course Calendar"
+#| fig-pos: ht
+
 class_cal
 ```
+
+\small
 
 ```{r schedule, eval = T, echo = F, fig.pos = 'h'}
 class_days %>% select(date, topic, time) %>%
@@ -208,8 +218,10 @@ class_days %>% select(date, topic, time) %>%
   select(Date, Time, Topic) %>%
 kableExtra::kable(caption = "Tentative schedule of class topics", format = "simple")
 ```
+\normalsize
 
 \FloatBarrier
+\clearpage
 # Course Policies
 
 ## Assessment/Grading

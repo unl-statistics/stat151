@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Stat 151",
     "section": "",
-    "text": "Homework Assignments\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\n\n\nNo matching items\n\n\n\n\nExams\nComing soon!"
+    "text": "Homework Assignments\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\nFeb 10, 2022\n\n\nHomework 2: Finding Your Way in R and Python\n\n\nYour Name\n\n\n\n\n\n\nNo matching items\n\n\n\n\nExams\nComing soon!"
   },
   {
     "objectID": "homework/01-scripts-notebooks.html",
@@ -26,5 +26,26 @@
     "title": "Homework 1: Scripts and Notebooks",
     "section": "Playing with Code in Notebooks",
     "text": "Playing with Code in Notebooks\nThe code chunk below defines a logarithmic spiral. Using this reference, modify the code so that it now plots Fermat’s spiral. Use \\(a = 1\\).\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta <- seq(0, 4*pi, .01) \n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta\nr <- seq(0, 5, length.out = length(theta))\n\n# Now define x and y in cartesian coordinates\nx <- r * cos(theta)\ny <- r * sin(theta)\n\nplot(x, y, type = \"l\")\n\n\n\n\nCan you do the same thing in Python? It may help to know that in Python, to raise something to a power, you use ** instead of ^.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta = np.arange(0, 4 * np.pi, 0.01)\n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta \n# (get length of theta with theta.size, \n#  and then divide 5 by that to get the increment)\nr = np.arange(0, 5, 5/theta.size)\n\n# Now define x and y in cartesian coordinates\nx = r * np.cos(theta)\ny = r * np.sin(theta)\n\n# Define the axes\nfig, ax = plt.subplots()\n# Plot the line\nax.plot(x, y)\nplt.show()"
+  },
+  {
+    "objectID": "homework/02-finding-your-way.html",
+    "href": "homework/02-finding-your-way.html",
+    "title": "Homework 2: Finding Your Way in R and Python",
+    "section": "",
+    "text": "Download the starter qmd file here"
+  },
+  {
+    "objectID": "homework/02-finding-your-way.html#madlibs",
+    "href": "homework/02-finding-your-way.html#madlibs",
+    "title": "Homework 2: Finding Your Way in R and Python",
+    "section": "MadLibs",
+    "text": "MadLibs\n\nRunning a Python Script at the command line\nRun the script madlibs.py using the terminal to run the script (e.g. type python3 madlibs.py in the terminal). Do what it asks of you. Copy the text after the initial command and paste it between the markings below. (These define a generic, no-language markdown code chunk).\n# Paste your output here!\nCan you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens."
+  },
+  {
+    "objectID": "homework/02-finding-your-way.html#thinking-critically",
+    "href": "homework/02-finding-your-way.html#thinking-critically",
+    "title": "Homework 2: Finding Your Way in R and Python",
+    "section": "Thinking Critically",
+    "text": "Thinking Critically\nConsider the counting words examples in the textbook (Your Turn – Terminal Mode, Your Turn – Script Mode). Look at the code, and then at the steps provided for each example. What is different? What is the same? Create a table comparing terminal mode, script mode (e.g. running the whole script using the Run button), and interactive mode. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they’re specified, and any differences in the output."
   }
 ]

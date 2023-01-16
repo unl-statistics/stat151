@@ -1,0 +1,60 @@
+---
+title: "Homework 1: Scripts and Notebooks"
+author: "Your Name"
+date: "Due: Feb 3, 2023"
+output: html_document
+---
+
+[Download the starter qmd file here](homework/01-scripts-notebooks.qmd)
+
+## What is the difference between a script and a notebook?
+
+Replace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use markdown formatting as described in [this cheat-sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf). You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages.
+
+
+## Playing with Code in Notebooks
+
+The code chunk below defines a logarithmic spiral. 
+Using [this reference](https://mathworld.wolfram.com/ArchimedeanSpiral.html), modify the code so that it now plots Fermat's spiral. Use $a = 1$.
+
+```{r}
+# Define the angle of the spiral (polar coords)
+# go around two full times (2*pi = one revolution)
+theta <- seq(0, 4*pi, .01) 
+# Define the distance from the origin of the spiral
+# Needs to have the same length as theta
+r <- seq(0, 5, length.out = length(theta))
+
+# Now define x and y in cartesian coordinates
+x <- r * cos(theta)
+y <- r * sin(theta)
+
+plot(x, y, type = "l")
+```
+
+Can you do the same thing in Python? It may help to know that in Python, to raise something to a power, you use `**` instead of `^`. 
+
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the angle of the spiral (polar coords)
+# go around two full times (2*pi = one revolution)
+theta = np.arange(0, 4 * np.pi, 0.01)
+# Define the distance from the origin of the spiral
+# Needs to have the same length as theta 
+# (get length of theta with theta.size, 
+#  and then divide 5 by that to get the increment)
+r = np.arange(0, 5, 5/theta.size)
+
+# Now define x and y in cartesian coordinates
+x = r * np.cos(theta)
+y = r * np.sin(theta)
+
+# Define the axes
+fig, ax = plt.subplots()
+# Plot the line
+ax.plot(x, y)
+plt.show()
+```

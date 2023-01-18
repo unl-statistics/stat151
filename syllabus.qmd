@@ -242,7 +242,7 @@ A |	97 |	94 | 	90
 B |	87 |	84 |	80
 C |	77 |	74 |	70
 D |	67 |	64 |	61
-F |	$<$61 | |
+F |	<61 | |
 
 Interpretation of this table: A grade of 85 will receive a B. A grade of 77 will receive a C+. A grade of 70 will receive a C-. Anything below a 61 will receive an F. 
 

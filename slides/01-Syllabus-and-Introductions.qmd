@@ -1,0 +1,136 @@
+---
+title: "Stat 151 - Introduction"
+format: 
+  revealjs:
+    navigation-mode: vertical
+---
+
+# Introductions
+
+## Introduce yourself!
+
+- Name / Year / Major
+
+- What do you hope to learn in this class?
+
+- Previous computing experience?
+
+- Is a poptart a ravioli? Why or why not?
+
+## My Introduction
+
+- Susan Vanderplas
+
+- Assistant Professor in Statistics
+
+- Ph.D. from Iowa State in 2015
+
+- Undergrad from Texas A&M in 2009
+
+- R user for 13 years, Python user for 1.5 years    
+Dabbled in JavaScript, HTML, C/C++
+
+- I have Prosopagnosia - face blindness
+
+- [On Poptarts and Ravioli...](https://twitter.com/Phosphatide/status/974067376894328833)
+
+# Syllabus
+
+## Contact Info
+
+- Email: [susan.vanderplas@unl.edu](mailto:susan.vanderplas@unl.edu?subject=Stat251)
+
+- Office: 343D Hardin Hall North Wing
+
+- Phone: I don't ever answer it... use email
+
+- Office Hours: [https://calendly.com/drvanderplas/officehours](https://calendly.com/drvanderplas/officehours  )    
+Self-serve, by Zoom unless you specify otherwise.
+
+- Textbook: [https://srvanderplas.github.io/stat-computing-r-python](https://srvanderplas.github.io/stat-computing-r-python)
+
+- Course site: [https://srvanderplas.github.io/unl-stat151/](https://srvanderplas.github.io/unl-stat151/)
+
+## Course Objectives
+
+1. Be comfortable using R and/or python for statistical analysis
+
+2. Write basic programs using logic including for loops, control structures, and matrix arithmetic
+
+3. Implement basic data analyses in R or python
+
+4. Describe the sequence of logical or mathematical steps necessary to solve a simple problem
+
+5. Be familiar with good computing practices, such as version control and documentation
+
+
+## Textbook
+
+[https://srvanderplas.github.io/stat-computing-r-python/](https://srvanderplas.github.io/stat-computing-r-python/)
+
+![](https://srvanderplas.github.io/stat-computing-r-python/build_deps/cover.png){fig-alt="Cover image of the textbook"}
+
+## Class Schedule
+
+```{r echo = F, message = F, warning = F}
+source("../schedule.R")
+class_cal
+```
+## Outline
+
+Subject to change based on how much programming you are already familiar with...
+
+```{r, echo = F}
+class_days %>% select(date, topic, time) %>%
+  mutate(time = ifelse(is.na(time), "", time)) %>%
+  mutate(date2 = format(date, "%b %e")) %>%
+  set_names(c("date", "Topic", "Time", "Date")) %>%
+  select(Date, Time, Topic) %>%
+  filter(row_number() <= 10) %>%
+kableExtra::kable(caption = "Tentative schedule of class topics", format = "simple")
+```
+
+## Grades
+
+
+Assignments | Weight
+----- | -----
+Reading Quizzes | 10%
+Weekly Homework & Participation | 50% 
+Midterm Exam | 20%
+Final Exam | 20%
+
+Approximately Weekly Homework -- started in class
+
+## Academic Integrity / Submitted Work Policy
+
+- You may (and should!) work with each other on homework assignments
+
+- Work alone on exams
+
+- You must be able to explain the logic of anything you submit for a grade    
+At my discretion, I will evaluate the coherence of your explanation instead of your submitted work
+
+- ChatGPT, StackOverflow, Google are all valuable tools, but they do not help you think
+
+
+## Programming
+
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/WGWm_lOFXCk" title="Take Chances Make Mistakes - Ms. Frizzle | The Magic School Bus (Gone as Planned)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+# Setting Up
+
+## Install Course Software
+
+[Textbook Chapter](https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html): https://bit.ly/3JtGCZR
+
+## Next Time
+
+We'll work on [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html)
+
+Please Read before class: 
+- [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
+- [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html)
+- [RStudio's Interface](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-Rstudio-interface.html)
+

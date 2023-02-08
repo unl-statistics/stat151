@@ -79,7 +79,7 @@ How many measurements are larger than the previous measurement?
 
 Draw a program flow map to show how you plan to solve the problem. I used excalidraw.com to draw the maps in the book.
 
-Export your map to a png and include it here
+Export your map to a png, upload it to an image hosting site like imgur, and include the link here. Make sure to link directly to the PNG (right click, get link to image).
 
 ![](program-flow-map.png)
 

@@ -2,11 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/homework/03-data-types.html",
-      "/homework/01-scripts-notebooks.html",
-      "/slides/01-Syllabus-and-Introductions.html",
       "/homework/04-vectors.html",
-      "/homework/02-finding-your-way.html"
+      "/homework/03-data-types.html",
+      "/homework/02-finding-your-way.html",
+      "/homework/01-scripts-notebooks.html",
+      "/slides/01-Syllabus-and-Introductions.html"
     ]
   }
 ]

@@ -30,7 +30,7 @@ writeLines(as.character(y), con = "hw5data-py.txt")
 
 ## Navigation
 
-The following problem is inspired by the first problem in the 2021 Advent of Code challenge.
+The following problem is inspired by the [first problem in the 2021 Advent of Code challenge](https://adventofcode.com/2021/day/1) and as a result is Santa-themed.
 
 You're minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean! Before you know it, you're inside a submarine the Elves keep ready for situations like this.
 

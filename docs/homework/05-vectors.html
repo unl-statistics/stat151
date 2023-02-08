@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Your Name">
-<meta name="dcterms.date" content="2023-02-17">
+<meta name="dcterms.date" content="2023-03-03">
 
-<title>Stat 151 - Homework 3: Basic Data Types</title>
+<title>Stat 151 - Homework 5: Vectors and Control Structures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,7 +124,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -172,9 +171,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pythagorean-theorem-in-r" id="toc-pythagorean-theorem-in-r" class="nav-link active" data-scroll-target="#pythagorean-theorem-in-r">Pythagorean Theorem in R</a></li>
-  <li><a href="#quadratic-formula-in-python" id="toc-quadratic-formula-in-python" class="nav-link" data-scroll-target="#quadratic-formula-in-python">Quadratic Formula in Python</a></li>
-  <li><a href="#debugging-practice" id="toc-debugging-practice" class="nav-link" data-scroll-target="#debugging-practice">Debugging practice</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">Set-Up</a></li>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation">Navigation</a>
+  <ul class="collapse">
+  <li><a href="#part-1---planning-the-solution" id="toc-part-1---planning-the-solution" class="nav-link" data-scroll-target="#part-1---planning-the-solution">Part 1 - Planning the solution</a></li>
+  <li><a href="#part-2---writing-the-code" id="toc-part-2---writing-the-code" class="nav-link" data-scroll-target="#part-2---writing-the-code">Part 2 - Writing the code</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -183,7 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 3: Basic Data Types</h1>
+<h1 class="title">Homework 5: Vectors and Control Structures</h1>
 </div>
 
 
@@ -200,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 17, 2023</p>
+      <p class="date">March 3, 2023</p>
     </div>
   </div>
   
@@ -210,64 +212,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p><a href="https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/03-data-types.qmd">Download the starter qmd file here</a></p>
-<section id="pythagorean-theorem-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="pythagorean-theorem-in-r">Pythagorean Theorem in R</h2>
-<p><span class="math display">\[a^2 + b^2 = c^2\]</span></p>
-<p>Use the chunk below to define variables <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>, where you set <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> is determined mathematically. You may need to find the square root function in R to make this work.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your pythagorean theorem code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<p><a href="https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/05-vectors.qmd">Download the starter qmd file here</a></p>
+<section id="set-up" class="level2">
+<h2 class="anchored" data-anchor-id="set-up">Set-Up</h2>
+<p>Running the following chunk will generate two files and save them to your current working directory.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">24038243</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a vector of data for the problem</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="fl">1e6</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="fl">1e6</span>))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># write it to a file</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="fu">as.character</span>(x), <span class="at">con =</span> <span class="st">"hw5data-r.txt"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="fu">as.character</span>(y), <span class="at">con =</span> <span class="st">"hw5data-py.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="quadratic-formula-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="quadratic-formula-in-python">Quadratic Formula in Python</h2>
-<p><span class="math display">\[x = -b \pm \frac{\sqrt{b^2 - 4ac}}{2a}\]</span></p>
-<p>Use the chunk below to define variables <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>, and then define <span class="math inline">\(x1\)</span> and <span class="math inline">\(x2\)</span>, the possible values for <span class="math inline">\(x\)</span>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your quadratic formula code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="navigation" class="level2">
+<h2 class="anchored" data-anchor-id="navigation">Navigation</h2>
+<p>The following problem is inspired by the first problem in the 2021 Advent of Code challenge.</p>
+<p>You’re minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean! Before you know it, you’re inside a submarine the Elves keep ready for situations like this.</p>
+<p>As the submarine drops below the surface of the ocean, it automatically performs a sonar sweep of the nearby sea floor. On a small screen, the sonar sweep report (your puzzle input) appears: each line is a measurement of the sea floor depth as the sweep looks further and further away from the submarine.</p>
+<p>For example, suppose you had the following report:</p>
+<pre><code>199
+200
+208
+210
+200
+207
+240
+269
+260
+263</code></pre>
+<p>This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.</p>
+<p>The first order of business is to figure out how quickly the depth increases, just so you know what you’re dealing with - you never know if the keys will get carried into deeper water by an ocean current or a fish or something.</p>
+<p>To do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.) In the example above, the changes are as follows:</p>
+<pre><code>199 (N/A - no previous measurement)
+200 (increased)
+208 (increased)
+210 (increased)
+200 (decreased)
+207 (increased)
+240 (increased)
+269 (increased)
+260 (decreased)
+263 (increased)</code></pre>
+<p>In this example, there are 7 measurements that are larger than the previous measurement.</p>
+<p>How many measurements are larger than the previous measurement?</p>
+<section id="part-1---planning-the-solution" class="level3">
+<h3 class="anchored" data-anchor-id="part-1---planning-the-solution">Part 1 - Planning the solution</h3>
+<p>Draw a program flow map to show how you plan to solve the problem. I used excalidraw.com to draw the maps in the book.</p>
+<p>Export your map to a png and include it here</p>
+<p><img src="program-flow-map.png" class="img-fluid"></p>
 </section>
-<section id="debugging-practice" class="level2">
-<h2 class="anchored" data-anchor-id="debugging-practice">Debugging practice</h2>
-<p>Look at the data frame below, which contains 3 columns: <code>Name</code>, <code>Salary</code>, and <code>Hire.Year</code>. You’ve read in this data from the <a href="https://srvanderplas.github.io/stat151-homework/3-data.tsv">data file online</a> and ideally, you want to plot <code>Hire.Year</code> on the x-axis and <code>Salary</code> on the y-axis (code to do this is provided).</p>
-<p>Unfortunately, the data isn’t reading in properly. Identify the problem, propose a solution, and try to implement your solution using functions on the R reference card.</p>
-<p>Some things you may want to consider:</p>
-<ul>
-<li><code>gsub</code></li>
-<li>You can access columns in a data frame using <code>$</code>: <code>df$col1</code> will get you <code>col1</code> of the <code>df</code> object. (We will talk about data frames more next week, but for now, just try to use them)</li>
-<li>You can access items in a vector using <code>[]</code>: <code>x[1]</code> will get you the first item in <code>x</code></li>
-</ul>
-<p>Note: You should be able to <strong>identify</strong> the problem given what you know about R from this chapter. You may not be able to implement a solution without some additional research, so if you don’t get that far that’s ok.</p>
+<section id="part-2---writing-the-code" class="level3">
+<h3 class="anchored" data-anchor-id="part-2---writing-the-code">Part 2 - Writing the code</h3>
+<p>You have two files, <code>hw4data-r.txt</code> and <code>hw4data-py.txt</code>. I have provided you with code to read the data in from these files (if they aren’t in your current working directory, run the chunk in the Set-up section, which creates the files).</p>
+<section id="r" class="level4">
+<h4 class="anchored" data-anchor-id="r">R</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This line reads in a tab-separated data file with a header naming the columns</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>salary <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"https://srvanderplas.github.io/stat151-homework/3-data.tsv"</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">header =</span> T)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># This code plots labels for each individual at location (x, y)</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(salary, <span class="fu">aes</span>(<span class="at">x =</span> Hire.Year, <span class="at">y =</span> Salary, <span class="at">label =</span> Name)) <span class="sc">+</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="03-data-types_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"hw5data-r.txt"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Solve the problem below this comment</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>nx <span class="ot">&lt;-</span> <span class="cn">NA</span> <span class="co"># Your answer should be stored in the nx variable to make the line below this chunk work</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This displays the salary object</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>salary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            Name     Salary Hire.Year
-1  Michael Scott $67,872.00      1995
-2 Dwight Schrute      54000      2001
-3     Pam Beesly      26309      2003
-4    Jim Halpert      59083      1998</code></pre>
-</div>
-</div>
-<hr>
-<p>The problem with the data is:</p>
-<p>Here is how I solved the problem:</p>
+<p>There are NA measurements larger than the previous measurement.</p>
+</section>
+<section id="python" class="level4">
+<h4 class="anchored" data-anchor-id="python">Python</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your implementation code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.loadtxt(<span class="st">'hw5data-py.txt'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Solve the problem below this comment</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>nx2 <span class="op">=</span> <span class="dv">0</span> <span class="co"># your answer should be stored in the nx variable to make the line below this chunk work</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>There are 0 measurements larger than the previous measurement.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

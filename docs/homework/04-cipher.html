@@ -9,7 +9,7 @@
 <meta name="author" content="Your Name">
 <meta name="dcterms.date" content="2023-02-24">
 
-<title>Stat 151 - Homework 4: Vectors and Control Structures</title>
+<title>Stat 151 - Homework 4: Cipher</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -171,12 +171,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">Set-Up</a></li>
-  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation">Navigation</a>
-  <ul class="collapse">
-  <li><a href="#part-1---planning-the-solution" id="toc-part-1---planning-the-solution" class="nav-link" data-scroll-target="#part-1---planning-the-solution">Part 1 - Planning the solution</a></li>
-  <li><a href="#part-2---writing-the-code" id="toc-part-2---writing-the-code" class="nav-link" data-scroll-target="#part-2---writing-the-code">Part 2 - Writing the code</a></li>
-  </ul></li>
+  <li><a href="#part-one-setup" id="toc-part-one-setup" class="nav-link active" data-scroll-target="#part-one-setup">Part One: Setup</a></li>
+  <li><a href="#part-two-decoding-the-secret-message." id="toc-part-two-decoding-the-secret-message." class="nav-link" data-scroll-target="#part-two-decoding-the-secret-message.">Part Two: Decoding the secret message.</a></li>
+  <li><a href="#part-3-the-secret-message" id="toc-part-3-the-secret-message" class="nav-link" data-scroll-target="#part-3-the-secret-message">Part 3: The secret message!</a></li>
   </ul>
 </nav>
     </div>
@@ -185,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 4: Vectors and Control Structures</h1>
+<h1 class="title">Homework 4: Cipher</h1>
 </div>
 
 
@@ -212,95 +209,125 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<p>This assignment is modified from the <a href="https://github.com/kbodwin/decodeR">decodeR</a> exercises by Kelly Bodwin and Allison Theobold.</p>
+<p>Once you finish this assignment, think about how you might decode the message in python. For +5 extra credit, write python code that decodes the message, following the outline of the R code you’ve already written.</p>
+<p>In this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.</p>
+<p>Some advice:</p>
+<ul>
+<li>Work with those around you</li>
+<li>Google is your friend! If an error is confusing, copy it into Google and see what other people are saying. If you don’t know how to do something, search for it.</li>
+<li>Just because there is no error message doesn’t mean everything went smoothly. Use the console to check each step and make sure you have accomplished what you wanted to accomplish.</li>
+</ul>
+<section id="part-one-setup" class="level2">
+<h2 class="anchored" data-anchor-id="part-one-setup">Part One: Setup</h2>
+<p>Each of the following R chunks will cause an error and/or do the desired task incorrectly.<br>
+Find the mistake, and correct it to complete the intended action.</p>
+<p><strong>For each error, write 1-2 sentences to reflect on what the mistake was and how you found it and fixed it.</strong></p>
+<ol type="1">
+<li>Create vectors containing the upper case letters, lower case letters, and some punctuation marks.</li>
+</ol>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lower_case <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span>, <span class="st">"f"</span>, <span class="st">"g"</span>, <span class="st">"h"</span>, <span class="st">"i"</span>, <span class="st">"j"</span>, <span class="st">"k"</span>, <span class="st">"l"</span>, <span class="st">"m"</span>, <span class="st">"n"</span>, <span class="st">"o"</span>, <span class="st">"p"</span>, <span class="st">"q"</span>, <span class="st">"r"</span>, <span class="st">"s"</span>, <span class="st">"t"</span>, <span class="st">"u"</span>, <span class="st">"v"</span>, <span class="st">"w"</span>, <span class="st">"x"</span>, <span class="st">"y"</span>, <span class="st">"z"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>upper_case <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>, <span class="st">"G"</span>, <span class="st">"H"</span> <span class="st">"I"</span>, <span class="st">"J"</span>, <span class="st">"K"</span>, <span class="st">"L"</span>, <span class="st">"M"</span>, <span class="st">"N"</span>, <span class="st">"O"</span>, <span class="st">"P"</span>, <span class="st">"Q"</span>, <span class="st">"R"</span>, <span class="st">"S"</span>, <span class="st">"T"</span>, <span class="st">"U"</span>, <span class="st">"V"</span>, <span class="st">"W"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>punctuation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"."</span>, <span class="st">","</span>, <span class="st">"!"</span>, <span class="st">"?"</span>, <span class="st">"'"</span>, <span class="st">""", "</span>(<span class="st">", "</span>)<span class="st">", "</span> <span class="st">", "</span><span class="sc">-</span><span class="st">", "</span>;<span class="st">", "</span><span class="sc">:</span><span class="st">")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:3:56: unexpected string constant
+2: 
+3: upper_case &lt;- c("A", "B", "C", "D", "E", "F", "G", "H" "I"
+                                                          ^</code></pre>
 </div>
-<p><a href="https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/04-vectors.qmd">Download the starter qmd file here</a></p>
-<section id="set-up" class="level2">
-<h2 class="anchored" data-anchor-id="set-up">Set-Up</h2>
-<p>Running the following chunk will generate two files and save them to your current working directory.</p>
+</div>
+<ol start="2" type="1">
+<li>Make one long vector containing all the symbols.</li>
+</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">24038243</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a vector of data for the problem</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="fl">1e6</span>))</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="fl">1e6</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># write it to a file</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="fu">as.character</span>(x), <span class="at">con =</span> <span class="st">"hw4data-r.txt"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="fu">as.character</span>(y), <span class="at">con =</span> <span class="st">"hw4data-py.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_symbols <span class="ot">&lt;-</span> <span class="fu">cbind</span>(lower_case, upper_case, punctuation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in cbind(lower_case, upper_case, punctuation): object 'lower_case' not found</code></pre>
 </div>
-</section>
-<section id="navigation" class="level2">
-<h2 class="anchored" data-anchor-id="navigation">Navigation</h2>
-<p>The following problem is inspired by the first problem in the 2021 Advent of Code challenge.</p>
-<p>You’re minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean! Before you know it, you’re inside a submarine the Elves keep ready for situations like this.</p>
-<p>As the submarine drops below the surface of the ocean, it automatically performs a sonar sweep of the nearby sea floor. On a small screen, the sonar sweep report (your puzzle input) appears: each line is a measurement of the sea floor depth as the sweep looks further and further away from the submarine.</p>
-<p>For example, suppose you had the following report:</p>
-<pre><code>199
-200
-208
-210
-200
-207
-240
-269
-260
-263</code></pre>
-<p>This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.</p>
-<p>The first order of business is to figure out how quickly the depth increases, just so you know what you’re dealing with - you never know if the keys will get carried into deeper water by an ocean current or a fish or something.</p>
-<p>To do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.) In the example above, the changes are as follows:</p>
-<pre><code>199 (N/A - no previous measurement)
-200 (increased)
-208 (increased)
-210 (increased)
-200 (decreased)
-207 (increased)
-240 (increased)
-269 (increased)
-260 (decreased)
-263 (increased)</code></pre>
-<p>In this example, there are 7 measurements that are larger than the previous measurement.</p>
-<p>How many measurements are larger than the previous measurement?</p>
-<section id="part-1---planning-the-solution" class="level3">
-<h3 class="anchored" data-anchor-id="part-1---planning-the-solution">Part 1 - Planning the solution</h3>
-<p>Draw a program flow map to show how you plan to solve the problem. I used excalidraw.com to draw the maps in the book.</p>
-<p>Export your map to a png and include it here</p>
-<p><img src="program-flow-map.png" class="img-fluid"></p>
-</section>
-<section id="part-2---writing-the-code" class="level3">
-<h3 class="anchored" data-anchor-id="part-2---writing-the-code">Part 2 - Writing the code</h3>
-<p>You have two files, <code>hw4data-r.txt</code> and <code>hw4data-py.txt</code>. I have provided you with code to read the data in from these files (if they aren’t in your current working directory, run the chunk in the Set-up section, which creates the files).</p>
-<section id="r" class="level4">
-<h4 class="anchored" data-anchor-id="r">R</h4>
+</div>
+<ol start="3" type="1">
+<li>Turn the <code>my_symbols</code> vector into a data frame, with the variable name “Symbol”</li>
+</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"hw4data-r.txt"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Solve the problem below this comment</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>nx <span class="ot">&lt;-</span> <span class="cn">NA</span> <span class="co"># Your answer should be stored in the nx variable to make the line below this chunk work</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>my_symbols <span class="ot">&lt;-</span> <span class="fu">dataframe</span>(my_symbols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in dataframe(my_symbols): could not find function "dataframe"</code></pre>
 </div>
-<p>There are NA measurements larger than the previous measurement.</p>
-</section>
-<section id="python" class="level4">
-<h4 class="anchored" data-anchor-id="python">Python</h4>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(my_symbols) <span class="ot">=</span> Symbol</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in eval(expr, envir, enclos): object 'Symbol' not found</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Find the total number of symbols we have in our data frame.</li>
+</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.loadtxt(<span class="st">'hw4data-py.txt'</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Solve the problem below this comment</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>nx2 <span class="op">=</span> <span class="dv">0</span> <span class="co"># your answer should be stored in the nx variable to make the line below this chunk work</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>len <span class="ot">&lt;-</span> <span class="fu">length</span>(my_symbols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in eval(expr, envir, enclos): object 'my_symbols' not found</code></pre>
 </div>
-<p>There are 0 measurements larger than the previous measurement.</p>
+</div>
+<ol start="5" type="1">
+<li>Create a new variable in your dataframe that assigns a number to each symbol.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_symbols%Num <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>len</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:1:11: unexpected input
+1: my_symbols%Num &lt;- 1:len
+              ^</code></pre>
+</div>
+</div>
+</section>
+<section id="part-two-decoding-the-secret-message." class="level2">
+<h2 class="anchored" data-anchor-id="part-two-decoding-the-secret-message.">Part Two: Decoding the secret message.</h2>
+<p>This chunk will load up the encoded secret message as a vector:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>top_secret <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/04_Secret_Code"</span>, <span class="at">header =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>V1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>By altering this top secret set of numbers, you will be able to create a message. Write your own code to complete the steps below.</p>
+<ol type="1">
+<li>Add 14 to every number.</li>
+<li>Multiply every number by 18, then subtract 257.</li>
+<li>Exponentiate every number. (That is, do e<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.)</li>
+<li>Square every number.</li>
+</ol>
+<p><strong>Checkpoint:</strong> Headquarters has informed you that at this stage of decoding, there should be 352 numbers in the secret message that are below 17.</p>
+<ol start="5" type="1">
+<li>Turn your vector of numbers into a matrix with 5 columns.</li>
+<li>Separately from your top secret numbers, create a vector of all the even numbers between 1 and 382. Name it “evens”. That is, “evens” should contain 2, 4, 6, 8 …, 382.</li>
+<li>Subtract the “evens” vector from the first column of your secret message matrix.</li>
+<li>Subtract 100 from all numbers in the 18-24th rows of the 3rd column.</li>
+<li>Multiply all numbers in the 4th and 5th column by 2.</li>
+<li>Turn your matrix back into a vector.</li>
+</ol>
+<p><strong>Checkpoint:</strong> Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are below 100.</p>
+<ol start="11" type="1">
+<li>Take the square root of all numbers in indices 38 to 465.</li>
+<li>Round all numbers to the nearest whole number.</li>
+<li>Replace all instances of the number 39 with 20.</li>
+</ol>
+<p><strong>Checkpoint:</strong> Headquarters has informed you that your final message should have 344 even numbers.</p>
+</section>
+<section id="part-3-the-secret-message" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-the-secret-message">Part 3: The secret message!</h2>
+<p>Use your final vector of numbers as indices for <code>my_symbols</code> to discover the final message!<br>
+Google the first line of this message, if you do not recognize it, to see what it is.</p>
+<p>Write 3-4 sentences about what you learned from this investigation. What problems did you encounter, and how did you solve them?</p>
 
 
 </section>
-</section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>number<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

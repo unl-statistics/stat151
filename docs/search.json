@@ -81,7 +81,7 @@
     "href": "homework/04-cipher.html",
     "title": "Homework 4: Cipher",
     "section": "",
-    "text": "This assignment is modified from the decodeR exercises by Kelly Bodwin and Allison Theobold.\nOnce you finish this assignment, think about how you might decode the message in python. For +5 extra credit, write python code that decodes the message, following the outline of the R code you’ve already written.\nIn this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.\nSome advice:"
+    "text": "Download the starter qmd file here\nThis assignment is modified from the decodeR exercises by Kelly Bodwin and Allison Theobold.\nOnce you finish this assignment, think about how you might decode the message in python. For +5 extra credit, write python code that decodes the message, following the outline of the R code you’ve already written.\nIn this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.\nSome advice:"
   },
   {
     "objectID": "homework/04-cipher.html#part-one-setup",

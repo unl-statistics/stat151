@@ -11,7 +11,7 @@ output:
 library(reticulate)
 ```
 
-[Download the starter qmd file here](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/04-vectors.qmd)
+[Download the starter qmd file here](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/05-vectors.qmd)
 
 ## Set-Up
 
@@ -24,8 +24,8 @@ x <- round(runif(100, 0, 1e6))
 y <- round(runif(100, 0, 1e6))
 
 # write it to a file
-writeLines(as.character(x), con = "hw4data-r.txt")
-writeLines(as.character(y), con = "hw4data-py.txt")
+writeLines(as.character(x), con = "hw5data-r.txt")
+writeLines(as.character(y), con = "hw5data-py.txt")
 ```
 
 ## Navigation
@@ -92,7 +92,7 @@ You have two files, `hw4data-r.txt` and `hw4data-py.txt`. I have provided you wi
 #### R 
 
 ```{r}
-x <- readLines("hw4data-r.txt")
+x <- readLines("hw5data-r.txt")
 
 ## Solve the problem below this comment
 
@@ -106,7 +106,7 @@ There are `r nx` measurements larger than the previous measurement.
 
 ```{python}
 import numpy as np
-x = np.loadtxt('hw4data-py.txt')
+x = np.loadtxt('hw5data-py.txt')
 
 ## Solve the problem below this comment
 

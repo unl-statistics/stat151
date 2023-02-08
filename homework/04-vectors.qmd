@@ -1,7 +1,7 @@
 ---
 title: "Homework 4: Vectors and Control Structures"
 author: "Your Name"
-date: "Due: February 18, 2022"
+date: "Due: February 24, 2022"
 output: 
   html_document:
     self_contained: yes
@@ -11,7 +11,7 @@ output:
 library(reticulate)
 ```
 
-[Download the starter qmd file here](4-vectors.qmd)
+[Download the starter qmd file here](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/04-vectors.qmd)
 
 ## Set-Up
 

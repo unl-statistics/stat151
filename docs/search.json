@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Stat 151",
     "section": "",
-    "text": "Course Materials\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMar 3, 2023\n\n\nHomework 5: Vectors and Control Structures\n\n\nYour Name\n\n\n\n\nFeb 24, 2023\n\n\nHomework 4: Cipher\n\n\nYour Name\n\n\n\n\nFeb 17, 2023\n\n\nHomework 3: Basic Data Types\n\n\nYour Name\n\n\n\n\nFeb 10, 2023\n\n\nHomework 2: Finding Your Way in R and Python\n\n\nYour Name\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\nJan 25, 2023\n\n\nStat 151 - Introduction\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nExams\nComing soon!"
+    "text": "Course Materials\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMar 9, 2023\n\n\nExam 1\n\n\nYour Name\n\n\n\n\nMar 3, 2023\n\n\nHomework 5: Vectors and Control Structures\n\n\nYour Name\n\n\n\n\nFeb 24, 2023\n\n\nHomework 4: Cipher\n\n\nYour Name\n\n\n\n\nFeb 17, 2023\n\n\nHomework 3: Basic Data Types\n\n\nYour Name\n\n\n\n\nFeb 10, 2023\n\n\nHomework 2: Finding Your Way in R and Python\n\n\nYour Name\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\nJan 25, 2023\n\n\nStat 151 - Introduction\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nExams\nComing soon!"
   },
   {
     "objectID": "homework/01-scripts-notebooks.html",
@@ -208,5 +208,47 @@
     "title": "Stat 151 - Introduction",
     "section": "Next Time",
     "text": "Next Time\nWe’ll work on Scripts and Notebooks\nPlease Read before class: - Computer Basics - Scripts and Notebooks - RStudio’s Interface"
+  },
+  {
+    "objectID": "exams/midterm.html",
+    "href": "exams/midterm.html",
+    "title": "Exam 1",
+    "section": "",
+    "text": "Download the starter qmd file here"
+  },
+  {
+    "objectID": "exams/midterm.html#instructions",
+    "href": "exams/midterm.html#instructions",
+    "title": "Exam 1",
+    "section": "Instructions",
+    "text": "Instructions\nCompleting the exam in both languages will earn you 20% extra credit on the exam and will also prove that you’re kicking butt in this class.\n\nCreate a folder for this exam on your computer.\nSave this file into that folder.\nWhen you are finished with the exam, compile the document. Make sure all of your code runs!\nUpload a zip file of your work and any necessary file dependencies to Canvas."
+  },
+  {
+    "objectID": "exams/midterm.html#ground-rules",
+    "href": "exams/midterm.html#ground-rules",
+    "title": "Exam 1",
+    "section": "Ground Rules",
+    "text": "Ground Rules\n\nYou may use the textbook and the internet (but the normal rules apply - you must be able to explain your answer!)\nYou may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc.\nYou may ask clarifying questions of Dr. Vanderplas by email/zoom or in person\nYou may use R or Python for any of these tasks, but your code must be reproducible - I must be able to run your quarto file on my machine. I have provided R chunks in the correct locations in this file - change them to Python if you wish.\nYou should have at least one code chunk for each numbered task below."
+  },
+  {
+    "objectID": "exams/midterm.html#dataset",
+    "href": "exams/midterm.html#dataset",
+    "title": "Exam 1",
+    "section": "Dataset",
+    "text": "Dataset\nThe data for this exam are taken from the happy dataset in the classdata R package. I’ve exported the data to CSV for you at this link: https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv\n\nDescription\nThe data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:\n\n\nFormat\nA data frame with 62466 rows and 11 variables\n\n\nDetails\n\nyear. year of the response, 1972 to 2018.\nage. age in years: 18–89 (89 stands for all 89 year olds and older).\ndegree. highest education: lt high school, high school, junior college, bachelor, graduate.\nfinrela. how is your financial status compared to others: far below, below average, average, above average, far above.\nhappy. happiness: very happy, pretty happy, not too happy.\nhealth. health: excellent, good, fair, poor.\nmarital. marital status: married, never married, divorced, widowed, separated.\nsex. sex: female, male.\npolviews. from extremely conservative to extremely liberal.\npartyid. party identification: strong republican, not str republican, ind near rep, independent, ind near dem, not str democrat, strong democrat, other party.\nwtssall. probability weight. 0.39–8.74"
+  },
+  {
+    "objectID": "exams/midterm.html#tasks",
+    "href": "exams/midterm.html#tasks",
+    "title": "Exam 1",
+    "section": "Tasks",
+    "text": "Tasks\n\nRead in the data and create a data frame that you will work with for this exam.\nCreate a new column variable, decade, in your data frame.\n\n\nYou will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or functions that will perform the operation you want.\nfloor() and math.floor() in R and python respectively are good places to start.\nCreate a scatterplot (use geom_point) of your happy year vs decade to show that your approach succeeded.\n\n\nCreate a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time.\nNote: You may have to pass an argument to the mean function to tell it to exclude missing values from the calculation, such as na.rm or skipna. Or, you can remove the NAs from happy using a function like na.omit or dropna, but be careful to only drop rows with an NA in variables we care about, like happy or year.\n\nThe code below provides an example of how to create a summary dataset and handle NAs in R and python. You may modify this code to help you answer part 3.\n\n# Create sample data\ndf <- data.frame(x = c(rnorm(100, 10), rnorm(100, 20)),\n                 y = rep(c(\"Group 1\", \"Group 2\"), each = 100))\n\ndf_means <- data.frame(y = NULL, mean = NULL)\n\n# For each y group, what is the mean of x?\nfor (i in unique(df$y)) {\n  sub_df <- subset(df, y == i)\n  df_means <- rbind(df_means, \n                    data.frame(y = i, mean = mean(sub_df$x, na.rm = T)))\n}\n\ndf_means\n##         y      mean\n## 1 Group 1  9.809909\n## 2 Group 2 20.031190\n\n# Demonstration of na.rm\nmean(c(NA, 1, 2, 3), na.rm = T) # Remove NAs\n## [1] 2\nmean(c(NA, 1, 2, 3), na.rm = F) # Don't remove NAs\n## [1] NA\n\n\nimport pandas as pd\nimport numpy as np\n\n# Create a new data frame\ndf = pd.DataFrame({\n  'y': np.repeat(['Group1', 'Group2'], (100, 100)), \n  'x': np.concatenate((np.random.normal(loc = 10, size = 100), np.random.normal(loc = 12, size = 100)), axis = None)\n  })\n\n# Create an empty dataframe\ndf_means = pd.DataFrame(columns = ['y', 'mean'])\n\n# For each age, how many values?\nfor i in np.unique(df.y):\n  # Create the subset\n  df_sub = df.loc[df.y == i]\n  # Drop NAs from the data frame\n  # This step isn't necessary because mean() uses skipna = T by default\n  # df_sub = df_sub.dropna(subset = ['x', 'y']) \n  # Add a new row to the end of df_means\n  df_means.loc[len(df_means.index)] = [i, df_sub.x.mean()]\n\n\n# Demonstrating skipna parameter of mean\npd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = True)\n## 2.0\npd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = False)\n## nan"
+  },
+  {
+    "objectID": "exams/midterm.html#solutions",
+    "href": "exams/midterm.html#solutions",
+    "title": "Exam 1",
+    "section": "Solutions",
+    "text": "Solutions\nCopy the list of tasks here and put your code for each task below the task description. Your code should be well commented.\nIf you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.\nIf your code does not compile, add , error = T to the chunk header so that the rest of the document will still compile.\n\nRead in the data and create a data frame\n\n\n\n\n\nCreate a new variable, decade\n\n\n\n\n\n\nHappy People per Year"
   }
 ]

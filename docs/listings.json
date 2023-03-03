@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/exams/midterm.html",
       "/homework/05-vectors.html",
       "/homework/04-cipher.html",
       "/homework/03-data-types.html",

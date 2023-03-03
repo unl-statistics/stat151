@@ -6,6 +6,7 @@ project:
     - syllabus.qmd
     - homework/*.qmd
     - slides/*.qmd
+    - exams/midterm.qmd
 website:
   title: "Stat 151"
   navbar:

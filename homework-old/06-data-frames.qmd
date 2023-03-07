@@ -2,6 +2,7 @@
 title: "Homework 6: Data Frames"
 author: "Your Name"
 date: "Due: March 4, 2022"
+categories: hw
 format:
   html:
     theme: default

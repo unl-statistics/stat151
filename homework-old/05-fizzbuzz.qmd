@@ -2,6 +2,7 @@
 title: "Homework 5: FizzBuzz"
 author: "Your Name"
 date: "Due: February 25, 2022"
+categories: hw
 format:
   html:
     theme: default

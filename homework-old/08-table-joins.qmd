@@ -2,6 +2,7 @@
 title: "Homework 8: Joins and Summaries"
 author: "Your Name"
 format: html
+categories: hw
 ---
 
 This week, you'll be using table joins to solve a murder mystery.

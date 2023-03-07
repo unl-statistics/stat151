@@ -2,6 +2,7 @@
 title: "Homework 10: Joins and Summaries"
 author: "Your Name"
 format: html
+categories: hw
 ---
 
 ## Swiss Banknotes

@@ -13,11 +13,7 @@ listing:
 ---
 
 # Course Materials
-
+Use the categories on the right to filter the materials.
 
 ::: {#hwlst}
 :::
-
-# Exams
-
-Coming soon!

@@ -2,6 +2,7 @@
 title: "Homework 5: Vectors and Control Structures"
 author: "Your Name"
 date: "Due: March 3, 2023"
+categories: hw
 output: 
   html_document:
     self_contained: yes

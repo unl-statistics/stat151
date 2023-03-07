@@ -2,6 +2,7 @@
 title: "Exam 1"
 author: "Your Name"
 date: "March 9, 2023"
+categories: exam
 format:
   html:
     theme: default

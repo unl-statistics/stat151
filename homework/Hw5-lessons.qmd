@@ -1,0 +1,136 @@
+---
+title: "Lessons from Homework 5"
+date: "March 7, 2023"
+categories: notes
+format: 
+  html:
+    number-sections: true
+    toc: true
+---
+
+## Compile your file first
+
+Also, check your compiled file before you submit to make sure it looks the way you want it.
+
+If you want to be really sure it works, copy your qmd file to a different folder and compile that... for now, that's the best way to check that it will work on my machine.
+
+## Images
+Image links must be to the *image url*, not to the imgur *page url*
+
+![caption text goes here](https://i.imgur.com/PKushbR.png){width=50%}
+
+Code for this image:
+```
+![caption text goes here](https://i.imgur.com/PKushbR.png){width=50%}
+```
+
+You can get this url by right-clicking on the image on the Imgur page and then selecting "Copy image address":
+
+![](images/image-387739091.png){width="25%"}
+
+Other things that don't work:
+
+- Including (local) file paths directly (user names changed to protect the innocent):
+    - `\C:\Users\person\Documents\Flow chart HW5.png`
+    - `C:\Users\person\Downloads\Stat 151\Excalidraw.png`
+- Including (local) file paths in correct image syntax    
+Explanation: this works on your machine, but won't work on mine because I don't have your file on my machine. You could zip the PNG file and the qmd file up together and submit that, I guess, but it's easier to follow the directions about imgur (in my opinion).
+    - `![](program-flow-map.png)`
+
+
+## YAML metadata
+YAML metadata is the stuff between `---` at the top of your document.
+
+- You should have only one set of metadata in your document.
+
+In this example, you should delete the first set of YAML metadata and only include the second set that has the proper information for the assignment.
+
+````
+---
+title: "person HW 5"
+format: html
+editor: visual
+---
+
+---
+title: "Homework 5: Vectors and Control Structures"
+author: "person"
+date: "Due: March 3, 2023"
+output: 
+  html_document:
+    self_contained: yes
+---
+
+````
+
+- YAML metadata indentation matters
+
+This works:
+
+````
+output: 
+  html_document:
+    self_contained: yes
+````
+
+This doesn't:
+
+````
+output: html_document
+  self_contained: yes
+````
+
+
+## Quarto default template
+
+It's totally fine to delete the default quarto information that looks like this from the bottom/top of your file.
+
+It's also totally fine to delete the YAML metadata that comes with that quarto default template. I usually say "Create blank document" or switch to source mode and Ctrl-A (select all) before Ctrl-V (paste) to remove everything that RStudio gives you by default.
+
+````
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{{r}}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{{r}}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+````
+
+## Print only necessary output
+
+I would prefer if you didn't print out the values of a vector in the code chunks when you submit your file. Comment those out - it's useful to have them for debugging, but you don't need them for presentation purposes.
+
+```{r, echo = F}
+set.seed(24038243)
+# Generate a vector of data for the problem
+x <- round(runif(100, 0, 1e6))
+```
+
+What to do:
+```{r}
+x <- as.numeric(x)
+# x # Commented out, so you can uncomment to debug if necessary
+```
+
+
+What not to do:
+```{r}
+x <- as.numeric(x)
+x
+```
+

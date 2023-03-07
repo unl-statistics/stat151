@@ -81,6 +81,30 @@ output: html_document
 ````
 
 
+This works:
+
+````
+---
+title: "Homework 5: Vectors and Control Structures"
+date: "Due: March 3, 2023"
+output: 
+  html_document:
+    self_contained: yes
+---
+````
+
+This doesn't:
+
+````
+---
+  title: "Homework 5: Vectors and Control Structures"
+date: "Due: March 3, 2023"
+output: 
+  html_document:
+  self_contained: yes
+---
+````
+
 ## Quarto default template
 
 It's totally fine to delete the default quarto information that looks like this from the bottom/top of your file.

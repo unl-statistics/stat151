@@ -1,7 +1,7 @@
 ---
 title: "Homework 6: FizzBuzz"
 author: "Your Name"
-date: "Due: March 24, 2022"
+date: "Due: March 24, 2023"
 categories: hw
 format:
   html:

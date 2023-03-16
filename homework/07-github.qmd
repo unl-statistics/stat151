@@ -1,0 +1,10 @@
+---
+title: "Homework 7: Git and Github"
+date: March 31, 2023
+author: Homework
+categories: HW
+---
+
+Note: This assignment must be submitted in github classroom.
+
+{{< include ../homework-repos/07-github/README.md >}}

@@ -1,8 +1,8 @@
 ---
 title: "Homework 7: Git and Github"
 date: March 31, 2023
-author: Homework
-categories: HW
+author: Your Name
+categories: hw
 ---
 
 Note: This assignment must be submitted in github classroom.

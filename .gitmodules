@@ -4,3 +4,6 @@
 [submodule "homework-repos/08-graphics"]
 	path = homework-repos/08-graphics
 	url = git@github.com:unl-stat151/08-graphics.git
+[submodule "homework-repos/09-data-cleaning"]
+	path = homework-repos/09-data-cleaning
+	url = git@github.com:unl-stat151/09-data-cleaning.git

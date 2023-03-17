@@ -1,0 +1,15 @@
+---
+title: "Homework 8: Graphics"
+author: "Your Name"
+date: "Due: April 7, 2023"
+categories: hw
+format:
+  html:
+    theme: default
+---
+
+
+Note: This assignment must be submitted in github classroom.
+
+{{< include ../homework-repos/08-graphics/index.qmd >}}
+

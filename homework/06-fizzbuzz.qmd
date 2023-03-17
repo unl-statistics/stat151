@@ -11,69 +11,107 @@ format:
 [Download the starter qmd file here](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/06-fizzbuzz.qmd)
 
 
-## FizzBuzz
+# FizzBuzz
 
 The "FizzBuzz Test" is a famous programming interview question. 
+
 > Write a program that prints the numbers from 1 to 30. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz"
 
 
-### Program Flow Map
+
+## Program Flow Map -- Pre-Work
 
 Create a program flow map (on paper, or using an online tool of your choice, such as Excalidraw) showing how FizzBuzz should be evaluated for a given integer x. 
 You do not need to worry about the for loop in this program flow map. 
 Upload your program flow map image to imgur.com and provide an image link here using markdown image syntax. 
 You will need to link directly to the image (with image file extension) - right click on your uploaded image and choose 'copy image address' to get the proper link.
 
-![Substitute picture of a cat](https://i.imgur.com/Ejx14pT.jpeg)
+![Substitute picture of a cat](https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_960_720.jpg)
 
-Can you think of another way to solve FizzBuzz using a different logical structure? 
-What do you need to know how to do in R/python for each solution? 
-Do you need to know how to concatenate strings? 
-Convert something from an integer to a string? 
-Just output stuff to the command line? 
+A few questions to consider:
+
+- Can you think of another way to solve FizzBuzz using a different logical structure? 
+- What do you need to know how to do in R/python for each solution? 
+    - Do you need to know how to concatenate strings? 
+    - Convert something from an integer to a string? 
+    - Output stuff to the command line? 
+
 Thinking through these requirements can help you decide which solution is the simplest and/or best. 
 
 List out the requirements of the solution in your program flow map here:
 
 
-### R Code
+## Fizzbuzz for one
 
-In the R chunk below, write code which will solve this problem using a for loop that goes from 1 to 30.
+In the chunk below, write code which will solve this problem for a single number, x. You should be able to change only the value of x and get the correct answer.
+
+(Do this in R or python - just pick a language for this assignment. If you choose python, just change the chunk types below.)
 
 ```{r fizzbuzz-logic}
+x = 20
+
+# Your code goes here
+
+```
+
+
+## Fizzbuzz in loops
+
+In the chunk below, write code which will solve this problem using a for loop that goes from 1 to 30.
+Store the result of each of the 30 numbers in a character vector instead of printing it out to the command line.
+
+```{r fizzbuzz-loop}
 # R code goes here
 
 ```
 
 
-Each logical comparison can take some time to evaluate. 
-How many logical comparisons are evaluated in your for loop? 
-Can you count them up? 
-For instance, if your if-elseif-else statement is TRUE on the first if statement, then the second logical comparison is not evaluated, but if it is FALSE for the first comparison, then the second comparison does get evaluated. 
-Thinking about efficiency is one way to evaluate whether code is well-written or not.
 
-Number of logical comparisons:
+## Fizzbuzz in a function
+
+Write a FizzBuzz function named `fizzbuzz1`. 
+Your function should take a single number and **return** (not print out) a single string evaluating the number that was passed in. 
+Use input validation to ensure that you are given a number, and provide a useful error if you are not given a number as the function argument.
 
 
-### Python Code
+```{r fizzbuzz-function}
+# Your code goes here
 
-In the python chunk below, write code which will solve this problem using a for loop that goes from 1 to 30, using the same logic that you used in the R chunk above.
 
-```{python same-logic-as-r}
-# Python code goes here
 
 ```
 
+This code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!
 
-Challenge: Can you use string concatenation to produce a solution that has only 3 single if statements (that is, one that doesn't use nested if statements or an if-else construction)? 
-This may be different from the way you constructed your R solution, and that's good - there are many ways to solve this problem.
-
-```{python string-concatenation-logic}
-# Additional python code goes here
-
+```{r testing-fizzbuzz-function, error = T, collapse = T}
+fizzbuzz1(3)
+fizzbuzz1(5)
+fizzbuzz1(7)
+fizzbuzz1(15)
+fizzbuzz1(0)
+fizzbuzz1("this should fail")
 ```
 
 
-> Which set of Python code do you think is better? You can consider both machine efficiency (e.g. number of comparisons/operations evaluated) and maintainability (how easy it is to read, understand, and modify the code). 
+## Vectorized FizzBuzz
 
-Write a response here
+Write a FizzBuzz function named `fizzbuzz` that can handle a vector of numbers and will **return** (not print out) a vector of character/string values. 
+Check to ensure the input vector is numeric.
+
+Hint: You might use a loop and call your function from the previous part on each value in the vector. 
+
+```{r fizzbuzz-vector}
+
+
+```
+
+This code will test your fizzbuzz function. 
+Please make sure it runs as you expect it to run before you submit this file to Canvas!
+
+```{r testing-fizzbuzz-vector, error = T, collapse = T}
+fizzbuzz(c(0, 3, 5, 7, 11, 15))
+
+fizzbuzz(month.name) # this should fail
+
+```
+

@@ -1,3 +1,6 @@
 [submodule "homework-repos/07-github"]
 	path = homework-repos/07-github
 	url = git@github.com:stat850-unl/github-starter-course.git
+[submodule "homework-repos/08-graphics"]
+	path = homework-repos/08-graphics
+	url = git@github.com:unl-stat151/08-graphics.git

@@ -173,9 +173,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#fizzbuzz" id="toc-fizzbuzz" class="nav-link active" data-scroll-target="#fizzbuzz">FizzBuzz</a>
   <ul class="collapse">
-  <li><a href="#program-flow-map" id="toc-program-flow-map" class="nav-link" data-scroll-target="#program-flow-map">Program Flow Map</a></li>
-  <li><a href="#r-code" id="toc-r-code" class="nav-link" data-scroll-target="#r-code">R Code</a></li>
-  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python Code</a></li>
+  <li><a href="#program-flow-map-pre-work" id="toc-program-flow-map-pre-work" class="nav-link" data-scroll-target="#program-flow-map-pre-work">Program Flow Map – Pre-Work</a></li>
+  <li><a href="#fizzbuzz-for-one" id="toc-fizzbuzz-for-one" class="nav-link" data-scroll-target="#fizzbuzz-for-one">Fizzbuzz for one</a></li>
+  <li><a href="#fizzbuzz-in-loops" id="toc-fizzbuzz-in-loops" class="nav-link" data-scroll-target="#fizzbuzz-in-loops">Fizzbuzz in loops</a></li>
+  <li><a href="#fizzbuzz-in-a-function" id="toc-fizzbuzz-in-a-function" class="nav-link" data-scroll-target="#fizzbuzz-in-a-function">Fizzbuzz in a function</a></li>
+  <li><a href="#vectorized-fizzbuzz" id="toc-vectorized-fizzbuzz" class="nav-link" data-scroll-target="#vectorized-fizzbuzz">Vectorized FizzBuzz</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -216,44 +218,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p><a href="https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/06-fizzbuzz.qmd">Download the starter qmd file here</a></p>
-<section id="fizzbuzz" class="level2">
-<h2 class="anchored" data-anchor-id="fizzbuzz">FizzBuzz</h2>
-<p>The “FizzBuzz Test” is a famous programming interview question. &gt; Write a program that prints the numbers from 1 to 30. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”</p>
-<section id="program-flow-map" class="level3">
-<h3 class="anchored" data-anchor-id="program-flow-map">Program Flow Map</h3>
+<section id="fizzbuzz" class="level1">
+<h1>FizzBuzz</h1>
+<p>The “FizzBuzz Test” is a famous programming interview question.</p>
+<blockquote class="blockquote">
+<p>Write a program that prints the numbers from 1 to 30. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”</p>
+</blockquote>
+<section id="program-flow-map-pre-work" class="level2">
+<h2 class="anchored" data-anchor-id="program-flow-map-pre-work">Program Flow Map – Pre-Work</h2>
 <p>Create a program flow map (on paper, or using an online tool of your choice, such as Excalidraw) showing how FizzBuzz should be evaluated for a given integer x. You do not need to worry about the for loop in this program flow map. Upload your program flow map image to imgur.com and provide an image link here using markdown image syntax. You will need to link directly to the image (with image file extension) - right click on your uploaded image and choose ‘copy image address’ to get the proper link.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://i.imgur.com/Ejx14pT.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_960_720.jpg" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Substitute picture of a cat</figcaption><p></p>
 </figure>
 </div>
-<p>Can you think of another way to solve FizzBuzz using a different logical structure? What do you need to know how to do in R/python for each solution? Do you need to know how to concatenate strings? Convert something from an integer to a string? Just output stuff to the command line? Thinking through these requirements can help you decide which solution is the simplest and/or best.</p>
+<p>A few questions to consider:</p>
+<ul>
+<li>Can you think of another way to solve FizzBuzz using a different logical structure?</li>
+<li>What do you need to know how to do in R/python for each solution?
+<ul>
+<li>Do you need to know how to concatenate strings?</li>
+<li>Convert something from an integer to a string?</li>
+<li>Output stuff to the command line?</li>
+</ul></li>
+</ul>
+<p>Thinking through these requirements can help you decide which solution is the simplest and/or best.</p>
 <p>List out the requirements of the solution in your program flow map here:</p>
 </section>
-<section id="r-code" class="level3">
-<h3 class="anchored" data-anchor-id="r-code">R Code</h3>
-<p>In the R chunk below, write code which will solve this problem using a for loop that goes from 1 to 30.</p>
+<section id="fizzbuzz-for-one" class="level2">
+<h2 class="anchored" data-anchor-id="fizzbuzz-for-one">Fizzbuzz for one</h2>
+<p>In the chunk below, write code which will solve this problem for a single number, x. You should be able to change only the value of x and get the correct answer.</p>
+<p>(Do this in R or python - just pick a language for this assignment. If you choose python, just change the chunk types below.)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">20</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Each logical comparison can take some time to evaluate. How many logical comparisons are evaluated in your for loop? Can you count them up? For instance, if your if-elseif-else statement is TRUE on the first if statement, then the second logical comparison is not evaluated, but if it is FALSE for the first comparison, then the second comparison does get evaluated. Thinking about efficiency is one way to evaluate whether code is well-written or not.</p>
-<p>Number of logical comparisons:</p>
 </section>
-<section id="python-code" class="level3">
-<h3 class="anchored" data-anchor-id="python-code">Python Code</h3>
-<p>In the python chunk below, write code which will solve this problem using a for loop that goes from 1 to 30, using the same logic that you used in the R chunk above.</p>
+<section id="fizzbuzz-in-loops" class="level2">
+<h2 class="anchored" data-anchor-id="fizzbuzz-in-loops">Fizzbuzz in loops</h2>
+<p>In the chunk below, write code which will solve this problem using a for loop that goes from 1 to 30. Store the result of each of the 30 numbers in a character vector instead of printing it out to the command line.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Challenge: Can you use string concatenation to produce a solution that has only 3 single if statements (that is, one that doesn’t use nested if statements or an if-else construction)? This may be different from the way you constructed your R solution, and that’s good - there are many ways to solve this problem.</p>
+</section>
+<section id="fizzbuzz-in-a-function" class="level2">
+<h2 class="anchored" data-anchor-id="fizzbuzz-in-a-function">Fizzbuzz in a function</h2>
+<p>Write a FizzBuzz function named <code>fizzbuzz1</code>. Your function should take a single number and <strong>return</strong> (not print out) a single string evaluating the number that was passed in. Use input validation to ensure that you are given a number, and provide a useful error if you are not given a number as the function argument.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Additional python code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code goes here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<blockquote class="blockquote">
-<p>Which set of Python code do you think is better? You can consider both machine efficiency (e.g.&nbsp;number of comparisons/operations evaluated) and maintainability (how easy it is to read, understand, and modify the code).</p>
-</blockquote>
-<p>Write a response here</p>
+<p>This code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz1</span>(<span class="dv">3</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz1(3): could not find function "fizzbuzz1"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz1</span>(<span class="dv">5</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz1(5): could not find function "fizzbuzz1"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz1</span>(<span class="dv">7</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz1(7): could not find function "fizzbuzz1"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz1</span>(<span class="dv">15</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz1(15): could not find function "fizzbuzz1"</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz1</span>(<span class="dv">0</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz1(0): could not find function "fizzbuzz1"</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz1</span>(<span class="st">"this should fail"</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz1("this should fail"): could not find function "fizzbuzz1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="vectorized-fizzbuzz" class="level2">
+<h2 class="anchored" data-anchor-id="vectorized-fizzbuzz">Vectorized FizzBuzz</h2>
+<p>Write a FizzBuzz function named <code>fizzbuzz</code> that can handle a vector of numbers and will <strong>return</strong> (not print out) a vector of character/string values. Check to ensure the input vector is numeric.</p>
+<p>Hint: You might use a loop and call your function from the previous part on each value in the vector.</p>
+<div class="cell">
+
+</div>
+<p>This code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>, <span class="dv">15</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz(c(0, 3, 5, 7, 11, 15)): could not find function "fizzbuzz"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">fizzbuzz</span>(month.name) <span class="co"># this should fail</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in fizzbuzz(month.name): could not find function "fizzbuzz"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>

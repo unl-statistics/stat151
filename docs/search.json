@@ -355,5 +355,40 @@
     "title": "Exam 1",
     "section": "Solutions",
     "text": "Solutions\nCopy the list of tasks here and put your code for each task below the task description. Your code should be well commented.\nIf you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.\nIf your code does not compile, add , error = T to the chunk header so that the rest of the document will still compile.\n\nRead in the data and create a data frame\n\n\n\n\n\nCreate a new variable, decade\n\n\n\n\n\n\nHappy People per Year"
+  },
+  {
+    "objectID": "homework/06-fizzbuzz.html#program-flow-map-pre-work",
+    "href": "homework/06-fizzbuzz.html#program-flow-map-pre-work",
+    "title": "Homework 6: FizzBuzz",
+    "section": "Program Flow Map – Pre-Work",
+    "text": "Program Flow Map – Pre-Work\nCreate a program flow map (on paper, or using an online tool of your choice, such as Excalidraw) showing how FizzBuzz should be evaluated for a given integer x. You do not need to worry about the for loop in this program flow map. Upload your program flow map image to imgur.com and provide an image link here using markdown image syntax. You will need to link directly to the image (with image file extension) - right click on your uploaded image and choose ‘copy image address’ to get the proper link.\n\n\n\nSubstitute picture of a cat\n\n\nA few questions to consider:\n\nCan you think of another way to solve FizzBuzz using a different logical structure?\nWhat do you need to know how to do in R/python for each solution?\n\nDo you need to know how to concatenate strings?\nConvert something from an integer to a string?\nOutput stuff to the command line?\n\n\nThinking through these requirements can help you decide which solution is the simplest and/or best.\nList out the requirements of the solution in your program flow map here:"
+  },
+  {
+    "objectID": "homework/06-fizzbuzz.html#fizzbuzz-for-one",
+    "href": "homework/06-fizzbuzz.html#fizzbuzz-for-one",
+    "title": "Homework 6: FizzBuzz",
+    "section": "Fizzbuzz for one",
+    "text": "Fizzbuzz for one\nIn the chunk below, write code which will solve this problem for a single number, x. You should be able to change only the value of x and get the correct answer.\n(Do this in R or python - just pick a language for this assignment. If you choose python, just change the chunk types below.)\n\nx = 20\n\n# Your code goes here"
+  },
+  {
+    "objectID": "homework/06-fizzbuzz.html#fizzbuzz-in-loops",
+    "href": "homework/06-fizzbuzz.html#fizzbuzz-in-loops",
+    "title": "Homework 6: FizzBuzz",
+    "section": "Fizzbuzz in loops",
+    "text": "Fizzbuzz in loops\nIn the chunk below, write code which will solve this problem using a for loop that goes from 1 to 30. Store the result of each of the 30 numbers in a character vector instead of printing it out to the command line.\n\n# R code goes here"
+  },
+  {
+    "objectID": "homework/06-fizzbuzz.html#fizzbuzz-in-a-function",
+    "href": "homework/06-fizzbuzz.html#fizzbuzz-in-a-function",
+    "title": "Homework 6: FizzBuzz",
+    "section": "Fizzbuzz in a function",
+    "text": "Fizzbuzz in a function\nWrite a FizzBuzz function named fizzbuzz1. Your function should take a single number and return (not print out) a single string evaluating the number that was passed in. Use input validation to ensure that you are given a number, and provide a useful error if you are not given a number as the function argument.\n\n# Your code goes here\n\nThis code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!\n\nfizzbuzz1(3)\n## Error in fizzbuzz1(3): could not find function \"fizzbuzz1\"\nfizzbuzz1(5)\n## Error in fizzbuzz1(5): could not find function \"fizzbuzz1\"\nfizzbuzz1(7)\n## Error in fizzbuzz1(7): could not find function \"fizzbuzz1\"\nfizzbuzz1(15)\n## Error in fizzbuzz1(15): could not find function \"fizzbuzz1\"\nfizzbuzz1(0)\n## Error in fizzbuzz1(0): could not find function \"fizzbuzz1\"\nfizzbuzz1(\"this should fail\")\n## Error in fizzbuzz1(\"this should fail\"): could not find function \"fizzbuzz1\""
+  },
+  {
+    "objectID": "homework/06-fizzbuzz.html#vectorized-fizzbuzz",
+    "href": "homework/06-fizzbuzz.html#vectorized-fizzbuzz",
+    "title": "Homework 6: FizzBuzz",
+    "section": "Vectorized FizzBuzz",
+    "text": "Vectorized FizzBuzz\nWrite a FizzBuzz function named fizzbuzz that can handle a vector of numbers and will return (not print out) a vector of character/string values. Check to ensure the input vector is numeric.\nHint: You might use a loop and call your function from the previous part on each value in the vector.\n\n\n\nThis code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!\n\nfizzbuzz(c(0, 3, 5, 7, 11, 15))\n## Error in fizzbuzz(c(0, 3, 5, 7, 11, 15)): could not find function \"fizzbuzz\"\n\nfizzbuzz(month.name) # this should fail\n## Error in fizzbuzz(month.name): could not find function \"fizzbuzz\""
   }
 ]

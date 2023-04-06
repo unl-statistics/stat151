@@ -1,5 +1,5 @@
 ---
-title: "Homework 11: Working with Joins"
+title: "Homework 11: Working with Strings"
 author: "Your Name"
 date: "Due: April 28, 2023"
 categories: hw
@@ -11,5 +11,5 @@ format:
 
 Note: This assignment must be submitted in github classroom.
 
-{{< include ../homework-repos/11-joins/index.qmd >}}
+{{< include ../homework-repos/11-strings/index.qmd >}}
 

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Stat 151",
     "section": "",
-    "text": "Course Materials\nUse the categories on the right to filter the materials.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nApr 28, 2023\n\n\nHomework 11: Working with Joins\n\n\nYour Name\n\n\n\n\nApr 14, 2023\n\n\nHomework 9: Data Cleaning and Manipulation\n\n\nYour Name\n\n\n\n\nApr 7, 2023\n\n\nHomework 8: Graphics\n\n\nYour Name\n\n\n\n\nMar 31, 2023\n\n\nHomework 7: Git and Github\n\n\nYour Name\n\n\n\n\nMar 24, 2023\n\n\nHomework 6: FizzBuzz\n\n\nYour Name\n\n\n\n\nMar 9, 2023\n\n\nExam 1\n\n\nYour Name\n\n\n\n\nMar 7, 2023\n\n\nLessons from Homework 5\n\n\n\n\n\n\nMar 3, 2023\n\n\nHomework 5: Vectors and Control Structures\n\n\nYour Name\n\n\n\n\nFeb 24, 2023\n\n\nHomework 4: Cipher\n\n\nYour Name\n\n\n\n\nFeb 17, 2023\n\n\nHomework 3: Basic Data Types\n\n\nYour Name\n\n\n\n\nFeb 10, 2023\n\n\nHomework 2: Finding Your Way in R and Python\n\n\nYour Name\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\nJan 25, 2023\n\n\nStat 151 - Introduction\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Course Materials\nUse the categories on the right to filter the materials.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nApr 28, 2023\n\n\nHomework 11: Working with Strings\n\n\nYour Name\n\n\n\n\nApr 14, 2023\n\n\nHomework 9: Data Cleaning and Manipulation\n\n\nYour Name\n\n\n\n\nApr 7, 2023\n\n\nHomework 8: Graphics\n\n\nYour Name\n\n\n\n\nMar 31, 2023\n\n\nHomework 7: Git and Github\n\n\nYour Name\n\n\n\n\nMar 24, 2023\n\n\nHomework 6: FizzBuzz\n\n\nYour Name\n\n\n\n\nMar 9, 2023\n\n\nExam 1\n\n\nYour Name\n\n\n\n\nMar 7, 2023\n\n\nLessons from Homework 5\n\n\n\n\n\n\nMar 3, 2023\n\n\nHomework 5: Vectors and Control Structures\n\n\nYour Name\n\n\n\n\nFeb 24, 2023\n\n\nHomework 4: Cipher\n\n\nYour Name\n\n\n\n\nFeb 17, 2023\n\n\nHomework 3: Basic Data Types\n\n\nYour Name\n\n\n\n\nFeb 10, 2023\n\n\nHomework 2: Finding Your Way in R and Python\n\n\nYour Name\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\nJan 25, 2023\n\n\nStat 151 - Introduction\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "homework/01-scripts-notebooks.html",
@@ -418,5 +418,33 @@
     "title": "Exam 1",
     "section": "Solutions",
     "text": "Solutions\nCopy the list of tasks here and put your code for each task below the task description. Your code should be well commented.\nIf you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.\nIf your code does not compile, add , error = T to the chunk header so that the rest of the document will still compile.\n\nRead in the data and create a data frame\n\n\n\n\n\nCreate a new variable, decade\n\n\n\n\n\n\nHappy People per Year"
+  },
+  {
+    "objectID": "homework/11-strings.html",
+    "href": "homework/11-strings.html",
+    "title": "Homework 11: Working with strings",
+    "section": "",
+    "text": "Note: This assignment must be submitted in github classroom.\nComplete the following tasks in R or Python.\nThese exercises are stolen from kbodwin’s decodeR repository."
+  },
+  {
+    "objectID": "homework/11-strings.html#setup",
+    "href": "homework/11-strings.html#setup",
+    "title": "Homework 11: Working with strings",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   1.0.1 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.3.0      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nlibrary(lubridate)\n\n\nAttaching package: 'lubridate'\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union\n\nmessage <- read.csv(\"https://raw.githubusercontent.com/unl-stat151/11-strings/main/message.txt\", stringsAsFactors = FALSE)$Word"
+  },
+  {
+    "objectID": "homework/11-strings.html#warm-up-exercises",
+    "href": "homework/11-strings.html#warm-up-exercises",
+    "title": "Homework 11: Working with strings",
+    "section": "Warm-up exercises",
+    "text": "Warm-up exercises\n\nHow many characters are in the scrambled message?\nHow many of these characters are white space?\nHow many words are in the scrambled message?\nShow all the punctuation marks in the scrambled message.\nPrint out, in all capitals, the longest word in the scrambled message.\nPrint out every piece of a word that starts with the letter “m” and ends with the letter “z” in the scrambled message."
+  },
+  {
+    "objectID": "homework/11-strings.html#decode-a-message",
+    "href": "homework/11-strings.html#decode-a-message",
+    "title": "Homework 11: Working with strings",
+    "section": "Decode a message",
+    "text": "Decode a message\nNow complete the following steps to decode the message:\n\nRemove any spaces before or after each word.\nNo word should be longer than 16 characters. Drop all extra characters off the end of each word.\nAny time you see the word “ugh”, with any number of h’s, followed by a punctuation mark, delete this.\nReplace all instances of exactly 2 a’s with exactly 2 e’s.\nReplace all z’s with t’s.\nEvery word that ends in b, change that to a y. Hint: punctuation!\nEvery word that starts with k, change that to a v. Hint: capitalization!\nUse str_c(str) or ' '.join(map(str, 1)) to recombine all your words into a message.\nFind the movie this quote is from."
   }
 ]

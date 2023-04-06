@@ -17,3 +17,6 @@
 [submodule "homework-repos/11-strings"]
 	path = homework-repos/11-strings
 	url = git@github.com:unl-stat151/11-strings.git
+[submodule "homework-repos/10-reshape"]
+	path = homework-repos/10-reshape
+	url = git@github.com:unl-stat151/10-reshape.git

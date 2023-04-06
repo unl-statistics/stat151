@@ -7,10 +7,10 @@
 [submodule "homework-repos/09-data-cleaning"]
 	path = homework-repos/09-data-cleaning
 	url = git@github.com:unl-stat151/09-data-cleaning.git
-[submodule "homework-repos/11-joins"]
-	path = homework-repos/11-joins
-	url = git@github.com:unl-stat151/sql-island.git
-	branch = main
+#[submodule "homework-repos/11-joins"]
+#	path = homework-repos/11-joins
+#	url = git@github.com:unl-stat151/sql-island.git
+#	branch = main
 [submodule "homework-repos/12-graphics2"]
 	path = homework-repos/12-graphics2
 	url = git@github.com:unl-stat151/12-graphics2.git

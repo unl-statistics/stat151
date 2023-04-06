@@ -11,3 +11,6 @@
 	path = homework-repos/11-joins
 	url = git@github.com:unl-stat151/sql-island.git
 	branch = main
+[submodule "homework-repos/12-graphics2"]
+	path = homework-repos/12-graphics2
+	url = git@github.com:unl-stat151/12-graphics2.git

@@ -172,10 +172,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#swiss-banknotes" id="toc-swiss-banknotes" class="nav-link active" data-scroll-target="#swiss-banknotes">Swiss Banknotes</a></li>
-  <li><a href="#take-everything-you-know-and-use-it-for-evil" id="toc-take-everything-you-know-and-use-it-for-evil" class="nav-link" data-scroll-target="#take-everything-you-know-and-use-it-for-evil">Take everything you know, and use it for evil</a>
-  <ul class="collapse">
-  <li><a href="#useful-references" id="toc-useful-references" class="nav-link" data-scroll-target="#useful-references">Useful References</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -229,9 +225,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>banknote <span class="op">=</span> r.banknote <span class="co"># Copy data from R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>For each of the three figures you create below, write a two-three sentence summary, describing the structure of the plot:</p>
+<p>For each of the three figures you create below, write a summary paragraph describing the structure of the plot:</p>
 <ul>
-<li>what type of plot is it?</li>
+<li>What type of plot is it?</li>
 <li>Which variables are mapped to x, to y, and to the (fill) color?</li>
 <li>What is the main message of the plot: what is your main finding, i.e.&nbsp;what do you want viewers to learn from the plot?</li>
 <li>Are there any anomalies or outliers?</li>
@@ -241,54 +237,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Use <code>ggplot2</code> or <code>plotnine</code> to draw a histogram of one of the variables in the dataset that shows a distinction between genuine and counterfeit banknotes. Use fill color to show this difference.</p></li>
 <li><p>Use <code>ggplot2</code> or <code>plotnine</code> to draw a scatterplot of two (continuous) measurements, color by Status. Try to find a pair of measurements that allow you to separate perfectly between genuine and counterfeit banknotes.</p></li>
 </ol>
-</section>
-<section id="take-everything-you-know-and-use-it-for-evil" class="level2">
-<h2 class="anchored" data-anchor-id="take-everything-you-know-and-use-it-for-evil">Take everything you know, and use it for evil</h2>
-<p>The textbook spent lots of time showing you how to create different types of graphics, but I spent a lot less time showing you all of the different ways you could customize graphics <code>ggplot2</code> or <code>plotnine</code>. In this problem, I want you to create the <em>ugliest</em> version of the following graphs you can, and then <strong>explain why</strong>, exactly, you made the decisions you did, and which principles of good graphics you’ve intentionally violated.</p>
-<p>Ugliness is subjective, so the goal here is for you to explore the different ways you can customize the finer details of graphics. Make sure your finished masterpiece has appropriate axis labels and a title (after all, even ugly plots need to be correctly labeled!). You are free to add additional variables and layers, modify the aesthetics used, and leverage other packages. I have provided this code as a starting point, not as a way to limit your creativity.</p>
-<p>I have provided some basic code to get you started. We’ll use the <code>palmerpenguins</code> package, which has <a href="https://allisonhorst.github.io/palmerpenguins/">fantastic documentation with really awesome artwork</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="st">"palmerpenguins"</span> <span class="sc">%in%</span> <span class="fu">installed.packages</span>()) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"allisonhorst/palmerpenguins"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 8
-  species island    bill_length_mm bill_depth_mm flipper_l…¹ body_…² sex    year
-  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;       &lt;int&gt;   &lt;int&gt; &lt;fct&gt; &lt;int&gt;
-1 Adelie  Torgersen           39.1          18.7         181    3750 male   2007
-2 Adelie  Torgersen           39.5          17.4         186    3800 fema…  2007
-3 Adelie  Torgersen           40.3          18           195    3250 fema…  2007
-4 Adelie  Torgersen           NA            NA            NA      NA &lt;NA&gt;   2007
-5 Adelie  Torgersen           36.7          19.3         193    3450 fema…  2007
-6 Adelie  Torgersen           39.3          20.6         190    3650 male   2007
-# … with abbreviated variable names ¹​flipper_length_mm, ²​body_mass_g</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> bill_length_mm, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="08-graphics_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> r.penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="useful-references" class="level3">
-<h3 class="anchored" data-anchor-id="useful-references">Useful References</h3>
-<ul>
-<li><p><a href="http://r-statistics.co/Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html">Customizing ggplot2 graphics</a></p></li>
-<li><p><a href="https://docs.google.com/presentation/d/1ixRsGI8BWgT2zA5AbB61eMLUbJgObvBCZt-OnZDzvX4/edit?usp=sharing">A group-created slideshow of awful graphics</a></p></li>
-<li><p><a href="https://t-redactyl.io/blog/2020/09/making-beautiful-boxplots-using-plotnine-in-python.html">An example of customizing plots in plotnine</a></p></li>
-</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

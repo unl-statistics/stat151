@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Your Name">
-<meta name="dcterms.date" content="2023-02-10">
+<meta name="dcterms.date" content="2023-04-28">
 
-<title>Stat 151 - Homework 2: Finding Your Way in R and Python</title>
+<title>Stat 151 - Homework 11: Working with Joins</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -104,24 +104,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#madlibs" id="toc-madlibs" class="nav-link active" data-scroll-target="#madlibs">MadLibs</a>
-  <ul class="collapse">
-  <li><a href="#running-a-python-script-at-the-command-line" id="toc-running-a-python-script-at-the-command-line" class="nav-link" data-scroll-target="#running-a-python-script-at-the-command-line">Running a Python Script at the command line</a></li>
-  </ul></li>
-  <li><a href="#thinking-critically" id="toc-thinking-critically" class="nav-link" data-scroll-target="#thinking-critically">Thinking Critically</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 2: Finding Your Way in R and Python</h1>
+<h1 class="title">Homework 11: SQL Island</h1>
   <div class="quarto-categories">
     <div class="quarto-category">hw</div>
   </div>
@@ -141,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2023</p>
+      <p class="date">April 28, 2023</p>
     </div>
   </div>
   
@@ -151,22 +141,210 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><a href="https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/02-finding-your-way.qmd">Download the starter qmd file here</a></p>
-<section id="madlibs" class="level2">
-<h2 class="anchored" data-anchor-id="madlibs">MadLibs</h2>
-<section id="running-a-python-script-at-the-command-line" class="level3">
-<h3 class="anchored" data-anchor-id="running-a-python-script-at-the-command-line">Running a Python Script at the command line</h3>
-<p>Run the script <a href="https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/madlibs.py">madlibs.py</a> using the terminal to run the script (e.g.&nbsp;type <code>python3 madlibs.py</code> in the terminal). Do what it asks of you. Copy the text after the initial command and paste it between the <code>markings below. (These</code> define a generic, no-language markdown code chunk).</p>
-<pre><code># Paste your output here!</code></pre>
-<p>Can you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens.</p>
-</section>
-</section>
-<section id="thinking-critically" class="level2">
-<h2 class="anchored" data-anchor-id="thinking-critically">Thinking Critically</h2>
-<p>Consider the counting words examples in the <a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html#a-short-history-of-talking-to-computers">textbook</a> (Your Turn – Terminal Mode, Your Turn – Script Mode). Look at the code, and then at the steps provided for each example. What is different? What is the same? Create a table comparing terminal mode, script mode (e.g.&nbsp;running the whole script using the Run button), and interactive mode. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they’re specified, and any differences in the output.</p>
+<p>Note: This assignment must be submitted in github classroom.</p>
+<p>Note: This is almost a direct transcript of a game available at https://sql-island.informatik.uni-kl.de/.</p>
+<p>If you would like to complete this game using SQL statements instead of R/Python commands, you may do so. Instead of providing a link to your repository on Canvas, provide instead a link to your certificate of completion. It will look like this: &gt; https://sql-island.informatik.uni-kl.de/cert.php?id=19149d34bb</p>
+<p>Be sure to use your full name on the certificate.</p>
+<hr>
+<p>You’ve been stranded on SQL Island!</p>
+<p>Use the tables in this repository to answer the following questions and/or complete the following tasks (use R or Python):</p>
+<ol type="1">
+<li>See what villages are on the island</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="2" type="1">
+<li>See what people are on the island</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="3" type="1">
+<li>You’re hungry. Can you find a butcher to get some sausages?<br>
+Use a query/filter statement to get a data frame of all of the butchers on the island.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="4" type="1">
+<li>You talk to Edward Grasshead, who gives you some sausages. He also warns you that not all people on the island are friendly. He suggests that as long as you are unarmed, you should stay away from villains.<br>
+Use a query/filter statement to get a data frame of all of the friendly people on the island.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="5" type="1">
+<li>You decide to find a sword. Is there a friendly weaponsmith that could forge one?<br>
+Use a query/filter statement to get a data frame of all of the friendly weaponsmiths on the island.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="6" type="1">
+<li>The options aren’t great. Can you find other friendly smiths to help you out?<br>
+Use a query/filter statement that tests for a partial match on “smith” - that will include weaponsmiths, but also smiths, blacksmiths, and so on.<br>
+<strong>Hint:</strong> Use <code>stringr::str_detect(x, pattern)</code> in R or <code>x.str.contains(pattern)</code> in Python. ::: {.cell}</li>
+</ol>
+<p>:::</p>
+<ol start="7" type="1">
+<li>Paul, the mayor of Monkeycity, stops you and offers to register you as a citizen. He has named you “Stranger”. Can you use a filter/query statement to figure out what your personid is?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="8" type="1">
+<li>You go to talk to Ernest Perry, the weaponsmith, and ask how much a sword costs. He offers to make you a sword for 150 gold.<br>
+How much gold do you have? Write a query/filter statement using your personid.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="9" type="1">
+<li>Maybe you can collect ownerless items and sell them to earn some money!<br>
+Make a list of all items that don’t belong to anyone (owner = “null” if the item is unclaimed).</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="10" type="1">
+<li>Claim the unclaimed items by updating the owner. Can you do this with a single statement?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="11" type="1">
+<li>List all of the items that you currently have using a query/filter statement.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="12" type="1">
+<li>Find a friendly inhabitant who is either a dealer or a merchant using a filter/query statement.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="13" type="1">
+<li>Helen Grasshead, a dealer, offers to buy the ring and the teapot for 120 gold.<br>
+Update the items dataset to indicate that she now owns those two items. Update the inhabitants dataset to indicate that you have 120 additional gold and Helen Grasshead has 120 less gold.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="14" type="1">
+<li>You still don’t have enough money for a sword. Update the inhabitants dataset to change your name from Stranger to your real name before you apply for a job.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="15" type="1">
+<li>You enjoy baking. Find a list of bakers who you can work for. Order your list by amount of gold (descending) so that the richest baker is on top.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="16" type="1">
+<li>You’ve interacted with Paul before. Can you join the table above to the village dataset to see how you know him?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="17" type="1">
+<li>Paul Bakerman offers you a job as a baker. You will be paid 1 gold for 100 bread rolls. You make 10,000 bread rolls.<br>
+Update the tables to pay yourself the appropriate amount of gold and reduce Paul Bakerman’s gold by the same amound.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="18" type="1">
+<li>You go back to Ernest Perry and purchase a sword for 150 gold. Update the relevant tables to ensure that everyone’s gold balance is correct AND add a row to the item table indicating that you now own a sword.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="19" type="1">
+<li>Is there a pilot on the island who could help you get home?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="20" type="1">
+<li>The pilot is being held captive by Dirty Dieter. Join two tables to figure out where Dirty Dieter lives.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="21" type="1">
+<li>What is the mayor of the town where Dirty Dieter lives? Use a join to answer this question.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="22" type="1">
+<li>How many inhabitants does the town have? Write code to count them.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="23" type="1">
+<li>The mayor tells you that the pilot is held captive by Dirty Dieter in his sister’s house. How many women there are in Onionville?<br>
+Use a join to answer this question.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="24" type="1">
+<li>What’s the name of the most likely suspect?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="25" type="1">
+<li>Dirty Dieter offers to release the pilot if you hand over gold equivalent to the entire property of Cucumbertown. How much gold do you need?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="26" type="1">
+<li>If you continue working and selling items, you could earn more gold than the worth of gold inventories of all bakers, dealers, and merchants. How much gold is that? Is it enough?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="27" type="1">
+<li>Can you determine how much money people have based on their jobs? Who is the best target for additional money?<br>
+Hint: Summarize the inhabitants data set by job?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="28" type="1">
+<li>How much gold do different inhabitants have based their state (friendly/evil)?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="29" type="1">
+<li>You conclude the only way out is to attack Dirty Dieter and Dirty Diane. Remove those rows from the inhabitants dataset.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="30" type="1">
+<li>You release the pilot. Update his state in the table.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="31" type="1">
+<li>The pilot flies you home. Update your state to “emigrated” in the table.</li>
+</ol>
+<div class="cell">
+
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

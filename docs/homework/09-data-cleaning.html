@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -331,32 +331,17 @@ dbl (4): year, avg, gain, peak
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run this if you haven't installed plotnine already</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_install</span>(<span class="st">"plotnine"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Using Python: /usr/bin/python3.10
-Creating virtual environment '~/.virtualenvs/r-reticulate' ... </code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>+ '/usr/bin/python3.10' -m venv '/home/susan/.virtualenvs/r-reticulate'</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Done!
-Installing packages: 'pip', 'wheel', 'setuptools', 'numpy'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>+ '/home/susan/.virtualenvs/r-reticulate/bin/python' -m pip install --upgrade --no-user 'pip' 'wheel' 'setuptools' 'numpy'</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Virtual environment '~/.virtualenvs/r-reticulate' successfully created.
-Using virtual environment '~/.virtualenvs/r-reticulate' ...</code></pre>
+<pre><code>Using virtual environment '/home/susan/.virtualenvs/r-reticulate' ...</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>+ '/home/susan/.virtualenvs/r-reticulate/bin/python' -m pip install --upgrade --no-user 'plotnine'</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>games <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>games <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -379,14 +364,14 @@ Using virtual environment '~/.virtualenvs/r-reticulate' ...</code></pre>
 <li><p>Sample code to make a line plot is provided below:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get only january months so that there's one point a year</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>jan_data <span class="op">=</span> games.query(<span class="st">'month == "January"'</span>)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># x axis is year, y axis is average players</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># group = gamename says draw one line for each game</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>ggplot(jan_data, aes(x <span class="op">=</span><span class="st">"year"</span>, y <span class="op">=</span> <span class="st">"avg"</span>, group <span class="op">=</span> <span class="st">"gamename"</span>)) <span class="op">+</span> geom_line()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get only january months so that there's one point a year</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>jan_data <span class="op">=</span> games.query(<span class="st">'month == "January"'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># x axis is year, y axis is average players</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># group = gamename says draw one line for each game</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ggplot(jan_data, aes(x <span class="op">=</span><span class="st">"year"</span>, y <span class="op">=</span> <span class="st">"avg"</span>, group <span class="op">=</span> <span class="st">"gamename"</span>)) <span class="op">+</span> geom_line()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;ggplot: (8790579186157)&gt;</code></pre>
+<pre><code>&lt;ggplot: (8793345372043)&gt;</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="09-data-cleaning_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="614"></p>

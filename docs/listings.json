@@ -2,7 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/homework/12-graphics2.html",
       "/homework/11-strings.html",
+      "/homework/10-reshape.html",
       "/homework/09-data-cleaning.html",
       "/homework/08-graphics.html",
       "/homework/07-github.html",

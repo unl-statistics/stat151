@@ -1,0 +1,15 @@
+---
+title: "Homework 12: Graphics Part 2"
+author: "Your Name"
+date: "Due: May 5, 2023"
+categories: hw
+format:
+  html:
+    theme: default
+---
+
+
+Note: This assignment must be submitted in github classroom.
+
+{{< include ../homework-repos/12-graphics2/index.qmd >}}
+

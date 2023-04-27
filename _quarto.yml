@@ -7,6 +7,7 @@ project:
     - homework/*.qmd
     - slides/*.qmd
     - exams/midterm.qmd
+    - exams/2023-final-exam/index.qmd
 website:
   title: "Stat 151"
   navbar:

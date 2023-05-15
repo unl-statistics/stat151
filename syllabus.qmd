@@ -2,9 +2,12 @@
 format: 
   pdf:
     template: "syllabus-template.tex"
-    latex_engine: xelatex
     dev: cairo_pdf
 geometry: margin=1in
+
+from: markdown+emoji
+pdf-engine: lualatex
+keep-tex: true
 
 title: "Stat 151: Introduction to Statistical Computing"
 instructor: Susan Vanderplas
@@ -133,12 +136,24 @@ F |	<61 | |
 
 Interpretation of this table: A grade of 85 will receive a B. A grade of 77 will receive a C+. A grade of 70 will receive a C-. Anything below a 61 will receive an F. 
 
+### Exams
+
+Two take-home exams will be given during the course of the semester, on dates noted on the Tentative Course Outline on the last page. 
+
+Exams will require that you write code to solve problems utilizing the course material. 
+You are expected to take exams at the scheduled times. 
+If this is impossible due to extreme circumstances (illness, death in the family, previously scheduled activities vital to academic program), please notify me and provide appropriate documentation. 
+No make-up exams will be given if I am not notified at least 24h prior to the exam due date. 
+You will be required to obtain a note from your physician or advisor explaining the nature of the conflict.
+
 ### Homework
 
 Approximately 8-12 homework assignments will be made over the course of the semester. 
 You will typically have one week to work on each of the assignments. 
 The only way to learn statistics is to practice working problems, and homework is therefore an essential part of the course. 
 Homework must be submitted in the file format specified, and should run or compile as submitted.
+
+### Participation
 
 All students are expected to attend and fully participate in class activities. 
 Participation will be determined based on a combination of class attendance and activities.
@@ -149,15 +164,30 @@ Participation will be determined based on a combination of class attendance and 
 Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. 
 I reserve the right not to grade any assignments received after the assignment due date.
 
-Two exams will be given during the course of the semester, on dates noted on the Tentative Course Outline on the last page. 
 
-### Exams
+### Resubmission Policy
 
-Exams will require that you write code to solve problems utilizing the course material. 
-You are expected to take exams at the scheduled times. 
-If this is impossible due to extreme circumstances (illness, death in the family, previously scheduled activities vital to academic program), please notify me and provide appropriate documentation. 
-No make-up exams will be given if I am not notified prior to the examination. 
-You will be required to obtain a note from your physician or advisor explaining the nature of the conflict.
+Learning how to program is a process that is ongoing. 
+I want you to not be afraid to make mistakes. 
+As a result, I allow you to re-submit homework over the course of the semester in order to make corrections and respond to my initial feedback.
+
+This policy is subject to a few constraints:
+
+- Each assignment should be resubmitted only once (to minimize repeat grading) unless you've obtained prior permission.
+
+- You should resubmit assignments as soon as possible.    
+I reserve the right to cut off assignment resubmissions on a rolling basis (e.g. you have 3 weeks after the original due date) or based on the point in the semester (e.g. all homeworks due before Spring Break must be resubmitted by the week after we return from Spring Break).
+<!-- There are multiple reasons for this policy: -->
+
+<!--   - The material in this class is cumulative, so it is important that you understand a topic before we move on to more advanced material -->
+
+<!--   - Students in the past who have resubmitted all homework just before the end of the semester don't do a good job and don't seem to retain the material.  -->
+
+<!--   - I want to keep my grading load to a reasonable level -->
+
+I spend the extra time grading resubmissions because it reinforces your learning; this policy is not designed to ensure that you can get a better grade in this class. 
+This resubmission policy is subject to adjustments throughout the semester to ensure that this objective is met. 
+I reserve the right to limit or penalize resubmissions if it becomes clear that the current policy does not promote learning of the material and/or support the course objectives.
 
 ## Attendance
 
@@ -197,11 +227,11 @@ Programming is the process of making a series of silly or stupid mistakes, and t
 The only way to know how to fix these mistakes (and avoid them in the future) is to make them.
 (Sometimes, you have to make the same mistake a few dozen times before you can avoid it in the future). 
 At some point during the class, you will find that you've spent 30 minutes staring at an error caused by a typo, a space, a parenthesis in the wrong place. 
-You may ask for help debugging this weird error, only to have someone immediately point out the problem... it is always easier to see these things in someone else's code. 
-This is part of programming, it is normal, and you shouldn't feel embarrassed or sorry (unless you put no effort into troubleshooting the problem before you asked for help)
+You may ask for help debugging this weird error, only to have someone immediately point out the problem... **it is always easier to see these things in someone else's code**. 
+This is part of programming, it is normal, and you shouldn't feel embarrassed or apologize (unless you put no effort into troubleshooting the problem before you asked for help)
 
-If you manage to produce an error I haven't seen before, then congratulations. 
-You have achieved something special, and that achievement should be celebrated. 
+If you manage to produce an error I haven't seen before, then congratulations! :clap: 
+You have achieved something special, and that achievement should be celebrated. :tada: 
 Each new and bizarre error is an opportunity to learn a bit more about the programming language, the operating system, or the interaction between the two.
 
 ## Assignment Evaluation Criteria

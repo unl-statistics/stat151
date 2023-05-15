@@ -90,7 +90,7 @@ class_cal <- Cal %>%
 # class_cal
 
 exam_days <- filter(Cal, category == "Exam") %>% 
-  mutate(topic = c("Midterm", "Final"),
+  mutate(topic = c("Midterm Review", "Final"),
          time = c("In Class", "1-3 pm"))
 
 class_days <- filter(Cal, category == "Class Day") %>%

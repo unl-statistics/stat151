@@ -102,12 +102,12 @@ class_days <- filter(Cal, category == "Class Day") %>%
     "Data Structures", 
     "Control Structures", 
     "Functions", 
-    "Working with Data", 
+    "Version Control", 
+    "Working with Data, Visualization", 
     "Data Cleaning", 
     "Strings", 
-    "Data Transformations", 
+    "Reshaping Data", 
     "Joins", 
-    "Graphics", 
-    "Version Control")) %>%
+    "Graphics")) %>%
   bind_rows(exam_days) %>%
   arrange(date)

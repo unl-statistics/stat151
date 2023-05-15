@@ -23,3 +23,9 @@ $endif$
 
 \let\Oldincludegraphics\includegraphics
 \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+
+\usepackage[section]{placeins}
+% \newcommand{\emoji}[1]{{\setmainfont{Noto Color Emoji}[Renderer=Harfbuzz]{#1}}}
+\usepackage{emoji}
+\newfontfamily{\emojifont}{Noto Color Emoji}[Renderer=Harfbuzz]
+\setemojifont{Noto Color Emoji}

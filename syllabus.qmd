@@ -1,7 +1,6 @@
 ---
 pdf-engine: lualatex
 from: markdown+emoji
-fontfamily: mathpazo
 fontsize: 11pt
 geometry: margin=1in
 
@@ -54,9 +53,9 @@ Covers basic programming concepts necessary for statistics, good computing pract
 At the end of this course, students will
 
 1. Be comfortable using R and/or python for statistical analysis
-2. Write basic programs using logic including for loops, control structures, and matrix arithmetic
+2. Write basic programs using logic including for loops and control structures
 3. Implement basic data analyses in R or python
-4. Describe the sequence of logical or mathematical steps necessary to solve a simple problem
+4. Describe the sequence of steps necessary to solve a simple problem
 5. Be familiar with good computing practices, such as version control and documentation
 
 

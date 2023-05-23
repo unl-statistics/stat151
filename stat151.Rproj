@@ -10,4 +10,8 @@ NumSpacesForTab: 2
 Encoding: UTF-8
 
 RnwWeave: knitr
-LaTeX: xetex
+LaTeX: pdfLaTeX
+
+PythonType: system
+PythonVersion: 3.11.3
+PythonPath: /usr/bin/python3.11

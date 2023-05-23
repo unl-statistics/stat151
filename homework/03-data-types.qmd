@@ -34,7 +34,7 @@ Use the chunk below to define variables $a$, $b$, and $c$, and then define $x1$ 
 
 ## Debugging practice
 
-Look at the data frame below, which contains 3 columns: `Name`, `Salary`, and `Hire.Year`. You've read in this data from the [data file online](https://srvanderplas.github.io/stat151-homework/3-data.tsv) and ideally, you want to plot `Hire.Year` on the x-axis and `Salary` on the y-axis (code to do this is provided).
+Look at the data frame below, which contains 3 columns: `Name`, `Salary`, and `Hire.Year`. You've read in this data from the [data file online](https://srvanderplas.github.io/stat151-homework-2022/3-data.tsv) and ideally, you want to plot `Hire.Year` on the x-axis and `Salary` on the y-axis (code to do this is provided).
 
 Unfortunately, the data isn't reading in properly. Identify the problem, propose a solution, and try to implement your solution using functions on the R reference card.
 
@@ -48,7 +48,7 @@ Note: You should be able to **identify** the problem given what you know about R
 
 ```{r}
 # This line reads in a tab-separated data file with a header naming the columns
-salary <- read.table("https://srvanderplas.github.io/stat151-homework/3-data.tsv",
+salary <- read.table("https://srvanderplas.github.io/stat151-homework-2022/3-data.tsv",
                      sep = "\t", header = T)
 
 # This code plots labels for each individual at location (x, y)

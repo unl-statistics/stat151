@@ -132,6 +132,7 @@ At my discretion, I will evaluate the coherence of your explanation instead of y
 We'll work on [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html)
 
 Please Read before class: 
+
 - [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
 - [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html)
 - [RStudio's Interface](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-Rstudio-interface.html)

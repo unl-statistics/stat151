@@ -21,8 +21,8 @@ email: "susan.vanderplas@unl.edu"
 web: "srvanderplas.netlify.app"
 officehours: "\\href{https://calendly.com/drvanderplas/officehours}{Schedule here}"
 office: "Hardin 343D"
-classroom: "Hardin 49"
-classhours: "Wednesdays 2-2:50"
+classroom: "Hardin 142-East"
+classhours: "Wednesdays 1-2:50"
 ---
 
 
@@ -144,8 +144,8 @@ Two take-home exams will be given during the course of the semester, on dates no
 Exams will require that you write code to solve problems utilizing the course material. 
 You are expected to take exams at the scheduled times. 
 If this is impossible due to extreme circumstances (illness, death in the family, previously scheduled activities vital to academic program), please notify me and provide appropriate documentation. 
-No make-up exams will be given if I am not notified at least 24h prior to the exam due date. 
-You will be required to obtain a note from your physician or advisor explaining the nature of the conflict.
+No make-up exams will be given if I am not notified at least 24h prior to the exam release date. 
+You will be required to obtain a note from your physician or adviser explaining the nature of the conflict.
 
 ### Homework
 
@@ -153,6 +153,7 @@ Approximately 8-12 homework assignments will be made over the course of the seme
 You will typically have one week to work on each of the assignments. 
 The only way to learn statistics is to practice working problems, and homework is therefore an essential part of the course. 
 Homework must be submitted in the file format specified, and should run or compile as submitted.
+
 
 ### Participation
 
@@ -163,8 +164,9 @@ Participation will be determined based on a combination of class attendance and 
 ### Late Policy
 
 Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. 
-I reserve the right not to grade any assignments received after the assignment due date.
+I reserve the right not to grade (or to assign a 0 to) any assignments received after the assignment due date.
 
+You may submit an assignment that was not submitted in time as a resubmission, assuming it meets the conditions outlined in the next section.
 
 ### Resubmission Policy
 
@@ -172,12 +174,24 @@ Learning how to program is a process that is ongoing.
 I want you to not be afraid to make mistakes. 
 As a result, I allow you to re-submit homework over the course of the semester in order to make corrections and respond to my initial feedback.
 
-This policy is subject to a few constraints:
+This policy is subject to the following constraints:
 
-- Each assignment should be resubmitted only once (to minimize repeat grading) unless you've obtained prior permission.
+- You may not resubmit an assignment for which solutions have been posted.
 
-- You should resubmit assignments as soon as possible.    
-I reserve the right to cut off assignment resubmissions on a rolling basis (e.g. you have 3 weeks after the original due date) or based on the point in the semester (e.g. all homeworks due before Spring Break must be resubmitted by the week after we return from Spring Break).
+- Each assignment should be resubmitted only once
+
+- Resubmits are due on the day before the next exam is released. I reserve the right to set a rolling due date (e.g. 3 weeks after the original due date) if grading resubmitted assignments becomes too overwhelming.
+
+- Resubmitted assignments will be graded at my convenience.
+
+<!-- - You should resubmit assignments as soon as possible.     -->
+<!-- I reserve the right to cut off assignment resubmissions on a rolling basis (e.g. you have 3 weeks after the original due date) or based on the point in the semester (e.g. all homeworks due before Spring Break must be resubmitted by the week after we return from Spring Break). -->
+
+    
+
+In general, this policy means that I will typically not post assignment solutions, though you are welcome to visit office hours to ask questions about an assignment. 
+
+
 <!-- There are multiple reasons for this policy: -->
 
 <!--   - The material in this class is cumulative, so it is important that you understand a topic before we move on to more advanced material -->
@@ -192,11 +206,11 @@ I reserve the right to limit or penalize resubmissions if it becomes clear that 
 
 ## Attendance
 
-You are expected to attend class and/or participate virtually. 
+You are expected to attend class. 
 Consistent, repeated failure to attend class or actively participate in the course will affect the participation portion of your grade.
 
 If you are feeling ill, please **do not come to class**. 
-Instead, review the material and work on the homework assignment, and then schedule an appointment with me to meet virtually.
+Instead, review the material and work on the homework assignment, and then schedule an appointment with me to meet virtually. This appointment (and your email notifying me about missing class) will substitute for the participation grade for the missed class.
 
 
 ## Inclement Weather
@@ -237,7 +251,7 @@ Each new and bizarre error is an opportunity to learn a bit more about the progr
 
 ## Assignment Evaluation Criteria
 
-In every assignment, discussion, and written component of this class, you are expected to demonstrate that you are intellectually engaging with the material. 
+In every assignment, discussion, and written component of this class, you are expected to **demonstrate that you are intellectually engaging with the material**. 
 I will evaluate you based on this engagement, which means that technically correct but low effort answers which do not demonstrate engagement or understanding will receive no credit.
 
 When you answer questions in this class, your goal is to show that you either understand the material or are actively engaging with it. 
@@ -246,9 +260,10 @@ This is not to encourage you to add unnecessary complexity to your answer - simp
 
 While this is not an English class, grammar and spelling are important, as is your ability to communicate technical information in writing; both of these criteria will be used in addition to assignment-specific rubrics to evaluate your work.
 
-With the proliferation of AI tools such as Chat-GPT, I reserve the right to replace exam and homework grades with grades based on a discussion of your submitted solutions. 
+With the proliferation of AI tools such as Chat-GPT, I reserve the right to replace exam and homework grades with grades based on an oral discussion of your submitted solutions. 
 If you cannot explain why your solution is correct, or the logic behind your solution, then you will not receive credit.
 Chat GPT can be a useful tool, but this course's objectives are meant to assess your ability to program in R and Python, not your ability to use AI systems.
+Fundamentally, you need to understand concepts and also develop some syntactic fluency to program effectively; generative AI solutions may hamper both of these goals if you rely on them too much.
 
 
 ## Academic Integrity and Class Conduct

@@ -12,21 +12,21 @@ library(lubridate)
 # Weekday(s) of class
 class_wdays <- c("Wed")
 
-# Spring Break was 13 March 2022 to 20 March 2022.
+# Spring Break was 09 March 2024 to 17 March 2024.
 not_here_dates <- c(
   # ymd("20220117"),
   # Spring Break
-  seq(ymd(20230312),ymd(20230318), by=1))
+  seq(ymd(20240309),ymd(20240317), by=1))
 
 # You can adjust this as you see fit. Basically: add assignment types (e.g. papers, quizzes).
 # My intro class was fairly simple: just exams.
-exam_dates <- c(ymd(20230308), ymd(20230516))
+exam_dates <- c(ymd(20240306), ymd(20240307), ymd(20240508), ymd(20240510))
 
-# What are the full dates of the semester? Here, I'll exclude exam week as I like to do.
-# In this case: 6 January to 23 April
-semester_dates <- seq(ymd(20230123), ymd(20230519), by=1)
+# What are the full dates of the semester? 
+# In this case: 22 January to 17 May
+semester_dates <- seq(ymd(20240122), ymd(20240510), by=1)
 
-exam_week <- seq(ymd(20230515), ymd(20230519), by = 1)
+exam_week <- seq(ymd(20240513), ymd(20240518), by = 1)
 
 # Custom function for treating the first day of the month as the first week 
 # of the month up until the first Sunday (unless Sunday was the start of the month)
@@ -36,7 +36,7 @@ wom <- function(date) {
 }
 
 # Create a data frame of dates, assign to Cal
-Cal <- tibble(date = seq(ymd(20230101), ymd(20230530), by=1))  %>%
+Cal <- tibble(date = seq(ymd(20240101), ymd(20240530), by=1))  %>%
   mutate(mon = lubridate::month(date, label=T, abbr=F), # get month label
          wkdy = weekdays(date, abbreviate=T), # get weekday label
          wkdy = fct_relevel(wkdy, "Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat"), # make sure Sunday comes first
@@ -59,11 +59,6 @@ Cal <- Cal %>%
     semester ~ "Semester",
     TRUE ~ "NA"
   ))
-# mutate(category = NA,
-#        category = ifelse(semester == 1, "Semester", category),
-#        category = ifelse(semester == 1 & wkdy %in% c("Wed"), "Class Day", category),
-#        category = ifelse(exams == 1, "Exams", category),
-#        category = ifelse(is.na(category) | (semester == 1 & not_here == 1), "NA", category)) -> Cal 
 
 class_cal <- Cal %>% 
   ggplot(.,aes(wkdy, week)) +
@@ -90,8 +85,8 @@ class_cal <- Cal %>%
 # class_cal
 
 exam_days <- filter(Cal, category == "Exam") %>% 
-  mutate(topic = c("Midterm Review", "Final"),
-         time = c("In Class", "1-3 pm"))
+  mutate(topic = c("Midterm Assigned", "Midterm Due", "Final Assigned", "Final Due"),
+         time = c("In class", "6pm", "In class", "6pm"))
 
 class_days <- filter(Cal, category == "Class Day") %>%
   mutate(topic = c(
@@ -103,11 +98,10 @@ class_days <- filter(Cal, category == "Class Day") %>%
     "Control Structures", 
     "Functions", 
     "Version Control", 
-    "Working with Data, Visualization", 
+    "Data Visualization", 
     "Data Cleaning", 
     "Strings", 
     "Reshaping Data", 
-    "Joins", 
     "Graphics")) %>%
   bind_rows(exam_days) %>%
   arrange(date)

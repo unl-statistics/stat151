@@ -48,7 +48,7 @@ Note: You should be able to **identify** the problem given what you know about R
 
 ```{r}
 # This line reads in a tab-separated data file with a header naming the columns
-salary <- read.table("https://srvanderplas.github.io/stat151-homework/3-data.tsv",
+salary <- read.table("https://srvanderplas.github.io/unl-stat151/homework/3-data.tsv",
                      sep = "\t", header = T)
 
 # This code plots labels for each individual at location (x, y)

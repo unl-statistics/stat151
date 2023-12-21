@@ -1,0 +1,153 @@
+# From https://github.com/stat20/stat20/blob/main/_course-settings.yml
+
+schedule:
+  - unit: "Tools"
+    materials:
+      - href: syllabus.qmd
+        categories: [Week01, reading]
+        date: 2024-01-21
+        pub-date: 2023-01-01
+      - href: slides/01-Syllabus-and-Introductions.qmd
+        categories: [Week01, slides]
+        date: 2024-01-24
+        pub-date: 2023-01-01
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html
+        categories: [Week01, reading]
+        date: 2024-01-28
+        pub-date: 2023-01-01
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html
+        categories: [Week01, reading]
+        date: 2024-01-28
+        pub-date: 2023-01-01
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-Rstudio-interface.html
+        categories: [Week02, reading]
+        date: 2024-01-28
+        pub-date: 2023-01-01
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html
+        categories: [Week02, reading]
+        date: 2024-01-28
+        pub-date: 2023-01-01
+      - href: homework/01-scripts-notebooks.qmd
+        categories: [Week02, HW]
+        date: 2024-02-02
+        pub-date: 2023-01-01
+  - unit: "General Programming"
+    materials:
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html
+        categories: [Week03, reading]
+        date: 2024-02-04
+        pub-date: 2023-01-01
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html
+        categories: [Week03, reading]
+        date: 2024-02-04
+        pub-date: 2023-01-01
+      - href: homework/02-finding-your-way.qmd
+        categories: [Week03, HW]
+        date: 2024-02-09
+        pub-date: 2023-01-01
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html
+        categories: [Week04, reading]
+        date: 2024-02-11
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html
+        categories: [Week04, reading]
+        date: 2024-02-11
+      - href: homework/03-data-types.qmd
+        categories: [Week04, HW]
+        date: 2024-02-16
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/03-data-struct.html
+        categories: [Week05, reading]
+        date: 2024-02-18
+      - href: homework/04-cipher.qmd
+        categories: [Week05, HW]
+        date: 2024-02-23
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/04-control-struct.html
+        categories: [Week06, reading]
+        date: 2024-02-25
+      - href: homework/05-vectors.qmd
+        categories: [Week06, HW]
+        date: 2024-03-01
+      - href: https://canvas.unl.edu/courses/171851
+        title: "Homework Resubmit Deadline"
+        categories: [Week07, HW]
+        date: 2024-03-05
+      - href: exams/2023-midterm.qmd
+        title: "Practice Midterm"
+        categories: [Week 06, Exam]
+        pub-date: 2024-02-29
+        date: 2024-03-06
+#      - href: exams/2024-midterm.qmd
+#        categories: [Week07, Exam]
+#        pub-date: 2024-03-06
+#        date: 2024-03-07
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/05-functions.html
+        categories: [Week08, reading]
+        date: 2024-03-17
+      - href: homework/06-fizzbuzz.qmd
+        categories: [Week08, HW]
+        date: 2024-03-22
+  - unit: "Data Programming"
+    materials:
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html
+        categories: [Week09, reading]
+        date: 2024-03-24
+      - href: homework/07-github.qmd
+        categories: [Week09, HW]
+        date: 2024-03-29
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html
+        categories: [Week10, reading]
+        date: 2024-03-31
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html
+        categories: [Week10, reading]
+        date: 2024-03-31
+      - href: homework/08-graphics.qmd
+        categories: [Week10, HW]
+        date: 2024-04-05
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html
+        categories: [Week11, reading]
+        date: 2024-04-07
+      - href: homework/09-data-cleaning.qmd
+        categories: [Week11, HW]
+        date: 2024-04-12
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/04-strings.html
+        categories: [Week12, reading]
+        date: 2024-04-14
+      - href: homework/11-strings.qmd
+        categories: [Week12, HW]
+        date: 2024-04-19
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/05-data-reshape.html
+        categories: [Week13, reading]
+        date: 2024-04-21
+      - href: homework/10-reshape.qmd
+        categories: [Week13, HW]
+        date: 2024-04-26
+      - href: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02c-good-graphics.html
+        categories: [Week14, reading]
+        date: 2024-04-28
+      - href: homework/07-github.qmd
+        categories: [Week14, HW]
+        date: 2024-05-03
+      - href: https://canvas.unl.edu/courses/171851
+        title: "Homework Resubmit Deadline"
+        categories: [Week15, HW]
+        date: 2024-05-07
+### Exam
+      - href: exams/2023-final-exam/index.qmd
+        title: "Practice Exam"
+        date: 2024-05-08
+        pub-date: 2024-05-01
+#      - href: exams/2024-final.qmd
+#        categories: [Week15, Exam]
+#        date: 2024-05-10
+#        pub-date: 2024-05-08
+
+auto-publish:
+  timezone: "America/Chicago"
+  publish-week-before: 2
+  live-as-of: "Sys.time()" # Either Sys.time() or a date parseable by lubridate::ymd()
+
+instructors:
+  - name: Susan Vanderplas
+    email: "susan.vanderplas@unl.edu"
+    quartopub-name: drvanderplas
+
+semester: "Spring, 2024"

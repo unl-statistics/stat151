@@ -1,15 +1,37 @@
 ---
-title: "Stat 151"
+title: Stat 151
 format: html
 listing:
-  id: hwlst
-  categories: true
-  contents: 
-    - "homework/*.qmd"
-    - "slides/*.qmd"
-    - "exams/*.qmd"
-  sort: "date desc"
+- id: hwlst
+  exclude:
+    categories:
+    - Week15
+    - Exam
+    - Week06
+    - Week04
+    - Week05
+    - Week08
+    - Week09
+    - Week14
+    - Week10
+    - Week11
+    - Week13
+    - Week12
+  categories: cloud
+  contents:
+  - homework/*.qmd
+  - slides/*.qmd
+  - exams/*.qmd
+  - reading.yaml
+  fields:
+  - date
+  - title
+  - type
+  - image
+  sort: date desc
   type: table
+  field-display-names:
+    type: Type
 ---
 
 # Course Materials

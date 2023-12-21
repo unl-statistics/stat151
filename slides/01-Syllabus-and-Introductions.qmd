@@ -1,8 +1,10 @@
 ---
-title: "Stat 151 - Introduction"
-date: January 25, 2023
-categories: slides
-format: 
+title: Stat 151 - Introduction
+date: '2024-01-24'
+categories:
+- Week01
+- slides
+format:
   revealjs:
     navigation-mode: vertical
 ---

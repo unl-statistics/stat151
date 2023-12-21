@@ -1,8 +1,10 @@
 ---
-title: "Homework 6: FizzBuzz"
-author: "Your Name"
-date: "Due: March 24, 2023"
-categories: hw
+title: 'Homework 6: FizzBuzz'
+author: Your Name
+date: '2024-03-22'
+categories:
+- Week08
+- HW
 format:
   html:
     theme: default

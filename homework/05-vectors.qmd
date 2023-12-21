@@ -1,11 +1,13 @@
 ---
-title: "Homework 5: Vectors and Control Structures"
-author: "Your Name"
-date: "Due: March 3, 2023"
-categories: hw
-output: 
+title: 'Homework 5: Vectors and Control Structures'
+author: Your Name
+date: '2024-03-01'
+categories:
+- Week06
+- HW
+output:
   html_document:
-    self_contained: yes
+    self_contained: true
 ---
 
 ```{r setup, echo = F}

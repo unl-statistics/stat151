@@ -1,8 +1,10 @@
 ---
-title: "Homework 10: Data Transformations"
-author: "Your Name"
-date: "Due: April 21, 2023"
-categories: hw
+title: 'Homework 10: Data Transformations'
+author: Your Name
+date: '2024-04-26'
+categories:
+- Week13
+- HW
 format:
   html:
     theme: default

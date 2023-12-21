@@ -1,8 +1,10 @@
 ---
-title: "Homework 9: Data Cleaning and Manipulation"
-author: "Your Name"
-date: "Due: April 14, 2023"
-categories: hw
+title: 'Homework 9: Data Cleaning and Manipulation'
+author: Your Name
+date: '2024-04-12'
+categories:
+- Week11
+- HW
 format:
   html:
     theme: default

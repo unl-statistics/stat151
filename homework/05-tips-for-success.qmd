@@ -1,8 +1,10 @@
 ---
-title: "Lessons from Homework 5"
-date: "March 7, 2023"
-categories: notes
-format: 
+title: 'Tips: Homework 5'
+date: '2024-03-01'
+categories:
+- HW
+- Week06
+format:
   html:
     number-sections: true
     toc: true
@@ -10,7 +12,7 @@ format:
 
 ## Compile your file first
 
-Also, check your compiled file before you submit to make sure it looks the way you want it.
+Check your compiled file before you submit to make sure it looks the way you want it.
 
 If you want to be really sure it works, copy your qmd file to a different folder and compile that... for now, that's the best way to check that it will work on my machine.
 

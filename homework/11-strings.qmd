@@ -3,8 +3,8 @@ title: 'Homework 11: Working with Strings'
 author: Your Name
 date: '2024-04-19'
 categories:
-- Week12
 - HW
+- Week12
 format:
   html:
     theme: default

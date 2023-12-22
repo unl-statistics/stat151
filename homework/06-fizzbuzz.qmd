@@ -3,8 +3,8 @@ title: 'Homework 6: FizzBuzz'
 author: Your Name
 date: '2024-03-22'
 categories:
-- Week08
 - HW
+- Week08
 format:
   html:
     theme: default

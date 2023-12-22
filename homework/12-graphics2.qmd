@@ -1,8 +1,10 @@
 ---
-title: "Homework 12: Graphics Part 2"
-author: "Your Name"
-date: "Due: May 5, 2023"
-categories: hw
+title: 'Homework 12: Graphics Part 2'
+author: Your Name
+date: '2024-05-03'
+categories:
+- HW
+- Week14
 format:
   html:
     theme: default

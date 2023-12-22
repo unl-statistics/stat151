@@ -1,136 +1,80 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Stat 151",
-    "section": "",
-    "text": "Course Materials\nUse the categories on the right to filter the materials.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMay 16, 2023\n\n\nFinal Exam\n\n\nYour Name\n\n\n\n\nMay 5, 2023\n\n\nHomework 12: Graphics Part 2\n\n\nYour Name\n\n\n\n\nApr 28, 2023\n\n\nHomework 11: Working with Strings\n\n\nYour Name\n\n\n\n\nApr 21, 2023\n\n\nHomework 10: Data Transformations\n\n\nYour Name\n\n\n\n\nApr 14, 2023\n\n\nHomework 9: Data Cleaning and Manipulation\n\n\nYour Name\n\n\n\n\nApr 7, 2023\n\n\nHomework 8: Graphics\n\n\nYour Name\n\n\n\n\nMar 31, 2023\n\n\nHomework 7: Git and Github\n\n\nYour Name\n\n\n\n\nMar 24, 2023\n\n\nHomework 6: FizzBuzz\n\n\nYour Name\n\n\n\n\nMar 9, 2023\n\n\nExam 1\n\n\nYour Name\n\n\n\n\nMar 7, 2023\n\n\nLessons from Homework 5\n\n\n\n\n\n\n\nMar 3, 2023\n\n\nHomework 5: Vectors and Control Structures\n\n\nYour Name\n\n\n\n\nFeb 24, 2023\n\n\nHomework 4: Cipher\n\n\nYour Name\n\n\n\n\nFeb 17, 2023\n\n\nHomework 3: Basic Data Types\n\n\nYour Name\n\n\n\n\nFeb 10, 2023\n\n\nHomework 2: Finding Your Way in R and Python\n\n\nYour Name\n\n\n\n\nFeb 3, 2023\n\n\nHomework 1: Scripts and Notebooks\n\n\nYour Name\n\n\n\n\nJan 25, 2023\n\n\nStat 151 - Introduction\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "homework/01-scripts-notebooks.html",
-    "href": "homework/01-scripts-notebooks.html",
-    "title": "Homework 1: Scripts and Notebooks",
+    "objectID": "exams/2023-midterm.html",
+    "href": "exams/2023-midterm.html",
+    "title": "Practice Midterm",
     "section": "",
     "text": "Download the starter qmd file here"
   },
   {
-    "objectID": "homework/01-scripts-notebooks.html#what-is-the-difference-between-a-script-and-a-notebook",
-    "href": "homework/01-scripts-notebooks.html#what-is-the-difference-between-a-script-and-a-notebook",
-    "title": "Homework 1: Scripts and Notebooks",
-    "section": "What is the difference between a script and a notebook?",
-    "text": "What is the difference between a script and a notebook?\nReplace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use markdown formatting as described in this cheat-sheet. You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages."
+    "objectID": "exams/2023-midterm.html#instructions",
+    "href": "exams/2023-midterm.html#instructions",
+    "title": "Practice Midterm",
+    "section": "Instructions",
+    "text": "Instructions\nCompleting the exam in both languages will earn you 20% extra credit on the exam and will also prove that you’re kicking butt in this class.\n\nCreate a folder for this exam on your computer.\nSave this file into that folder.\nWhen you are finished with the exam, compile the document. Make sure all of your code runs!\nUpload a zip file of your work and any necessary file dependencies to Canvas."
   },
   {
-    "objectID": "homework/01-scripts-notebooks.html#playing-with-code-in-notebooks",
-    "href": "homework/01-scripts-notebooks.html#playing-with-code-in-notebooks",
-    "title": "Homework 1: Scripts and Notebooks",
-    "section": "Playing with Code in Notebooks",
-    "text": "Playing with Code in Notebooks\nThe code chunk below defines a logarithmic spiral. Using this reference, modify the code so that it now plots Fermat’s spiral. Use \\(a = 1\\).\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta &lt;- seq(0, 4*pi, .01) \n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta\nr &lt;- seq(0, 5, length.out = length(theta))\n\n# Now define x and y in cartesian coordinates\nx &lt;- r * cos(theta)\ny &lt;- r * sin(theta)\n\nplot(x, y, type = \"l\")\n\n\n\n\nCan you do the same thing in Python? It may help to know that in Python, to raise something to a power, you use ** instead of ^.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta = np.arange(0, 4 * np.pi, 0.01)\n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta \n# (get length of theta with theta.size, \n#  and then divide 5 by that to get the increment)\nr = np.arange(0, 5, 5/theta.size)\n\n# Now define x and y in cartesian coordinates\nx = r * np.cos(theta)\ny = r * np.sin(theta)\n\n# Define the axes\nfig, ax = plt.subplots()\n# Plot the line\nax.plot(x, y)\nplt.show()"
+    "objectID": "exams/2023-midterm.html#ground-rules",
+    "href": "exams/2023-midterm.html#ground-rules",
+    "title": "Practice Midterm",
+    "section": "Ground Rules",
+    "text": "Ground Rules\n\nYou may use the textbook and the internet (but the normal rules apply - you must be able to explain your answer!)\nYou may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc.\nYou may ask clarifying questions of Dr. Vanderplas by email/zoom or in person\nYou may use R or Python for any of these tasks, but your code must be reproducible - I must be able to run your quarto file on my machine. I have provided R chunks in the correct locations in this file - change them to Python if you wish.\nYou should have at least one code chunk for each numbered task below."
   },
   {
-    "objectID": "homework/02-finding-your-way.html",
-    "href": "homework/02-finding-your-way.html",
-    "title": "Homework 2: Finding Your Way in R and Python",
+    "objectID": "exams/2023-midterm.html#dataset",
+    "href": "exams/2023-midterm.html#dataset",
+    "title": "Practice Midterm",
+    "section": "Dataset",
+    "text": "Dataset\nThe data for this exam are taken from the happy dataset in the classdata R package. I’ve exported the data to CSV for you at this link: https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv\n\nDescription\nThe data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:\n\n\nFormat\nA data frame with 62466 rows and 11 variables\n\n\nDetails\n\nyear. year of the response, 1972 to 2018.\nage. age in years: 18–89 (89 stands for all 89 year olds and older).\ndegree. highest education: lt high school, high school, junior college, bachelor, graduate.\nfinrela. how is your financial status compared to others: far below, below average, average, above average, far above.\nhappy. happiness: very happy, pretty happy, not too happy.\nhealth. health: excellent, good, fair, poor.\nmarital. marital status: married, never married, divorced, widowed, separated.\nsex. sex: female, male.\npolviews. from extremely conservative to extremely liberal.\npartyid. party identification: strong republican, not str republican, ind near rep, independent, ind near dem, not str democrat, strong democrat, other party.\nwtssall. probability weight. 0.39–8.74"
+  },
+  {
+    "objectID": "exams/2023-midterm.html#tasks",
+    "href": "exams/2023-midterm.html#tasks",
+    "title": "Practice Midterm",
+    "section": "Tasks",
+    "text": "Tasks\n\nRead in the data and create a data frame that you will work with for this exam.\nCreate a new column variable, decade, in your data frame.\n\n\nYou will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or functions that will perform the operation you want.\nfloor() and math.floor() in R and python respectively are good places to start.\nCreate a scatterplot (use geom_point) of your happy year vs decade to show that your approach succeeded.\n\n\nCreate a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time.\nNote: You may have to pass an argument to the mean function to tell it to exclude missing values from the calculation, such as na.rm or skipna. Or, you can remove the NAs from happy using a function like na.omit or dropna, but be careful to only drop rows with an NA in variables we care about, like happy or year.\n\nThe code below provides an example of how to create a summary dataset and handle NAs in R and python. You may modify this code to help you answer part 3.\n\n# Create sample data\ndf &lt;- data.frame(x = c(rnorm(100, 10), rnorm(100, 20)),\n                 y = rep(c(\"Group 1\", \"Group 2\"), each = 100))\n\ndf_means &lt;- data.frame(y = NULL, mean = NULL)\n\n# For each y group, what is the mean of x?\nfor (i in unique(df$y)) {\n  sub_df &lt;- subset(df, y == i)\n  df_means &lt;- rbind(df_means, \n                    data.frame(y = i, mean = mean(sub_df$x, na.rm = T)))\n}\n\ndf_means\n##         y      mean\n## 1 Group 1  9.990727\n## 2 Group 2 20.011285\n\n# Demonstration of na.rm\nmean(c(NA, 1, 2, 3), na.rm = T) # Remove NAs\n## [1] 2\nmean(c(NA, 1, 2, 3), na.rm = F) # Don't remove NAs\n## [1] NA\n\n\nimport pandas as pd\nimport numpy as np\n\n# Create a new data frame\ndf = pd.DataFrame({\n  'y': np.repeat(['Group1', 'Group2'], (100, 100)), \n  'x': np.concatenate((np.random.normal(loc = 10, size = 100), np.random.normal(loc = 12, size = 100)), axis = None)\n  })\n\n# Create an empty dataframe\ndf_means = pd.DataFrame(columns = ['y', 'mean'])\n\n# For each age, how many values?\nfor i in np.unique(df.y):\n  # Create the subset\n  df_sub = df.loc[df.y == i]\n  # Drop NAs from the data frame\n  # This step isn't necessary because mean() uses skipna = T by default\n  # df_sub = df_sub.dropna(subset = ['x', 'y']) \n  # Add a new row to the end of df_means\n  df_means.loc[len(df_means.index)] = [i, df_sub.x.mean()]\n\n\n# Demonstrating skipna parameter of mean\npd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = True)\n## 2.0\npd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = False)\n## nan"
+  },
+  {
+    "objectID": "exams/2023-midterm.html#solutions",
+    "href": "exams/2023-midterm.html#solutions",
+    "title": "Practice Midterm",
+    "section": "Solutions",
+    "text": "Solutions\nCopy the list of tasks here and put your code for each task below the task description. Your code should be well commented.\nIf you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.\nIf your code does not compile, add , error = T to the chunk header so that the rest of the document will still compile.\n\nRead in the data and create a data frame\n\n\nCreate a new variable, decade\n\n\n\nHappy People per Year"
+  },
+  {
+    "objectID": "homework/12-graphics2.html",
+    "href": "homework/12-graphics2.html",
+    "title": "Homework 12: Graphics 2",
     "section": "",
-    "text": "Download the starter qmd file here"
+    "text": "Note: This assignment must be submitted in github classroom."
   },
   {
-    "objectID": "homework/02-finding-your-way.html#madlibs",
-    "href": "homework/02-finding-your-way.html#madlibs",
-    "title": "Homework 2: Finding Your Way in R and Python",
-    "section": "MadLibs",
-    "text": "MadLibs\n\nRunning a Python Script at the command line\nRun the script madlibs.py using the terminal to run the script (e.g. type python3 madlibs.py in the terminal). Do what it asks of you. Copy the text after the initial command and paste it between the markings below. (These define a generic, no-language markdown code chunk).\n# Paste your output here!\nCan you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens."
+    "objectID": "homework/12-graphics2.html#take-everything-you-know-and-use-it-for-evil",
+    "href": "homework/12-graphics2.html#take-everything-you-know-and-use-it-for-evil",
+    "title": "Homework 12: Graphics 2",
+    "section": "Take everything you know, and use it for evil",
+    "text": "Take everything you know, and use it for evil\nThe textbook spent lots of time showing you how to create different types of graphics, but I spent a lot less time showing you all of the different ways you could customize graphics ggplot2 or plotnine. In this problem, I want you to create the ugliest version of the following graphs you can, and then explain why, exactly, you made the decisions you did, and which principles of good graphics you’ve intentionally violated.\nUgliness is subjective, so the goal here is for you to explore the different ways you can customize the finer details of graphics. Make sure your finished masterpiece has appropriate axis labels and a title (after all, even ugly plots need to be correctly labeled!). You are free to add additional variables and layers, modify the aesthetics used, and leverage other packages. I have provided this code as a starting point, not as a way to limit your creativity.\nI have provided some basic code to get you started. We’ll use the palmerpenguins package, which has fantastic documentation with really awesome artwork.\n\nif (!\"palmerpenguins\" %in% installed.packages()) {\n  remotes::install_github(\"allisonhorst/palmerpenguins\")\n}\nlibrary(palmerpenguins)\nlibrary(ggplot2)\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\nggplot(penguins, aes(x = body_mass_g, y = bill_length_mm, color = species)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\npenguins = r.penguins\n\n\nUseful References\n\nCustomizing ggplot2 graphics\nA group-created slideshow of awful graphics\nAn example of customizing plots in plotnine"
   },
   {
-    "objectID": "homework/02-finding-your-way.html#thinking-critically",
-    "href": "homework/02-finding-your-way.html#thinking-critically",
-    "title": "Homework 2: Finding Your Way in R and Python",
-    "section": "Thinking Critically",
-    "text": "Thinking Critically\nConsider the counting words examples in the textbook (Your Turn – Terminal Mode, Your Turn – Script Mode). Look at the code, and then at the steps provided for each example. What is different? What is the same? Create a table comparing terminal mode, script mode (e.g. running the whole script using the Run button), and interactive mode. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they’re specified, and any differences in the output."
-  },
-  {
-    "objectID": "homework/03-data-types.html",
-    "href": "homework/03-data-types.html",
-    "title": "Homework 3: Basic Data Types",
+    "objectID": "homework/10-reshape.html",
+    "href": "homework/10-reshape.html",
+    "title": "Homework 10: Data Transformations",
     "section": "",
-    "text": "Download the starter qmd file here"
+    "text": "Note: This assignment must be submitted in github classroom.\nThis week’s assignment uses data from Tidy Tuesday (link) and relates to food consumption and CO2 emissions.\n\n# Credit to Kasia and minorly edited to create output file and test plot\n# Blog post at https://r-tastic.co.uk/post/from-messy-to-tidy/\nlibrary(rvest)\nlibrary(dplyr)\n\nurl &lt;- \"https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018\"\n\n# scrape the website\nurl_html &lt;- read_html(url)\n\n# extract the HTML table\nwhole_table &lt;- url_html %&gt;% \n  html_nodes('table') %&gt;%\n  html_table(fill = TRUE) %&gt;%\n  .[[1]]\n\ntable_content &lt;- whole_table %&gt;%\n  select(-X1) %&gt;% # remove redundant column\n  filter(!dplyr::row_number() %in% 1:3) # remove redundant rows\n\nraw_headers &lt;- url_html %&gt;%\n  html_nodes(\".thead-icon\") %&gt;%\n  html_attr('title')\n\ntidy_bottom_header &lt;- raw_headers[28:length(raw_headers)]\n# tidy_bottom_header[1:10]\n\nraw_middle_header &lt;- raw_headers[17:27]\n# raw_middle_header\n\ntidy_headers &lt;- c(\n  rep(raw_middle_header[1:7], each = 2),\n  \"animal_total\",\n  rep(raw_middle_header[8:length(raw_middle_header)], each = 2),\n  \"non_animal_total\",\n  \"country_total\")\n\n# tidy_headers\n\ncombined_colnames &lt;- paste(tidy_headers, tidy_bottom_header, sep = ';')\ncolnames(table_content) &lt;- c(\"Country\", combined_colnames)\n\ntable_content &lt;- table_content %&gt;%\n  mutate_at(vars(2:26), as.numeric)\n\nThe code above reads the data in from the original webpage and gets it into tabular form.\nYour job is to complete the following tasks:\n\nDescribe the state of the data set, table_content.\n\nWhat are the variables in the data set?\n\nvar1\nvar2\n(add more as necessary)\n\nIs it in tidy form? What principles of tidy data does this violate?\nYour answer here\nWhat steps do you need to take to get it into tidy form?\n\n\n(add more steps as necessary)\n\n\nSketch out what the final (tidy) data set will look like. You can use markdown table syntax or a picture here, but if you use a picture, upload it to imgur and include the image link in this document USING PROPER MARKDOWN SYNTAX.\nWrite R or python code for each step in the process you identified in #1. Show what the data looks like at each step using head(). Each step should be in a different code chunk.\nFor each food type (you may have to remove total values), plot the relationship between Carbon output and Consumption (use facets to get separate plots for each type of food). What do you notice for each plot? If you want to reduce carbon emissions, what foods should you eat less of?\nLook at the plot above again. Do you have any concerns about the data? The data source?"
   },
   {
-    "objectID": "homework/03-data-types.html#pythagorean-theorem-in-r",
-    "href": "homework/03-data-types.html#pythagorean-theorem-in-r",
-    "title": "Homework 3: Basic Data Types",
-    "section": "Pythagorean Theorem in R",
-    "text": "Pythagorean Theorem in R\n\\[a^2 + b^2 = c^2\\]\nUse the chunk below to define variables \\(a\\), \\(b\\), and \\(c\\), where you set \\(a\\) and \\(b\\) and \\(c\\) is determined mathematically. You may need to find the square root function in R to make this work.\n\n# Your pythagorean theorem code goes here"
-  },
-  {
-    "objectID": "homework/03-data-types.html#quadratic-formula-in-python",
-    "href": "homework/03-data-types.html#quadratic-formula-in-python",
-    "title": "Homework 3: Basic Data Types",
-    "section": "Quadratic Formula in Python",
-    "text": "Quadratic Formula in Python\n\\[x = -b \\pm \\frac{\\sqrt{b^2 - 4ac}}{2a}\\]\nUse the chunk below to define variables \\(a\\), \\(b\\), and \\(c\\), and then define \\(x1\\) and \\(x2\\), the possible values for \\(x\\).\n\n# Your quadratic formula code goes here"
-  },
-  {
-    "objectID": "homework/03-data-types.html#debugging-practice",
-    "href": "homework/03-data-types.html#debugging-practice",
-    "title": "Homework 3: Basic Data Types",
-    "section": "Debugging practice",
-    "text": "Debugging practice\nLook at the data frame below, which contains 3 columns: Name, Salary, and Hire.Year. You’ve read in this data from the data file online and ideally, you want to plot Hire.Year on the x-axis and Salary on the y-axis (code to do this is provided).\nUnfortunately, the data isn’t reading in properly. Identify the problem, propose a solution, and try to implement your solution using functions on the R reference card.\nSome things you may want to consider:\n\ngsub\nYou can access columns in a data frame using $: df$col1 will get you col1 of the df object. (We will talk about data frames more next week, but for now, just try to use them)\nYou can access items in a vector using []: x[1] will get you the first item in x\n\nNote: You should be able to identify the problem given what you know about R from this chapter. You may not be able to implement a solution without some additional research, so if you don’t get that far that’s ok.\n\n# This line reads in a tab-separated data file with a header naming the columns\nsalary &lt;- read.table(\"https://srvanderplas.github.io/stat151-homework-2022/3-data.tsv\",\n                     sep = \"\\t\", header = T)\n\n# This code plots labels for each individual at location (x, y)\nlibrary(ggplot2)\nggplot(salary, aes(x = Hire.Year, y = Salary, label = Name)) +\n  geom_label()\n\n\n\n# This displays the salary object\nsalary\n\n            Name     Salary Hire.Year\n1  Michael Scott $67,872.00      1995\n2 Dwight Schrute      54000      2001\n3     Pam Beesly      26309      2003\n4    Jim Halpert      59083      1998\n\n\n\nThe problem with the data is:\nHere is how I solved the problem:\n\n# Your implementation code goes here"
-  },
-  {
-    "objectID": "homework/04-cipher.html",
-    "href": "homework/04-cipher.html",
-    "title": "Homework 4: Cipher",
+    "objectID": "homework/08-graphics.html",
+    "href": "homework/08-graphics.html",
+    "title": "Homework 8: Graphics",
     "section": "",
-    "text": "Download the starter qmd file here\nThis assignment is modified from the decodeR exercises by Kelly Bodwin and Allison Theobold.\nOnce you finish this assignment, think about how you might decode the message in python. For +5 extra credit, write python code that decodes the message, following the outline of the R code you’ve already written.\nIn this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.\nSome advice:"
+    "text": "Note: This assignment must be submitted in github classroom."
   },
   {
-    "objectID": "homework/04-cipher.html#part-one-setup",
-    "href": "homework/04-cipher.html#part-one-setup",
-    "title": "Homework 4: Cipher",
-    "section": "Part One: Setup",
-    "text": "Part One: Setup\nEach of the following R chunks will cause an error and/or do the desired task incorrectly.\nFind the mistake, and correct it to complete the intended action.\nFor each error, write 1-2 sentences to reflect on what the mistake was and how you found it and fixed it.\n\nCreate vectors containing the upper case letters, lower case letters, and some punctuation marks.\n\n\nlower_case &lt;- c(\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"q\", \"r\", \"s\", \"t\", \"u\", \"v\", \"w\", \"x\", \"y\", \"z\")\n\nupper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\")\n\npunctuation &lt;- c(\".\", \",\", \"!\", \"?\", \"'\", \"\"\", \"(\", \")\", \" \", \"-\", \";\", \":\")\n\nError: &lt;text&gt;:3:56: unexpected string constant\n2: \n3: upper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\"\n                                                          ^\n\n\n\nMake one long vector containing all the symbols.\n\n\nmy_symbols &lt;- cbind(lower_case, upper_case, punctuation)\n\nError in eval(expr, envir, enclos): object 'lower_case' not found\n\n\n\nTurn the my_symbols vector into a data frame, with the variable name “Symbol”\n\n\nmy_symbols &lt;- dataframe(my_symbols)\n\nError in dataframe(my_symbols): could not find function \"dataframe\"\n\nnames(my_symbols) = Symbol\n\nError in eval(expr, envir, enclos): object 'Symbol' not found\n\n\n\nFind the total number of symbols we have in our data frame.\n\n\nlen &lt;- length(my_symbols)\n\nError in eval(expr, envir, enclos): object 'my_symbols' not found\n\n\n\nCreate a new variable in your dataframe that assigns a number to each symbol.\n\n\nmy_symbols%Num &lt;- 1:len\n\nError: &lt;text&gt;:1:11: unexpected input\n1: my_symbols%Num &lt;- 1:len\n              ^"
-  },
-  {
-    "objectID": "homework/04-cipher.html#part-two-decoding-the-secret-message.",
-    "href": "homework/04-cipher.html#part-two-decoding-the-secret-message.",
-    "title": "Homework 4: Cipher",
-    "section": "Part Two: Decoding the secret message.",
-    "text": "Part Two: Decoding the secret message.\nThis chunk will load up the encoded secret message as a vector:\n\ntop_secret &lt;- read.csv(\"https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/04_Secret_Code\", header = FALSE)$V1\n\nBy altering this top secret set of numbers, you will be able to create a message. Write your own code to complete the steps below.\n\nAdd 14 to every number.\nMultiply every number by 18, then subtract 257.\nExponentiate every number. (That is, do e1.)\nSquare every number.\n\nCheckpoint: Headquarters has informed you that at this stage of decoding, there should be 352 numbers in the secret message that are below 17.\n\nTurn your vector of numbers into a matrix with 5 columns.\nSeparately from your top secret numbers, create a vector of all the even numbers between 1 and 382. Name it “evens”. That is, “evens” should contain 2, 4, 6, 8 …, 382.\nSubtract the “evens” vector from the first column of your secret message matrix.\nSubtract 100 from all numbers in the 18-24th rows of the 3rd column.\nMultiply all numbers in the 4th and 5th column by 2.\nTurn your matrix back into a vector.\n\nCheckpoint: Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are below 100.\n\nTake the square root of all numbers in indices 38 to 465.\nRound all numbers to the nearest whole number.\nReplace all instances of the number 39 with 20.\n\nCheckpoint: Headquarters has informed you that your final message should have 344 even numbers."
-  },
-  {
-    "objectID": "homework/04-cipher.html#part-3-the-secret-message",
-    "href": "homework/04-cipher.html#part-3-the-secret-message",
-    "title": "Homework 4: Cipher",
-    "section": "Part 3: The secret message!",
-    "text": "Part 3: The secret message!\nUse your final vector of numbers as indices for my_symbols to discover the final message!\nGoogle the first line of this message, if you do not recognize it, to see what it is.\nWrite 3-4 sentences about what you learned from this investigation. What problems did you encounter, and how did you solve them?"
-  },
-  {
-    "objectID": "homework/04-cipher.html#footnotes",
-    "href": "homework/04-cipher.html#footnotes",
-    "title": "Homework 4: Cipher",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nnumber↩︎"
-  },
-  {
-    "objectID": "homework/05-vectors.html",
-    "href": "homework/05-vectors.html",
-    "title": "Homework 5: Vectors and Control Structures",
-    "section": "",
-    "text": "Download the starter qmd file here"
-  },
-  {
-    "objectID": "homework/05-vectors.html#set-up",
-    "href": "homework/05-vectors.html#set-up",
-    "title": "Homework 5: Vectors and Control Structures",
-    "section": "Set-Up",
-    "text": "Set-Up\nRunning the following chunk will generate two files and save them to your current working directory.\n\nset.seed(24038243)\n# Generate a vector of data for the problem\nx &lt;- round(runif(100, 0, 1e6))\ny &lt;- round(runif(100, 0, 1e6))\n\n# write it to a file\nwriteLines(as.character(x), con = \"hw5data-r.txt\")\nwriteLines(as.character(y), con = \"hw5data-py.txt\")"
-  },
-  {
-    "objectID": "homework/05-vectors.html#navigation",
-    "href": "homework/05-vectors.html#navigation",
-    "title": "Homework 5: Vectors and Control Structures",
-    "section": "Navigation",
-    "text": "Navigation\nThe following problem is inspired by the first problem in the 2021 Advent of Code challenge and as a result is Santa-themed.\nYou’re minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean! Before you know it, you’re inside a submarine the Elves keep ready for situations like this.\nAs the submarine drops below the surface of the ocean, it automatically performs a sonar sweep of the nearby sea floor. On a small screen, the sonar sweep report (your puzzle input) appears: each line is a measurement of the sea floor depth as the sweep looks further and further away from the submarine.\nFor example, suppose you had the following report:\n199\n200\n208\n210\n200\n207\n240\n269\n260\n263\nThis report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.\nThe first order of business is to figure out how quickly the depth increases, just so you know what you’re dealing with - you never know if the keys will get carried into deeper water by an ocean current or a fish or something.\nTo do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.) In the example above, the changes are as follows:\n199 (N/A - no previous measurement)\n200 (increased)\n208 (increased)\n210 (increased)\n200 (decreased)\n207 (increased)\n240 (increased)\n269 (increased)\n260 (decreased)\n263 (increased)\nIn this example, there are 7 measurements that are larger than the previous measurement.\nHow many measurements are larger than the previous measurement?\n\nPart 1 - Planning the solution\nDraw a program flow map to show how you plan to solve the problem. I used excalidraw.com to draw the maps in the book.\nExport your map to a png, upload it to an image hosting site like imgur, and include the link here. Make sure to link directly to the PNG (right click, get link to image).\n\n\n\nPart 2 - Writing the code\nYou have two files, hw4data-r.txt and hw4data-py.txt. I have provided you with code to read the data in from these files (if they aren’t in your current working directory, run the chunk in the Set-up section, which creates the files).\n\nR\n\nx &lt;- readLines(\"hw5data-r.txt\")\n\n## Solve the problem below this comment\n\n\nnx &lt;- NA # Your answer should be stored in the nx variable to make the line below this chunk work\n\nThere are NA measurements larger than the previous measurement.\n\n\nPython\n\nimport numpy as np\nx = np.loadtxt('hw5data-py.txt')\n\n## Solve the problem below this comment\n\n\nnx2 = 0 # your answer should be stored in the nx variable to make the line below this chunk work\n\nThere are 0 measurements larger than the previous measurement."
+    "objectID": "homework/08-graphics.html#swiss-banknotes",
+    "href": "homework/08-graphics.html#swiss-banknotes",
+    "title": "Homework 8: Graphics",
+    "section": "Swiss Banknotes",
+    "text": "Swiss Banknotes\nThe R package mclust contains a data set called banknote, consisting of (physical) measurements on 200 Swiss bank notes, 100 of which are genuine, while the other half is counterfeit. Load this data set (you might have to install the package) using the code below.\n\n# install.packages(\"mclust\")\nlibrary(mclust) # if this throws an error of the form 'there is no package called mclust', uncomment the line above, run it once, then comment the line out again and run the code chunk again.\n## Package 'mclust' version 6.0.0\n## Type 'citation(\"mclust\")' for citing this R package in publications.\ndata(banknote)\nbanknote$Status &lt;- factor(banknote$Status)\n\n\nbanknote = r.banknote # Copy data from R\n\nFor each of the three figures you create below, write a summary paragraph describing the structure of the plot:\n\nWhat type of plot is it?\nWhich variables are mapped to x, to y, and to the (fill) color?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n\n\nUse ggplot2 or plotnine to draw a barchart of Status. Map Status to the fill color of the barchart. This will be a relatively boring chart (but that is ok)\nUse ggplot2 or plotnine to draw a histogram of one of the variables in the dataset that shows a distinction between genuine and counterfeit banknotes. Use fill color to show this difference.\nUse ggplot2 or plotnine to draw a scatterplot of two (continuous) measurements, color by Status. Try to find a pair of measurements that allow you to separate perfectly between genuine and counterfeit banknotes."
   },
   {
     "objectID": "homework/06-fizzbuzz.html",
@@ -173,6 +117,174 @@
     "title": "Homework 6: FizzBuzz",
     "section": "Vectorized FizzBuzz",
     "text": "Vectorized FizzBuzz\nWrite a FizzBuzz function named fizzbuzz that can handle a vector of numbers and will return (not print out) a vector of character/string values. Check to ensure the input vector is numeric.\nHint: You might use a loop and call your function from the previous part on each value in the vector.\nThis code will test your fizzbuzz function. Please make sure it runs as you expect it to run before you submit this file to Canvas!\n\nfizzbuzz(c(0, 3, 5, 7, 11, 15))\n## Error in fizzbuzz(c(0, 3, 5, 7, 11, 15)): could not find function \"fizzbuzz\"\n\nfizzbuzz(month.name) # this should fail\n## Error in fizzbuzz(month.name): could not find function \"fizzbuzz\""
+  },
+  {
+    "objectID": "homework/05-tips-for-success.html",
+    "href": "homework/05-tips-for-success.html",
+    "title": "Tips: Homework 5",
+    "section": "",
+    "text": "Check your compiled file before you submit to make sure it looks the way you want it.\nIf you want to be really sure it works, copy your qmd file to a different folder and compile that… for now, that’s the best way to check that it will work on my machine."
+  },
+  {
+    "objectID": "homework/05-tips-for-success.html#compile-your-file-first",
+    "href": "homework/05-tips-for-success.html#compile-your-file-first",
+    "title": "Tips: Homework 5",
+    "section": "",
+    "text": "Check your compiled file before you submit to make sure it looks the way you want it.\nIf you want to be really sure it works, copy your qmd file to a different folder and compile that… for now, that’s the best way to check that it will work on my machine."
+  },
+  {
+    "objectID": "homework/05-tips-for-success.html#images",
+    "href": "homework/05-tips-for-success.html#images",
+    "title": "Tips: Homework 5",
+    "section": "2 Images",
+    "text": "2 Images\nImage links must be to the image url, not to the imgur page url\n\n\n\ncaption text goes here\n\n\nCode for this image:\n![caption text goes here](https://i.imgur.com/PKushbR.png){width=50%}\nYou can get this url by right-clicking on the image on the Imgur page and then selecting “Copy image address”:\n\nOther things that don’t work:\n\nIncluding (local) file paths directly (user names changed to protect the innocent):\n\n\\C:\\Users\\person\\Documents\\Flow chart HW5.png\nC:\\Users\\person\\Downloads\\Stat 151\\Excalidraw.png\n\nIncluding (local) file paths in correct image syntax\nExplanation: this works on your machine, but won’t work on mine because I don’t have your file on my machine. You could zip the PNG file and the qmd file up together and submit that, I guess, but it’s easier to follow the directions about imgur (in my opinion).\n\n![](program-flow-map.png)"
+  },
+  {
+    "objectID": "homework/05-tips-for-success.html#yaml-metadata",
+    "href": "homework/05-tips-for-success.html#yaml-metadata",
+    "title": "Tips: Homework 5",
+    "section": "3 YAML metadata",
+    "text": "3 YAML metadata\nYAML metadata is the stuff between --- at the top of your document.\n\nYou should have only one set of metadata in your document.\n\nIn this example, you should delete the first set of YAML metadata and only include the second set that has the proper information for the assignment.\n---\ntitle: \"person HW 5\"\nformat: html\neditor: visual\n---\n\n---\ntitle: \"Homework 5: Vectors and Control Structures\"\nauthor: \"person\"\ndate: \"Due: March 3, 2023\"\noutput: \n  html_document:\n    self_contained: yes\n---\n\n\nYAML metadata indentation matters\n\nThis works:\noutput: \n  html_document:\n    self_contained: yes\nThis doesn’t:\noutput: html_document\n  self_contained: yes\nThis works:\n---\ntitle: \"Homework 5: Vectors and Control Structures\"\ndate: \"Due: March 3, 2023\"\noutput: \n  html_document:\n    self_contained: yes\n---\nThis doesn’t:\n---\n  title: \"Homework 5: Vectors and Control Structures\"\ndate: \"Due: March 3, 2023\"\noutput: \n  html_document:\n  self_contained: yes\n---"
+  },
+  {
+    "objectID": "homework/05-tips-for-success.html#quarto-default-template",
+    "href": "homework/05-tips-for-success.html#quarto-default-template",
+    "title": "Tips: Homework 5",
+    "section": "4 Quarto default template",
+    "text": "4 Quarto default template\nIt’s totally fine to delete the default quarto information that looks like this from the bottom/top of your file.\nIt’s also totally fine to delete the YAML metadata that comes with that quarto default template. I usually say “Create blank document” or switch to source mode and Ctrl-A (select all) before Ctrl-V (paste) to remove everything that RStudio gives you by default.\n\n## Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.\n\n## Running Code\n\nWhen you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n```{r}\n1 + 1\n```\n\nYou can add options to executable code like this\n\n```{r}\n#| echo: false\n2 * 2\n```\n\nThe `echo: false` option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "homework/05-tips-for-success.html#print-only-necessary-output",
+    "href": "homework/05-tips-for-success.html#print-only-necessary-output",
+    "title": "Tips: Homework 5",
+    "section": "5 Print only necessary output",
+    "text": "5 Print only necessary output\nI would prefer if you didn’t print out the values of a vector in the code chunks when you submit your file. Comment those out - it’s useful to have them for debugging, but you don’t need them for presentation purposes.\nWhat to do:\n\nx &lt;- as.numeric(x)\n# x # Commented out, so you can uncomment to debug if necessary\n\nWhat not to do:\n\nx &lt;- as.numeric(x)\nx\n\n  [1] 325698 766364 362012 166247 897999 294171 916664 884662 278403 940574\n [11] 106891 381401 849972 897001 226519 828195  91265 753154 588095 457528\n [21] 277275 809052 113874 671162 686489 896904 747724   7053 950898 707745\n [31] 168003 523324 896071 810445 641980 457608 941793  14326 706029 537414\n [41]  55988 910090 506347 526471 962873 317735 762427 638727 425519 388537\n [51] 280629 940575 755803 934680 911933 857272 707581 358178 789662 394281\n [61]   7500 178213 362466 967969 252530 128349 953298 500442 760581 367530\n [71] 871698 127322 190632 637714 365932 776579 969538 916833 254271 692061\n [81] 253268 136396 295048 643919 979193 716806 945620 576969 602211 402003\n [91] 536309 626646 882011  89558 114729 187246 866224 493441 529045 677284"
+  },
+  {
+    "objectID": "homework/03-data-types.html",
+    "href": "homework/03-data-types.html",
+    "title": "Homework 3: Basic Data Types",
+    "section": "",
+    "text": "Download the starter qmd file here"
+  },
+  {
+    "objectID": "homework/03-data-types.html#pythagorean-theorem-in-r",
+    "href": "homework/03-data-types.html#pythagorean-theorem-in-r",
+    "title": "Homework 3: Basic Data Types",
+    "section": "Pythagorean Theorem in R",
+    "text": "Pythagorean Theorem in R\n\\[a^2 + b^2 = c^2\\]\nUse the chunk below to define variables \\(a\\), \\(b\\), and \\(c\\), where you set \\(a\\) and \\(b\\) and \\(c\\) is determined mathematically. You may need to find the square root function in R to make this work.\n\n# Your pythagorean theorem code goes here"
+  },
+  {
+    "objectID": "homework/03-data-types.html#quadratic-formula-in-python",
+    "href": "homework/03-data-types.html#quadratic-formula-in-python",
+    "title": "Homework 3: Basic Data Types",
+    "section": "Quadratic Formula in Python",
+    "text": "Quadratic Formula in Python\n\\[x = -b \\pm \\frac{\\sqrt{b^2 - 4ac}}{2a}\\]\nUse the chunk below to define variables \\(a\\), \\(b\\), and \\(c\\), and then define \\(x1\\) and \\(x2\\), the possible values for \\(x\\).\n\n# Your quadratic formula code goes here"
+  },
+  {
+    "objectID": "homework/03-data-types.html#debugging-practice",
+    "href": "homework/03-data-types.html#debugging-practice",
+    "title": "Homework 3: Basic Data Types",
+    "section": "Debugging practice",
+    "text": "Debugging practice\nLook at the data frame below, which contains 3 columns: Name, Salary, and Hire.Year. You’ve read in this data from the data file online and ideally, you want to plot Hire.Year on the x-axis and Salary on the y-axis (code to do this is provided).\nUnfortunately, the data isn’t reading in properly. Identify the problem, propose a solution, and try to implement your solution using functions on the R reference card.\nSome things you may want to consider:\n\ngsub\nYou can access columns in a data frame using $: df$col1 will get you col1 of the df object. (We will talk about data frames more next week, but for now, just try to use them)\nYou can access items in a vector using []: x[1] will get you the first item in x\n\nNote: You should be able to identify the problem given what you know about R from this chapter. You may not be able to implement a solution without some additional research, so if you don’t get that far that’s ok.\n\n# This line reads in a tab-separated data file with a header naming the columns\nsalary &lt;- read.table(\"https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/03-data.tsv\",\n                     sep = \"\\t\", header = T)\n\n# This code plots labels for each individual at location (x, y)\nlibrary(ggplot2)\nggplot(salary, aes(x = Hire.Year, y = Salary, label = Name)) +\n  geom_label()\n\n\n\n# This displays the salary object\nsalary\n\n            Name     Salary Hire.Year\n1  Michael Scott $67,872.00      1995\n2 Dwight Schrute      54000      2001\n3     Pam Beesly      26309      2003\n4    Jim Halpert      59083      1998\n\n\n\nThe problem with the data is:\nHere is how I solved the problem:\n\n# Your implementation code goes here"
+  },
+  {
+    "objectID": "homework/01-scripts-notebooks.html",
+    "href": "homework/01-scripts-notebooks.html",
+    "title": "Homework 1: Scripts and Notebooks",
+    "section": "",
+    "text": "Download the starter qmd file here"
+  },
+  {
+    "objectID": "homework/01-scripts-notebooks.html#what-is-the-difference-between-a-script-and-a-notebook",
+    "href": "homework/01-scripts-notebooks.html#what-is-the-difference-between-a-script-and-a-notebook",
+    "title": "Homework 1: Scripts and Notebooks",
+    "section": "What is the difference between a script and a notebook?",
+    "text": "What is the difference between a script and a notebook?\nReplace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use markdown formatting as described in this cheat-sheet. You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages."
+  },
+  {
+    "objectID": "homework/01-scripts-notebooks.html#playing-with-code-in-notebooks",
+    "href": "homework/01-scripts-notebooks.html#playing-with-code-in-notebooks",
+    "title": "Homework 1: Scripts and Notebooks",
+    "section": "Playing with Code in Notebooks",
+    "text": "Playing with Code in Notebooks\nThe code chunk below defines a logarithmic spiral. Using this reference, modify the code so that it now plots Fermat’s spiral. Use \\(a = 1\\).\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta &lt;- seq(0, 4*pi, .01) \n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta\nr &lt;- seq(0, 5, length.out = length(theta))\n\n# Now define x and y in cartesian coordinates\nx &lt;- r * cos(theta)\ny &lt;- r * sin(theta)\n\nplot(x, y, type = \"l\")\n\n\n\n\nCan you do the same thing in Python? It may help to know that in Python, to raise something to a power, you use ** instead of ^.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Define the angle of the spiral (polar coords)\n# go around two full times (2*pi = one revolution)\ntheta = np.arange(0, 4 * np.pi, 0.01)\n# Define the distance from the origin of the spiral\n# Needs to have the same length as theta \n# (get length of theta with theta.size, \n#  and then divide 5 by that to get the increment)\nr = np.arange(0, 5, 5/theta.size)\n\n# Now define x and y in cartesian coordinates\nx = r * np.cos(theta)\ny = r * np.sin(theta)\n\n# Define the axes\nfig, ax = plt.subplots()\n# Plot the line\nax.plot(x, y)\nplt.show()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stat 151",
+    "section": "",
+    "text": "Course Materials\nUse the categories on the right to filter the materials.\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nType\n\n\n\n\n\n\n\n\nFeb 9, 2024\n\n\nHomework 2: Finding Your Way in R and Python\n\n\nHW\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\nIntroduction to Programming\n\n\nreading\n\n\n\n\n\n\n\nFeb 4, 2024\n\n\nVariables and Basic Data Types\n\n\nreading\n\n\n\n\n\n\n\nFeb 2, 2024\n\n\nHomework 1: Scripts and Notebooks\n\n\nHW\n\n\n\n\n\n\n\nJan 28, 2024\n\n\nRStudio’s interface\n\n\nreading\n\n\n\n\n\n\n\nJan 28, 2024\n\n\nScripts and Notebooks\n\n\nreading\n\n\n\n\n\n\n\nJan 24, 2024\n\n\nStat 151 - Introduction\n\n\nslides\n\n\n\n\n\n\n\nJan 21, 2024\n\n\nSyllabus\n\n\nreading\n\n\n\n\n\n\n\nJan 21, 2024\n\n\nComputer Basics\n\n\nreading\n\n\n\n\n\n\n\nJan 21, 2024\n\n\nSetting Up Your Computer\n\n\nreading\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "homework/02-finding-your-way.html",
+    "href": "homework/02-finding-your-way.html",
+    "title": "Homework 2: Finding Your Way in R and Python",
+    "section": "",
+    "text": "Download the starter qmd file here"
+  },
+  {
+    "objectID": "homework/02-finding-your-way.html#madlibs",
+    "href": "homework/02-finding-your-way.html#madlibs",
+    "title": "Homework 2: Finding Your Way in R and Python",
+    "section": "MadLibs",
+    "text": "MadLibs\n\nRunning a Python Script at the command line\nRun the script madlibs.py using the terminal to run the script (e.g. type python3 madlibs.py in the terminal). Do what it asks of you. Copy the text after the initial command and paste it between the markings below. (These define a generic, no-language markdown code chunk).\n# Paste your output here!\nCan you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens."
+  },
+  {
+    "objectID": "homework/02-finding-your-way.html#thinking-critically",
+    "href": "homework/02-finding-your-way.html#thinking-critically",
+    "title": "Homework 2: Finding Your Way in R and Python",
+    "section": "Thinking Critically",
+    "text": "Thinking Critically\nConsider the counting words examples in the textbook (Your Turn – Terminal Mode, Your Turn – Script Mode). Look at the code, and then at the steps provided for each example. What is different? What is the same? Create a table comparing terminal mode, script mode (e.g. running the whole script using the Run button), and interactive mode. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they’re specified, and any differences in the output."
+  },
+  {
+    "objectID": "homework/04-cipher.html",
+    "href": "homework/04-cipher.html",
+    "title": "Homework 4: Cipher",
+    "section": "",
+    "text": "Download the starter qmd file here\nThis assignment is modified from the decodeR exercises by Kelly Bodwin and Allison Theobold.\nOnce you finish this assignment, think about how you might decode the message in python. For +5 extra credit, write python code that decodes the message, following the outline of the R code you’ve already written.\nIn this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.\nSome advice:"
+  },
+  {
+    "objectID": "homework/04-cipher.html#part-one-setup",
+    "href": "homework/04-cipher.html#part-one-setup",
+    "title": "Homework 4: Cipher",
+    "section": "Part One: Setup",
+    "text": "Part One: Setup\nEach of the following R chunks will cause an error and/or do the desired task incorrectly.\nFind the mistake, and correct it to complete the intended action.\nFor each error, write 1-2 sentences to reflect on what the mistake was and how you found it and fixed it.\n\nCreate vectors containing the upper case letters, lower case letters, and some punctuation marks.\n\n\nlower_case &lt;- c(\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"q\", \"r\", \"s\", \"t\", \"u\", \"v\", \"w\", \"x\", \"y\", \"z\")\n\nupper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\")\n\npunctuation &lt;- c(\".\", \",\", \"!\", \"?\", \"'\", \"\"\", \"(\", \")\", \" \", \"-\", \";\", \":\")\n\nError: &lt;text&gt;:3:56: unexpected string constant\n2: \n3: upper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\"\n                                                          ^\n\n\n\nMake one long vector containing all the symbols.\n\n\nmy_symbols &lt;- cbind(lower_case, upper_case, punctuation)\n\nError in eval(expr, envir, enclos): object 'lower_case' not found\n\n\n\nTurn the my_symbols vector into a data frame, with the variable name “Symbol”\n\n\nmy_symbols &lt;- dataframe(my_symbols)\n\nError in dataframe(my_symbols): could not find function \"dataframe\"\n\nnames(my_symbols) = Symbol\n\nError in eval(expr, envir, enclos): object 'Symbol' not found\n\n\n\nFind the total number of symbols we have in our data frame.\n\n\nlen &lt;- length(my_symbols)\n\nError in eval(expr, envir, enclos): object 'my_symbols' not found\n\n\n\nCreate a new variable in your dataframe that assigns a number to each symbol.\n\n\nmy_symbols%Num &lt;- 1:len\n\nError: &lt;text&gt;:1:11: unexpected input\n1: my_symbols%Num &lt;- 1:len\n              ^"
+  },
+  {
+    "objectID": "homework/04-cipher.html#part-two-decoding-the-secret-message.",
+    "href": "homework/04-cipher.html#part-two-decoding-the-secret-message.",
+    "title": "Homework 4: Cipher",
+    "section": "Part Two: Decoding the secret message.",
+    "text": "Part Two: Decoding the secret message.\nThis chunk will load up the encoded secret message as a vector:\n\ntop_secret &lt;- read.csv(\"https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/04_Secret_Code\", header = FALSE)$V1\n\nBy altering this top secret set of numbers, you will be able to create a message. Write your own code to complete the steps below.\n\nAdd 14 to every number.\nMultiply every number by 18, then subtract 257.\nExponentiate every number. (That is, do e1.)\nSquare every number.\n\nCheckpoint: Headquarters has informed you that at this stage of decoding, there should be 352 numbers in the secret message that are below 17.\n\nTurn your vector of numbers into a matrix with 5 columns.\nSeparately from your top secret numbers, create a vector of all the even numbers between 1 and 382. Name it “evens”. That is, “evens” should contain 2, 4, 6, 8 …, 382.\nSubtract the “evens” vector from the first column of your secret message matrix.\nSubtract 100 from all numbers in the 18-24th rows of the 3rd column.\nMultiply all numbers in the 4th and 5th column by 2.\nTurn your matrix back into a vector.\n\nCheckpoint: Headquarters has informed you that at this stage of decoding, all numbers in indices 500 and beyond are below 100.\n\nTake the square root of all numbers in indices 38 to 465.\nRound all numbers to the nearest whole number.\nReplace all instances of the number 39 with 20.\n\nCheckpoint: Headquarters has informed you that your final message should have 344 even numbers."
+  },
+  {
+    "objectID": "homework/04-cipher.html#part-3-the-secret-message",
+    "href": "homework/04-cipher.html#part-3-the-secret-message",
+    "title": "Homework 4: Cipher",
+    "section": "Part 3: The secret message!",
+    "text": "Part 3: The secret message!\nUse your final vector of numbers as indices for my_symbols to discover the final message!\nGoogle the first line of this message, if you do not recognize it, to see what it is.\nWrite 3-4 sentences about what you learned from this investigation. What problems did you encounter, and how did you solve them?"
+  },
+  {
+    "objectID": "homework/05-vectors.html",
+    "href": "homework/05-vectors.html",
+    "title": "Homework 5: Vectors and Control Structures",
+    "section": "",
+    "text": "Download the starter qmd file here"
+  },
+  {
+    "objectID": "homework/05-vectors.html#set-up",
+    "href": "homework/05-vectors.html#set-up",
+    "title": "Homework 5: Vectors and Control Structures",
+    "section": "Set-Up",
+    "text": "Set-Up\nRunning the following chunk will generate two files and save them to your current working directory.\n\nset.seed(24038243)\n# Generate a vector of data for the problem\nx &lt;- round(runif(100, 0, 1e6))\ny &lt;- round(runif(100, 0, 1e6))\n\n# write it to a file\nwriteLines(as.character(x), con = \"hw5data-r.txt\")\nwriteLines(as.character(y), con = \"hw5data-py.txt\")"
+  },
+  {
+    "objectID": "homework/05-vectors.html#navigation",
+    "href": "homework/05-vectors.html#navigation",
+    "title": "Homework 5: Vectors and Control Structures",
+    "section": "Navigation",
+    "text": "Navigation\nThe following problem is inspired by the first problem in the 2021 Advent of Code challenge and as a result is Santa-themed.\nYou’re minding your own business on a ship at sea when the overboard alarm goes off! You rush to see if you can help. Apparently, one of the Elves tripped and accidentally sent the sleigh keys flying into the ocean! Before you know it, you’re inside a submarine the Elves keep ready for situations like this.\nAs the submarine drops below the surface of the ocean, it automatically performs a sonar sweep of the nearby sea floor. On a small screen, the sonar sweep report (your puzzle input) appears: each line is a measurement of the sea floor depth as the sweep looks further and further away from the submarine.\nFor example, suppose you had the following report:\n199\n200\n208\n210\n200\n207\n240\n269\n260\n263\nThis report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.\nThe first order of business is to figure out how quickly the depth increases, just so you know what you’re dealing with - you never know if the keys will get carried into deeper water by an ocean current or a fish or something.\nTo do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.) In the example above, the changes are as follows:\n199 (N/A - no previous measurement)\n200 (increased)\n208 (increased)\n210 (increased)\n200 (decreased)\n207 (increased)\n240 (increased)\n269 (increased)\n260 (decreased)\n263 (increased)\nIn this example, there are 7 measurements that are larger than the previous measurement.\nHow many measurements are larger than the previous measurement?\n\nPart 1 - Planning the solution\nDraw a program flow map to show how you plan to solve the problem. I used excalidraw.com to draw the maps in the book.\nExport your map to a png, upload it to an image hosting site like imgur, and include the link here. Make sure to link directly to the PNG (right click, get link to image).\n\n\n\nPart 2 - Writing the code\nYou have two files, hw4data-r.txt and hw4data-py.txt. I have provided you with code to read the data in from these files (if they aren’t in your current working directory, run the chunk in the Set-up section, which creates the files).\n\nR\n\nx &lt;- readLines(\"hw5data-r.txt\")\n\n## Solve the problem below this comment\n\n\nnx &lt;- NA # Your answer should be stored in the nx variable to make the line below this chunk work\n\nThere are NA measurements larger than the previous measurement.\n\n\nPython\n\nimport numpy as np\nx = np.loadtxt('hw5data-py.txt')\n\n## Solve the problem below this comment\n\n\nnx2 = 0 # your answer should be stored in the nx variable to make the line below this chunk work\n\nThere are 0 measurements larger than the previous measurement."
   },
   {
     "objectID": "homework/07-github.html",
@@ -231,20 +343,6 @@
     "text": "Optional extra steps\n\nOpen a pull request and let your teacher know that you’ve finished this course.\n\nCreate your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What’s your favorite hobby? Learn more about creating your profile README in the document, “Managing Your Profile README”.\nGo to your user dashboard and create a new repository. Experiment with the features within that repository to familiarize yourself with them.\nLet us know what you liked or didn’t like about the content of this course. What would you like to see more of? What would be interesting or helpful to your learning journey?"
   },
   {
-    "objectID": "homework/08-graphics.html",
-    "href": "homework/08-graphics.html",
-    "title": "Homework 8: Graphics",
-    "section": "",
-    "text": "Note: This assignment must be submitted in github classroom."
-  },
-  {
-    "objectID": "homework/08-graphics.html#swiss-banknotes",
-    "href": "homework/08-graphics.html#swiss-banknotes",
-    "title": "Homework 8: Graphics",
-    "section": "Swiss Banknotes",
-    "text": "Swiss Banknotes\nThe R package mclust contains a data set called banknote, consisting of (physical) measurements on 200 Swiss bank notes, 100 of which are genuine, while the other half is counterfeit. Load this data set (you might have to install the package) using the code below.\n\n# install.packages(\"mclust\")\nlibrary(mclust) # if this throws an error of the form 'there is no package called mclust', uncomment the line above, run it once, then comment the line out again and run the code chunk again.\n## Package 'mclust' version 6.0.0\n## Type 'citation(\"mclust\")' for citing this R package in publications.\ndata(banknote)\nbanknote$Status &lt;- factor(banknote$Status)\n\n\nbanknote = r.banknote # Copy data from R\n\nFor each of the three figures you create below, write a summary paragraph describing the structure of the plot:\n\nWhat type of plot is it?\nWhich variables are mapped to x, to y, and to the (fill) color?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n\n\nUse ggplot2 or plotnine to draw a barchart of Status. Map Status to the fill color of the barchart. This will be a relatively boring chart (but that is ok)\nUse ggplot2 or plotnine to draw a histogram of one of the variables in the dataset that shows a distinction between genuine and counterfeit banknotes. Use fill color to show this difference.\nUse ggplot2 or plotnine to draw a scatterplot of two (continuous) measurements, color by Status. Try to find a pair of measurements that allow you to separate perfectly between genuine and counterfeit banknotes."
-  },
-  {
     "objectID": "homework/09-data-cleaning.html",
     "href": "homework/09-data-cleaning.html",
     "title": "Homework 9: Data Manipulation",
@@ -280,13 +378,6 @@
     "text": "Python\n\nPandas will let you sort a data frame in decreasing order of variable x using sort_values('x', ascending = False)\nYou can select rows of a python data frame that match a list using .isin() demo\nUsing the .assign() function to create new variables will reduce the number of errors you run into. You may be able to get the correct answer without this tip, but if you run into a ‘modify on copy’ or ‘copy on write’ error, consider using .assign().\nSample code to make a line plot in plotnine is provided below:\n\n\n# Get only january months so that there's one point a year\njan_data = games.query('month == \"January\"')\n\n# x axis is year, y axis is average players\n# group = gamename says draw one line for each game\nggplot(jan_data, aes(x =\"year\", y = \"avg\", group = \"gamename\")) + geom_line()\n\n&lt;Figure Size: (640 x 480)&gt;\n\n\n\n\n\nNote that you will need to modify this code to use the correct data frame (that you generate) as well as to e.g. use color."
   },
   {
-    "objectID": "homework/10-reshape.html",
-    "href": "homework/10-reshape.html",
-    "title": "Homework 10: Data Transformations",
-    "section": "",
-    "text": "Note: This assignment must be submitted in github classroom.\nThis week’s assignment uses data from Tidy Tuesday (link) and relates to food consumption and CO2 emissions.\n\n# Credit to Kasia and minorly edited to create output file and test plot\n# Blog post at https://r-tastic.co.uk/post/from-messy-to-tidy/\nlibrary(rvest)\nlibrary(dplyr)\n\nurl &lt;- \"https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018\"\n\n# scrape the website\nurl_html &lt;- read_html(url)\n\n# extract the HTML table\nwhole_table &lt;- url_html %&gt;% \n  html_nodes('table') %&gt;%\n  html_table(fill = TRUE) %&gt;%\n  .[[1]]\n\ntable_content &lt;- whole_table %&gt;%\n  select(-X1) %&gt;% # remove redundant column\n  filter(!dplyr::row_number() %in% 1:3) # remove redundant rows\n\nraw_headers &lt;- url_html %&gt;%\n  html_nodes(\".thead-icon\") %&gt;%\n  html_attr('title')\n\ntidy_bottom_header &lt;- raw_headers[28:length(raw_headers)]\n# tidy_bottom_header[1:10]\n\nraw_middle_header &lt;- raw_headers[17:27]\n# raw_middle_header\n\ntidy_headers &lt;- c(\n  rep(raw_middle_header[1:7], each = 2),\n  \"animal_total\",\n  rep(raw_middle_header[8:length(raw_middle_header)], each = 2),\n  \"non_animal_total\",\n  \"country_total\")\n\n# tidy_headers\n\ncombined_colnames &lt;- paste(tidy_headers, tidy_bottom_header, sep = ';')\ncolnames(table_content) &lt;- c(\"Country\", combined_colnames)\n\ntable_content &lt;- table_content %&gt;%\n  mutate_at(vars(2:26), as.numeric)\n\nThe code above reads the data in from the original webpage and gets it into tabular form.\nYour job is to complete the following tasks:\n\nDescribe the state of the data set, table_content.\n\nWhat are the variables in the data set?\n\nvar1\nvar2\n(add more as necessary)\n\nIs it in tidy form? What principles of tidy data does this violate?\nYour answer here\nWhat steps do you need to take to get it into tidy form?\n\n\n(add more steps as necessary)\n\n\nSketch out what the final (tidy) data set will look like. You can use markdown table syntax or a picture here, but if you use a picture, upload it to imgur and include the image link in this document USING PROPER MARKDOWN SYNTAX.\nWrite R or python code for each step in the process you identified in #1. Show what the data looks like at each step using head(). Each step should be in a different code chunk.\nFor each food type (you may have to remove total values), plot the relationship between Carbon output and Consumption (use facets to get separate plots for each type of food). What do you notice for each plot? If you want to reduce carbon emissions, what foods should you eat less of?\nLook at the plot above again. Do you have any concerns about the data? The data source?"
-  },
-  {
     "objectID": "homework/11-strings.html",
     "href": "homework/11-strings.html",
     "title": "Homework 11: Working with strings",
@@ -298,7 +389,7 @@
     "href": "homework/11-strings.html#setup",
     "title": "Homework 11: Working with strings",
     "section": "Setup",
-    "text": "Setup\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(lubridate)\nmessage &lt;- read.csv(\"https://raw.githubusercontent.com/unl-stat151/11-strings/main/message.txt\", stringsAsFactors = FALSE)$Word"
+    "text": "Setup\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(lubridate)\nmessage &lt;- read.csv(\"https://raw.githubusercontent.com/unl-stat151/11-strings/main/message.txt\", stringsAsFactors = FALSE)$Word"
   },
   {
     "objectID": "homework/11-strings.html#warm-up-exercises",
@@ -313,62 +404,6 @@
     "title": "Homework 11: Working with strings",
     "section": "Decode a message",
     "text": "Decode a message\nNow complete the following steps to decode the message:\n\nRemove any spaces before or after each word.\nNo word should be longer than 16 characters. Drop all extra characters off the end of each word.\nAny time you see the word “ugh”, with any number of h’s, followed by a punctuation mark, delete this.\nReplace all instances of exactly 2 a’s with exactly 2 e’s.\nReplace all z’s with t’s.\nEvery word that ends in b, change that to a y. Hint: punctuation!\nEvery word that starts with k, change that to a v. Hint: capitalization!\nUse str_c(str) or ' '.join(map(str, 1)) to recombine all your words into a message.\nFind the movie this quote is from."
-  },
-  {
-    "objectID": "homework/12-graphics2.html",
-    "href": "homework/12-graphics2.html",
-    "title": "Homework 12: Graphics 2",
-    "section": "",
-    "text": "Note: This assignment must be submitted in github classroom."
-  },
-  {
-    "objectID": "homework/12-graphics2.html#take-everything-you-know-and-use-it-for-evil",
-    "href": "homework/12-graphics2.html#take-everything-you-know-and-use-it-for-evil",
-    "title": "Homework 12: Graphics 2",
-    "section": "Take everything you know, and use it for evil",
-    "text": "Take everything you know, and use it for evil\nThe textbook spent lots of time showing you how to create different types of graphics, but I spent a lot less time showing you all of the different ways you could customize graphics ggplot2 or plotnine. In this problem, I want you to create the ugliest version of the following graphs you can, and then explain why, exactly, you made the decisions you did, and which principles of good graphics you’ve intentionally violated.\nUgliness is subjective, so the goal here is for you to explore the different ways you can customize the finer details of graphics. Make sure your finished masterpiece has appropriate axis labels and a title (after all, even ugly plots need to be correctly labeled!). You are free to add additional variables and layers, modify the aesthetics used, and leverage other packages. I have provided this code as a starting point, not as a way to limit your creativity.\nI have provided some basic code to get you started. We’ll use the palmerpenguins package, which has fantastic documentation with really awesome artwork.\n\nif (!\"palmerpenguins\" %in% installed.packages()) {\n  remotes::install_github(\"allisonhorst/palmerpenguins\")\n}\nlibrary(palmerpenguins)\nlibrary(ggplot2)\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\nggplot(penguins, aes(x = body_mass_g, y = bill_length_mm, color = species)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\npenguins = r.penguins\n\n\nUseful References\n\nCustomizing ggplot2 graphics\nA group-created slideshow of awful graphics\nAn example of customizing plots in plotnine"
-  },
-  {
-    "objectID": "homework/Hw5-lessons.html",
-    "href": "homework/Hw5-lessons.html",
-    "title": "Lessons from Homework 5",
-    "section": "",
-    "text": "Also, check your compiled file before you submit to make sure it looks the way you want it.\nIf you want to be really sure it works, copy your qmd file to a different folder and compile that… for now, that’s the best way to check that it will work on my machine."
-  },
-  {
-    "objectID": "homework/Hw5-lessons.html#compile-your-file-first",
-    "href": "homework/Hw5-lessons.html#compile-your-file-first",
-    "title": "Lessons from Homework 5",
-    "section": "",
-    "text": "Also, check your compiled file before you submit to make sure it looks the way you want it.\nIf you want to be really sure it works, copy your qmd file to a different folder and compile that… for now, that’s the best way to check that it will work on my machine."
-  },
-  {
-    "objectID": "homework/Hw5-lessons.html#images",
-    "href": "homework/Hw5-lessons.html#images",
-    "title": "Lessons from Homework 5",
-    "section": "2 Images",
-    "text": "2 Images\nImage links must be to the image url, not to the imgur page url\n\n\n\ncaption text goes here\n\n\nCode for this image:\n![caption text goes here](https://i.imgur.com/PKushbR.png){width=50%}\nYou can get this url by right-clicking on the image on the Imgur page and then selecting “Copy image address”:\n\nOther things that don’t work:\n\nIncluding (local) file paths directly (user names changed to protect the innocent):\n\n\\C:\\Users\\person\\Documents\\Flow chart HW5.png\nC:\\Users\\person\\Downloads\\Stat 151\\Excalidraw.png\n\nIncluding (local) file paths in correct image syntax\nExplanation: this works on your machine, but won’t work on mine because I don’t have your file on my machine. You could zip the PNG file and the qmd file up together and submit that, I guess, but it’s easier to follow the directions about imgur (in my opinion).\n\n![](program-flow-map.png)"
-  },
-  {
-    "objectID": "homework/Hw5-lessons.html#yaml-metadata",
-    "href": "homework/Hw5-lessons.html#yaml-metadata",
-    "title": "Lessons from Homework 5",
-    "section": "3 YAML metadata",
-    "text": "3 YAML metadata\nYAML metadata is the stuff between --- at the top of your document.\n\nYou should have only one set of metadata in your document.\n\nIn this example, you should delete the first set of YAML metadata and only include the second set that has the proper information for the assignment.\n---\ntitle: \"person HW 5\"\nformat: html\neditor: visual\n---\n\n---\ntitle: \"Homework 5: Vectors and Control Structures\"\nauthor: \"person\"\ndate: \"Due: March 3, 2023\"\noutput: \n  html_document:\n    self_contained: yes\n---\n\n\nYAML metadata indentation matters\n\nThis works:\noutput: \n  html_document:\n    self_contained: yes\nThis doesn’t:\noutput: html_document\n  self_contained: yes\nThis works:\n---\ntitle: \"Homework 5: Vectors and Control Structures\"\ndate: \"Due: March 3, 2023\"\noutput: \n  html_document:\n    self_contained: yes\n---\nThis doesn’t:\n---\n  title: \"Homework 5: Vectors and Control Structures\"\ndate: \"Due: March 3, 2023\"\noutput: \n  html_document:\n  self_contained: yes\n---"
-  },
-  {
-    "objectID": "homework/Hw5-lessons.html#quarto-default-template",
-    "href": "homework/Hw5-lessons.html#quarto-default-template",
-    "title": "Lessons from Homework 5",
-    "section": "4 Quarto default template",
-    "text": "4 Quarto default template\nIt’s totally fine to delete the default quarto information that looks like this from the bottom/top of your file.\nIt’s also totally fine to delete the YAML metadata that comes with that quarto default template. I usually say “Create blank document” or switch to source mode and Ctrl-A (select all) before Ctrl-V (paste) to remove everything that RStudio gives you by default.\n\n## Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.\n\n## Running Code\n\nWhen you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n```{r}\n1 + 1\n```\n\nYou can add options to executable code like this\n\n```{r}\n#| echo: false\n2 * 2\n```\n\nThe `echo: false` option disables the printing of code (only output is displayed)."
-  },
-  {
-    "objectID": "homework/Hw5-lessons.html#print-only-necessary-output",
-    "href": "homework/Hw5-lessons.html#print-only-necessary-output",
-    "title": "Lessons from Homework 5",
-    "section": "5 Print only necessary output",
-    "text": "5 Print only necessary output\nI would prefer if you didn’t print out the values of a vector in the code chunks when you submit your file. Comment those out - it’s useful to have them for debugging, but you don’t need them for presentation purposes.\nWhat to do:\n\nx &lt;- as.numeric(x)\n# x # Commented out, so you can uncomment to debug if necessary\n\nWhat not to do:\n\nx &lt;- as.numeric(x)\nx\n\n  [1] 325698 766364 362012 166247 897999 294171 916664 884662 278403 940574\n [11] 106891 381401 849972 897001 226519 828195  91265 753154 588095 457528\n [21] 277275 809052 113874 671162 686489 896904 747724   7053 950898 707745\n [31] 168003 523324 896071 810445 641980 457608 941793  14326 706029 537414\n [41]  55988 910090 506347 526471 962873 317735 762427 638727 425519 388537\n [51] 280629 940575 755803 934680 911933 857272 707581 358178 789662 394281\n [61]   7500 178213 362466 967969 252530 128349 953298 500442 760581 367530\n [71] 871698 127322 190632 637714 365932 776579 969538 916833 254271 692061\n [81] 253268 136396 295048 643919 979193 716806 945620 576969 602211 402003\n [91] 536309 626646 882011  89558 114729 187246 866224 493441 529045 677284"
   },
   {
     "objectID": "slides/01-Syllabus-and-Introductions.html#introduce-yourself",
@@ -417,7 +452,7 @@
     "href": "slides/01-Syllabus-and-Introductions.html#outline",
     "title": "Stat 151 - Introduction",
     "section": "Outline",
-    "text": "Outline\nSubject to change based on how much programming you are already familiar with…\n\n\n\nTentative schedule of class topics\n\n\nDate\nTime\nTopic\n\n\n\n\nJan 25\n\nGetting Started\n\n\nFeb 1\n\nScripts & Notebooks\n\n\nFeb 8\n\nIntro to Programming\n\n\nFeb 15\n\nData Types\n\n\nFeb 22\n\nData Structures\n\n\nMar 1\n\nControl Structures\n\n\nMar 8\nIn Class\nMidterm Review\n\n\nMar 22\n\nFunctions\n\n\nMar 29\n\nVersion Control\n\n\nApr 5\n\nWorking with Data, Visualization"
+    "text": "Outline\nSubject to change based on how much programming you are already familiar with…\n\n\n\nTentative schedule of class topics\n\n\nDate\nTime\nTopic\n\n\n\n\nJan 24\n\nGetting Started\n\n\nJan 31\n\nScripts & Notebooks\n\n\nFeb 7\n\nIntro to Programming\n\n\nFeb 14\n\nData Types\n\n\nFeb 21\n\nData Structures\n\n\nFeb 28\n\nControl Structures\n\n\nMar 6\nIn class\nMidterm Assigned\n\n\nMar 7\n6pm\nMidterm Due\n\n\nMar 20\n\nFunctions\n\n\nMar 27\n\nVersion Control"
   },
   {
     "objectID": "slides/01-Syllabus-and-Introductions.html#grades",
@@ -453,82 +488,5 @@
     "title": "Stat 151 - Introduction",
     "section": "Next Time",
     "text": "Next Time\nWe’ll work on Scripts and Notebooks\nPlease Read before class:\n\nComputer Basics\nScripts and Notebooks\nRStudio’s Interface"
-  },
-  {
-    "objectID": "exams/midterm.html",
-    "href": "exams/midterm.html",
-    "title": "Exam 1",
-    "section": "",
-    "text": "Download the starter qmd file here"
-  },
-  {
-    "objectID": "exams/midterm.html#instructions",
-    "href": "exams/midterm.html#instructions",
-    "title": "Exam 1",
-    "section": "Instructions",
-    "text": "Instructions\nCompleting the exam in both languages will earn you 20% extra credit on the exam and will also prove that you’re kicking butt in this class.\n\nCreate a folder for this exam on your computer.\nSave this file into that folder.\nWhen you are finished with the exam, compile the document. Make sure all of your code runs!\nUpload a zip file of your work and any necessary file dependencies to Canvas."
-  },
-  {
-    "objectID": "exams/midterm.html#ground-rules",
-    "href": "exams/midterm.html#ground-rules",
-    "title": "Exam 1",
-    "section": "Ground Rules",
-    "text": "Ground Rules\n\nYou may use the textbook and the internet (but the normal rules apply - you must be able to explain your answer!)\nYou may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc.\nYou may ask clarifying questions of Dr. Vanderplas by email/zoom or in person\nYou may use R or Python for any of these tasks, but your code must be reproducible - I must be able to run your quarto file on my machine. I have provided R chunks in the correct locations in this file - change them to Python if you wish.\nYou should have at least one code chunk for each numbered task below."
-  },
-  {
-    "objectID": "exams/midterm.html#dataset",
-    "href": "exams/midterm.html#dataset",
-    "title": "Exam 1",
-    "section": "Dataset",
-    "text": "Dataset\nThe data for this exam are taken from the happy dataset in the classdata R package. I’ve exported the data to CSV for you at this link: https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv\n\nDescription\nThe data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:\n\n\nFormat\nA data frame with 62466 rows and 11 variables\n\n\nDetails\n\nyear. year of the response, 1972 to 2018.\nage. age in years: 18–89 (89 stands for all 89 year olds and older).\ndegree. highest education: lt high school, high school, junior college, bachelor, graduate.\nfinrela. how is your financial status compared to others: far below, below average, average, above average, far above.\nhappy. happiness: very happy, pretty happy, not too happy.\nhealth. health: excellent, good, fair, poor.\nmarital. marital status: married, never married, divorced, widowed, separated.\nsex. sex: female, male.\npolviews. from extremely conservative to extremely liberal.\npartyid. party identification: strong republican, not str republican, ind near rep, independent, ind near dem, not str democrat, strong democrat, other party.\nwtssall. probability weight. 0.39–8.74"
-  },
-  {
-    "objectID": "exams/midterm.html#tasks",
-    "href": "exams/midterm.html#tasks",
-    "title": "Exam 1",
-    "section": "Tasks",
-    "text": "Tasks\n\nRead in the data and create a data frame that you will work with for this exam.\nCreate a new column variable, decade, in your data frame.\n\n\nYou will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or functions that will perform the operation you want.\nfloor() and math.floor() in R and python respectively are good places to start.\nCreate a scatterplot (use geom_point) of your happy year vs decade to show that your approach succeeded.\n\n\nCreate a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time.\nNote: You may have to pass an argument to the mean function to tell it to exclude missing values from the calculation, such as na.rm or skipna. Or, you can remove the NAs from happy using a function like na.omit or dropna, but be careful to only drop rows with an NA in variables we care about, like happy or year.\n\nThe code below provides an example of how to create a summary dataset and handle NAs in R and python. You may modify this code to help you answer part 3.\n\n# Create sample data\ndf &lt;- data.frame(x = c(rnorm(100, 10), rnorm(100, 20)),\n                 y = rep(c(\"Group 1\", \"Group 2\"), each = 100))\n\ndf_means &lt;- data.frame(y = NULL, mean = NULL)\n\n# For each y group, what is the mean of x?\nfor (i in unique(df$y)) {\n  sub_df &lt;- subset(df, y == i)\n  df_means &lt;- rbind(df_means, \n                    data.frame(y = i, mean = mean(sub_df$x, na.rm = T)))\n}\n\ndf_means\n##         y      mean\n## 1 Group 1  9.984594\n## 2 Group 2 20.236691\n\n# Demonstration of na.rm\nmean(c(NA, 1, 2, 3), na.rm = T) # Remove NAs\n## [1] 2\nmean(c(NA, 1, 2, 3), na.rm = F) # Don't remove NAs\n## [1] NA\n\n\nimport pandas as pd\nimport numpy as np\n\n# Create a new data frame\ndf = pd.DataFrame({\n  'y': np.repeat(['Group1', 'Group2'], (100, 100)), \n  'x': np.concatenate((np.random.normal(loc = 10, size = 100), np.random.normal(loc = 12, size = 100)), axis = None)\n  })\n\n# Create an empty dataframe\ndf_means = pd.DataFrame(columns = ['y', 'mean'])\n\n# For each age, how many values?\nfor i in np.unique(df.y):\n  # Create the subset\n  df_sub = df.loc[df.y == i]\n  # Drop NAs from the data frame\n  # This step isn't necessary because mean() uses skipna = T by default\n  # df_sub = df_sub.dropna(subset = ['x', 'y']) \n  # Add a new row to the end of df_means\n  df_means.loc[len(df_means.index)] = [i, df_sub.x.mean()]\n\n\n# Demonstrating skipna parameter of mean\npd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = True)\n## 2.0\npd.DataFrame({'y':[1, 2, 3, np.nan]}).y.mean(skipna = False)\n## nan"
-  },
-  {
-    "objectID": "exams/midterm.html#solutions",
-    "href": "exams/midterm.html#solutions",
-    "title": "Exam 1",
-    "section": "Solutions",
-    "text": "Solutions\nCopy the list of tasks here and put your code for each task below the task description. Your code should be well commented.\nIf you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.\nIf your code does not compile, add , error = T to the chunk header so that the rest of the document will still compile.\n\nRead in the data and create a data frame\n\n\nCreate a new variable, decade\n\n\n\nHappy People per Year"
-  },
-  {
-    "objectID": "exams/2023-final-exam/index.html",
-    "href": "exams/2023-final-exam/index.html",
-    "title": "Final Exam",
-    "section": "",
-    "text": "This exam is due at 3pm on May 16, 2023 (the end of the final exam period for this class). Your exam MUST BE PUSHED TO GITHUB CLASSROOM by 3pm. Please double-check your github repository to ensure that the file that is on github is the file you want me to grade.\nFor each of these problems, you may choose to solve the problem in either R or python.\nThe chunks I’ve provided are R chunks, but you are free to change the code type to python; I just want to ensure that your answers are where I expect them to be.\nThe exam is worth a total of 40 points. There are 4 bonus points available.\n\n\n\n\nYou may use the textbook, your notes, and google on this exam, but you may not post this exam and ask for help on any site.\nIt is ok to google, for instance, how to convert a string to a list of characters, but it is not ok to google how to solve the entire question. Please ask if you are concerned about any possible edge cases.\nYou may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc.\nYou must be able to explain how any code you submit on this exam works.\nYou may ask clarifying questions of Dr. Vanderplas by email/zoom or in person\n(5 points) Your submitted qmd file must compile without errors .\nUse error=TRUE in a chunk if it is supposed to return an error (for instance, if you are demonstrating error handling)."
-  },
-  {
-    "objectID": "exams/2023-final-exam/index.html#rules",
-    "href": "exams/2023-final-exam/index.html#rules",
-    "title": "Final Exam",
-    "section": "",
-    "text": "You may use the textbook, your notes, and google on this exam, but you may not post this exam and ask for help on any site.\nIt is ok to google, for instance, how to convert a string to a list of characters, but it is not ok to google how to solve the entire question. Please ask if you are concerned about any possible edge cases.\nYou may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc.\nYou must be able to explain how any code you submit on this exam works.\nYou may ask clarifying questions of Dr. Vanderplas by email/zoom or in person\n(5 points) Your submitted qmd file must compile without errors .\nUse error=TRUE in a chunk if it is supposed to return an error (for instance, if you are demonstrating error handling)."
-  },
-  {
-    "objectID": "exams/2023-final-exam/index.html#part-1-read-in-and-clean-the-data",
-    "href": "exams/2023-final-exam/index.html#part-1-read-in-and-clean-the-data",
-    "title": "Final Exam",
-    "section": "Part 1: Read in and Clean the Data",
-    "text": "Part 1: Read in and Clean the Data\n(5 points + 2 bonus)\n\n(2 points) Read in the file scrabble_points.csv and store it in a variable named points.\n\n\n(3 points) What steps do you need to take to get this data into tidy form? Describe the operations, even if you do not know how to perform them yet.\n\n\n\n\n… add more as necessary\n\n\n(2 bonus points) Write code to get your data into tidy form, if you can.\nHint: you may find the function unnest() (R) or df.explode() (Python) useful here."
-  },
-  {
-    "objectID": "exams/2023-final-exam/index.html#part-2-functions",
-    "href": "exams/2023-final-exam/index.html#part-2-functions",
-    "title": "Final Exam",
-    "section": "Part 2: Functions",
-    "text": "Part 2: Functions\n(12 points + 2 bonus)\nFor this part, you may find it useful to use the provided file clean_points.csv, which contains the same information as scrabble_points.csv, but in tidy form.\n\n(4 points) Write a function named scrabble_score(x) which will take a word as an argument and determine the point value of that word. Assume that the blank tile is indicated by _.\n\n\nscrabble_score(\"YOU\") # Should return 6 (4 + 1 + 1)\n## Error in scrabble_score(\"YOU\"): could not find function \"scrabble_score\"\nscrabble_score(\"R_CK\") # Should return 9 (1 + 0 + 3 + 5)\n## Error in scrabble_score(\"R_CK\"): could not find function \"scrabble_score\"\n\n\n(2 points) Modify the function you wrote above so that it checks that the input is a string. That is, if someone calls scrabble_score(3), your function should provide an appropriate error.\n\n\nscrabble_score(3)\n## Error in scrabble_score(3): could not find function \"scrabble_score\"\n\n\n(2 points) Modify your function so that it accepts lower-case and upper-case input and treats both the same.\n\n\nscrabble_score(\"AWESOME\") == scrabble_score(\"awEsOme\")\n## Error in scrabble_score(\"AWESOME\"): could not find function \"scrabble_score\"\n\n\n(4 points) Modify your function so that it:\n\nprovides an appropriate warning if the provided string contains a character which is not valid\nremoves any invalid characters from the string before calculating the score\n\n\n\nscrabble_score(\"GOOD LUCK!\")\n## Error in scrabble_score(\"GOOD LUCK!\"): could not find function \"scrabble_score\"\n\n\n(2 bonus) Make your function vectorized, so that you can handle either single characters or a vector of character input.\n\n\nscrabble_score(c(\"You\", \"can\", \"do\", \"this\"))\n## Error in scrabble_score(c(\"You\", \"can\", \"do\", \"this\")): could not find function \"scrabble_score\""
-  },
-  {
-    "objectID": "exams/2023-final-exam/index.html#part-3-scoring",
-    "href": "exams/2023-final-exam/index.html#part-3-scoring",
-    "title": "Final Exam",
-    "section": "Part 3: Scoring",
-    "text": "Part 3: Scoring\n(18 points)\n\n(3 points) Create a data frame named scrabble with a column named word containing the words in the file words.txt.\n\n\n(6 points) Add a column, score, to scrabble containing the word score and add another column, length, with the word length.\n\n\n(3 points) Plot word length and word score in an appropriate plot (geom_jitter may be helpful). Make sure your plot has an appropriate title and axis labels. Include any annotations (trend lines, etc.) that you think are helpful for emphasizing important features of the data. If you had trouble with the previous parts, you may use length_score_graph.csv to complete this part.\n\n\n(3 points) Describe the plot’s main features in 2-3 sentences.\n(3 points) What challenges would you face if you plot the score of all 279,498 valid scrabble words in Collins Scrabble Words (2019).txt? What modifications would you consider making to your plot?\nYou do not have to actually plot this additional data, but you may want to try it to see what the problems are."
   }
 ]

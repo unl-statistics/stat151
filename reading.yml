@@ -1,0 +1,60 @@
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html
+  title: Computer Basics
+  date: '2024-01-21'
+  pub.date: '2023-01-01'
+  categories:
+  - reading
+  - Week01
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html
+  title: Setting Up Your Computer
+  date: '2024-01-21'
+  pub.date: '2023-01-01'
+  categories:
+  - reading
+  - Week01
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-Rstudio-interface.html
+  title: RStudio's interface
+  date: '2024-01-28'
+  pub.date: '2023-01-01'
+  categories:
+  - reading
+  - Week02
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html
+  title: Scripts and Notebooks
+  date: '2024-01-28'
+  pub.date: '2023-01-01'
+  categories:
+  - reading
+  - Week02
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html
+  title: Introduction to Programming
+  date: '2024-02-04'
+  pub.date: '2023-01-01'
+  categories:
+  - reading
+  - Week03
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html
+  title: Variables and Basic Data Types
+  date: '2024-02-04'
+  pub.date: '2023-01-01'
+  categories:
+  - reading
+  - Week03
+  type: reading
+  image: figs/reading.svg
+  is_live: true

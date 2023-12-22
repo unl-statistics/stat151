@@ -3,8 +3,8 @@ title: 'Homework 8: Graphics'
 author: Your Name
 date: '2024-04-05'
 categories:
-- Week10
 - HW
+- Week10
 format:
   html:
     theme: default

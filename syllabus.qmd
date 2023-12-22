@@ -11,7 +11,7 @@ format:
     - partials/before-body.tex
     - partials/graphics.tex
     dev: cairo_pdf
-title: 'Stat 151: Introduction to Statistical Computing'
+title: Syllabus
 instructor: Susan Vanderplas
 semester: Spring 2023
 email: susan.vanderplas@unl.edu
@@ -21,9 +21,11 @@ office: Hardin 343D
 classroom: Hardin 142-East
 classhours: Wednesdays 1-2:50
 categories:
-- Week01
 - reading
+- Week01
 date: '2024-01-21'
+image: figs/reading.svg
+type: reading
 ---
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.489">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,7 +63,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -70,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-type','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
@@ -100,9 +107,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Stat 151</span>
     </a>
@@ -114,21 +121,21 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://srvanderplas.github.io/stat-computing-r-python/" rel="" target="">
- <span class="menu-text">Textbook</span></a>
+    <a class="nav-link" href="https://srvanderplas.github.io/stat-computing-r-python/"> 
+<span class="menu-text">Textbook</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.pdf" rel="" target="">
- <span class="menu-text">Syllabus</span></a>
+    <a class="nav-link" href="./syllabus.pdf"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -144,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#course-materials" id="toc-course-materials" class="nav-link active" data-scroll-target="#course-materials">Course Materials</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="exam">exam <span class="quarto-category-count">(2)</span></div><div class="category" data-category="hw">hw <span class="quarto-category-count">(12)</span></div><div class="category" data-category="notes">notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="slides">slides <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="HW"><span class="quarto-category-count category-cloud-2">HW</span></div><div class="category" data-category="Week01"><span class="quarto-category-count category-cloud-4">Week01</span></div><div class="category" data-category="Week02"><span class="quarto-category-count category-cloud-3">Week02</span></div><div class="category" data-category="Week03"><span class="quarto-category-count category-cloud-3">Week03</span></div><div class="category" data-category="reading"><span class="quarto-category-count category-cloud-7">reading</span></div><div class="category" data-category="slides"><span class="quarto-category-count category-cloud-1">slides</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -163,7 +170,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="course-materials" class="level1">
 <h1>Course Materials</h1>
@@ -184,9 +193,6 @@ ul.task-list li input[type="checkbox"] {
          <option value="listing-title-sort" data-direction="asc">
           Title
         </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
      </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -194,7 +200,6 @@ ul.task-list li input[type="checkbox"] {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-
 <table class="quarto-listing-table table">
 <thead>
 <tr>
@@ -205,189 +210,154 @@ ul.task-list li input[type="checkbox"] {
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+Type
+</th>
+<th>
 </th>
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="exam" data-listing-date-sort="1684213200000" data-listing-file-modified-sort="1684808620633" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Final Exam" data-listing-filename-sort="index.qmd">
+<tr data-index="0" data-categories="HW,Week03" data-listing-date-sort="1707458400000" data-listing-file-modified-sort="1703271413663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="187" data-listing-title-sort="Homework 2: Finding Your Way in R and Python" data-listing-filename-sort="02-finding-your-way.qmd">
 <td>
-<span class="listing-date">May 16, 2023</span>
-</td>
-<td>
-<a href="./exams/2023-final-exam/index.html" class="title listing-title">Final Exam</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="hw" data-listing-date-sort="1683262800000" data-listing-file-modified-sort="1680817242106" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Homework 12: Graphics Part 2" data-listing-filename-sort="12-graphics2.qmd">
-<td>
-<span class="listing-date">May 5, 2023</span>
-</td>
-<td>
-<a href="./homework/12-graphics2.html" class="title listing-title">Homework 12: Graphics Part 2</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="hw" data-listing-date-sort="1682658000000" data-listing-file-modified-sort="1680814504209" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Homework 11: Working with Strings" data-listing-filename-sort="11-strings.qmd">
-<td>
-<span class="listing-date">Apr 28, 2023</span>
-</td>
-<td>
-<a href="./homework/11-strings.html" class="title listing-title">Homework 11: Working with Strings</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="hw" data-listing-date-sort="1682053200000" data-listing-file-modified-sort="1680817142033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Homework 10: Data Transformations" data-listing-filename-sort="10-reshape.qmd">
-<td>
-<span class="listing-date">Apr 21, 2023</span>
-</td>
-<td>
-<a href="./homework/10-reshape.html" class="title listing-title">Homework 10: Data Transformations</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="4" data-categories="hw" data-listing-date-sort="1681448400000" data-listing-file-modified-sort="1679020520840" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Homework 9: Data Cleaning and Manipulation" data-listing-filename-sort="09-data-cleaning.qmd">
-<td>
-<span class="listing-date">Apr 14, 2023</span>
-</td>
-<td>
-<a href="./homework/09-data-cleaning.html" class="title listing-title">Homework 9: Data Cleaning and Manipulation</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="5" data-categories="hw" data-listing-date-sort="1680843600000" data-listing-file-modified-sort="1679020397334" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Homework 8: Graphics" data-listing-filename-sort="08-graphics.qmd">
-<td>
-<span class="listing-date">Apr 7, 2023</span>
-</td>
-<td>
-<a href="./homework/08-graphics.html" class="title listing-title">Homework 8: Graphics</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="6" data-categories="hw" data-listing-date-sort="1680238800000" data-listing-file-modified-sort="1679020037590" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Homework 7: Git and Github" data-listing-filename-sort="07-github.qmd">
-<td>
-<span class="listing-date">Mar 31, 2023</span>
-</td>
-<td>
-<a href="./homework/07-github.html" class="title listing-title">Homework 7: Git and Github</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="7" data-categories="hw" data-listing-date-sort="1679634000000" data-listing-file-modified-sort="1679019854557" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Homework 6: FizzBuzz" data-listing-filename-sort="06-fizzbuzz.qmd">
-<td>
-<span class="listing-date">Mar 24, 2023</span>
-</td>
-<td>
-<a href="./homework/06-fizzbuzz.html" class="title listing-title">Homework 6: FizzBuzz</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="8" data-categories="exam" data-listing-date-sort="1678341600000" data-listing-file-modified-sort="1679008461723" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-title-sort="Exam 1" data-listing-filename-sort="midterm.qmd">
-<td>
-<span class="listing-date">Mar 9, 2023</span>
-</td>
-<td>
-<a href="./exams/midterm.html" class="title listing-title">Exam 1</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="9" data-categories="notes" data-listing-date-sort="1678168800000" data-listing-file-modified-sort="1679008461723" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Lessons from Homework 5" data-listing-filename-sort="Hw5-lessons.qmd">
-<td>
-<span class="listing-date">Mar 7, 2023</span>
-</td>
-<td>
-<a href="./homework/Hw5-lessons.html" class="title listing-title">Lessons from Homework 5</a>
-</td>
-<td>
-<span class="listing-author"></span>
-</td>
-</tr>
-<tr data-index="10" data-categories="hw" data-listing-date-sort="1677823200000" data-listing-file-modified-sort="1679008461723" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Homework 5: Vectors and Control Structures" data-listing-filename-sort="05-vectors.qmd">
-<td>
-<span class="listing-date">Mar 3, 2023</span>
-</td>
-<td>
-<a href="./homework/05-vectors.html" class="title listing-title">Homework 5: Vectors and Control Structures</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="11" data-categories="hw" data-listing-date-sort="1677218400000" data-listing-file-modified-sort="1679008461723" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Homework 4: Cipher" data-listing-filename-sort="04-cipher.qmd">
-<td>
-<span class="listing-date">Feb 24, 2023</span>
-</td>
-<td>
-<a href="./homework/04-cipher.html" class="title listing-title">Homework 4: Cipher</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="12" data-categories="hw" data-listing-date-sort="1676613600000" data-listing-file-modified-sort="1684808886773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Homework 3: Basic Data Types" data-listing-filename-sort="03-data-types.qmd">
-<td>
-<span class="listing-date">Feb 17, 2023</span>
-</td>
-<td>
-<a href="./homework/03-data-types.html" class="title listing-title">Homework 3: Basic Data Types</a>
-</td>
-<td>
-<span class="listing-author">Your Name</span>
-</td>
-</tr>
-<tr data-index="13" data-categories="hw" data-listing-date-sort="1676008800000" data-listing-file-modified-sort="1679008461723" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Homework 2: Finding Your Way in R and Python" data-listing-filename-sort="02-finding-your-way.qmd">
-<td>
-<span class="listing-date">Feb 10, 2023</span>
+<span class="listing-date">Feb 9, 2024</span>
 </td>
 <td>
 <a href="./homework/02-finding-your-way.html" class="title listing-title">Homework 2: Finding Your Way in R and Python</a>
 </td>
 <td>
-<span class="listing-author">Your Name</span>
+<span class="listing-type">HW</span>
+</td>
+<td>
+<span class="listing-image"><img src="./figs/hw.svg" style="height: 40px;"></span>
 </td>
 </tr>
-<tr data-index="14" data-categories="hw" data-listing-date-sort="1675404000000" data-listing-file-modified-sort="1679008461723" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Homework 1: Scripts and Notebooks" data-listing-filename-sort="01-scripts-notebooks.qmd">
+<tr data-index="1" data-categories="reading,Week03" data-listing-date-sort="1707026400000" data-listing-title-sort="Introduction to Programming">
 <td>
-<span class="listing-date">Feb 3, 2023</span>
+<span class="listing-date">Feb 4, 2024</span>
+</td>
+<td>
+<a href="https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html" class="title listing-title">Introduction to Programming</a>
+</td>
+<td>
+<span class="listing-type">reading</span>
+</td>
+<td>
+<span class="listing-image"><img src="figs/reading.svg" style="height: 40px;"></span>
+</td>
+</tr>
+<tr data-index="2" data-categories="reading,Week03" data-listing-date-sort="1707026400000" data-listing-title-sort="Variables and Basic Data Types">
+<td>
+<span class="listing-date">Feb 4, 2024</span>
+</td>
+<td>
+<a href="https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html" class="title listing-title">Variables and Basic Data Types</a>
+</td>
+<td>
+<span class="listing-type">reading</span>
+</td>
+<td>
+<span class="listing-image"><img src="figs/reading.svg" style="height: 40px;"></span>
+</td>
+</tr>
+<tr data-index="3" data-categories="HW,Week02" data-listing-date-sort="1706853600000" data-listing-file-modified-sort="1703271413659" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294" data-listing-title-sort="Homework 1: Scripts and Notebooks" data-listing-filename-sort="01-scripts-notebooks.qmd">
+<td>
+<span class="listing-date">Feb 2, 2024</span>
 </td>
 <td>
 <a href="./homework/01-scripts-notebooks.html" class="title listing-title">Homework 1: Scripts and Notebooks</a>
 </td>
 <td>
-<span class="listing-author">Your Name</span>
+<span class="listing-type">HW</span>
+</td>
+<td>
+<span class="listing-image"><img src="./figs/hw.svg" style="height: 40px;"></span>
 </td>
 </tr>
-<tr data-index="15" data-categories="slides" data-listing-date-sort="1674626400000" data-listing-file-modified-sort="1684810910373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Stat 151 - Introduction" data-listing-filename-sort="01-Syllabus-and-Introductions.qmd">
+<tr data-index="4" data-categories="reading,Week02" data-listing-date-sort="1706421600000" data-listing-title-sort="RStudio's interface">
 <td>
-<span class="listing-date">Jan 25, 2023</span>
+<span class="listing-date">Jan 28, 2024</span>
+</td>
+<td>
+<a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-Rstudio-interface.html" class="title listing-title">RStudio’s interface</a>
+</td>
+<td>
+<span class="listing-type">reading</span>
+</td>
+<td>
+<span class="listing-image"><img src="figs/reading.svg" style="height: 40px;"></span>
+</td>
+</tr>
+<tr data-index="5" data-categories="reading,Week02" data-listing-date-sort="1706421600000" data-listing-title-sort="Scripts and Notebooks">
+<td>
+<span class="listing-date">Jan 28, 2024</span>
+</td>
+<td>
+<a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html" class="title listing-title">Scripts and Notebooks</a>
+</td>
+<td>
+<span class="listing-type">reading</span>
+</td>
+<td>
+<span class="listing-image"><img src="figs/reading.svg" style="height: 40px;"></span>
+</td>
+</tr>
+<tr data-index="6" data-categories="slides,Week01" data-listing-date-sort="1706076000000" data-listing-file-modified-sort="1703271413651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="398" data-listing-title-sort="Stat 151 - Introduction" data-listing-filename-sort="01-Syllabus-and-Introductions.qmd">
+<td>
+<span class="listing-date">Jan 24, 2024</span>
 </td>
 <td>
 <a href="./slides/01-Syllabus-and-Introductions.html" class="title listing-title">Stat 151 - Introduction</a>
 </td>
 <td>
-<span class="listing-author"></span>
+<span class="listing-type">slides</span>
+</td>
+<td>
+<span class="listing-image"><img src="./figs/slides.svg" style="height: 40px;"></span>
+</td>
+</tr>
+<tr data-index="7" data-categories="reading,Week01" data-listing-date-sort="1705816800000" data-listing-file-modified-sort="1703271413631" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2220" data-listing-title-sort="Syllabus" data-listing-filename-sort="syllabus.qmd">
+<td>
+<span class="listing-date">Jan 21, 2024</span>
+</td>
+<td>
+<a href="./syllabus.pdf" class="title listing-title">Syllabus</a>
+</td>
+<td>
+<span class="listing-type">reading</span>
+</td>
+<td>
+<span class="listing-image"><img src="./figs/reading.svg" style="height: 40px;"></span>
+</td>
+</tr>
+<tr data-index="8" data-categories="reading,Week01" data-listing-date-sort="1705816800000" data-listing-title-sort="Computer Basics">
+<td>
+<span class="listing-date">Jan 21, 2024</span>
+</td>
+<td>
+<a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html" class="title listing-title">Computer Basics</a>
+</td>
+<td>
+<span class="listing-type">reading</span>
+</td>
+<td>
+<span class="listing-image"><img src="figs/reading.svg" style="height: 40px;"></span>
+</td>
+</tr>
+<tr data-index="9" data-categories="reading,Week01" data-listing-date-sort="1705816800000" data-listing-title-sort="Setting Up Your Computer">
+<td>
+<span class="listing-date">Jan 21, 2024</span>
+</td>
+<td>
+<a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html" class="title listing-title">Setting Up Your Computer</a>
+</td>
+<td>
+<span class="listing-type">reading</span>
+</td>
+<td>
+<span class="listing-image"><img src="figs/reading.svg" style="height: 40px;"></span>
 </td>
 </tr>
 </tbody>
-
 </table>
 <div class="listing-no-matching d-none">
 No matching items
@@ -478,10 +448,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -491,8 +460,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -505,6 +483,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -548,6 +648,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -573,6 +674,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -633,6 +760,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

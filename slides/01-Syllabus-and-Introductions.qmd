@@ -2,8 +2,8 @@
 title: Stat 151 - Introduction
 date: '2024-01-24'
 categories:
-- Week01
 - slides
+- Week01
 format:
   revealjs:
     navigation-mode: vertical

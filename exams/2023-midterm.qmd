@@ -3,8 +3,8 @@ title: Practice Midterm
 author: Your Name
 date: '2024-03-06'
 categories:
-- Week06
 - Exam
+- Week07
 format:
   html:
     theme: default

@@ -93,7 +93,7 @@ jobs:
 
       - name: Publish to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }} # this secret is always available for github actions
         run: |
           git config --global user.email "svanderplas2@unl.edu"
           git config --global user.name "Auto Build 251 Site"

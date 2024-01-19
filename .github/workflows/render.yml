@@ -82,6 +82,7 @@ jobs:
             any::purrr
             any::readr
             any::xml2
+            any::forcats
 
       - name: Install Python dependencies
         run: |

@@ -1,6 +1,8 @@
 
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 library(lubridate)
+library(forcats)
 
 # Create a calendar for your syllabus ----
 # Source: http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/

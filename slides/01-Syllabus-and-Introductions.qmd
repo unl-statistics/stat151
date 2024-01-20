@@ -88,7 +88,7 @@ Subject to change based on how much programming you are already familiar with...
 class_days %>% select(date, topic, time) %>%
   mutate(time = ifelse(is.na(time), "", time)) %>%
   mutate(date2 = format(date, "%b %e")) %>%
-  set_names(c("date", "Topic", "Time", "Date")) %>%
+  magrittr::set_names(c("date", "Topic", "Time", "Date")) %>%
   select(Date, Time, Topic) %>%
   filter(row_number() <= 10) %>%
 kableExtra::kable(caption = "Tentative schedule of class topics", format = "simple")

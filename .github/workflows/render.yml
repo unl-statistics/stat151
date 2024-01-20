@@ -59,7 +59,9 @@ jobs:
                            libcurl4-openssl-dev \
                            libgdal-dev \
                            gdal-bin \
-                           libproj-dev
+                           libproj-dev \
+                           libharfbuzz-dev \
+                           libfribidi-dev
           sudo apt install r-cran-sf r-cran-rnaturalearthdata r-cran-terra
 
       - name: Install and activate renv

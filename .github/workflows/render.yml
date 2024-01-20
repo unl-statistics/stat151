@@ -65,6 +65,7 @@ jobs:
                            gdal-bin \
                            libproj-dev
           sudo apt install r-cran-sf r-cran-rnaturalearthdata r-cran-terra r-cran-tidyverse
+          pip install plotnine
 
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2

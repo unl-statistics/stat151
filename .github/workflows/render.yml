@@ -22,12 +22,12 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Install Google Fonts
-      # https://jasonraimondi.com/posts/install-google-fonts-in-github-workflow/
         run: |
           wget -O Noto_Sans.zip https://fonts.google.com/download?family=Noto%20Sans
           unzip -d Noto_Sans/ Noto_Sans.zip
           mv Noto_Sans /usr/share/fonts/
           fc-cache -fv
+      # https://jasonraimondi.com/posts/install-google-fonts-in-github-workflow/
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -38,12 +38,12 @@ jobs:
       # add software dependencies here and any libraries
 
       - name: Setup Python
-      # From https://github.com/actions/setup-python
         uses: actions/setup-python@v3
+      # From https://github.com/actions/setup-python
 
       - name: Setup R
-      # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
         uses: r-lib/actions/setup-r@v2
+      # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
 
       - name: setup Renv
       - uses: r-lib/actions/setup-renv@v2
@@ -66,10 +66,10 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
 
       - name: Publish to GitHub Pages
-      # Note: If Publishing to GitHub Pages, set the permissions correctly
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # this secret is always available for github actions
         run: |
           git config --global user.email "svanderplas2@unl.edu"
           git config --global user.name "Auto Build 251 Site"
           quarto publish gh-pages docs --no-render --no-browser
+      # Note: If Publishing to GitHub Pages, set the permissions correctly

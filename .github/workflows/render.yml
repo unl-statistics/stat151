@@ -73,8 +73,9 @@ jobs:
       - name: Get R and OS version
         id: get-version
         run: |
-          cat("##[set-output name=os-version;]", sessionInfo()$running, "\n", sep = "")
-          cat("##[set-output name=r-version;]", R.Version()$version.string, sep = "")
+          make_cmd <- function(name, value, var) sprintf("echo \"{%s}={%s}\" >> $%s", name, value, var)
+          system(make_cmd("os-version", sessionInfo()$running, GITHUB_OUTPUT))
+          system(make_cmd("r-version", R.Version()$version.string, $GITHUB_OUTPUT))
         shell: Rscript {0}
         
       - name: Restore Renv package cache
@@ -99,7 +100,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install pandas datetime seaborn matplotlib
+          pip install pandas datetime seaborn matplotlib numpy
 
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2

@@ -56,7 +56,7 @@ jobs:
                            libgdal-dev \
                            gdal-bin \
                            libproj-dev
-          sudo apt install r-cran-sf r-cran-rnaturalearthdata r-cran-terra r-cran-textshaping
+          sudo apt install r-cran-sf r-cran-rnaturalearthdata r-cran-terra r-cran-ragg
 
       - name: Setup Renv
         uses: r-lib/actions/setup-renv@v2

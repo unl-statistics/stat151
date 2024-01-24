@@ -38,6 +38,10 @@ schedule:
         categories: [HW]
         date: 2024-02-02
         pub-date: 2023-01-01
+      - href: slides/02-Scripts-and-Notebbooks.qmd
+        categories: [slides]
+        date: 2024-01-24
+        pub-date: 2023-01-01
   - unit: "General Programming"
     materials:
       - path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html

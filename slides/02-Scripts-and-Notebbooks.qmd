@@ -1,0 +1,50 @@
+---
+title: "Scripts and Notebooks"
+date: '2024-01-31'
+categories:
+- slides
+- Week02
+---
+
+# Last Week
+
+-   [Setting up](https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html)
+
+    What we have installed:
+
+    -   Python
+    -   R
+    -   Rstudio
+    -   Quarto
+
+# This Week
+
+Please read the following text book chapters
+
+1.  [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
+
+2.  [RStudio's Interface](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-Rstudio-interface.html)
+
+3.  [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html)
+
+# Homework1
+
+1.  Go to [homework 1](https://srvanderplas.github.io/unl-stat151/homework/01-scripts-notebooks.html)
+
+2.  Click "Download the starter qmd file"
+
+    ![](images/paste-FC08DB08.png)
+
+    Now you should see something like this, this is the raw file content:
+
+    ![](images/paste-35176BC7.png)
+
+3.  Open a quarto document in RStudio, copy everything in the raw file content from last step and paste in your quarto document (make sure you paste under the source mode). Now you are ready to do the homework.
+
+# Next Time
+
+We will get to know programming and basic data structures
+
+[Introduction to Programming](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html)
+
+[Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html)

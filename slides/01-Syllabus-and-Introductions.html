@@ -343,7 +343,7 @@
 <li><p>Name / Year / Major</p></li>
 <li><p>What do you hope to learn in this class?</p></li>
 <li><p>Previous computing experience?</p></li>
-<li><p>Is a poptart a ravioli? Why or why not?</p></li>
+<li><p>Should chocolate be considered a vegetable?</p></li>
 </ul>
 </section>
 <section id="my-introduction" class="slide level2">
@@ -351,14 +351,17 @@
 <ul>
 <li><p>Susan Vanderplas</p></li>
 <li><p>Assistant Professor in Statistics</p></li>
-<li><p>Ph.D.&nbsp;from Iowa State in 2015</p></li>
-<li><p>Undergrad from Texas A&amp;M in 2009</p></li>
-<li><p>R user for 13 years, Python user for 1.5 years<br>
-Dabbled in JavaScript, HTML, C/C++</p></li>
+<li><p>R user for 14 years, Python user for 2.5 years<br>
+<span class="smaller">Dabbled in JavaScript, HTML, C/C++</span></p></li>
 <li><p>I have Prosopagnosia - face blindness</p></li>
-<li><p><a href="https://twitter.com/Phosphatide/status/974067376894328833">On Poptarts and Ravioli…</a></p></li>
 </ul>
-</section></section>
+
+<img data-src="fig/prosopagnosia.png" alt="Faces with only hair, glasses, and mouths; no other components (eyes, nose) are present." class="r-stretch quarto-figure-center"><p class="caption"><span class="small"><a href="http://www.shutterstock.com/pic-283980695/stock-vector-vector-set-of-different-male-and-female-icons-in-trendy-flat-style-flat-people-faces-icon.html">Male and Female faces</a>, from Shutterstock</span></p></section></section>
+<section id="day-1-activity-class-picture" class="title-slide slide level1 center">
+<h1>Day 1 Activity: Class Picture!</h1>
+
+</section>
+
 <section>
 <section id="syllabus" class="title-slide slide level1 center">
 <h1>Syllabus</h1>
@@ -369,33 +372,73 @@ Dabbled in JavaScript, HTML, C/C++</p></li>
 <ul>
 <li><p>Email: <a href="mailto:susan.vanderplas@unl.edu?subject=Stat251">susan.vanderplas@unl.edu</a></p></li>
 <li><p>Office: 343D Hardin Hall North Wing</p></li>
-<li><p>Phone: I don’t ever answer it… use email</p></li>
-<li><p>Office Hours: <a href="https://calendly.com/drvanderplas/officehours">https://calendly.com/drvanderplas/officehours</a><br>
-Self-serve, by Zoom unless you specify otherwise.</p></li>
-<li><p>Textbook: <a href="https://srvanderplas.github.io/stat-computing-r-python">https://srvanderplas.github.io/stat-computing-r-python</a></p></li>
-<li><p>Course site: <a href="https://srvanderplas.github.io/unl-stat151/">https://srvanderplas.github.io/unl-stat151/</a></p></li>
+<li><p>Office Hours:<br>
+<a href="https://calendly.com/drvanderplas/officehours">https://calendly.com/drvanderplas/officehours</a><br>
+<span class="small">Self-serve, by Zoom unless you specify otherwise.</span></p></li>
 </ul>
 </section>
 <section id="course-objectives" class="slide level2">
 <h2>Course Objectives</h2>
+<div class="fragment">
 <ol type="1">
-<li><p>Be comfortable using R and/or python for statistical analysis</p></li>
-<li><p>Write basic programs using logic including for loops, control structures, and matrix arithmetic</p></li>
-<li><p>Implement basic data analyses in R or python</p></li>
-<li><p>Describe the sequence of logical or mathematical steps necessary to solve a simple problem</p></li>
-<li><p>Be familiar with good computing practices, such as version control and documentation</p></li>
+<li>Be comfortable using R and/or python for statistical analysis</li>
 </ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Write basic programs using logic including for loops, control structures, and matrix arithmetic</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Implement basic data analyses in R or python</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li>Describe the sequence of logical or mathematical steps necessary to solve a simple problem</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="5" type="1">
+<li>Be familiar with good computing practices, such as version control and documentation</li>
+</ol>
+</div>
 </section>
 <section id="textbook" class="slide level2">
 <h2>Textbook</h2>
 <p><a href="https://srvanderplas.github.io/stat-computing-r-python/">https://srvanderplas.github.io/stat-computing-r-python/</a></p>
 
 <img data-src="https://srvanderplas.github.io/stat-computing-r-python/build_deps/cover.png" alt="Cover image of the textbook" class="r-stretch"></section>
+<section id="course-materials" class="slide level2">
+<h2>Course Materials</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Canvas
+<ul>
+<li>quizzes</li>
+<li>weekly readings</li>
+<li>homework/exam submission</li>
+</ul></li>
+</ul>
+</div><div class="column">
+<ul>
+<li><a href="https://srvanderplas.github.io/unl-stat151/">Course site</a>
+<ul>
+<li>slides</li>
+<li>weekly readings</li>
+<li>homework/exam descriptions</li>
+</ul></li>
+</ul>
+</div><p><span class="small">Everything should be cross-linked properly but email me if there’s an issue.</span></p>
+</div>
+</section>
 <section id="class-schedule" class="slide level2">
 <h2>Class Schedule</h2>
 
 <img data-src="01-Syllabus-and-Introductions_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="outline" class="slide level2">
+<section id="outline" class="slide level2 scrollable smaller">
 <h2>Outline</h2>
 <p>Subject to change based on how much programming you are already familiar with…</p>
 <div class="cell">
@@ -405,60 +448,77 @@ Self-serve, by Zoom unless you specify otherwise.</p></li>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Date</th>
-<th style="text-align: left;">Time</th>
 <th style="text-align: left;">Topic</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Jan 24</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Getting Started</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Jan 31</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Scripts &amp; Notebooks</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Feb 7</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Intro to Programming</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Feb 14</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Data Types</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Feb 21</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Data Structures</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Feb 28</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Control Structures</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Mar 6</td>
-<td style="text-align: left;">In class</td>
 <td style="text-align: left;">Midterm Assigned</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Mar 7</td>
-<td style="text-align: left;">6pm</td>
 <td style="text-align: left;">Midterm Due</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Mar 20</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Functions</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Mar 27</td>
-<td style="text-align: left;"></td>
 <td style="text-align: left;">Version Control</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Apr 3</td>
+<td style="text-align: left;">Data Visualization</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apr 10</td>
+<td style="text-align: left;">Data Cleaning</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Apr 17</td>
+<td style="text-align: left;">Strings</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Apr 24</td>
+<td style="text-align: left;">Reshaping Data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May 1</td>
+<td style="text-align: left;">Graphics</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">May 8</td>
+<td style="text-align: left;">Final Assigned</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">May 10</td>
+<td style="text-align: left;">Final Due</td>
 </tr>
 </tbody>
 </table>
@@ -500,9 +560,9 @@ Self-serve, by Zoom unless you specify otherwise.</p></li>
 <ul>
 <li><p>You may (and should!) work with each other on homework assignments</p></li>
 <li><p>Work alone on exams</p></li>
-<li><p>You must be able to explain the logic of anything you submit for a grade<br>
-At my discretion, I will evaluate the coherence of your explanation instead of your submitted work</p></li>
-<li><p>ChatGPT, StackOverflow, Google are all valuable tools, but they do not help you think</p></li>
+<li><p>You must be able to explain anything you submit<br>
+<span class="smaller">At my discretion, I can use a one-on-one discussion of your work to replace the grade for that work.</span></p></li>
+<li><p>ChatGPT, StackOverflow, Google are tools, but they do not help you think</p></li>
 </ul>
 </section>
 <section id="programming" class="slide level2">
@@ -518,6 +578,7 @@ At my discretion, I will evaluate the coherence of your explanation instead of y
 <section id="install-course-software" class="slide level2">
 <h2>Install Course Software</h2>
 <p><a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html">Textbook Chapter</a>: https://bit.ly/3JtGCZR</p>
+<iframe width="100%" height="600px" src="https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html" title="Setting Up"></iframe>
 </section>
 <section id="next-time" class="slide level2">
 <h2>Next Time</h2>
@@ -529,7 +590,8 @@ At my discretion, I will evaluate the coherence of your explanation instead of y
 <li><a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-Rstudio-interface.html">RStudio’s Interface</a></li>
 </ul>
 
-<div class="footer footer-default">
+
+<img src="N.svg" class="slide-logo r-stretch"><div class="footer footer-default">
 
 </div>
 </section></section>

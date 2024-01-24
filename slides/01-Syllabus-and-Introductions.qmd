@@ -154,7 +154,6 @@ Approximately Weekly Homework -- started in class
 
 ```{=html}
 <iframe width="100%" height="600px" src="https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html" title="Setting Up"></iframe>
-
 ```
 
 ## Next Time

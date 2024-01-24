@@ -1,4 +1,5 @@
 image: ../figs/slides.svg
+type: slides
 engine: knitr
 format:
   revealjs:

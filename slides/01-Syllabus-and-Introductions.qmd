@@ -4,9 +4,6 @@ date: '2024-01-24'
 categories:
 - slides
 - Week01
-format:
-  revealjs:
-    navigation-mode: vertical
 ---
 
 # Introductions
@@ -19,7 +16,7 @@ format:
 
 - Previous computing experience?
 
-- Is a poptart a ravioli? Why or why not?
+- Should chocolate be considered a vegetable?
 
 ## My Introduction
 
@@ -27,16 +24,16 @@ format:
 
 - Assistant Professor in Statistics
 
-- Ph.D. from Iowa State in 2015
-
-- Undergrad from Texas A&M in 2009
-
-- R user for 13 years, Python user for 1.5 years    
-Dabbled in JavaScript, HTML, C/C++
+- R user for 14 years, Python user for 2.5 years    
+[Dabbled in JavaScript, HTML, C/C++]{.smaller}
 
 - I have Prosopagnosia - face blindness
 
-- [On Poptarts and Ravioli...](https://twitter.com/Phosphatide/status/974067376894328833)
+![[[Male and Female faces](http://www.shutterstock.com/pic-283980695/stock-vector-vector-set-of-different-male-and-female-icons-in-trendy-flat-style-flat-people-faces-icon.html), from Shutterstock]{.small}](fig/prosopagnosia.png){#prosopagnosia fig-alt="Faces with only hair, glasses, and mouths; no other components (eyes, nose) are present."}
+
+
+# Day 1 Activity: Class Picture!
+
 
 # Syllabus
 
@@ -46,27 +43,32 @@ Dabbled in JavaScript, HTML, C/C++
 
 - Office: 343D Hardin Hall North Wing
 
-- Phone: I don't ever answer it... use email
+- Office Hours:     
+[https://calendly.com/drvanderplas/officehours](https://calendly.com/drvanderplas/officehours)    
+[Self-serve, by Zoom unless you specify otherwise.]{.small}
 
-- Office Hours: [https://calendly.com/drvanderplas/officehours](https://calendly.com/drvanderplas/officehours  )    
-Self-serve, by Zoom unless you specify otherwise.
-
-- Textbook: [https://srvanderplas.github.io/stat-computing-r-python](https://srvanderplas.github.io/stat-computing-r-python)
-
-- Course site: [https://srvanderplas.github.io/unl-stat151/](https://srvanderplas.github.io/unl-stat151/)
 
 ## Course Objectives
 
+:::  {.fragment}
 1. Be comfortable using R and/or python for statistical analysis
+:::
 
+:::  {.fragment}
 2. Write basic programs using logic including for loops, control structures, and matrix arithmetic
+:::
 
+:::  {.fragment}
 3. Implement basic data analyses in R or python
+:::
 
+:::  {.fragment}
 4. Describe the sequence of logical or mathematical steps necessary to solve a simple problem
+:::
 
+:::  {.fragment}
 5. Be familiar with good computing practices, such as version control and documentation
-
+:::
 
 ## Textbook
 
@@ -74,13 +76,35 @@ Self-serve, by Zoom unless you specify otherwise.
 
 ![](https://srvanderplas.github.io/stat-computing-r-python/build_deps/cover.png){fig-alt="Cover image of the textbook"}
 
+## Course Materials
+::: columns
+::: column
+- Canvas 
+  - quizzes
+  - weekly readings
+  - homework/exam submission
+  
+:::
+
+::: column
+- [Course site](https://srvanderplas.github.io/unl-stat251/)
+  - slides
+  - weekly readings
+  - homework/exam descriptions
+  
+:::
+
+[Everything should be cross-linked properly but email me if there's an issue.]{.small}
+:::
+
 ## Class Schedule
 
 ```{r echo = F, message = F, warning = F}
 source("../schedule.R")
 class_cal
 ```
-## Outline
+
+## Outline {.scrollable .smaller}
 
 Subject to change based on how much programming you are already familiar with...
 
@@ -89,8 +113,7 @@ class_days %>% select(date, topic, time) %>%
   mutate(time = ifelse(is.na(time), "", time)) %>%
   mutate(date2 = format(date, "%b %e")) %>%
   magrittr::set_names(c("date", "Topic", "Time", "Date")) %>%
-  select(Date, Time, Topic) %>%
-  filter(row_number() <= 10) %>%
+  select(Date, Topic) %>%
 kableExtra::kable(caption = "Tentative schedule of class topics", format = "simple")
 ```
 
@@ -112,10 +135,10 @@ Approximately Weekly Homework -- started in class
 
 - Work alone on exams
 
-- You must be able to explain the logic of anything you submit for a grade    
-At my discretion, I will evaluate the coherence of your explanation instead of your submitted work
+- You must be able to explain anything you submit    
+[At my discretion, I can use a one-on-one discussion of your work to replace the grade for that work.]{.smaller}
 
-- ChatGPT, StackOverflow, Google are all valuable tools, but they do not help you think
+- ChatGPT, StackOverflow, Google are tools, but they do not help you think
 
 
 ## Programming
@@ -128,6 +151,11 @@ At my discretion, I will evaluate the coherence of your explanation instead of y
 ## Install Course Software
 
 [Textbook Chapter](https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html): https://bit.ly/3JtGCZR
+
+```{=html}
+<iframe width="100%" height="600px" src="https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html" title="Setting Up"></iframe>
+
+```
 
 ## Next Time
 

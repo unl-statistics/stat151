@@ -10,88 +10,90 @@ categories:
 
 ## Introduce yourself!
 
-- Name / Year / Major
+-   Name / Year / Major
 
-- What do you hope to learn in this class?
+-   What do you hope to learn in this class?
 
-- Previous computing experience?
+-   Previous computing experience?
 
-- Should chocolate be considered a vegetable?
+-   Should chocolate be considered a vegetable?
 
 ## My Introduction
 
-- Susan Vanderplas
+-   Susan Vanderplas
 
-- Assistant Professor in Statistics
+-   Assistant Professor in Statistics
 
-- R user for 14 years, Python user for 2.5 years    
-[Dabbled in JavaScript, HTML, C/C++]{.smaller}
+-   R user for 14 years, Python user for 2.5 years\
+    [Dabbled in JavaScript, HTML, C/C++]{.smaller}
 
-- I have Prosopagnosia - face blindness
+-   I have Prosopagnosia - face blindness
 
-![[[Male and Female faces](http://www.shutterstock.com/pic-283980695/stock-vector-vector-set-of-different-male-and-female-icons-in-trendy-flat-style-flat-people-faces-icon.html), from Shutterstock]{.small}](fig/prosopagnosia.png){#prosopagnosia fig-alt="Faces with only hair, glasses, and mouths; no other components (eyes, nose) are present."}
-
+![[[Male and Female faces]{.small}](http://www.shutterstock.com/pic-283980695/stock-vector-vector-set-of-different-male-and-female-icons-in-trendy-flat-style-flat-people-faces-icon.html)[, from Shutterstock]{.small}](fig/prosopagnosia.png){#prosopagnosia fig-alt="Faces with only hair, glasses, and mouths; no other components (eyes, nose) are present."}
 
 # Day 1 Activity: Class Picture!
-
 
 # Syllabus
 
 ## Contact Info
 
-- Email: [susan.vanderplas@unl.edu](mailto:susan.vanderplas@unl.edu?subject=Stat251)
+-   Email: [susan.vanderplas\@unl.edu](mailto:susan.vanderplas@unl.edu?subject=Stat251)
 
-- Office: 343D Hardin Hall North Wing
+-   Office: 343D Hardin Hall North Wing
 
-- Office Hours:     
-[https://calendly.com/drvanderplas/officehours](https://calendly.com/drvanderplas/officehours)    
-[Self-serve, by Zoom unless you specify otherwise.]{.small}
+-   Office Hours:\
+    <https://calendly.com/drvanderplas/officehours>\
+    [Self-serve, by Zoom unless you specify otherwise.]{.small}
 
+-   Muxin (TA) Office Hours: 
+
+    -   <https://calendly.com/mhua2>
+
+    -   I'll be in my office (Hardin 349) during the office hours too, feel free to stop by
 
 ## Course Objectives
 
-:::  {.fragment}
-1. Be comfortable using R and/or python for statistical analysis
+::: fragment
+1.  Be comfortable using R and/or python for statistical analysis
 :::
 
-:::  {.fragment}
-2. Write basic programs using logic including for loops, control structures, and matrix arithmetic
+::: fragment
+2.  Write basic programs using logic including for loops, control structures, and matrix arithmetic
 :::
 
-:::  {.fragment}
-3. Implement basic data analyses in R or python
+::: fragment
+3.  Implement basic data analyses in R or python
 :::
 
-:::  {.fragment}
-4. Describe the sequence of logical or mathematical steps necessary to solve a simple problem
+::: fragment
+4.  Describe the sequence of logical or mathematical steps necessary to solve a simple problem
 :::
 
-:::  {.fragment}
-5. Be familiar with good computing practices, such as version control and documentation
+::: fragment
+5.  Be familiar with good computing practices, such as version control and documentation
 :::
 
 ## Textbook
 
-[https://srvanderplas.github.io/stat-computing-r-python/](https://srvanderplas.github.io/stat-computing-r-python/)
+<https://srvanderplas.github.io/stat-computing-r-python/>
 
 ![](https://srvanderplas.github.io/stat-computing-r-python/build_deps/cover.png){fig-alt="Cover image of the textbook"}
 
 ## Course Materials
+
 ::: columns
 ::: column
-- Canvas 
-  - quizzes
-  - weekly readings
-  - homework/exam submission
-  
+-   Canvas
+    -   quizzes
+    -   weekly readings
+    -   homework/exam submission
 :::
 
 ::: column
-- [Course site](https://srvanderplas.github.io/unl-stat151/)
-  - slides
-  - weekly readings
-  - homework/exam descriptions
-  
+-   [Course site](https://srvanderplas.github.io/unl-stat151/)
+    -   slides
+    -   weekly readings
+    -   homework/exam descriptions
 :::
 
 [Everything should be cross-linked properly but email me if there's an issue.]{.small}
@@ -119,32 +121,31 @@ kableExtra::kable(caption = "Tentative schedule of class topics", format = "simp
 
 ## Grades
 
-
-Assignments | Weight
------ | -----
-Reading Quizzes | 10%
-Weekly Homework & Participation | 50% 
-Midterm Exam | 20%
-Final Exam | 20%
+| Assignments                     | Weight |
+|---------------------------------|--------|
+| Reading Quizzes                 | 10%    |
+| Weekly Homework & Participation | 50%    |
+| Midterm Exam                    | 20%    |
+| Final Exam                      | 20%    |
 
 Approximately Weekly Homework -- started in class
 
 ## Academic Integrity / Submitted Work Policy
 
-- You may (and should!) work with each other on homework assignments
+-   You may (and should!) work with each other on homework assignments
 
-- Work alone on exams
+-   Work alone on exams
 
-- You must be able to explain anything you submit    
-[At my discretion, I can use a one-on-one discussion of your work to replace the grade for that work.]{.smaller}
+-   You must be able to explain anything you submit\
+    [At my discretion, I can use a one-on-one discussion of your work to replace the grade for that work.]{.smaller}
 
-- ChatGPT, StackOverflow, Google are tools, but they do not help you think
-
+-   ChatGPT, StackOverflow, Google are tools, but they do not help you think
 
 ## Programming
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/WGWm_lOFXCk" title="Take Chances Make Mistakes - Ms. Frizzle | The Magic School Bus (Gone as Planned)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/WGWm_lOFXCk" title="Take Chances Make Mistakes - Ms. Frizzle | The Magic School Bus (Gone as Planned)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
+</iframe>
 
 # Setting Up
 
@@ -155,14 +156,12 @@ Approximately Weekly Homework -- started in class
 ```{=html}
 <iframe width="100%" height="600px" src="https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html" title="Setting Up"></iframe>
 ```
-
 ## Next Time
 
 We'll work on [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html)
 
-Please Read before class: 
+Please Read before class:
 
-- [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
-- [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html)
-- [RStudio's Interface](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-Rstudio-interface.html)
-
+-   [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
+-   [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html)
+-   [RStudio's Interface](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-Rstudio-interface.html)

@@ -33,11 +33,11 @@ Please read the following text book chapters
 
 2.  Click "Download the starter qmd file"
 
-    ![](images/paste-FC08DB08.png)
+    ![](fig/hw1_download.png)
 
     Now you should see something like this, this is the raw file content:
 
-    ![](images/paste-35176BC7.png)
+    ![](fig/hw1_content.png)
 
 3.  Open a quarto document in RStudio, copy everything in the raw file content from last step and paste in your quarto document (make sure you paste under the source mode). Now you are ready to do the homework.
 

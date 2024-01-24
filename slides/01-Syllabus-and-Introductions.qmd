@@ -87,7 +87,7 @@ categories:
 :::
 
 ::: column
-- [Course site](https://srvanderplas.github.io/unl-stat251/)
+- [Course site](https://srvanderplas.github.io/unl-stat151/)
   - slides
   - weekly readings
   - homework/exam descriptions

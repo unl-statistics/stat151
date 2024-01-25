@@ -31,15 +31,11 @@ Please read the following text book chapters
 
 Go to [homework](https://srvanderplas.github.io/unl-stat151/homework/01-scripts-notebooks.html)
 
-Click "Download the starter qmd file"
-
-    ![](fig/hw1_download.png)
+Click "Download the starter qmd file" ![](fig/hw1_download.png)
 
 ## Raw content file
 
-Now you should see something like this, this is the raw file content:
-
-    ![](fig/hw1_content.png)
+Now you should see something like this, this is the raw file content: ![](fig/hw1_content.png)
 
 ## Paste Everything
 

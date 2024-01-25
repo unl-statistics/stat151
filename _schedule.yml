@@ -40,7 +40,7 @@ schedule:
         pub-date: 2023-01-01
       - href: slides/02-Scripts-and-Notebbooks.qmd
         categories: [slides]
-        date: 2024-01-24
+        date: 2024-01-31
         pub-date: 2023-01-01
   - unit: "General Programming"
     materials:

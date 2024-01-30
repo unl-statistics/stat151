@@ -19,7 +19,7 @@ categories:
 
 # This Week
 
-We've the following text book chapters
+We've read the following text book chapters
 
 1.  [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
 

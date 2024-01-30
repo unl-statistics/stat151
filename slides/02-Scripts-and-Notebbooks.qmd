@@ -19,7 +19,7 @@ categories:
 
 # This Week
 
-Please read the following text book chapters
+We've the following text book chapters
 
 1.  [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
 
@@ -29,9 +29,11 @@ Please read the following text book chapters
 
 # Homework1
 
-Go to [homework](https://srvanderplas.github.io/unl-stat151/homework/01-scripts-notebooks.html)
+-   Create a *Stat151* folder in a place where you can find it again
 
-Click "Download the starter qmd file" ![](fig/hw1_download.png)
+-   Go to [homework](https://srvanderplas.github.io/unl-stat151/homework/01-scripts-notebooks.html)
+
+-   Click "Download the starter qmd file" ![](fig/hw1_download.png)
 
 ## Raw content file
 
@@ -39,12 +41,20 @@ Now you should see something like this, this is the raw file content: ![](fig/hw
 
 ## Paste Everything
 
-Open a quarto document in RStudio, copy everything in the raw file content from last step and paste in your quarto document (make sure you paste under the source mode). Now you are ready to do the homework.
+-   Open a quarto document in RStudio
+
+-   Copy everything in the raw file content from last step and paste in your quarto document (make sure you paste under the source mode)
+
+-   Save the file as *01-Lastname-Firstname.qmd* to folder *Stat151.*
+
+-   Now you are ready to do the homework.
 
 # Next Time
 
 We will get to know programming and basic data structures
 
-[Introduction to Programming](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html)
+Please read:
 
-[Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html)
+1.   [Introduction to Programming](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html)
+
+2.  [Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html)

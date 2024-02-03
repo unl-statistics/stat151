@@ -12,15 +12,23 @@ categories:
 
 ## Muxin Office Hours:
 
--   <https://calendly.com/mhua2>
--   mhua2\@huskers.unl.edu, Hardin 349
+-   mhua2\@huskers.unl.edu
+
+-   Hardin 349
+
 -   Monday: 10:00 am - 1:00 pm
--   Wednesday: 10:00 am - 11:00 am 12:00 pm - 1:00 pm
--   Other available time...
+
+-   Wednesday: 10:00 am - 11:00 am, 12:00 pm - 1:00 pm
+
+-   More available time https://calendly.com/mhua2 or email
 
 # We Have Done
 
--   Homework1: had first taste of running code, writing code, how a script and a notebook are differ.
+-   Homework1:
+
+    -   had first taste of running code, writing code
+
+    -   how a script and a notebook are differ
 
 # We have read
 

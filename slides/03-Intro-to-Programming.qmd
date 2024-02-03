@@ -1,0 +1,66 @@
+---
+title: Intro to Programming
+date: '2024-02-07'
+categories:
+- slides
+- Week03
+---
+
+# Misc
+
+-   Homework: read **instruction** and submit the right format
+
+-   Muxin Office Hours:
+
+    -   <https://calendly.com/mhua2>
+
+    -   mhua2\@huskers.unl.edu, Hardin 349
+
+    -   Monday:
+
+        -   10:00 am - 1:00 pm (In office)
+
+        -   2:45 pm - 5:00 pm
+
+    -   Wednesday:
+
+        -   10:00 am - 11:00 am (In office)
+
+        -   12:00 pm - 1:00 pm (In office)
+
+        -   after class
+
+# We Have Done
+
+-   Homework1: had first taste of running code, writing code, how a script and a notebook are differ.
+
+-   We have read
+
+    1.  [Introduction to Programming](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html)
+
+        -   Complete tasks using limited software vocabulary and get help if needed
+
+    2.  [Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html)
+
+        -   Assigning variables
+
+        -   variable types and conversion
+
+        -   Syntax...
+
+# Homework2
+
+-   Download and save [Homework2 raw content](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/02-finding-your-way.qmd)
+    -   Click the link
+    -   Copy the raw content
+    -   Save to a **Quarto** file under Source mode
+    -   Name the file as ***01-Lastname-Firstname.qmd***
+    -   Submit in .qmd file
+
+# Next Time
+
+We will get to know programming and basic data structures
+
+Please read:
+
+1.  [Using Functions and Libraries](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html)

@@ -25,7 +25,7 @@ schedule:
         date: 2024-01-24
         pub-date: 2023-01-01
       - path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-Rstudio-interface.html
-        title: RStudio's interface
+        title: RStudios interface
         categories: [reading]
         date: 2024-01-28
         pub-date: 2023-01-01
@@ -53,6 +53,10 @@ schedule:
         title: Variables and Basic Data Types
         categories: [reading]
         date: 2024-02-04
+        pub-date: 2023-01-01
+      - href: slides/03-Intro-to-Programming.qmd
+        categories: [slides]
+        date: 2024-02-07
         pub-date: 2023-01-01
       - href: homework/02-finding-your-way.qmd
         categories: [HW]

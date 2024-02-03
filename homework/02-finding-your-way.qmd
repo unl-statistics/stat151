@@ -11,23 +11,17 @@ categories:
 [Download the starter qmd file here](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/02-finding-your-way.qmd)
 
 ## MadLibs
+
 ### Running a Python Script at the command line
 
-Run the script [madlibs.py](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/madlibs.py) using the terminal to run the script (e.g. type `python3 madlibs.py` in the terminal). Do what it asks of you. Copy the text after the initial command and paste it between the ``` markings below. (These ``` define a generic, no-language markdown code chunk). 
+Run the script [madlibs.py](https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/madlibs.py) using the terminal to run the script (e.g. type `python3 madlibs.py` in the terminal). Do what it asks of you. Copy the text after the initial command and paste it between the `markings below. (These` define a generic, no-language markdown code chunk).
 
-```
+```         
 # Paste your output here!
 ```
 
-Can you run this same script in RStudio using the Source Script button? 
-If you can, please describe any differences you note compared to using the terminal. 
-If you cannot, tell me what happens.
-
+Can you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens.
 
 ## Thinking Critically
 
-Consider the counting words examples in the [textbook](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-scripts-notebooks.html#a-short-history-of-talking-to-computers) (Your Turn -- Terminal Mode, Your Turn -- Script Mode). Look at the code, and then at the steps provided for each example. What is different? What is the same? Create a table comparing terminal mode, script mode (e.g. running the whole script using the Run button), and interactive mode. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they're specified, and any differences in the output.
-
-
-
-
+Consider the counting words examples in the [textbook](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html#writing-code-for-people) (Your Turn -- Terminal Mode, Your Turn -- Script Mode). Look at the code, and then at the steps provided for each example. What is different? What is the same? Create a table comparing terminal mode, script mode (e.g. running the whole script using the Run button), and interactive mode. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they're specified, and any differences in the output.

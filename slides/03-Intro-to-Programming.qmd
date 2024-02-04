@@ -6,13 +6,7 @@ categories:
 - Week03
 ---
 
-# Misc
-
--   Homework: read **instruction** and submit the right format
-
-## Muxin Office Hours:
-
--   mhua2\@huskers.unl.edu
+# Muxin Office Hours:
 
 -   Hardin 349
 
@@ -20,15 +14,25 @@ categories:
 
 -   Wednesday: 10:00 am - 11:00 am, 12:00 pm - 1:00 pm
 
--   More available time https://calendly.com/mhua2 or email
+-   More available time <https://calendly.com/mhua2> or mhua2\@huskers.unl.edu
 
 # We Have Done
 
--   Homework1:
+-   Homework 1:
 
     -   had first taste of running code, writing code
 
     -   how a script and a notebook are differ
+
+## Homework 1
+
+-   Remove everything when you create the file ![](fig/create_qmd.png){width="400"}
+
+    -   Render and see how it's working or not working
+
+-   Save the file! (control+s/ command+s)
+
+-   Submit qmd file
 
 # We have read
 

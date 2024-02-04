@@ -26,13 +26,17 @@ categories:
 
 ## Homework 1
 
--   Remove everything when you create the file ![](fig/create_qmd.png){width="400"}
+-   Remove everything when you create the file ![](fig/create_qmd.png){width="368"}
 
     -   Render and see how it's working or not working
 
 -   Save the file! (control+s/ command+s)
 
 -   Submit qmd file
+
+-   Grading comments
+
+    ![](fig/comments.png){width="200"}
 
 # We have read
 

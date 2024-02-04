@@ -24,6 +24,7 @@ categories:
 
     -   how a script and a notebook are differ
 
+::: {.r-fit-text}
 ## Homework 1
 
 -   Remove everything when you create the file ![](fig/create_qmd.png){width="368"}
@@ -37,6 +38,7 @@ categories:
 -   Grading comments
 
     ![](fig/comments.png){width="200"}
+:::
 
 # We have read
 

@@ -60,7 +60,7 @@ categories:
     -   Click the link
     -   Copy the raw content
     -   Save to a **Quarto** file under Source mode
-    -   Name the file as ***01-Lastname-Firstname.qmd***
+    -   Name the file as ***02-Lastname-Firstname.qmd***
     -   Submit in .qmd file
 
 # Next Time

@@ -6,41 +6,46 @@ categories:
 - Week04
 ---
 
-
 # We Have Done {.scrollable}
 
 -   Homework 2:
+    -   Save files
+
+    -   Read instructions
+
+        -   "Copy the text after the initial command"
+
+        -   "What is different? What is the same?"
+
     -   Mainly three modes: interactive, source and script
 
-        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-        |             | Interactive (words.R)  | Script (Words-noinput.R)                           | Source (Words-noinput.R)                           |
-        +=============+========================+====================================================+====================================================+
-        | Path        | Under the correct path | Correct relative/absolute path to read in the data | Correct relative/absolute path to read in the data |
-        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-        | Where       | Run in terminal        | Run in console                                     | Run in console                                     |
-        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-        | How         | Run as a whole         | Run line by line                                   | Run as a whole                                     |
-        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-        | Output      | Display output         | Display output even no print function              | No output                                          |
-        |             |                        |                                                    |                                                    |
-        |             |                        |                                                    | Accept its input from the named file directly      |
-        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-        | Environment | No variables created   | variables created in the environment               | Variable created in the environment                |
-        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+        -   Path
 
+        -   Where to run
 
+        -   How codes are ran
 
-## Homework 2 {.scrollable}
+        -   What are the outputs
 
--   Save files
+        -   Variables in environment
 
--   Read instructions
+## How modes are different {.scrollable}
 
-    -   "Copy the text after the initial command"
-
-    -   "What is different? What is the same?"
-
-
++--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+|              | Interactive (words.R)  | Script (Words-noinput.R)                           | Source (Words-noinput.R)                           |
++==============+========================+====================================================+====================================================+
+| Path         | Under the correct path | Correct relative/absolute path to read in the data | Correct relative/absolute path to read in the data |
++--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+| Where        | Run in terminal        | Run in console                                     | Run in console                                     |
++--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+| How          | Run as a whole         | Run line by line                                   | Run as a whole                                     |
++--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+| Output       | Display output         | Display output even no print function              | No output                                          |
+|              |                        |                                                    |                                                    |
+|              |                        |                                                    | Accept its input from the named file directly      |
++--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+| Environment  | No variables created   | variables created in the environment               | Variable created in the environment                |
++--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
 
 # We have read {.scrollable}
 
@@ -59,8 +64,8 @@ categories:
         | numeric (different precisions) | float  |
         | character                      | str    |
 
-
 ## Functions and Libraries {.scrollable}
+
 2.  [Using Functions and Libraries](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html)
     -   Mathematical operations
     -   Operation order follows mathematical rule

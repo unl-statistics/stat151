@@ -7,7 +7,12 @@ listing:
   contents:
   - homework/01-scripts-notebooks.qmd
   - homework/02-finding-your-way.qmd
+  - homework/03-data-types.qmd
+  - homework/04-cipher.qmd
   - slides/01-Syllabus-and-Introductions.qmd
+  - slides/02-Scripts-and-Notebbooks.qmd
+  - slides/03-Intro-to-Programming.qmd
+  - slides/04-Basic-Data-Types.qmd
   - syllabus.qmd
   - reading.yml
   fields:

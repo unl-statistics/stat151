@@ -6,8 +6,8 @@ categories:
 - Week04
 ---
 
-::: r-fit-text
-# We Have Done
+
+# We Have Done {.scrollable}
 
 -   Homework 2:
     -   Mainly three modes: interactive, source and script
@@ -27,10 +27,10 @@ categories:
         +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
         | Environment | No variables created   | variables created in the environment               | Variable created in the environment                |
         +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-:::
 
-::: r-fit-text
-## Homework 2
+
+
+## Homework 2 {.scrollable}
 
 -   Save files
 
@@ -39,15 +39,14 @@ categories:
     -   "Copy the text after the initial command"
 
     -   "What is different? What is the same?"
-:::
 
-::: r-fit-text
-# We have read
 
-::: r-fit-text
+
+# We have read {.scrollable}
+
 ## Variables and Basic Data
 
-2.  [Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html)
+1.  [Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html)
 
     -   Assigning variables
 
@@ -59,9 +58,10 @@ categories:
         | integer                        | int    |
         | numeric (different precisions) | float  |
         | character                      | str    |
-:::
 
-1.  [Using Functions and Libraries](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html)
+
+## Functions and Libraries {.scrollable}
+2.  [Using Functions and Libraries](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html)
     -   Mathematical operations
     -   Operation order follows mathematical rule
     -   String operation: easier in Python, little bit more work in R `paste`
@@ -76,7 +76,6 @@ categories:
         -   Pipe
             -   Heavily used in R data manipulation
             -   Not so much in Python
-:::
 
 ::: r-fit-text
 # Next Time

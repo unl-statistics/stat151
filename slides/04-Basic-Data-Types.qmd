@@ -1,0 +1,100 @@
+---
+title: Basic Data Types
+date: '2024-02-14'
+categories:
+- slides
+- Week04
+---
+
+::: r-fit-text
+# We Have Done
+
+-   Homework 2:
+    -   Mainly three modes: interactive, source and script
+
+        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+        |             | Interactive (words.R)  | Script (Words-noinput.R)                           | Source (Words-noinput.R)                           |
+        +=============+========================+====================================================+====================================================+
+        | Path        | Under the correct path | Correct relative/absolute path to read in the data | Correct relative/absolute path to read in the data |
+        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+        | Where       | Run in terminal        | Run in console                                     | Run in console                                     |
+        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+        | How         | Run as a whole         | Run line by line                                   | Run as a whole                                     |
+        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+        | Output      | Display output         | Display output even no print function              | No output                                          |
+        |             |                        |                                                    |                                                    |
+        |             |                        |                                                    | Accept its input from the named file directly      |
+        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+        | Environment | No variables created   | variables created in the environment               | Variable created in the environment                |
+        +-------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+:::
+
+::: r-fit-text
+## Homework 2
+
+-   Save files
+
+-   Read instructions
+
+    -   "Copy the text after the initial command"
+
+    -   "What is different? What is the same?"
+:::
+
+::: r-fit-text
+# We have read
+
+::: r-fit-text
+## Variables and Basic Data
+
+2.  [Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html)
+
+    -   Assigning variables
+
+    -   variable types and conversion
+
+        | R                              | Python |
+        |--------------------------------|--------|
+        | logical/ boolean               | bool   |
+        | integer                        | int    |
+        | numeric (different precisions) | float  |
+        | character                      | str    |
+:::
+
+1.  [Using Functions and Libraries](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html)
+    -   Mathematical operations
+    -   Operation order follows mathematical rule
+    -   String operation: easier in Python, little bit more work in R `paste`
+    -   Functions
+        -   Take arguments and mostly have return values
+        -   Method - special type of function
+    -   Libraries/ packages
+        -   Package management:
+            -   Virtual environments
+            -   installing packages at the **user** or **system** level
+        -   Installing packages and loading packages
+        -   Pipe
+            -   Heavily used in R data manipulation
+            -   Not so much in Python
+:::
+
+::: r-fit-text
+# Next Time
+
+We will get to know basic data structures
+
+Please read:
+
+[Data Structures](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/03-data-struct.html)
+:::
+
+::: r-fit-text
+# Homework3
+
+-   Download and save [Homework3 raw content](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/03-data-types.qmd)
+    -   Click the link
+    -   Copy the raw content
+    -   Save to a **Quarto** file under Source mode
+    -   Name the file as ***03-Lastname-Firstname.qmd***
+    -   Submit in .qmd file
+:::

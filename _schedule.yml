@@ -70,6 +70,10 @@ schedule:
         title: Using Functions and Libraries
         categories: [reading]
         date: 2024-02-11
+      - href: slides/04-Basic-Data-Types.qmd
+        categories: [slides]
+        date: 2024-02-14
+        pub-date: 2023-01-01
       - href: homework/03-data-types.qmd
         categories: [HW]
         date: 2024-02-16

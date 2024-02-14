@@ -19,7 +19,7 @@
   image: figs/reading.svg
   is_live: true
 - path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-Rstudio-interface.html
-  title: RStudio's interface
+  title: RStudios interface
   date: '2024-01-28'
   pub.date: '2023-01-01'
   categories:
@@ -55,6 +55,46 @@
   categories:
   - reading
   - Week03
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html
+  title: Variables and Basic Data Types
+  date: '2024-02-11'
+  pub.date: '2024-01-28'
+  categories:
+  - reading
+  - Week04
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html
+  title: Using Functions and Libraries
+  date: '2024-02-11'
+  pub.date: '2024-01-28'
+  categories:
+  - reading
+  - Week04
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/03-data-struct.html
+  title: Data Structures
+  date: '2024-02-18'
+  pub.date: '2024-02-04'
+  categories:
+  - reading
+  - Week05
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/04-control-struct.html
+  title: Control Structures
+  date: '2024-02-25'
+  pub.date: '2024-02-11'
+  categories:
+  - reading
+  - Week06
   type: reading
   image: figs/reading.svg
   is_live: true

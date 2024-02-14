@@ -6,9 +6,9 @@ categories:
 - Week04
 ---
 
-# We Have Done
+# We Have Done {.scrollable}
 
--   Homework 2: {.scrollable}
+-   Homework 2: 
     -   Save files
 
     -   Read instructions
@@ -19,7 +19,7 @@ categories:
 
     -   Mainly three modes: interactive, source and script
 
-        -   Path/Where to run/How codes are ran/What are the outputs/Variables in environment
+        -   Path/Where to run/How code is run/What are the outputs/Variables in environment
 
 # We have read {.scrollable}
 

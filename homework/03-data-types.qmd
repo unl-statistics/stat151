@@ -23,7 +23,7 @@ Use the chunk below to define variables $a$, $b$, and $c$, where you set $a$ and
 
 ## Quadratic Formula in Python
 
-$$x = -b \pm \frac{\sqrt{b^2 - 4ac}}{2a}$$
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 
 Use the chunk below to define variables $a$, $b$, and $c$, and then define $x1$ and $x2$, the possible values for $x$.

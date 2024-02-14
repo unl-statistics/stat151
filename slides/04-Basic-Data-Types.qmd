@@ -6,9 +6,9 @@ categories:
 - Week04
 ---
 
-# We Have Done {.scrollable}
+# We Have Done
 
--   Homework 2:
+-   Homework 2: {.scrollable}
     -   Save files
 
     -   Read instructions
@@ -19,33 +19,7 @@ categories:
 
     -   Mainly three modes: interactive, source and script
 
-        -   Path
-
-        -   Where to run
-
-        -   How codes are ran
-
-        -   What are the outputs
-
-        -   Variables in environment
-
-## How modes are different {.scrollable}
-
-+--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-|              | Interactive (words.R)  | Script (Words-noinput.R)                           | Source (Words-noinput.R)                           |
-+==============+========================+====================================================+====================================================+
-| Path         | Under the correct path | Correct relative/absolute path to read in the data | Correct relative/absolute path to read in the data |
-+--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-| Where        | Run in terminal        | Run in console                                     | Run in console                                     |
-+--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-| How          | Run as a whole         | Run line by line                                   | Run as a whole                                     |
-+--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-| Output       | Display output         | Display output even no print function              | No output                                          |
-|              |                        |                                                    |                                                    |
-|              |                        |                                                    | Accept its input from the named file directly      |
-+--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
-| Environment  | No variables created   | variables created in the environment               | Variable created in the environment                |
-+--------------+------------------------+----------------------------------------------------+----------------------------------------------------+
+        -   Path/Where to run/How codes are ran/What are the outputs/Variables in environment
 
 # We have read {.scrollable}
 

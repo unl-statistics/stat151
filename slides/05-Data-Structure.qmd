@@ -1,6 +1,6 @@
 ---
-title: Basic Data Types
-date: '2024-02-14'
+title: Data Structure
+date: '2024-02-21'
 categories:
 - slides
 - Week04
@@ -22,9 +22,9 @@ categories:
 
 # We have read {.scrollable}
 
-## Data Structure
+[Data Structures](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/03-data-struct.html)
 
-Same function doesn't work equivalently on different data structure `length`
+Same function doesn't work equivalently on different data structures `length`
 
 -   List:
 
@@ -57,6 +57,8 @@ Same function doesn't work equivalently on different data structure `length`
         -   Many more ways to manipulate data
 
     -   Create a dataframe and read in data as a dataframe
+
+
 
 ::: r-fit-text
 # Next Time

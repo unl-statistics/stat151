@@ -81,6 +81,10 @@ schedule:
         title: Data Structures
         categories: [reading]
         date: 2024-02-18
+      - href: slides/05-Data-Structure.qmd
+        categories: [slides]
+        date: 2024-02-21
+        pub-date: 2023-01-01
       - href: homework/04-cipher.qmd
         categories: [HW]
         date: 2024-02-23

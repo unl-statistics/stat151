@@ -1,0 +1,95 @@
+---
+title: Basic Data Types
+date: '2024-02-14'
+categories:
+- slides
+- Week04
+---
+
+# We Have Done {.scrollable}
+
+-   Homework 3:
+
+    -   Write code
+
+    -   Debugging
+
+        -   Data type: character/string –\> numeric/int
+
+        -   Indexing an entry or a column
+
+        -   Observe from visualizing, printing and read
+
+# We have read {.scrollable}
+
+## Data Structure
+
+Same function doesn't work equivalently on different data structure `length`
+
+-   List:
+
+    -   Different types in both R and Python
+
+    -   Nested in R, double bracket \[\[1\]\]
+
+-   Vector:
+
+    -   Same data type
+
+    -   `c()` vs `np.array`(Not just 1d), `pd.series`
+
+-   Indexing with row,column and logical vectors
+
+    -   Python starts at 0!
+
+-   Matrices
+
+    -   "gathering of vectors" - same type, 2D
+
+    -   name the columns and row in R, not really in Python (can be done with another object in some other packages)
+
+-   Dataframe
+
+    -   Like a table (what you see in excel): row, columns...
+
+    -   Commonly used functions: `head()`, `tail()`, `summary()`, `dim()`, `nrow()`... There are equivalents in pandas/numpy
+
+        -   Many more ways to manipulate data
+
+    -   Create a dataframe and read in data as a dataframe
+
+::: r-fit-text
+# Next Time
+
+We will get to know the essentials of programming/ creating your own function
+
+Please read:
+
+[Control Structures](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/04-control-struct.html)
+:::
+
+# Homework4 {.scrollable}
+
+-   Download and save [Homework4 raw content](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/04-cipher.qmd)
+
+    -   Click the link
+
+    -   Copy the raw content
+
+    -   Save to a **Quarto** file under Source mode
+
+    -   Name the file as ***04-Lastname-Firstname.qmd***
+
+    -   Submit in .qmd file
+
+## Homework 4 {.scrollable}
+
+-   Follow instructions to decode a secrete message
+
+-   Take advantage of Google/Stack overflow... if errors are raised
+
+-   No error raised doesn't mean it's correct, print the variable to make sure it is what you are looking for
+
+-   Checkpoints make sure you are on the right track
+
+-   Use functions/indexing techniques to do checkpoints

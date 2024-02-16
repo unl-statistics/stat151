@@ -20,12 +20,13 @@ categories:
 
         -   Observe from visualizing, printing and read
 
-# We have read {.scrollable}
+# We have read 
 
 [Data Structures](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/03-data-struct.html)
 
 Same function doesn't work equivalently on different data structures `length`
 
+## Data Structures {.scrollable}
 -   List:
 
     -   Different types in both R and Python
@@ -57,8 +58,6 @@ Same function doesn't work equivalently on different data structures `length`
         -   Many more ways to manipulate data
 
     -   Create a dataframe and read in data as a dataframe
-
-
 
 ::: r-fit-text
 # Next Time

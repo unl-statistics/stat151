@@ -20,13 +20,16 @@ categories:
 
         -   Observe from visualizing, printing and read
 
-# We have read 
+        -   ![](fig/hw3.png){width="532"}
+
+# We have read
 
 [Data Structures](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/03-data-struct.html)
 
 Same function doesn't work equivalently on different data structures `length`
 
 ## Data Structures {.scrollable}
+
 -   List:
 
     -   Different types in both R and Python

@@ -8,19 +8,19 @@ categories:
 
 # We Have Done {.scrollable}
 
--   Homework 3:
+-   Data types
+-   Using functions and Using Functions and Libraries
+    -   `import()` Python
+    -   `library()` R
+    -   `FUN(args)`
 
-    -   Write code
+## Homework3 {.scrollable}
 
-    -   Debugging
+-   Write code and debugging
 
-        -   Data type: character/string –\> numeric/int
+    -   import a library, call functions, data conversion, indexing
 
-        -   Indexing an entry or a column
-
-        -   Observe from visualizing, printing and read
-
-        -   ![](fig/hw3.png){width="532"}
+    -   Observe from visualizing, printing and reading![](fig/hw3.png){width="532"}
 
 # We have read
 

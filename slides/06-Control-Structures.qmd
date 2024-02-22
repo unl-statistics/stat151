@@ -1,0 +1,66 @@
+---
+title: "Control Structures"
+editor: visual
+---
+
+# We Have Done {.scrollable}
+
+-   Homework 4
+    -   Data structure conversion: matrix - vector - dataframe
+    -   
+
+## We have read {.scrollable}
+
+[Control Structures](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/04-control-struct.html)
+
+-   Conditional: if else
+
+    -   Use logical statement
+
+-   Loops
+
+    -   while loop
+
+        -   Update the variable to avoid infinite loop
+
+    -   For loop
+
+        -   Normally loop over a list
+
+        -   Iterate all the values in the list
+
+    -   Sometimes either loop does the work
+
+-   Other structures:
+
+    -   `case_when` in tidyverse (really handy!)
+
+    -   Control loops: `continue`/ `break`/ `next` ...
+
+::: r-fit-text
+# Next Time
+
+-   Midterm
+
+-   Homework resubmission deadline March 5, 6 pm
+:::
+
+# Homework5 {.scrollable}
+
+-   Download and save [Homework5 raw content](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/05-vectors.qmd)
+
+    -   Click the link
+
+    -   Copy the raw content
+
+    -   Save to a **Quarto** file under Source mode
+
+    -   Name the file as ***05-Lastname-Firstname.qmd***
+
+    -   Submit in .qmd file
+
+## Homework 4 {.scrollable}
+
+-   Double check the working directory, so files generated will be read in with the relative path in the following code.
+
+-   Python uses indentation to indicate a block of code, but R uses `{}`

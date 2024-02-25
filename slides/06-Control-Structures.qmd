@@ -1,6 +1,9 @@
 ---
-title: "Control Structures"
-editor: visual
+title: Control Structures
+date: '2024-02-21'
+categories:
+- slides
+- Week04
 ---
 
 # We Have Done {.scrollable}

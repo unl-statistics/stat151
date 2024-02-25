@@ -92,15 +92,16 @@ schedule:
         title: Control Structures
         categories: [reading]
         date: 2024-02-25
+      - href: slides/06-Control-Structures.qmd
+        categories: [slides]
+        date: 2024-02-28
+        pub-date: 2023-01-01
       - href: homework/05-vectors.qmd
         categories: [HW]
         date: 2024-03-01
       - href: homework/05-tips-for-success.qmd
         categories: [HW]
         date: 2024-03-01
-      - href: homework/06-Control-Structures.qmd
-        categories: [slides]
-        date: 2024-02-28
       - path: https://canvas.unl.edu/courses/171851
         title: "Homework Resubmit Deadline"
         categories: [HW]

@@ -98,3 +98,13 @@
   type: reading
   image: figs/reading.svg
   is_live: true
+- path: https://canvas.unl.edu/courses/171851
+  title: Homework Resubmit Deadline
+  date: '2024-03-05'
+  pub.date: '2024-02-20'
+  categories:
+  - HW
+  - Week07
+  type: HW
+  image: figs/hw.svg
+  is_live: true

@@ -9,10 +9,14 @@ listing:
   - homework/02-finding-your-way.qmd
   - homework/03-data-types.qmd
   - homework/04-cipher.qmd
+  - homework/05-tips-for-success.qmd
+  - homework/05-vectors.qmd
   - slides/01-Syllabus-and-Introductions.qmd
   - slides/02-Scripts-and-Notebbooks.qmd
   - slides/03-Intro-to-Programming.qmd
   - slides/04-Basic-Data-Types.qmd
+  - slides/05-Data-Structure.qmd
+  - slides/06-Control-Structures.qmd
   - syllabus.qmd
   - reading.yml
   fields:

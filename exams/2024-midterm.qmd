@@ -1,8 +1,9 @@
 ---
 title: Practice Midterm
 author: Your Name
-date: '2024-03-06'
+date: '2024-03-07'
 categories:
+- Week07
 - Exam
 - Week07
 format:

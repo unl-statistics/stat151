@@ -103,7 +103,7 @@ schedule:
         categories: [HW]
         date: 2024-03-01
       - path: https://canvas.unl.edu/courses/171851
-        title: "Homework Resubmit Deadline"
+        title: "Homework Resubmit Dead    line"
         categories: [HW]
         date: 2024-03-05
       - href: exams/2023-midterm.qmd

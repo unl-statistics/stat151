@@ -111,10 +111,10 @@ schedule:
         categories: [Exam]
         pub-date: 2024-02-29
         date: 2024-03-06
-#      - href: exams/2024-midterm.qmd
-#        categories: [Week07, Exam]
-#        pub-date: 2024-03-06
-#        date: 2024-03-07
+      - href: exams/2024-midterm.qmd
+        categories: [Week07, Exam]
+        pub-date: 2024-03-06
+        date: 2024-03-07
       - path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/05-functions.html
         title: Writing Functions
         categories: [reading]

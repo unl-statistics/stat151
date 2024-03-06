@@ -5,6 +5,8 @@ listing:
 - id: hwlst
   categories: cloud
   contents:
+  - exams/2023-midterm.qmd
+  - exams/2024-midterm.qmd
   - homework/01-scripts-notebooks.qmd
   - homework/02-finding-your-way.qmd
   - homework/03-data-types.qmd

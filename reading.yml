@@ -118,3 +118,13 @@
   type: reading
   image: figs/reading.svg
   is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html
+  title: Git and GitHub
+  date: '2024-03-24'
+  pub.date: '2024-03-10'
+  categories:
+  - reading
+  - Week09
+  type: reading
+  image: figs/reading.svg
+  is_live: true

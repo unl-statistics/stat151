@@ -1,0 +1,80 @@
+---
+title: Writing Functions
+date: '2024-03-20'
+categories:
+- slides
+- Week08
+---
+
+# We have read
+
+[Writing Functions](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/05-functions.html)
+
+Why do we need functions?
+
+-   Re-usability
+
+-   Readability
+
+-   Maintainability
+
+## Writing functions {.scrollable}
+
+-   Syntax
+
+    -   `function_name <- function(params){ }`
+
+    -   `def(params):`
+
+-   parameter vs argument
+
+    -   passing in more than one arguments
+
+        -   follow the order of parameters ``` (x_, y_) ->``func(x, y) ```
+
+        -   specify by parameters `func(x=x_, y = y_)`
+
+-   Input validation
+
+    -   Handle exceptions
+
+        -   data type
+
+        -   invalid data
+
+    -   `stopifnot()` and `try...except...`
+
+-   Scope
+
+    -   Lexical scope: the area that is between the braces/ indented region
+
+    -   "Rewrite"
+
+    -   [python visualizer](https://pythontutor.com/visualize.html#mode=edit)
+
+::: r-fit-text
+# Next Time
+
+-   [version control](https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html)
+-   Sign up for Github Classroom
+:::
+
+# Homework 6 {.scrollable}
+
+-   Download and save [Homework6 raw content](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/06-fizzbuzz.qmd)
+
+    -   Click the link
+
+    -   Copy the raw content
+
+    -   Save to a **Quarto** file under Source mode
+
+    -   Name the file as ***06-Lastname-Firstname.qmd***
+
+    -   Submit in .qmd file
+
+## Homework 6 {.scrollable}
+
+-   `print()` function doesn't have a return value
+
+-   Pay attention to the data type

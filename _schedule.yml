@@ -119,6 +119,9 @@ schedule:
         title: Writing Functions
         categories: [reading]
         date: 2024-03-17
+      - href: slides/08-Writing-Functions.qmd
+        categories: [slides]
+        date: 2024-03-20
       - href: homework/06-fizzbuzz.qmd
         categories: [HW]
         date: 2024-03-22

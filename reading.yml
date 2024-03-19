@@ -99,7 +99,7 @@
   image: figs/reading.svg
   is_live: true
 - path: https://canvas.unl.edu/courses/171851
-  title: Homework Resubmit Deadline
+  title: Homework Resubmit Dead    line
   date: '2024-03-05'
   pub.date: '2024-02-20'
   categories:
@@ -107,4 +107,24 @@
   - Week07
   type: HW
   image: figs/hw.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/05-functions.html
+  title: Writing Functions
+  date: '2024-03-17'
+  pub.date: '2024-03-03'
+  categories:
+  - reading
+  - Week08
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html
+  title: Git and GitHub
+  date: '2024-03-24'
+  pub.date: '2024-03-10'
+  categories:
+  - reading
+  - Week09
+  type: reading
+  image: figs/reading.svg
   is_live: true

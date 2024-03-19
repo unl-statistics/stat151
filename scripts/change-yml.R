@@ -42,7 +42,7 @@ change_yaml_matter <- function(input_file, ..., output_file) {
     if(element_name %in% names(yaml_list)) {
       yaml_list[element_name] <- dots[element_name]
     } else {
-      yaml_list <- c(yaml_list,dots[element_name])
+      yaml_list <- unique(c(yaml_list,dots[element_name]))
     }
   }
 

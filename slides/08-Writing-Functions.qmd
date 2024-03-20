@@ -30,7 +30,7 @@ Why do we need functions?
 
     -   passing in more than one arguments
 
-        -   follow the order of parameters ``` (x_, y_) ->``func(x, y) ```
+        -   follow the order of parameters `(x_, y_) ->func(x, y)`
 
         -   specify by parameters `func(x=x_, y = y_)`
 

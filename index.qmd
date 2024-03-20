@@ -14,12 +14,14 @@ listing:
   - homework/05-tips-for-success.qmd
   - homework/05-vectors.qmd
   - homework/06-fizzbuzz.qmd
+  - homework/07-github.qmd
   - slides/01-Syllabus-and-Introductions.qmd
   - slides/02-Scripts-and-Notebbooks.qmd
   - slides/03-Intro-to-Programming.qmd
   - slides/04-Basic-Data-Types.qmd
   - slides/05-Data-Structure.qmd
   - slides/06-Control-Structures.qmd
+  - slides/08-Writing-Functions.qmd
   - syllabus.qmd
   - reading.yml
   fields:

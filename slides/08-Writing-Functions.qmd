@@ -22,17 +22,21 @@ Why do we need functions?
 
 -   Syntax
 
-    -   `function_name <- function(params){ }`
+    -  R:  `function_name <- function(params){ }`
 
-    -   `def(params):`
+    -  Python:  `def(params):`
 
 -   parameter vs argument
 
     -   passing in more than one arguments
 
-        -   follow the order of parameters `(x_, y_) ->func(x, y)`
+        -   follow the order of parameters    
+        `(x_, y_) ->func(x, y)`
 
-        -   specify by parameters `func(x=x_, y = y_)`
+        -   specify by parameters     
+        `func(x=x_, y = y_)`
+
+## Writing functions {.scrollable}
 
 -   Input validation
 
@@ -50,13 +54,19 @@ Why do we need functions?
 
     -   "Rewrite"
 
-    -   [python visualizer](https://pythontutor.com/visualize.html#mode=edit)
+    -   [python visualizer](https://pythontutor.com/visualize.html#mode=edit)    
+    [See a simple function in action](https://pythontutor.com/render.html#code=def%20rescale01%28x%29%3A%0A%20%20xmin,%20xmax%20%3D%20%5Bmin%28x%29,%20max%28x%29%5D%0A%20%20return%20%5B%28i%20-%20xmin%29/%28xmax%20-%20xmin%29%20for%20i%20in%20x%5D%0A%0Ax%20%3D%20%5B1,%202,%203,%204,%205,%206,%207,%2010%5D%0A%0Arescale01%28x%29&cumulative=false&curInstr=18&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
 ::: r-fit-text
 # Next Time
 
 -   [version control](https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html)
--   Sign up for Github Classroom
+
+-   Before next week: **Sign up for Github Classroom**
+
+-   Seminar of interest: Dr. Heike Hofmann will talk about the practical side of building data processing pipelines. Hardin 901, 11:30 - 12:20, with lunch afterwards.     
+Earn 2 points of extra credit on a reading quiz. 
+
 :::
 
 # Homework 6 {.scrollable}

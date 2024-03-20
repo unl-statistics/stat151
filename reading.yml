@@ -128,3 +128,23 @@
   type: reading
   image: figs/reading.svg
   is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html
+  title: Data Visualization Basics
+  date: '2024-03-31'
+  pub.date: '2024-03-17'
+  categories:
+  - reading
+  - Week10
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html
+  title: Data Visualization (Intro, Why, Thinking Critically)
+  date: '2024-03-31'
+  pub.date: '2024-03-17'
+  categories:
+  - reading
+  - Week10
+  type: reading
+  image: figs/reading.svg
+  is_live: true

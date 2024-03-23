@@ -1,0 +1,66 @@
+---
+title: Version Control
+date: '2024-03-27'
+categories:
+- slides
+- Week09
+---
+
+# We have read
+
+[Version Control](https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html)
+
+Why do we need version control?
+
+-   Keeping track of changes
+
+    -   code
+
+    -   data file
+
+    -   save as, but not exactly, we can revert too
+
+-   Collaboration
+
+## Git and Github {.scrollable}
+
+-   Git: keep track of changes
+
+    -   `commit`
+
+    -   "make change and make a comment as a reminder in the future"
+
+-   Github: website host git repos
+
+    -   Hook up with git to back up your code in cloud
+
+    -   "Google drive/ One drive"
+
+    ![](fig/git.png)
+
+-   Introduce yourself to git and setup SSH authentication
+
+-   Create a repository
+
+-   commands
+
+    -   git add: tell git to track, add + stage
+
+    -   git commit: content change
+
+    -   git push: deposit
+
+    -   git pull: with
+
+::: r-fit-text
+# Next Time
+
+-   [Data Visualization Basics](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html)
+-   [Data Visualization](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html)
+:::
+
+# Homework 7 {.scrollable}
+
+-   Use github classroom to accept the assignment
+-   Follow the instructions
+-   Don't forget committing and pushing the changes!

@@ -127,6 +127,9 @@ schedule:
         categories: [reading]
         date: 2024-03-24
         pub-date: 2024-03-22
+      - href: slides/09-Version-Control.qmd
+        categories: [slides]
+        date: 2024-03-27
       - href: homework/07-github.qmd
         categories: [HW]
         date: 2024-03-29

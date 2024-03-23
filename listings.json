@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/homework/07-github.html",
+      "/slides/09-Version-Control.html",
       "/homework/06-fizzbuzz.html",
       "/slides/08-Writing-Functions.html",
       "/exams/2024-midterm.html",

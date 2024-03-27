@@ -44,13 +44,13 @@ Why do we need version control?
 
 -   commands
 
-    -   git add: tell git to track, add + stage
+    -   git add: tell git to track, stage
 
-    -   git commit: content change
+    -   git commit: record the content has been changed
 
-    -   git push: deposit
+    -   git push: update the remote repo
 
-    -   git pull: with
+    -   git pull: fetch+checkout
 
 ::: r-fit-text
 # Next Time

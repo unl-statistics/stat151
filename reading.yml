@@ -61,7 +61,7 @@
 - path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html
   title: Variables and Basic Data Types
   date: '2024-02-11'
-  pub.date: '2024-01-28'
+  pub.date: '2024-02-04'
   categories:
   - reading
   - Week04
@@ -71,7 +71,7 @@
 - path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html
   title: Using Functions and Libraries
   date: '2024-02-11'
-  pub.date: '2024-01-28'
+  pub.date: '2024-02-04'
   categories:
   - reading
   - Week04
@@ -81,7 +81,7 @@
 - path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/03-data-struct.html
   title: Data Structures
   date: '2024-02-18'
-  pub.date: '2024-02-04'
+  pub.date: '2024-02-11'
   categories:
   - reading
   - Week05
@@ -91,7 +91,7 @@
 - path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/04-control-struct.html
   title: Control Structures
   date: '2024-02-25'
-  pub.date: '2024-02-11'
+  pub.date: '2024-02-18'
   categories:
   - reading
   - Week06
@@ -99,12 +99,22 @@
   image: figs/reading.svg
   is_live: true
 - path: https://canvas.unl.edu/courses/171851
-  title: Homework Resubmit Deadline
+  title: Homework Resubmit Dead    line
   date: '2024-03-05'
-  pub.date: '2024-02-20'
+  pub.date: '2024-02-27'
   categories:
   - HW
   - Week07
   type: HW
   image: figs/hw.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/05-functions.html
+  title: Writing Functions
+  date: '2024-03-17'
+  pub.date: '2024-03-10'
+  categories:
+  - reading
+  - Week08
+  type: reading
+  image: figs/reading.svg
   is_live: true

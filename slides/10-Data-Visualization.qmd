@@ -1,0 +1,26 @@
+---
+title: Data Visualization
+date: '2024-04-03'
+categories:
+- slides
+- Week10
+---
+
+# We have read
+
+[Data Visualiztion Basic](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html)
+
+[Data Visualiztion](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html)
+
+## ggplot {.scrollable}
+
+-   `ggplot(data = <DATA>) +        <GEOM>(mapping = aes(<MAPPINGS>),               position = <POSITION>,               stat = <STAT>) +        <FACET> +        <COORD> +        <THEME>Next Time`
+
+::: r-fit-text
+-   [Data Cleaning](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html)
+:::
+
+# Homework 8 {.scrollable}
+
+-   Use github classroom to accept the assignment
+-   Don't forget committing and pushing the changes!

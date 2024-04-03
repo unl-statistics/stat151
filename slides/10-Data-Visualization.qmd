@@ -1,6 +1,5 @@
 ---
 title: "Data Visualization"
-editor: visual
 date: '2024-04-03'
 categories:
 - slides
@@ -15,13 +14,7 @@ categories:
 
 ## ggplot {.scrollable}
 
--   `ggplot(data = <DATA>) + 
-      <GEOM>(mapping = aes(<MAPPINGS>), 
-             position = <POSITION>, 
-             stat = <STAT>) + 
-      <FACET> + 
-      <COORD> + 
-      <THEME>Next Time`
+-   `ggplot(data = <DATA>) +        <GEOM>(mapping = aes(<MAPPINGS>),               position = <POSITION>,               stat = <STAT>) +        <FACET> +        <COORD> +        <THEME>Next Time`
 
 ::: r-fit-text
 -   [Data Cleaning](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html)

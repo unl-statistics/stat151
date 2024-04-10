@@ -1,0 +1,62 @@
+---
+title: Data cleaning
+date: '2024-04-10'
+categories:
+- slides
+- Week11
+---
+
+# We have read
+
+[Data Cleaning](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html)
+
+## Questions For You
+
+-   What are the attributes of tidy data?
+
+-   What are the packages you considered as handy in R/python for data cleaning?
+
+-   What are the commonly used functions in the package and what are the functions for?
+
+## Tidy data {.scrollable}
+
+-   Each variable has its own column
+
+-   Each observation has its own row
+
+-   Each value has its own cell
+
+## Packages and Functions {.scrollable}
+
+-   dplyr
+
+    -   `filter` : operate row wise, filter out unwanted rows or keep the wanted rows
+
+    -   `select` : operate column wise, select wanted columns
+
+    -   `mutate` : create a new column
+
+    -   there is more...
+
+        -   group_by, summarise, stat functions...
+
+-   Lubridate
+
+    -   Deal date and time
+
+    -   Pay attention to the data type!!!!
+
+-   Python and base R are bit more complicated to manipulate the data
+
+    -   lambda function and apply family
+    
+::: r-fit-text
+# Next Time
+
+-   [Reshaping data](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/05-data-reshape.html)
+:::
+
+# Homework 9 {.scrollable}
+
+-   Use github classroom to accept the assignment
+-   Don't forget committing and pushing the changes!

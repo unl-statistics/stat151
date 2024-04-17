@@ -168,6 +168,9 @@ schedule:
         categories: [reading]
         date: 2024-04-14
         pub-date: 2024-04-12
+      - href: slides/12-Working-with-Strings.qmd
+        categories: [slides]
+        date: 2024-04-17
       - href: homework/11-strings.qmd
         categories: [HW]
         date: 2024-04-19

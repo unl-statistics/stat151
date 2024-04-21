@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/homework/10-reshape.html",
       "/homework/11-strings.html",
       "/slides/12-Working-with-Strings.html",
       "/homework/09-data-cleaning.html",

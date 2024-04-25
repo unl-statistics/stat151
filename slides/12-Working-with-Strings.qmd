@@ -1,0 +1,44 @@
+---
+title: Working With Strings
+date: '2024-04-17'
+categories:
+- slides
+- Week11
+---
+
+# We have read
+
+[work with strings](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/04-strings.html)
+
+[stringr cheatsheet](https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_strings.pdf)
+
+::: r-fit-text
+-   [Reshape Data](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/05-data-reshape.html)
+:::
+
+# Homework 10 {.scrollable}
+
+-   Use github classroom to accept the assignment
+-   Don't forget committing and pushing the changes!
+
+## Hints and Clarifications {.scrollable}
+
+-   Regular expressions are not necessary all the time
+
+-   `stringr` functions are handy
+
+-   `str_view()` vs `str_view_all()`
+
+-   Step 3: Any time you see the word "ugh", with any number of h's, followed by a punctuation mark, delete this.
+
+    -   ugh, ugh! ughh! ughhhh should be deleted
+
+-   Step 4: Replace all instances of **exactly 2 a's** with exactly 2 e's.
+
+    -   "baa" –\> "bee" but nothing should happen to "baaa"
+
+-   Step 6 Every word that ends in b, change that to a y. *Hint: punctuation!*
+
+    -   either "b!" or "b" is changed to y, no need to keep punctuation
+
+-   By the end of step 7, you should see individual words that make sense.

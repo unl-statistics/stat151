@@ -118,3 +118,84 @@
   type: reading
   image: figs/reading.svg
   is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html
+  title: Git and GitHub
+  date: '2024-03-24'
+  pub.date: '2024-03-22'
+  categories:
+  - reading
+  - Week09
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html
+  title: Data Visualization Basics
+  date: '2024-03-31'
+  pub.date: '2024-03-29'
+  categories:
+  - reading
+  - Week10
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html
+  title: Data Visualization (Intro, Why, Thinking Critically)
+  date: '2024-03-31'
+  pub.date: '2024-03-29'
+  categories:
+  - reading
+  - Week10
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html
+  title: Data Cleaning and Manipulation
+  date: '2024-04-07'
+  pub.date: '2024-04-05'
+  categories:
+  - reading
+  - Week11
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/04-strings.html
+  title: Working with Strings (Basic Ops, Converting to Numbers, Separating and Joining
+    Cols)
+  date: '2024-04-14'
+  pub.date: '2024-04-12'
+  categories:
+  - reading
+  - Week12
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/05-data-reshape.html
+  title: Reshaping Data
+  date: '2024-04-21'
+  pub.date: '2024-04-19'
+  categories:
+  - reading
+  - Week13
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02c-good-graphics.html
+  title: Creating Good Charts
+  date: '2024-04-28'
+  pub.date: '2024-04-26'
+  categories:
+  - reading
+  - Week14
+  type: reading
+  image: figs/reading.svg
+  is_live: true
+- path: https://canvas.unl.edu/courses/171851
+  title: Homework Resubmit Deadline
+  date: '2024-05-07'
+  pub.date: '2024-04-26'
+  categories:
+  - HW
+  - Week15
+  type: HW
+  image: figs/hw.svg
+  is_live: true

@@ -1,0 +1,14 @@
+---
+title: Final Exam
+author: Your Name
+date: '2024-05-10'
+categories:
+- Week15
+- Exam
+- Week15
+format:
+  html:
+    theme: default
+---
+
+{{< include 2024-final-exam/index.qmd >}}

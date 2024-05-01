@@ -198,16 +198,16 @@ schedule:
         categories: [HW]
         date: 2024-05-07
         pub-date: 2024-04-26
-### Exam
-      - href: exams/2023-final-exam/index.qmd
-        title: "Practice Exam"
-        date: 2024-05-08
-        pub-date: 2024-05-01
+      - href: exams/2023-final.qmd
         categories: [Week15, Exam]
-#      - href: exams/2024-final.qmd
-#        categories: [Week15, Exam]
-#        date: 2024-05-10
-#        pub-date: 2024-05-08
+        date: 2024-05-08
+        pub-date: 2024-04-30
+      - href: exams/2024-final.qmd
+        categories: [Week15, Exam]
+        date: 2024-05-10
+        pub-date: 2024-05-07
+
+
 
 auto-publish:
   timezone: "America/Chicago"

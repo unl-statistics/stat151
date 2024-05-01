@@ -5,6 +5,7 @@ listing:
 - id: hwlst
   categories: cloud
   contents:
+  - exams/2023-final.qmd
   - exams/2024-midterm.qmd
   - homework/01-scripts-notebooks.qmd
   - homework/02-finding-your-way.qmd
@@ -13,13 +14,23 @@ listing:
   - homework/05-tips-for-success.qmd
   - homework/05-vectors.qmd
   - homework/06-fizzbuzz.qmd
+  - homework/07-github.qmd
+  - homework/08-graphics.qmd
+  - homework/09-data-cleaning.qmd
+  - homework/10-reshape.qmd
+  - homework/11-strings.qmd
+  - homework/12-graphics2.qmd
   - slides/01-Syllabus-and-Introductions.qmd
-  - slides/02-Scripts-and-Notebbooks.qmd
+  - slides/02-Scripts-and-Notebooks.qmd
   - slides/03-Intro-to-Programming.qmd
   - slides/04-Basic-Data-Types.qmd
   - slides/05-Data-Structure.qmd
   - slides/06-Control-Structures.qmd
   - slides/08-Writing-Functions.qmd
+  - slides/09-Version-Control.qmd
+  - slides/10-Data-Visualization.qmd
+  - slides/11-Data-Cleaning.qmd
+  - slides/12-Working-with-Strings.qmd
   - syllabus.qmd
   - reading.yml
   fields:

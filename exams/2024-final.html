@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Your Name">
-<meta name="dcterms.date" content="2024-03-07">
+<meta name="dcterms.date" content="2024-05-08">
 
-<title>Stat 151 - 2024 Midterm</title>
+<title>Stat 151 - Final Exam</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,20 +152,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#ground-rules" id="toc-ground-rules" class="nav-link" data-scroll-target="#ground-rules">Ground Rules</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a>
   <ul class="collapse">
-  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
-  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a></li>
-  <li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a></li>
+  <li><a href="#rules" id="toc-rules" class="nav-link" data-scroll-target="#rules">Rules</a></li>
   </ul></li>
-  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <li><a href="#wordle" id="toc-wordle" class="nav-link" data-scroll-target="#wordle">Wordle!</a>
   <ul class="collapse">
-  <li><a href="#read-in-the-data-and-create-a-data-frame" id="toc-read-in-the-data-and-create-a-data-frame" class="nav-link" data-scroll-target="#read-in-the-data-and-create-a-data-frame">Read in the data and create a data frame</a></li>
-  <li><a href="#create-a-new-variable-decade" id="toc-create-a-new-variable-decade" class="nav-link" data-scroll-target="#create-a-new-variable-decade">Create a new variable, <code>decade</code></a></li>
-  <li><a href="#happy-people-per-year" id="toc-happy-people-per-year" class="nav-link" data-scroll-target="#happy-people-per-year">Happy People per Year</a></li>
+  <li><a href="#part-1-read-in-and-clean-the-data" id="toc-part-1-read-in-and-clean-the-data" class="nav-link" data-scroll-target="#part-1-read-in-and-clean-the-data">Part 1: Read in and Clean the Data</a></li>
+  <li><a href="#part-2-functions" id="toc-part-2-functions" class="nav-link" data-scroll-target="#part-2-functions">Part 2: Functions</a></li>
+  <li><a href="#part-3-assessing-word-frequency" id="toc-part-3-assessing-word-frequency" class="nav-link" data-scroll-target="#part-3-assessing-word-frequency">Part 3: Assessing Word Frequency</a></li>
+  <li><a href="#part-4-decoding-wordle-bot" id="toc-part-4-decoding-wordle-bot" class="nav-link" data-scroll-target="#part-4-decoding-wordle-bot">Part 4: Decoding Wordle-Bot</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -175,11 +171,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2024 Midterm</h1>
+<h1 class="title">Stat 151 Final Exam</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Week07</div>
+    <div class="quarto-category">Week15</div>
     <div class="quarto-category">Exam</div>
-    <div class="quarto-category">Week07</div>
   </div>
   </div>
 
@@ -197,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 7, 2024</p>
+      <p class="date">2024-05-08</p>
     </div>
   </div>
   
@@ -209,142 +204,165 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><a href="https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/exams/2024-midterm.qmd">Download the starter qmd file here</a></p>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<p>Completing the exam in both languages will earn you 20% extra credit on the exam and will also prove that you’re kicking butt in this class.</p>
-<ol type="1">
-<li><p>Create a folder for this exam on your computer.</p></li>
-<li><p>Save this file into that folder.</p></li>
-<li><p>When you are finished with the exam, compile the document. Make sure all of your code runs!</p></li>
-<li><p>Upload a zip file of your work and any necessary file dependencies to Canvas.</p></li>
-</ol>
-</section>
-<section id="ground-rules" class="level2">
-<h2 class="anchored" data-anchor-id="ground-rules">Ground Rules</h2>
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
 <ul>
-<li><p>You may use the textbook and the internet (but the normal rules apply - you must be able to explain your answer!)</p></li>
-<li><p>You may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc.</p></li>
-<li><p>You may ask clarifying questions of Dr.&nbsp;Vanderplas by email/zoom or in person</p></li>
-<li><p>You may use R or Python for any of these tasks, but your code must be reproducible - I must be able to run your quarto file on my machine. I have provided R chunks in the correct locations in this file - change them to Python if you wish.</p></li>
-<li><p>You should have at least one code chunk for each numbered task below.</p></li>
+<li><p>This exam is due at 6pm on May 10, 2024. Your exam MUST BE PUSHED TO GITHUB CLASSROOM by 6pm. Please double-check your github repository to ensure that the file that is on github is the file you want me to grade.</p></li>
+<li><p>For each of these problems, you may choose to solve the problem in either R or python.<br>
+The chunks I’ve provided are R chunks, but you are free to change the code type to python; I just want to ensure that your answers are where I expect them to be.</p></li>
 </ul>
-</section>
-<section id="dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>The data for this exam are taken from the <code>happy</code> dataset in the <code>classdata</code> R package. I’ve exported the data to CSV for you at this link: https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv</p>
-<section id="description" class="level3">
-<h3 class="anchored" data-anchor-id="description">Description</h3>
-<p>The data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:</p>
-</section>
-<section id="format" class="level3">
-<h3 class="anchored" data-anchor-id="format">Format</h3>
-<p>A data frame with 62466 rows and 11 variables</p>
-</section>
-<section id="details" class="level3">
-<h3 class="anchored" data-anchor-id="details">Details</h3>
+<section id="rules" class="level2">
+<h2 class="anchored" data-anchor-id="rules">Rules</h2>
 <ul>
-<li><p>year. year of the response, 1972 to 2018.</p></li>
-<li><p>age. age in years: 18–89 (89 stands for all 89 year olds and older).</p></li>
-<li><p>degree. highest education: lt high school, high school, junior college, bachelor, graduate.</p></li>
-<li><p>finrela. how is your financial status compared to others: far below, below average, average, above average, far above.</p></li>
-<li><p>happy. happiness: very happy, pretty happy, not too happy.</p></li>
-<li><p>health. health: excellent, good, fair, poor.</p></li>
-<li><p>marital. marital status: married, never married, divorced, widowed, separated.</p></li>
-<li><p>sex. sex: female, male.</p></li>
-<li><p>polviews. from extremely conservative to extremely liberal.</p></li>
-<li><p>partyid. party identification: strong republican, not str republican, ind near rep, independent, ind near dem, not str democrat, strong democrat, other party.</p></li>
-<li><p>wtssall. probability weight. 0.39–8.74</p></li>
+<li><p>You may use the textbook, your notes, and google on this exam, but you may not post this exam and ask for help on any site.<br>
+It is ok to google, for instance, how to convert a string to a list of characters, but it is not ok to google how to solve the entire question. Please ask if you are concerned about any possible edge cases.</p></li>
+<li><p>You may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc. Pre-existing posts on SO are fair game, though.</p></li>
+<li><p>You must be able to explain how any code you submit on this exam works. Oral exams based on your submissions will be held M-W May 13-15 (e.g.&nbsp;during finals week)</p></li>
+<li><p>You may ask clarifying questions of Dr.&nbsp;Vanderplas or Muxin Hua by email/zoom or in person</p></li>
+<li><p>There are a total of 70 points available on this exam.</p></li>
+<li><p>If you get stuck, you may email Dr.&nbsp;Vanderplas for the solution to the problem you are stuck on, at the cost of the points which would be awarded for that problem. Please specify the part and question number, if you decide to use this option. This is designed to get you un-stuck and allow you to complete problems</p></li>
+<li><p>(6 points) Your submitted qmd file must compile without errors .<br>
+Use <code>error=TRUE</code> in a chunk if it is supposed to return an error (for instance, if you are demonstrating error handling).</p></li>
 </ul>
 </section>
 </section>
-<section id="tasks" class="level2">
-<h2 class="anchored" data-anchor-id="tasks">Tasks</h2>
+<section id="wordle" class="level1">
+<h1>Wordle!</h1>
+<p>Wordle is a web-based word game created by Josh Wardle and currently owned by the New York Times. Players get 6 attempts to guess a five-letter word. On each attempt, letters that are in the solution but not in the correct place are indicated with yellow tiles, and letters that are in the correct place are indicated with green tiles.</p>
+<p>You can play wordle <a href="https://www.nytimes.com/games/wordle/index.html">here</a>.</p>
+<p>In this assignment, you will work with two data sets:</p>
+<ul>
+<li><p>wordle-words.csv, which contains the valid guesses, answers for all 2315 days of predetermined wordle solutions in the original version of the game, and google N-gram word frequency of each word between 1970 and 2019. This data was modified from the csv provided by https://github.com/steve-kasica/wordle-words/.</p></li>
+<li><p>guess-words.csv, which contains an additional 1881 valid guesses which were added when the New York Times took over the game in January of 2022. These words were obtained from <a href="https://gist.github.com/nshafer/8e12aa557cc91c6b16a6057e83e4741e">this list</a> and I used <a href="fetch.py">fetch.py</a> to obtain the N-gram word frequency for these words.</p></li>
+</ul>
+<p>Because of changes in the NYT version of wordle, 7 of the original 2315 solutions have been removed from the game. In order to additionally safeguard against any spoilers for wordle players, I have shuffled the solution days in this data set so that all actual solutions are still marked as such, but the days reported in this data set are not the actual days on which the words will appear. I used the file <a href="shuffle-answers.R">shuffle-answers.R</a> to perform this operation (you don’t need to use this file, but I like to be transparent).</p>
+<section id="part-1-read-in-and-clean-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-read-in-and-clean-the-data">Part 1: Read in and Clean the Data</h2>
+<p>(6 points total)</p>
 <ol type="1">
-<li><p>Read in the data and create a data frame that you will work with for this exam.</p></li>
-<li><p>Create a new column variable, <code>decade</code>, in your data frame.</p></li>
+<li>(2 points) Read in the file <code>wordle-words.csv</code> and store the data in a variable named <code>orig</code>. Read in the file <code>guess-words.csv</code> and store the data in a variable named <code>guess</code>.</li>
 </ol>
-<ol type="a">
-<li>You will need to take the response year and truncate it to the decade, so that 1972 becomes 1970 and 1989 becomes 1980. You can use a series of logical statements if you want, but it may be more effective to find a numerical function or combination of functions that will perform the operation you want.<br>
-<code>floor()</code> and <code>math.floor()</code> in R and python respectively are good places to start.</li>
-<li>Create a scatterplot (use <code>geom_point</code>) of your happy year vs decade to show that your approach succeeded.</li>
+<ol start="2" type="1">
+<li>(4 points) Is the <code>orig</code> data in tidy form? Explain - if it is, list the features of tidy data and how this data set meets the requirements. If not, list the features of tidy data this data set violates, and explain what a tidy form of the data would look like.</li>
+</ol>
+</section>
+<section id="part-2-functions" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-functions">Part 2: Functions</h2>
+<p>(24 points total)</p>
+<p>In this part of the exam, use only the <code>orig</code> words.</p>
+<p>You may need to write a for loop to check whether each letter is (or is not) in the vector of words. If you start with a vector that has 0 for each word in the list, you can use addition operations to ensure that only words with all of the provided letters are returned.</p>
+<p>In R, the <code>letters</code> object contains all 26 valid lowercase latin letters.</p>
+<ol type="1">
+<li>(4 points) Write a function named <code>filter_yellow(words, x)</code> that uses the words data and a vector of lowercase letters, <code>x</code>, which are in the wordle solution and returns all possible words containing those letters.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_yellow</span>(orig, <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>, <span class="st">"u"</span>)) </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in filter_yellow(orig, c("a", "e", "i", "u")): could not find function "filter_yellow"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#        word   occurrence day</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 110   adieu 2.186597e-06  NA</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 653   aurei 7.694299e-08  NA</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 11968 uraei 1.093829e-08  NA</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_yellow</span>(orig, <span class="fu">c</span>(<span class="st">"q"</span>, <span class="st">"u"</span>, <span class="st">"e"</span>, <span class="st">"y"</span>)) </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in filter_yellow(orig, c("q", "u", "e", "y")): could not find function "filter_yellow"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#       word   occurrence  day</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 8779 query 8.135131e-06 1495</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 8782 queyn 5.189541e-10   NA</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 8783 queys 3.685211e-10   NA</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 8818 quyte 5.250099e-09   NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li><p>(2 points) Modify <code>filter_yellow(words, x)</code> so that the function will return a useful error if the <code>words</code> data frame does not have a column named <code>word</code>.</p></li>
+<li><p>(2 points) Modify <code>filter_yellow(words, x)</code> so that the function will return a warning if any characters provided are not letters (A-z), and then will drop the non-letter characters from the vector before returning results using the valid letters.</p></li>
+<li><p>(2 points) Modify <code>filter_yellow(words, x)</code> so that the function can accept uppercase or lowercase letters, but will convert the letters to lowercase automatically without an error.</p></li>
+<li><p>(4 points) Write a function named <code>filter_black(y)</code> that takes a vector of letters, <code>y</code>, which aren’t in the wordle solution and returns all possible words which do not contain any of those letters. Use the same error handling code that you added in parts 2-4.</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_black</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">19</span>])</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in filter_black(letters[1:19]): could not find function "filter_black"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "tutty" "vutty"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_black</span>(<span class="fu">c</span>(<span class="st">"S"</span>, <span class="st">"T"</span>, <span class="st">"C"</span>, <span class="st">"H"</span>, <span class="st">"Y"</span>, <span class="st">"R"</span>, <span class="st">"P"</span>, <span class="st">"L"</span>, <span class="st">"K"</span>, <span class="st">"G"</span>, <span class="st">"N"</span>, <span class="st">"M"</span>, <span class="st">"D"</span>, <span class="st">"F"</span>, <span class="st">"B"</span>, <span class="st">"W"</span>))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in filter_black(c("S", "T", "C", "H", "Y", "R", "P", "L", "K", "G", : could not find function "filter_black"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "ajiva" "aquae" "avize" "jaxie" "jeeze" "juvie" "ouija"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># [8] "ozzie" "qajaq" "queue" "zoaea" "zoeae" "zooea"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>(4 points) Write a function named <code>filter green(words, letters)</code> that takes a string of 5 letters (with unknowns indicated by _) and returns all words which have the specified letters in the specified position. Add error handling that identifies not-valid characters and flags strings that are not of length 5.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_green</span>(orig, <span class="at">z =</span> <span class="st">"EXA__"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in filter_green(orig, z = "EXA__"): could not find function "filter_green"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#    word   occurrence day</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 exact 2.450183e-05 139</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 exalt 5.109440e-07 449</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 exams 2.825810e-06  NA</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_green</span>(orig, <span class="at">z =</span> <span class="st">"summer"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in filter_green(orig, z = "summer"): could not find function "filter_green"</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Error in filter_green(orig, z = "summer") : nchar(z) == 5 is not TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li>(4 points) Use your functions to determine what the remaining valid words are in the following situation. Based on the word occurrence frequency, which would you guess first?<br>
+Hint: You should be able to chain your functions together with pipes if you’ve set things up as instructed.</li>
+</ol>
+<p><img src="wordle_game.png" class="img-fluid"></p>
+<ol start="8" type="1">
+<li>(2 points) How would you improve your functions to make your wordle game better?</li>
+</ol>
+</section>
+<section id="part-3-assessing-word-frequency" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-assessing-word-frequency">Part 3: Assessing Word Frequency</h2>
+<p>(12 points total)</p>
+<ol type="1">
+<li>(2 points) Join the two data frames of valid wordle words to create a data frame named <code>all_words</code> of all valid words.</li>
+</ol>
+<ol start="2" type="1">
+<li>(2 points) Create a new column in your data frame, <code>solution</code>, that is TRUE for words which are solutions to wordle puzzles, and FALSE for words which are not solutions but are valid guesses.</li>
 </ol>
 <ol start="3" type="1">
-<li>Create a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time.<br>
-Note: You may have to pass an argument to the mean function to tell it to exclude missing values from the calculation, such as <code>na.rm</code> or <code>skipna</code>. Or, you can remove the NAs from happy using a function like <code>na.omit</code> or <code>dropna</code>, but be careful to only drop rows with an NA in variables we care about, like <code>happy</code> or <code>year</code>.</li>
+<li>(4 points) Using <code>ggplot2</code> or <code>plotnine</code>, create side-by-side boxplots which show the frequency of words by <code>solution</code>. You may want to use a transformation (e.g.&nbsp;<code>scale_y_log10()</code>)to make these values easier to visualize.<br>
+If you cannot figure this part out, email Dr.&nbsp;Vanderplas for code at the cost of a deduction of the 4 points you would get for this question.</li>
 </ol>
-<p>The code below provides an example of how to create a summary dataset and handle NAs in R and python. You may modify this code to help you answer part 3.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sample data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">10</span>), <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">20</span>)),</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Group 1"</span>, <span class="st">"Group 2"</span>), <span class="at">each =</span> <span class="dv">100</span>))</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df_means <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">mean =</span> <span class="cn">NULL</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># For each y group, what is the mean of x?</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">unique</span>(df<span class="sc">$</span>y)) {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  sub_df <span class="ot">&lt;-</span> <span class="fu">subset</span>(df, y <span class="sc">==</span> i)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  df_means <span class="ot">&lt;-</span> <span class="fu">rbind</span>(df_means, </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">data.frame</span>(<span class="at">y =</span> i, <span class="at">mean =</span> <span class="fu">mean</span>(sub_df<span class="sc">$</span>x, <span class="at">na.rm =</span> T)))</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>df_means</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="do">##         y      mean</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 Group 1  9.996615</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 Group 2 20.064791</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstration of na.rm</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">na.rm =</span> T) <span class="co"># Remove NAs</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 2</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">na.rm =</span> F) <span class="co"># Don't remove NAs</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new data frame</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">'y'</span>: np.repeat([<span class="st">'Group1'</span>, <span class="st">'Group2'</span>], (<span class="dv">100</span>, <span class="dv">100</span>)), </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">'x'</span>: np.concatenate((np.random.normal(loc <span class="op">=</span> <span class="dv">10</span>, size <span class="op">=</span> <span class="dv">100</span>), np.random.normal(loc <span class="op">=</span> <span class="dv">12</span>, size <span class="op">=</span> <span class="dv">100</span>)), axis <span class="op">=</span> <span class="va">None</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  })</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an empty dataframe</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>df_means <span class="op">=</span> pd.DataFrame(columns <span class="op">=</span> [<span class="st">'y'</span>, <span class="st">'mean'</span>])</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># For each age, how many values?</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> np.unique(df.y):</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create the subset</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  df_sub <span class="op">=</span> df.loc[df.y <span class="op">==</span> i]</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Drop NAs from the data frame</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This step isn't necessary because mean() uses skipna = T by default</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># df_sub = df_sub.dropna(subset = ['x', 'y']) </span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add a new row to the end of df_means</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  df_means.loc[<span class="bu">len</span>(df_means.index)] <span class="op">=</span> [i, df_sub.x.mean()]</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Demonstrating skipna parameter of mean</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">'y'</span>:[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, np.nan]}).y.mean(skipna <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co">## 2.0</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">'y'</span>:[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, np.nan]}).y.mean(skipna <span class="op">=</span> <span class="va">False</span>)</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co">## nan</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<ol start="4" type="1">
+<li>(2 points) Make sure your plot has a title and descriptive axis labels.</li>
+</ol>
+<ol start="5" type="1">
+<li>(2 points) Write at least 2 sentences interpreting the chart you created in part 3.</li>
+</ol>
 </section>
-<section id="solutions" class="level2">
-<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
-<p>Copy the list of tasks here and put your code for each task below the task description. Your code should be well commented.</p>
-<p>If you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.</p>
-<p>If your code does not compile, add <code>, error = T</code> to the chunk header so that the rest of the document will still compile.</p>
-<section id="read-in-the-data-and-create-a-data-frame" class="level3">
-<h3 class="anchored" data-anchor-id="read-in-the-data-and-create-a-data-frame">Read in the data and create a data frame</h3>
-</section>
-<section id="create-a-new-variable-decade" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-new-variable-decade">Create a new variable, <code>decade</code></h3>
-<!-- Create a scatterplot (use `geom_point`) of your happy year vs decade to show that your approach succeeded. -->
-</section>
-<section id="happy-people-per-year" class="level3">
-<h3 class="anchored" data-anchor-id="happy-people-per-year">Happy People per Year</h3>
-<!-- Create a new data set by iterating through each year to find the proportion of people who are very happy. Use a for loop. Using your new data frame, plot the proportion of very happy people over time.     -->
+<section id="part-4-decoding-wordle-bot" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-decoding-wordle-bot">Part 4: Decoding Wordle-Bot</h2>
+<p>(22 points total)</p>
+<p>The New York Times added Wordle-Bot, which helps analyze your wordle guesses and critique your approach, when it acquired the game from its original creator.</p>
+<p>This portion of the exam will help you create some of the data you would need to build your own wordle-bot clone.</p>
+<ol type="1">
+<li>(2 points) Starting with <code>all_words</code>, the data frame you created for Part 3, create a data frame named <code>answers</code> that contains only words which are wordle solutions.</li>
+</ol>
+<ol start="2" type="1">
+<li>(4 points) Split the letters of the words in the <code>answers</code> data frame into separate columns, so that there is a column for all of the first letters, all of the 2nd letters, and so on. You may find it helpful to first mutate a new column and then use a function such as <code>unnest_wider()</code> to get the data into a form that you can work with. A few lines of the desired data structure is provided below.<br>
+If you cannot figure this part out, email Dr.&nbsp;Vanderplas for code at the cost of a deduction of the 4 points you would get for this question.</li>
+</ol>
+<pre><code># A tibble: 2,315 × 9
+   word    occurrence   day X1    X2    X3    X4    X5    solution
+   &lt;chr&gt;        &lt;dbl&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;lgl&gt;   
+ 1 aback 0.00000113    1628 a     b     a     c     k     TRUE    
+ 2 abase 0.0000000618   459 a     b     a     s     e     TRUE    
+ 3 abate 0.00000104    1781 a     b     a     t     e     TRUE    
+ 4 abbey 0.00000143     841 a     b     b     e     y     TRUE    </code></pre>
+<ol start="3" type="1">
+<li><p>(4 points) Describe the form of the data you would need in order to compare the relative frequency of each letter in the alphabet by word position (e.g.&nbsp;1st letter, 2nd letter, 3rd letter…). Feel free to upload and include a sketch using markdown syntax, if it is easier to sketch out the form of the data you would need.</p></li>
+<li><p>(4 points) Write code that will take you from the form of the data you got in question 2 to the structure you described in question 3.</p></li>
+</ol>
+<ol start="5" type="1">
+<li>(2 points) Create a new variable named <code>letter_type</code> that has values <code>vowel</code> and <code>consonant</code>. For the purposes of this question, ‘y’ should be treated as a vowel.</li>
+</ol>
+<ol start="6" type="1">
+<li>(4 points) Create a bar chart with letter on the x-axis and frequency on the y-axis. Facet by position so that your chart has 5 rows and a single column. The bars should be shaded according to <code>letter_type</code>, and your plot should have informative axis labels and a useful title.</li>
+</ol>
+<ol start="7" type="1">
+<li>(2 points) How would you improve this chart so that viewers could more clearly see which letters correspond to each position? Justify your answer, using some of the information on chart perception we discussed in this class.</li>
+</ol>
 
 
 </section>

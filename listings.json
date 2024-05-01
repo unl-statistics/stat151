@@ -2,6 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/exams/2023-final.html",
+      "/homework/12-graphics2.html",
       "/homework/10-reshape.html",
       "/homework/11-strings.html",
       "/slides/12-Working-with-Strings.html",
@@ -24,7 +26,7 @@
       "/homework/02-finding-your-way.html",
       "/slides/03-Intro-to-Programming.html",
       "/homework/01-scripts-notebooks.html",
-      "/slides/02-Scripts-and-Notebbooks.html",
+      "/slides/02-Scripts-and-Notebooks.html",
       "/slides/01-Syllabus-and-Introductions.html",
       "/syllabus.pdf"
     ]

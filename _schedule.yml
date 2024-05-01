@@ -38,7 +38,7 @@ schedule:
         categories: [HW]
         date: 2024-02-02
         pub-date: 2023-01-01
-      - href: slides/02-Scripts-and-Notebbooks.qmd
+      - href: slides/02-Scripts-and-Notebooks.qmd
         categories: [slides]
         date: 2024-01-31
         pub-date: 2023-01-01

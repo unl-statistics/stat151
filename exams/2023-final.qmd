@@ -13,4 +13,4 @@ format:
 
 You can download all of the files needed for this exam [here](https://github.com/srvanderplas/unl-stat151/raw/main/exams/2023-final-exam.zip).
 
-{{< include 2023-final-exam/index.qmd >}}
+{{< include 2023-final/index.qmd >}}

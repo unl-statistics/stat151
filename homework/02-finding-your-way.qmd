@@ -20,4 +20,8 @@ Can you run this same script in RStudio using the Source Script button? If you c
 
 ## Thinking Critically
 
-Consider the counting words examples in the [textbook](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html#writing-code-for-people) (Your Turn -- Terminal Mode, Your Turn -- Script Mode). Look at the code, and then at the steps provided for each example. What is different? What is the same? Create a table comparing terminal mode, script mode (e.g. running the whole script using the Run button), and interactive mode. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they're specified, and any differences in the output.
+Consider the counting words examples in the [textbook](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html#writing-code-for-people) (Your Turn -- Scripts and Terminals, Your Turn - Sourcing a Script, Your Turn - Words in quarto). Look at the code, and then at the steps provided for each example. What is different? What is the same?
+
+Create a table comparing using a terminal interactively, sourcing a script (e.g. running the whole script using the Run button), and using a script or notebook interactively. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they're specified, and any differences in the output.
+
+Hint: To create a table, change this to "Visual" mode (editor toolbar, under the save/render bar) and a menu option should appear that will help you add a table.

@@ -1,10 +1,6 @@
 ---
 title: 'Homework 9: Data Cleaning and Manipulation'
 author: Your Name
-date: '2024-04-12'
-categories:
-- HW
-- Week11
 format:
   html:
     theme: default
@@ -13,5 +9,5 @@ format:
 
 Note: This assignment must be submitted in github classroom.
 
-{{< include ../homework-repos/09-data-cleaning/index.qmd >}}
+{{< include ../homework-repos/data-cleaning-steam-games/index.qmd >}}
 

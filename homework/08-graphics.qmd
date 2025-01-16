@@ -1,10 +1,6 @@
 ---
 title: 'Homework 8: Graphics'
 author: Your Name
-date: '2024-04-05'
-categories:
-- HW
-- Week10
 format:
   html:
     theme: default
@@ -13,5 +9,5 @@ format:
 
 Note: This assignment must be submitted in github classroom.
 
-{{< include ../homework-repos/08-graphics/index.qmd >}}
+{{< include ../homework-repos/graphics-intro/index.qmd >}}
 

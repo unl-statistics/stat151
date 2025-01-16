@@ -1,5 +1,5 @@
 ---
-title: 'Homework 12: Graphics Part 2'
+title: 'Homework: Working with Strings'
 author: Your Name
 format:
   html:
@@ -9,5 +9,5 @@ format:
 
 Note: This assignment must be submitted in github classroom.
 
-{{< include ../homework-repos/good-graphics/index.qmd >}}
+{{< include ../homework-repos/strings-decoder/index.qmd >}}
 

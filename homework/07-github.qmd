@@ -1,12 +1,8 @@
 ---
 title: 'Homework 7: Git and Github'
-date: '2024-03-29'
 author: Your Name
-categories:
-- HW
-- Week09
 ---
 
 Note: This assignment must be submitted in github classroom.
 
-{{< include ../homework-repos/07-github/README.md >}}
+{{< include ../homework-repos/github-intro/README.qmd >}}

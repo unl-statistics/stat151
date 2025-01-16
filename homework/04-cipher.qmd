@@ -13,7 +13,7 @@ categories:
 
 This assignment is modified from the [decodeR](https://github.com/kbodwin/decodeR) exercises by Kelly Bodwin and Allison Theobold.
 
-Once you finish this assignment, think about how you might decode the message in python. For +5 extra credit, write python code that decodes the message, following the outline of the R code you've already written.
+Once you finish this assignment in R, think about how you might decode the message in python. For +5 extra credit, write python code that decodes the message, following the outline of the R code you've already written.
 
 In this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.
 

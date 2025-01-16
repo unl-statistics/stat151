@@ -1,0 +1,22 @@
+# Week 14: Good Charts
+  
+## 📖 Reading
+
+  - [ ] [Creating Good Charts](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02c-good-graphics.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 14 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Find an example of a terrible chart in the media
+
+## 🐪 Wednesday
+
+- Bad Chart day!
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 12](../homework/12-graphics2.qmd) (Submitted via Github classroom)
+

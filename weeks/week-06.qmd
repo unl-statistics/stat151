@@ -1,0 +1,18 @@
+# Week 6: Control Structures
+  
+## 📖 Reading
+
+  - [ ] [Control Structures](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/04-control-struct.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 6 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Read [Homework 5 tips for success](../homework/05-tips-for-success.qmd) and make sure you understand local vs. global file paths
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 5](../homework/05-vectors.qmd)
+

@@ -1,51 +1,19 @@
 ---
-title: Stat 151
+title: Stat 151 - Introduction to Statistical Computing
 format: html
-listing:
-- id: hwlst
-  categories: cloud
-  contents:
-  - exams/2023-final.qmd
-  - exams/2024-midterm.qmd
-  - homework/01-scripts-notebooks.qmd
-  - homework/02-finding-your-way.qmd
-  - homework/03-data-types.qmd
-  - homework/04-cipher.qmd
-  - homework/05-tips-for-success.qmd
-  - homework/05-vectors.qmd
-  - homework/06-fizzbuzz.qmd
-  - homework/07-github.qmd
-  - homework/08-graphics.qmd
-  - homework/09-data-cleaning.qmd
-  - homework/10-reshape.qmd
-  - homework/11-strings.qmd
-  - homework/12-graphics2.qmd
-  - slides/01-Syllabus-and-Introductions.qmd
-  - slides/02-Scripts-and-Notebooks.qmd
-  - slides/03-Intro-to-Programming.qmd
-  - slides/04-Basic-Data-Types.qmd
-  - slides/05-Data-Structure.qmd
-  - slides/06-Control-Structures.qmd
-  - slides/08-Writing-Functions.qmd
-  - slides/09-Version-Control.qmd
-  - slides/10-Data-Visualization.qmd
-  - slides/11-Data-Cleaning.qmd
-  - slides/12-Working-with-Strings.qmd
-  - syllabus.qmd
-  - reading.yml
-  fields:
-  - date
-  - title
-  - type
-  - image
-  sort: date desc
-  type: table
-  field-display-names:
-    type: Type
 ---
 
-# Course Materials
-Use the categories on the right to filter the materials.
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+source("schedule.R")
 
-::: {#hwlst}
-:::
+schedule %>%
+  tidyr::replace_na(list("Important Notes" = "", Topic =  "Finals Week")) %>%
+  mutate(Topic = if_else(Week < 16, sprintf("[%s](https://unl-statistics.github.io/stat151/weeks/week-%02d.html)", Topic, Week), Topic)) %>%
+  gt::gt() |>
+  gt::fmt_markdown(2)
+
+```
+

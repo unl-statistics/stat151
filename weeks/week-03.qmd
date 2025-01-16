@@ -1,0 +1,22 @@
+# Week 3: Intro to Programming
+  
+## 📖 Reading
+
+  - [ ] [Introduction to Programming](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/00-intro.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 3 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Download and read through the homework assignment
+
+## 🐪 Wednesday
+
+- Cues to look for to figure out how code is being run
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 2](../homework/02-finding-your-way.qmd)
+

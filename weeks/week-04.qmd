@@ -1,0 +1,24 @@
+# Week 4: Building Blocks
+  
+## 📖 Reading
+
+  - [ ] [Variables and Basic Data Types](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/01-basic-var-types.html) 
+- [ ] [Using Functions and Libraries](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/02-prog-functions.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 4 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Download and read through the homework assignment
+
+## 🐪 Wednesday
+
+- Data Types, Variables, and  Common Mistakes
+- Debugging strategies
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 3](../homework/03-data-types.qmd)
+

@@ -1,0 +1,23 @@
+# Week 13: Reshaping Data
+  
+## 📖 Reading
+
+  - [ ] [Reshaping Data](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/05-data-reshape.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 13 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Manually try to convert data from wide-to-long and long-to-wide in Excel with copy/paste.
+
+## 🐪 Wednesday
+
+- Wide to long and long to wide operations
+- Drawing pictures to help with planning code
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 11](../homework/11-reshape.qmd) (Submitted via Github classroom)
+

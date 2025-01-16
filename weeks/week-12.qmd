@@ -1,0 +1,22 @@
+# Week 12: Strings
+  
+## 📖 Reading
+
+  - [ ] [Working with Strings](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/04-strings.html) - Read only sections Basic Operations, Converting to Numbers, Separating and Joining Columns.
+
+### 🎯 Check your understanding
+
+- [ ] Week 12 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Try out each of the different ways to manipulate strings and clean up data
+
+## 🐪 Wednesday
+
+- Working with Strings
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 10](../homework/10-strings.qmd) (Submitted via Github classroom)
+

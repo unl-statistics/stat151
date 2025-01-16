@@ -1,0 +1,20 @@
+# Week 7: Functions
+  
+## 📖 Reading
+
+  - [ ] [Writing Functions](https://srvanderplas.github.io/stat-computing-r-python/part-gen-prog/05-functions.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 7 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Take the Mid semester Survey on Canvas    
+This provides me with helpful feedback and lets me calibrate the course for the 2nd half of the semester. 
+- [ ] Homework resubmission deadline is next week! Be sure to finish up any homework you’d like to resubmit.
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 6](../homework/06-fizzbuzz.qmd)
+

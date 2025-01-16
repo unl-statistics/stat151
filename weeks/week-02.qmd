@@ -1,0 +1,25 @@
+# Week 2: Scripts and Notebooks
+  
+## 📖 Reading
+
+  - [ ] [RStudio's Interface](https://srvanderplas.github.io/stat-computing-r-python/part-tools/03-Rstudio-interface.html)
+- [ ] [Scripts and Notebooks](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 2 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Do the examples in the textbook chapter on Scripts and Notebooks.
+
+## 🐪 Wednesday
+
+- Scripts vs. Notebooks
+- Take Chances, Make Mistakes, and Get Messy! Don’t be afraid to mess with someone else’s code!
+<div class="tenor-gif-embed" data-postid="5918600078252353803" data-share-method="host" data-aspect-ratio="1.46296" data-width="100%"><a href="https://tenor.com/view/ms-frizzle-magic-school-bus-gif-5918600078252353803">Ms Frizzle Magic School Bus GIF</a>from <a href="https://tenor.com/search/ms+frizzle-gifs">Ms Frizzle GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 1](../homework/01-scripts-notebooks.qmd)
+

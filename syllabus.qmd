@@ -4,6 +4,12 @@ from: markdown+emoji
 fontsize: 11pt
 geometry: margin=1in
 format:
+  html:
+    keep-tex: false
+    template-partials:
+    - partials/title.tex
+    - partials/before-body.tex
+    - partials/graphics.tex
   pdf:
     keep-tex: false
     template-partials:
@@ -13,17 +19,14 @@ format:
     dev: cairo_pdf
 title: Syllabus
 instructor: Susan Vanderplas
-semester: Spring 2024
+semester: Spring 2025
 email: susan.vanderplas@unl.edu
-web: srvanderplas.netlify.app
-officehours: \href{https://calendly.com/drvanderplas/officehours}{Schedule here}
+web: srvanderplas.github.io
+officehours: \href{https://calendly.com/vanderplas/office-hours}{Schedule here}
 office: Hardin 343D
-classroom: Hardin 142-East
+classroom: Hardin 163
 classhours: Wednesdays 1-2:50
-categories:
-- reading
-- Week01
-date: '2024-01-21'
+date: '2025-01-20'
 image: figs/reading.svg
 type: reading
 ---
@@ -32,7 +35,7 @@ type: reading
 ```{r setup, include=FALSE}
 # knitr::opts_chunk$set(cache=FALSE, dev='pdf')
 knitr::opts_chunk$set(cache=F,
-                      fig.path = 'figs/',
+                      fig.path = 'images/',
                       cache.path='cache/',
                       warning=F,
                       message=F)
@@ -105,11 +108,8 @@ class_cal
 \small
 
 ```{r schedule, eval = T, echo = F, fig.pos = 'h'}
-class_days %>% select(date, topic, time) %>%
-  mutate(time = ifelse(is.na(time), "", time)) %>%
-  mutate(date2 = format(date, "%b %e")) %>%
-  magrittr::set_names(c("date", "Topic", "Time", "Date")) %>%
-  select(Date, Time, Topic) %>%
+schedule |>
+  mutate(`Important Notes` = if_else(is.na(`Important Notes`), "", `Important Notes`)) |>
 kableExtra::kable(caption = "Tentative schedule of class topics", format = "simple")
 ```
 \normalsize
@@ -123,32 +123,33 @@ kableExtra::kable(caption = "Tentative schedule of class topics", format = "simp
 Assignments | Weight
 ----- | -----
 Reading Quizzes | 10%
-Weekly Homework & Participation | 50% 
+Attendance & Participation | 10%
+Weekly Homeworks | 40% 
 Midterm Exam | 20%
 Final Exam | 20%
 
 
-Lower bounds for grade cutoffs are shown in the following table. I will not "round up" grades at the end of the semester beyond strict mathematical rules of rounding.
+Lower bounds for grade cutoffs are shown in the following table. I will not "round up" grades at the end of the semester.
 
-Letter grade |	X + |  	X |	X - 
--------- | ----- | ----- | -----
-A |	97 |	94 | 	90
-B |	87 |	84 |	80
-C |	77 |	74 |	70
-D |	67 |	64 |	61
-F |	<61 | |
+| Letter grade | X +    | X    | X -  |
+|--------------|--------|------|------|
+| A            | 97.0   | 94.0 | 90.0 |
+| B            | 87.0   | 84.0 | 80.0 |
+| C            | 77.0   | 74.0 | 70.0 |
+| D            | 67.0   | 64.0 | 61.0 |
+| F            | \<61.0 |      |      |
 
-Interpretation of this table: A grade of 85 will receive a B. A grade of 77 will receive a C+. A grade of 70 will receive a C-. Anything below a 61 will receive an F. 
+Interpretation of this table: A grade of 84.3 will receive a B. A grade of 77.6 will receive a C+. A grade of 73.9 will receive a C-. Anything below a 61 will receive an F.
 
 ### Exams
 
-Two take-home exams will be given during the course of the semester, on dates noted on the Tentative Course Outline on the last page. 
+Two exams will be given during the course of the semester. 
 
 Exams will require that you write code to solve problems utilizing the course material. 
 You are expected to take exams at the scheduled times. 
 If this is impossible due to extreme circumstances (illness, death in the family, previously scheduled activities vital to academic program), please notify me and provide appropriate documentation. 
-No make-up exams will be given if I am not notified at least 24h prior to the exam release date. 
-You will be required to obtain a note from your physician or adviser explaining the nature of the conflict.
+
+No make-up exams will be given if I am not notified at least 24h prior to the exam. 
 
 ### Homework
 
@@ -166,8 +167,7 @@ Participation will be determined based on a combination of class attendance and 
 
 ### Late Policy
 
-Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. 
-I reserve the right not to grade (or to assign a 0 to) any assignments received after the assignment due date.
+Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. I reserve the right not to grade (or to assign a 0 to) any assignments received after the assignment due date.
 
 You may submit an assignment that was not submitted in time as a resubmission, assuming it meets the conditions outlined in the next section.
 
@@ -177,35 +177,31 @@ Learning how to program is a process that is ongoing.
 I want you to not be afraid to make mistakes. 
 As a result, I allow you to re-submit homework over the course of the semester in order to make corrections and respond to my initial feedback.
 
+**Note: The resubmission policy does NOT apply to exams and/or projects.**
+
 This policy is subject to the following constraints:
 
-- You may not resubmit an assignment for which solutions have been posted.
+-   You should resubmit assignments as soon as possible.
 
-- Each assignment should be resubmitted only once
+-   You may not resubmit an assignment for which solutions have been posted.
 
-- Resubmits are due on the day before the next exam is released. I reserve the right to set a rolling due date (e.g. 3 weeks after the original due date) if grading resubmitted assignments becomes too overwhelming.
+-   Each assignment should be resubmitted only once.
 
-- Resubmitted assignments will be graded at my convenience.
+-   Resubmissions are due no later than 2 weeks after the initial due date. In addition,
 
-<!-- - You should resubmit assignments as soon as possible.     -->
-<!-- I reserve the right to cut off assignment resubmissions on a rolling basis (e.g. you have 3 weeks after the original due date) or based on the point in the semester (e.g. all homeworks due before Spring Break must be resubmitted by the week after we return from Spring Break). -->
+    -   Resubmissions from weeks 1-7 must be submitted by Monday of week 8 of classes
+    -   Resubmissions from weeks 9-14 must be submitted by Monday of week 15 of classes
 
-    
+-   Resubmitted assignments will be graded at my convenience.
+
+
+I spend the extra time grading resubmissions because it reinforces your learning; this policy is not designed to improve your grade in this class.\
+I reserve the right to adjust the resubmission policy over the course of the semester to ensure that it is meeting the objective of reinforcing your learning.\
+I reserve the right to limit or penalize resubmissions if it becomes clear that the current policy does not promote learning of the material and/or support the course objectives.
 
 In general, this policy means that I will typically not post assignment solutions, though you are welcome to visit office hours to ask questions about an assignment. 
 
 
-<!-- There are multiple reasons for this policy: -->
-
-<!--   - The material in this class is cumulative, so it is important that you understand a topic before we move on to more advanced material -->
-
-<!--   - Students in the past who have resubmitted all homework just before the end of the semester don't do a good job and don't seem to retain the material.  -->
-
-<!--   - I want to keep my grading load to a reasonable level -->
-
-I spend the extra time grading resubmissions because it reinforces your learning; this policy is not designed to ensure that you can get a better grade in this class. 
-This resubmission policy is subject to adjustments throughout the semester to ensure that this objective is met. 
-I reserve the right to limit or penalize resubmissions if it becomes clear that the current policy does not promote learning of the material and/or support the course objectives.
 
 ## Attendance
 

@@ -1,0 +1,22 @@
+# Week 9: Version Control
+  
+## 📖 Reading
+
+  - [ ] [Git and Github](https://srvanderplas.github.io/stat-computing-r-python/part-tools/05-git-and-github.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 9 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Sign up for a GitHub account. You can use any email address, but make your username professionally appropriate so that you can use this account throughout your undergraduate career to host portfolios, projects, etc.
+
+## 🐪 Wednesday
+
+- Using git and github
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 7](../homework/07-github.qmd) (Submitted via Github classroom)
+

@@ -1,0 +1,23 @@
+# Week 11: Data Cleaning
+  
+## 📖 Reading
+
+  - [ ] [Data Cleaning and Manipulation](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html)
+
+### 🎯 Check your understanding
+
+- [ ] Week 11 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Make yourself a cheat sheet of which functions to use for different R and python data manipulation tasks.
+
+## 🐪 Wednesday
+
+- Data Cleaning Verbs
+- Thinking through data processing tasks
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 9](../homework/09-data-cleaning.qmd)  (Submitted via Github classroom)
+

@@ -1,0 +1,24 @@
+# Week 1: Setting Up
+  
+## 📖 Reading
+
+  - [ ] [Syllabus](../syllabus.pdf)
+- [ ] [Computer Basics](https://srvanderplas.github.io/stat-computing-r-python/part-tools/01-computer-basics.html)
+- [ ] [Setting Up Your Computer](https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html)
+
+### 🎯 Check your understanding
+
+- [ ] Reading Quiz 0 – Syllabus and Introductory Material
+- [ ] Week 1 Reading Quiz
+
+## 🥣 Prepare for class
+
+- [ ] Try to set up your computer with R, RStudio, Python, and quarto
+
+## 🐪 Wednesday
+
+- Syllabus
+- Introductions
+- Class Picture (for Dr. Vanderplas’s face blindness)
+- Set up your laptop!
+

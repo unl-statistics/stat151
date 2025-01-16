@@ -1,0 +1,82 @@
+---
+title: "Course FAQ & Resources"
+format:
+  html:
+    toc: true
+---
+
+## I'm afraid to ask questions in class
+
+If you have a question during class, please ask! 
+You cannot learn programming without (1) making "silly" mistakes, and (2) asking "silly" questions. 
+The simplest errors to fix are things like typos, and they happen to *everyone*. 
+
+
+If you manage to produce an error I haven't seen before, then congratulations! 👏
+You have achieved something special, and that achievement should be celebrated. 🎉
+Each new and bizarre error is an opportunity to learn a bit more about the programming language, the operating system, or the interaction between the two.
+Some of my favorite students in past courses have been those who were unafraid to ask questions. Most of the time, they were asking questions that other people had or could learn from. 
+
+Be fearless!
+
+## How can I get extra help? 
+
+Office hours are available by appointment at [this link](https://calendly.com/vanderplas/office-hours). 
+In general, office hours will be via Zoom - this allows me to offer more availability, and doesn't require you to come to East campus to visit my office.
+If you'd prefer to meet in person, try to schedule your appointment on Monday or Wednesday, and mention in the request that you want an in-person meeting. I will let you know if that's feasible given my schedule for the day. 
+
+## Can I send you an email?
+
+Of course! 
+
+With that said, if you have a question about course policies or content, it is probably better to use the Canvas discussion board, so that other people can also benefit from the information.
+
+If you have a question about personal matters that may not be appropriate for the public course forum (e.g., illness, grades, accommodations, etc.), email is the perfect venue. 
+Please add "STAT151" to the subject line, so that I can prioritize your email.
+
+## Where can I get extra support with academics and study habits? 
+
+There are times you may need help with the class that is beyond what I can provide. 
+In those instances, please visit the **Center for Academic Success and Transition (CAST)**. 
+[CAST](https://success.unl.edu/resources/) offers free services to all students.
+
+Students have access to [peer tutoring](https://success.unl.edu/academic-support/study-stop/), [academic coaching](https://success.unl.edu/academic-support/), and [academic success workshops](https://success.unl.edu/academic-support/success-workshops/).
+
+Your student fees are already paying for these centers, so you may as well use them early and often! Build good study habits early - they will reward you for the rest of your academic career. 
+
+## I'm not doing so well (mentally/physically/emotionally). Where can I get help?
+
+Your mental health and wellness extremely important, and the university offers resources to help!
+UNL offers several resources for students to manage stress, seek help with well-being, and access crisis and long-term care.
+
+-   [Counseling and Psychological Services (CAPS)](https://caps.unl.edu/), 402-472-7450
+
+-   [Center for Advocacy, Response, & Education (CARE)](https://care.unl.edu/), 402-472-3553 -- resources for victims/survivors of interpersonal violence.
+
+-   [Services for Students with Disabilities (SSD)](https://ssd.unl.edu/), ssd\@unl.edu or 402-472-3787 -- resources for students experiencing short or long-term disabilities that affect the campus or educational experience.
+
+## Something terrible happened to my computer. How can I still participate in class?
+
+Students who do not have a working computer can check out a loaner laptop from [HuskerTech](https://libraries.unl.edu/laptop-checkout/) on city campus (Love South, Adele Hall) and east campus (Dinsdale).
+
+If you are unable to get a loaner laptop set up with the software required for parts of this course, please try to let me know ahead of time - I may be able to assist you with browser-based solutions or a department loaner laptop.
+
+
+## Can I use AI in this course?
+
+Well, I really can't stop you. 
+
+AI is pretty cool, if you're using it as a personal tutor and asking it to explain why ___ happens or what ___ code does. 
+
+If you're using it to do your  homework, though, you're cheating yourself out of the main thing I can provide you in this class: specific guidance as to how to learn new programming skills efficiently and effectively. 
+Using AI to complete assignments is like using the washer spin cycle to meet your step goal for the day -- you might get the illusion of success, but eventually it will catch up to you.
+
+I'm pretty good at detecting AI use and at knowing what a standard response to the homework questions should be.
+I've also added in-person exams to this course.
+And even if those measures weren't enough, I have a syllabus policy that allows me to replace any grade with an oral exam on your submission. 
+If you can't tell me exactly why you did what you did, and what each function does, then ... you're not going to get credit for your answer.
+
+I'm not completely anti-AI - it may have a place in accelerating programming in certain contexts. 
+But the goal of this course is to help you build the foundation to program with data, and using AI to do that is only going to make later classes much, much harder.
+
+

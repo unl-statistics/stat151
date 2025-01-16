@@ -2,28 +2,108 @@ project:
   type: website
   output-dir: docs
   pre-render:
-    - scripts/update-assignment-dates.R
-    - scripts/hide-future-assignments.R
+    - code/gen-week-files-from-course-schedule.R
   render:
-    - index.qmd
-    - syllabus.qmd
-    - homework/*.qmd
-    - project/*.qmd
-    - slides/*.qmd
-    - exams/*.qmd
+    - ./homework/*.qmd
+    - ./slides/*.qmd
+    - ./weeks/*.qmd
+    - ./index.qmd
+    - ./syllabus.qmd
+    - ./course-links.qmd
+    - ./course-overview.qmd
+    - ./course-support.qmd
 
+
+engine: knitr
+  
 website:
-  title: "Stat 151"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: https://srvanderplas.github.io/stat-computing-r-python/
-        text: Textbook
-      - href: syllabus.pdf
-        text: Syllabus
+  title: "Stat 151 - Spring 2025"
+  page-navigation: true
+  description: "Homepage for STAT 151 - Introduction to Statistical Computing"
+  site-url: "https://unl-statistics.github.io/stat151"
+
+  repo-url: https://github.com/unl-statistics/stat151
+  repo-actions: [edit, issue]
+
+  open-graph: true
+  
+  twitter-card:
+    creator: "@srvanderplas"
+    image: "images/twitter-card.png"
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2025, Susan Vanderplas"
+    background: "#cdf2db"
+
+  sidebar:
+    background: "#cdf2db"
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://classroom.github.com/classrooms/195160117-unl-stat151-2025a-classroom-97fc1e
+        text: "GitHub Classroom"
+
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - section: "Course information"
+        contents:
+          - href: syllabus.qmd
+            text: Syllabus
+          - href: index.qmd
+            text: Schedule
+          - href: course-links.qmd
+            text: Course Resources
+          - href: course-support.qmd
+            text: FAQ
+          - href: course-overview.qmd
+            text: Description
+      - section: "Weekly materials"
+        contents:
+          - href: weeks/week-01.qmd
+            text: "Week 1 - Setting Up"
+          - href: weeks/week-02.qmd
+            text: "Week 2 - Scripts & Notebooks"
+          - href: weeks/week-03.qmd
+            text: "Week 3 - Intro to Programming"
+          - href: weeks/week-04.qmd
+            text: "Week 4 - Building Blocks"
+          - href: weeks/week-05.qmd
+            text: "Week 5 - Data Structures"
+          - href: weeks/week-06.qmd
+            text: "Week 6 - Control Structures"
+          - href: weeks/week-07.qmd
+            text: "Week 7 - Functions"
+          - href: weeks/week-08.qmd
+            text: "Week 8 - Midterm"
+          - href: weeks/week-09.qmd
+            text: "Week 9 - Version Control"
+          - href: weeks/week-10.qmd
+            text: "Week 10 - Data Visualization"
+          - href: weeks/week-11.qmd
+            text: "Week 11 - Data Cleaning"
+          - href: weeks/week-12.qmd
+            text: "Week 12 - Strings"
+          - href: weeks/week-13.qmd
+            text: "Week 13 - Reshaping Data"
+          - href: weeks/week-14.qmd
+            text: "Week 14 - Creating Good Charts"
+          - href: weeks/week-15.qmd
+            text: "Week 15 - Review"
+          - href: weeks/week-16.qmd
+            text: "Finals"
+
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    grid:
+      sidebar-width: 350px
+      margin-width: 0px
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    mainfont: "Atkinson Hyperlegible"
     toc: true

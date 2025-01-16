@@ -1,0 +1,28 @@
+---
+title: "Useful links"
+---
+
+|  |  |
+|-----------|----|
+| [![](images/Canvas_logo_single_mark.png){fig-alt="Canvas logo" height="40px"} Canvas](https://canvas.unl.edu/courses/193335) | Assignment Submissions, Reading Quizzes, Gradebook |
+| [![](images/github-classroom.svg){fig-alt="Github classroom logo" height="30px"}](https://classroom.github.com/classrooms/195160117-unl-stat151-2025a-classroom-97fc1e) | Assignment Submissions (after Spring Break) |
+| 📚 [Statistical Computing in R and Python](https://srvanderplas.github.io/stat-computing-r-python/) | Textbook | 
+
+
+# Additional Resources
+
+## Books
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+
+- [Python for Everybody](https://www.py4e.com/html3/)
+
+- [Python for Data Analysis](https://www.oreilly.com/library/view/python-for-data/9781449323592/) - Available online for free if you register with your UNL email address.
+
+- [Python Data Science Handbook](https://learning.oreilly.com/library/view/python-data-science/9781491912126/) - Available online for free if you register with your UNL email address.
+
+- [Advanced R](http://adv-r.had.co.nz/)
+
+## Videos
+
+- [TidyTuesday Data Analyses](https://youtube.com/playlist?list=PL2joUpumI-Z-VDAgquuNFlGm_hPE2RLGh&si=iQk61eq1gILvSvv3) - TidyTuesday is an R project to screencast the data analysis process. Every Tuesday, they take on a new data set, and this provides an excellent way to see how the things you're learning in class translate to real data. 

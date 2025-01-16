@@ -1,0 +1,19 @@
+# Week 10: Graphics
+  
+## 📖 Reading
+
+  - [ ] [Basic Data Visualization](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html)
+- [ ] [Data Visualization](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html) - Read Intro, Why, and Thinking Critically. You can skip or skim the other sections.
+
+### 🎯 Check your understanding
+
+- [ ] Week 10 Reading Quiz
+
+## 🐪 Wednesday
+
+- Graphics
+
+##  🏋️ Practice your skills
+
+- [ ] [Homework 8](../homework/08-graphics.qmd)  (Submitted via Github classroom)
+

@@ -1,9 +1,5 @@
 ---
 title: 'Tips: Homework 5'
-date: '2024-03-01'
-categories:
-- HW
-- Week06
 format:
   html:
     number-sections: true

@@ -1,10 +1,6 @@
 ---
 title: 'Homework 6: FizzBuzz'
 author: Your Name
-date: '2024-03-22'
-categories:
-- HW
-- Week08
 ---
 
 [Download the starter qmd file here](https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/06-fizzbuzz.qmd)

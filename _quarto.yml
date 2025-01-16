@@ -12,7 +12,8 @@ project:
     - ./course-links.qmd
     - ./course-overview.qmd
     - ./course-support.qmd
-
+  post-render:
+    - code/nojekyll
 
 engine: knitr
   

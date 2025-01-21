@@ -1,0 +1,51 @@
+---
+title: "Welcome to Stat 151!"
+format: revealjs
+---
+
+## Stat 151
+
+- Gentle introduction to programming
+
+- 1st half: Basic programming concepts
+    - variables
+    - data types
+    - if statements
+    - loops
+    - functions
+
+
+- 2nd half: Simple programming with data
+
+
+
+## About Me
+
+::: columns
+
+::: column
+- Associate Professor in Statistics
+
+- Ph.D. work in Perception of Data Visualization
+
+- Research: 
+  - Data Visualization
+  - Statistical Algorithms for Forensics
+  - Reproducibility
+  - Data Science pipelines
+:::
+
+::: column
+
+::: {#fig-family layout="[[-1, 2, -1],[1,1]]"}
+![The human family](./images/family.jpg){fig-width="A family picture showing an 8yo boy (Alex), and a 3yo girl (Zoey) sitting on her father's shoulders."}
+
+![Edison (Eddie)](images/Eddie-tug-video.mp4){fig-alt="A jack russell terrier playing tug of war with a man"}
+
+![Ivy](images/Ivy-tail.mp4){fig-alt="An American Eskimo dog enthusiastically chasing her tail"}
+
+:::
+
+:::
+
+:::

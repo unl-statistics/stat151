@@ -1308,5 +1308,19 @@
       "Course information",
       "Description"
     ]
+  },
+  {
+    "objectID": "slides/01-intro.html#stat-151",
+    "href": "slides/01-intro.html#stat-151",
+    "title": "Welcome to Stat 151!",
+    "section": "Stat 151",
+    "text": "Stat 151\n\nGentle introduction to programming\n1st half: Basic programming concepts\n\nvariables\ndata types\nif statements\nloops\nfunctions\n\n2nd half: Simple programming with data"
+  },
+  {
+    "objectID": "slides/01-intro.html#about-me",
+    "href": "slides/01-intro.html#about-me",
+    "title": "Welcome to Stat 151!",
+    "section": "About Me",
+    "text": "About Me\n\n\n\nAssociate Professor in Statistics\nPh.D. work in Perception of Data Visualization\nResearch:\n\nData Visualization\nStatistical Algorithms for Forensics\nReproducibility\nData Science pipelines\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nThe human family\n\n\n\n\n \n\n\n\n\n\n\nVideo\nEdison (Eddie)\n\n\n\n\n\n\nVideo\nIvy\n\n\n\n\n\n\nFigure 1"
   }
 ]

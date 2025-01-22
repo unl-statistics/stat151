@@ -1,6 +1,10 @@
 ---
 title: "Welcome to Stat 151!"
 format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
 ---
 
 ## Stat 151
@@ -26,19 +30,21 @@ format: revealjs
 ::: column
 - Associate Professor in Statistics
 
-- Ph.D. work in Perception of Data Visualization
 
-- Research: 
+- Research:
+
   - Data Visualization
   - Statistical Algorithms for Forensics
   - Reproducibility
   - Data Science pipelines
+
+
 :::
 
 ::: column
 
-::: {#fig-family layout="[[-1, 2, -1],[1,1]]"}
-![The human family](./images/family.jpg){fig-width="A family picture showing an 8yo boy (Alex), and a 3yo girl (Zoey) sitting on her father's shoulders."}
+::: {layout="[[-1, 4, -1],[1,1]]"}
+![Alex (left), Ryan (right), and Zoey (top)](./images/family.jpg){fig-width="A family picture showing an 8yo boy (Alex), and a 3yo girl (Zoey) sitting on her father's shoulders."}
 
 ![Edison (Eddie)](images/Eddie-tug-video.mp4){fig-alt="A jack russell terrier playing tug of war with a man"}
 
@@ -49,3 +55,113 @@ format: revealjs
 :::
 
 :::
+
+## About Me
+
+- I have prosopagnosia
+
+![Image source: https://susilolab.org/Prosopagnosia.html](images/Prosopagnosia.png)
+
+## Introductions
+
+- Your name
+
+- Your major
+
+- What is the best prank you've ever experienced or planned?
+
+## Class Picture
+
+Let's all time travel back to elementary school...
+
+(but seriously, help a face-blind prof out)
+
+# Syllabus Policies
+
+## Class Structure
+
+- Flipped classroom
+- You prepare for class on your own
+- We'll do a (very short) review at the start of class
+- Most of class will be working on the homework
+
+- I can help you get through the frustrating bits more quickly!
+
+## Grades
+
+Assignments | Weight
+----- | -----
+Reading Quizzes | 10%
+Attendance & Participation | 10%
+Weekly Homeworks | 40% 
+Midterm Exam | 20%
+Final Exam | 20%
+
+## Reading Quizzes
+
+- Due before class starts
+- Will become inaccessible at 1pm on Wednesdays
+- Open-book, open-note
+- A deadline to encourage you to do the reading before class
+
+## Participation/Attendance
+
+- I will take attendance
+- You get one free, no excuses necessary absence
+- If you're sick, don't come to class!
+  - Do the reading/homework, 
+  - Make an appointment as you feel better
+  - In the appointment field, indicate that this is to substitute for class attendance
+  - Don't abuse this
+  
+## Homework
+
+- Almost every week
+- Homework can be resubmitted once for a re-grade
+- Resubmissions are due on the Monday before the exam 
+  - March 10 (midterm) 
+  - May 5 (final)     
+  (I can't make things due during finals week)
+
+## Exams
+
+- In-class exam (March 12) and Final (May 15, 1-3pm)
+
+- Don't miss the exams!
+
+- If you miss the midterm AND notify me beforehand AND have a valid excuse...    
+the final is worth 40%
+
+- If you miss the final AND notify me beforehand AND have a valid excuse...    
+Incomplete + make up final w/ an oral exam component
+
+## Oral Exam Policy
+
+- You must understand any code you turn in
+
+- If you can't explain it to me and answer my questions, you don't get credit
+
+- I will send an oral exam request via canvas/email
+
+- You must schedule an appt within 24h (appt within 3 business days)
+
+- I'll ask you questions about your submission
+
+## Class Environment
+
+- Programming = making silly mistakes
+
+- The easiest mistakes to fix are typos! Don't be embarrassed about them!
+
+- New errors = new things to learn!
+
+## Goals for today
+
+- Install R
+
+- Install Python
+
+- Install RStudio
+
+- Install quarto
+

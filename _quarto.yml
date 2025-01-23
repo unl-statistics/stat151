@@ -47,7 +47,7 @@ website:
         text: "GitHub Classroom"
 
     style: "docked"
-    search: true
+    search: false
     collapse-level: 2
     contents:
       - section: "Course information"
@@ -98,7 +98,7 @@ website:
             text: "Finals"
             
             
-fontsize: "24pt"
+fontsize: "2rem"
 lineheight: "1.5ex"
 
 format:

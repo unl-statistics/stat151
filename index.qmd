@@ -5,10 +5,8 @@ format: html
 
 ```{r}
 #| echo: false
-#| eval: false
 #| message: false
 #| warning: false
-#| results: markup
 source("schedule.R")
 
 library(DT)
@@ -18,9 +16,8 @@ library(DT)
   group_by(Week, Topic) |>
   summarize(`Important Notes` = paste(`Important Notes`, collapse = "<br>")) |>
   ungroup() |>
-  datatable(escape = F, selection = 'none', filter='none', options = list(paging = F, info = F, searching = F), rownames = F, style = "bootstrap")
-```
+  datatable(escape = F, selection = 'none', filter='none', options = list(paging = F, info = F, searching = F, ordering = F), rownames = F, style = "bootstrap")
 
-{{< include schedule-table.html >}}
+```
 
 

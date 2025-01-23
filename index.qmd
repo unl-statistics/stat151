@@ -5,15 +5,28 @@ format: html
 
 ```{r}
 #| echo: false
+#| eval: false
 #| message: false
 #| warning: false
+#| results: markup
 source("schedule.R")
 
-schedule %>%
-  tidyr::replace_na(list("Important Notes" = "", Topic =  "Finals Week")) %>%
-  mutate(Topic = if_else(Week < 16, sprintf("[%s](https://unl-statistics.github.io/stat151/weeks/week-%02d.html)", Topic, Week), Topic)) %>%
-  gt::gt() |>
-  gt::fmt_markdown(2)
+library(gt)
 
+schedule |>
+  # bind_rows(tibble(Week = 16, Topic = "Finals Week")) |>
+  tidyr::replace_na(list("Important Notes" = "", Topic =  "Finals")) |>
+  mutate(Topic = if_else(Week < 16, sprintf("<a href='https://unl-statistics.github.io/stat151/weeks/week-%02d.html'> %s </a>", Week, Topic), Topic)) |>
+  group_by(Week, Topic) |>
+  summarize(`Important Notes` = paste(`Important Notes`, collapse = "<br>")) |>
+  ungroup() |>
+  gt::gt() |>
+  gt::fmt_markdown(columns = c(Topic)) |>
+  gt::fmt_markdown(columns = `Important Notes`) |>
+  gt::as_raw_html()|>
+  writeLines(con = "schedule-table.html")
 ```
+
+{{< include schedule-table.html >}}
+
 

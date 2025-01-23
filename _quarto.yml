@@ -97,17 +97,17 @@ website:
           - href: weeks/week-16.qmd
             text: "Finals"
             
-fontsize: "18pt"
+            
+fontsize: "24pt"
 lineheight: "1.5ex"
 
 format:
   html:
     grid:
       sidebar-width: 400px
-      body-width: 600px
       margin-width: 0px
     theme:
-      light: [flatly, theme.scss]
-      dark: [darkly, theme.scss]
+      light: [flatly, theme.scss, _variables-flatly.scss]
+      dark: [darkly, theme.scss, _variables-darkly.scss]
     mainfont: "Atkinson Hyperlegible"
     toc: true

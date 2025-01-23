@@ -73,8 +73,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7a0e04ec82617701cd34937292aa414e.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2b027793b7f338b0d6c456ff6f9e9684.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-24aee646da47e84180279087a1852ac6.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ce6af5c828366e6f9219c1d962fbcdb2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-fbaf39e7d01a17ec57bd3240ab69aac9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -319,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#quarto-default-template" id="toc-quarto-default-template" class="nav-link" data-scroll-target="#quarto-default-template"><span class="header-section-number">4</span> Quarto default template</a></li>
   <li><a href="#print-only-necessary-output" id="toc-print-only-necessary-output" class="nav-link" data-scroll-target="#print-only-necessary-output"><span class="header-section-number">5</span> Print only necessary output</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat151/edit/main/homework/05-tips-for-success.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/unl-statistics/stat151/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat151/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -363,13 +363,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/image-387739091.png" class="img-fluid" style="width:25.0%"></p>
 <p>Other things that don’t work:</p>
 <ul>
-<li>Including (local) file paths directly (user names changed to protect the innocent):
+<li><p>Including (local) file paths directly (user names changed to protect the innocent):</p>
 <ul>
 <li><code>\C:\Users\person\Documents\Flow chart HW5.png</code></li>
 <li><code>C:\Users\person\Downloads\Stat 151\Excalidraw.png</code></li>
 </ul></li>
-<li>Including (local) file paths in correct image syntax<br>
-Explanation: this works on your machine, but won’t work on mine because I don’t have your file on my machine. You could zip the PNG file and the qmd file up together and submit that, I guess, but it’s easier to follow the directions about imgur (in my opinion).
+<li><p>Including (local) file paths in correct image syntax<br>
+Explanation: this works on your machine, but won’t work on mine because I don’t have your file on my machine. You could zip the PNG file and the qmd file up together and submit that, I guess, but it’s easier to follow the directions about imgur (in my opinion).</p>
 <ul>
 <li><code>![](program-flow-map.png)</code></li>
 </ul></li>
@@ -453,11 +453,13 @@ output:
 <section id="print-only-necessary-output" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="print-only-necessary-output"><span class="header-section-number">5</span> Print only necessary output</h2>
 <p>I would prefer if you didn’t print out the values of a vector in the code chunks when you submit your file. Comment those out - it’s useful to have them for debugging, but you don’t need them for presentation purposes.</p>
-<p>What to do: ::: {.cell}</p>
+<p>What to do:</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(x)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x # Commented out, so you can uncomment to debug if necessary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
-<p>What not to do: ::: {.cell}</p>
+</div>
+<p>What not to do:</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(x)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -472,7 +474,7 @@ output:
  [81] 253268 136396 295048 643919 979193 716806 945620 576969 602211 402003
  [91] 536309 626646 882011  89558 114729 187246 866224 493441 529045 677284</code></pre>
 </div>
-<p>:::</p>
+</div>
 
 
 </section>
@@ -1047,10 +1049,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/unl-statistics/stat151/edit/main/homework/05-tips-for-success.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/unl-statistics/stat151/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/unl-statistics/stat151/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</p>
-</div>
+      &nbsp;
+    </div>
   </div>
 </footer>
 

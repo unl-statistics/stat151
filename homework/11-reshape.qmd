@@ -1,9 +1,7 @@
 ---
 title: 'Homework 10: Data Transformations'
 author: Your Name
-format:
-  html:
-    theme: default
+format: html
 ---
 
 

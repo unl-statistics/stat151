@@ -13,11 +13,13 @@ Check your compiled file before you submit to make sure it looks the way you wan
 If you want to be really sure it works, copy your qmd file to a different folder and compile that... for now, that's the best way to check that it will work on my machine.
 
 ## Images
+
 Image links must be to the *image url*, not to the imgur *page url*
 
 ![caption text goes here](https://i.imgur.com/PKushbR.png){width=50%}
 
 Code for this image:
+
 ```
 ![caption text goes here](https://i.imgur.com/PKushbR.png){width=50%}
 ```
@@ -29,14 +31,18 @@ You can get this url by right-clicking on the image on the Imgur page and then s
 Other things that don't work:
 
 - Including (local) file paths directly (user names changed to protect the innocent):
+
     - `\C:\Users\person\Documents\Flow chart HW5.png`
     - `C:\Users\person\Downloads\Stat 151\Excalidraw.png`
+    
 - Including (local) file paths in correct image syntax    
 Explanation: this works on your machine, but won't work on mine because I don't have your file on my machine. You could zip the PNG file and the qmd file up together and submit that, I guess, but it's easier to follow the directions about imgur (in my opinion).
+
     - `![](program-flow-map.png)`
 
 
 ## YAML metadata
+
 YAML metadata is the stuff between `---` at the top of your document.
 
 - You should have only one set of metadata in your document.
@@ -144,6 +150,7 @@ x <- round(runif(100, 0, 1e6))
 ```
 
 What to do:
+
 ```{r}
 x <- as.numeric(x)
 # x # Commented out, so you can uncomment to debug if necessary
@@ -151,6 +158,7 @@ x <- as.numeric(x)
 
 
 What not to do:
+
 ```{r}
 x <- as.numeric(x)
 x

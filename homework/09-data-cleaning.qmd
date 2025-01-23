@@ -2,9 +2,7 @@
 title: 'Homework 9: Data Cleaning and Manipulation'
 author: Your Name
 working-dir: ../homework-repos/data-cleaning-steam-games
-format:
-  html:
-    theme: default
+format: html
 ---
 
 

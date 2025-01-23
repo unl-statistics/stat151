@@ -107,7 +107,7 @@ format:
       body-width: 600px
       margin-width: 0px
     theme:
-      light: [cerulean, theme.scss]
-      dark: [slate, theme.scss]
+      light: [flatly, theme.scss]
+      dark: [darkly, theme.scss]
     mainfont: "Atkinson Hyperlegible"
     toc: true

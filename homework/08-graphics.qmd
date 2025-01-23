@@ -1,9 +1,7 @@
 ---
 title: 'Homework 8: Graphics'
 author: Your Name
-format:
-  html:
-    theme: default
+format: html
 ---
 
 

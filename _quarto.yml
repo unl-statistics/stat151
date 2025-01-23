@@ -24,7 +24,7 @@ website:
   site-url: "https://unl-statistics.github.io/stat151"
 
   repo-url: https://github.com/unl-statistics/stat151
-  repo-actions: [edit, issue]
+  repo-actions: [issue]
 
   open-graph: true
   
@@ -33,12 +33,11 @@ website:
     image: "images/twitter-card.png"
 
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
     left: "&copy; Copyright 2025, Susan Vanderplas"
-    background: "#cdf2db"
+    background: "$secondary"
 
   sidebar:
-    background: "#cdf2db"
+    background: "$secondary"
     logo: "images/logo.png"
     pinned: true
     align: center
@@ -97,14 +96,18 @@ website:
             text: "Week 15 - Review"
           - href: weeks/week-16.qmd
             text: "Finals"
+            
+fontsize: "18pt"
+lineheight: "1.5ex"
 
 format:
   html:
     grid:
-      sidebar-width: 350px
+      sidebar-width: 400px
+      body-width: 600px
       margin-width: 0px
     theme:
-      light: [cosmo, theme.scss]
-      dark: [cosmo, theme-dark.scss]
+      light: [cerulean, theme.scss]
+      dark: [slate, theme.scss]
     mainfont: "Atkinson Hyperlegible"
     toc: true

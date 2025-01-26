@@ -1,0 +1,41 @@
+---
+title: "Scripts and Notebooks"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+---
+
+
+## Talking to R and Python
+
+Places to put code: 
+
+- Command Line (Terminal)
+- Scripts
+- Notebooks
+
+## Talking to R and Python
+
+How you run the code:
+
+- Type/execute one command at a time
+- Run a whole set of code
+
+## Talking to R and Python
+
+Where the results appear:
+
+- Terminal
+- Output file
+- Finished document
+
+## Key signals
+
+- What does the prompt look like? `>`, `$`, `>>>`, `%`
+    - Indication of what language the computer expects
+- How do you run the code?
+    - `python3 <file.py>`, `Ctrl/Cmd + Enter`, hit Enter, ...
+- What folder is the computer looking in? (working directory)
+- What program are you operating in? (RStudio, Cmd.exe, Terminal, etc.)

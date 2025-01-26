@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>Stat 151 - Spring 2025 – Welcome to Stat 151!</title>
+  <title>Stat 151 - Spring 2025 – Scripts and Notebooks</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -120,9 +120,9 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Welcome to Stat 151! – Stat 151 - Spring 2025">
+<meta property="og:title" content="Scripts and Notebooks – Stat 151 - Spring 2025">
 <meta property="og:site_name" content="Stat 151 - Spring 2025">
-<meta name="twitter:title" content="Welcome to Stat 151! – Stat 151 - Spring 2025">
+<meta name="twitter:title" content="Scripts and Notebooks – Stat 151 - Spring 2025">
 <meta name="twitter:image" content="https://unl-statistics.github.io/stat151/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@srvanderplas">
 <meta name="twitter:card" content="summary_large_image">
@@ -132,227 +132,55 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Welcome to Stat 151!</h1>
+  <h1 class="title">Scripts and Notebooks</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="stat-151" class="slide level2">
-<h2>Stat 151</h2>
+<section id="talking-to-r-and-python" class="slide level2">
+<h2>Talking to R and Python</h2>
+<p>Places to put code:</p>
 <ul>
-<li><p>Gentle introduction to programming</p></li>
-<li><p>1st half: Basic programming concepts</p>
+<li>Command Line (Terminal)</li>
+<li>Scripts</li>
+<li>Notebooks</li>
+</ul>
+</section>
+<section id="talking-to-r-and-python-1" class="slide level2">
+<h2>Talking to R and Python</h2>
+<p>How you run the code:</p>
 <ul>
-<li>variables</li>
-<li>data types</li>
-<li>if statements</li>
-<li>loops</li>
-<li>functions</li>
+<li>Type/execute one command at a time</li>
+<li>Run a whole set of code</li>
+</ul>
+</section>
+<section id="talking-to-r-and-python-2" class="slide level2">
+<h2>Talking to R and Python</h2>
+<p>Where the results appear:</p>
+<ul>
+<li>Terminal</li>
+<li>Output file</li>
+<li>Finished document</li>
+</ul>
+</section>
+<section id="key-signals" class="slide level2">
+<h2>Key signals</h2>
+<ul>
+<li>What does the prompt look like? <code>&gt;</code>, <code>$</code>, <code>&gt;&gt;&gt;</code>, <code>%</code>
+<ul>
+<li>Indication of what language the computer expects</li>
 </ul></li>
-<li><p>2nd half: Simple programming with data</p></li>
-</ul>
-</section>
-<section id="about-me" class="slide level2">
-<h2>About Me</h2>
-<div class="columns">
-<div class="column">
+<li>How do you run the code?
 <ul>
-<li><p>Associate Professor in Statistics</p></li>
-<li><p>Research:</p>
-<ul>
-<li>Data Visualization</li>
-<li>Statistical Algorithms for Forensics</li>
-<li>Reproducibility</li>
-<li>Data Science pipelines</li>
+<li><code>python3 &lt;file.py&gt;</code>, <code>Ctrl/Cmd + Enter</code>, hit Enter, …</li>
 </ul></li>
-</ul>
-</div><div class="column">
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-1, 4, -1],[1,1]]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/family.jpg"></p>
-<figcaption>Alex (left), Ryan (right), and Zoey (top)</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><video data-src="images/Eddie-tug-video.mp4" alt="A jack russell terrier playing tug of war with a man" controls=""><a href="images/Eddie-tug-video.mp4">Video</a></video></p>
-<figcaption>Edison (Eddie)</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><video data-src="images/Ivy-tail.mp4" alt="An American Eskimo dog enthusiastically chasing her tail" controls=""><a href="images/Ivy-tail.mp4">Video</a></video></p>
-<figcaption>Ivy</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="about-me-1" class="slide level2">
-<h2>About Me</h2>
-<ul>
-<li>I have prosopagnosia</li>
-</ul>
-
-<img data-src="images/Prosopagnosia.png" class="r-stretch quarto-figure-center"><p class="caption">Image source: https://susilolab.org/Prosopagnosia.html</p></section>
-<section id="introductions" class="slide level2">
-<h2>Introductions</h2>
-<ul>
-<li><p>Your name</p></li>
-<li><p>Your major</p></li>
-<li><p>What is the best prank you’ve ever experienced or planned?</p></li>
-</ul>
-</section>
-<section id="class-picture" class="slide level2">
-<h2>Class Picture</h2>
-<p>Let’s all time travel back to elementary school…</p>
-<p>(but seriously, help a face-blind prof out)</p>
-</section>
-<section>
-<section id="syllabus-policies" class="title-slide slide level1 center">
-<h1>Syllabus Policies</h1>
-
-</section>
-<section id="class-structure" class="slide level2">
-<h2>Class Structure</h2>
-<ul>
-<li><p>Flipped classroom</p></li>
-<li><p>You prepare for class on your own</p></li>
-<li><p>We’ll do a (very short) review at the start of class</p></li>
-<li><p>Most of class will be working on the homework</p></li>
-<li><p>I can help you get through the frustrating bits more quickly!</p></li>
-</ul>
-</section>
-<section id="grades" class="slide level2">
-<h2>Grades</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Assignments</th>
-<th>Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Reading Quizzes</td>
-<td>10%</td>
-</tr>
-<tr class="even">
-<td>Attendance &amp; Participation</td>
-<td>10%</td>
-</tr>
-<tr class="odd">
-<td>Weekly Homeworks</td>
-<td>40%</td>
-</tr>
-<tr class="even">
-<td>Midterm Exam</td>
-<td>20%</td>
-</tr>
-<tr class="odd">
-<td>Final Exam</td>
-<td>20%</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="reading-quizzes" class="slide level2">
-<h2>Reading Quizzes</h2>
-<ul>
-<li>Due before class starts</li>
-<li>Will become inaccessible at 1pm on Wednesdays</li>
-<li>Open-book, open-note</li>
-<li>A deadline to encourage you to do the reading before class</li>
-</ul>
-</section>
-<section id="participationattendance" class="slide level2">
-<h2>Participation/Attendance</h2>
-<ul>
-<li>I will take attendance</li>
-<li>You get one free, no excuses necessary absence</li>
-<li>If you’re sick, don’t come to class!
-<ul>
-<li>Do the reading/homework,</li>
-<li>Make an appointment as you feel better</li>
-<li>In the appointment field, indicate that this is to substitute for class attendance</li>
-<li>Don’t abuse this</li>
-</ul></li>
-</ul>
-</section>
-<section id="homework" class="slide level2">
-<h2>Homework</h2>
-<ul>
-<li>Almost every week</li>
-<li>Homework can be resubmitted once for a re-grade</li>
-<li>Resubmissions are due on the Monday before the exam
-<ul>
-<li>March 10 (midterm)</li>
-<li>May 5 (final)<br>
-(I can’t make things due during finals week)</li>
-</ul></li>
-</ul>
-</section>
-<section id="exams" class="slide level2">
-<h2>Exams</h2>
-<ul>
-<li><p>In-class exam (March 12) and Final (May 15, 1-3pm)</p></li>
-<li><p>Don’t miss the exams!</p></li>
-<li><p>If you miss the midterm AND notify me beforehand AND have a valid excuse…<br>
-the final is worth 40%</p></li>
-<li><p>If you miss the final AND notify me beforehand AND have a valid excuse…<br>
-Incomplete + make up final w/ an oral exam component</p></li>
-</ul>
-</section>
-<section id="oral-exam-policy" class="slide level2">
-<h2>Oral Exam Policy</h2>
-<ul>
-<li><p>You must understand any code you turn in</p></li>
-<li><p>If you can’t explain it to me and answer my questions, you don’t get credit</p></li>
-<li><p>I will send an oral exam request via canvas/email</p></li>
-<li><p>You must schedule an appt within 24h (appt within 3 business days)</p></li>
-<li><p>I’ll ask you questions about your submission</p></li>
-</ul>
-</section>
-<section id="class-environment" class="slide level2">
-<h2>Class Environment</h2>
-<ul>
-<li><p>Programming = making silly mistakes</p></li>
-<li><p>The easiest mistakes to fix are typos! Don’t be embarrassed about them!</p></li>
-<li><p>New errors = new things to learn!</p></li>
-</ul>
-</section>
-<section id="goals-for-today" class="slide level2">
-<h2>Goals for today</h2>
-<ul>
-<li><p>Install R</p></li>
-<li><p>Install Python</p></li>
-<li><p>Install RStudio</p></li>
-<li><p>Install quarto</p></li>
+<li>What folder is the computer looking in? (working directory)</li>
+<li>What program are you operating in? (RStudio, Cmd.exe, Terminal, etc.)</li>
 </ul>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

@@ -17,7 +17,8 @@
 
 - Scripts vs. Notebooks
 - Take Chances, Make Mistakes, and Get Messy! Don’t be afraid to mess with someone else’s code!
-<div class="tenor-gif-embed" data-postid="5918600078252353803" data-share-method="host" data-aspect-ratio="1.46296" data-width="100%"><a href="https://tenor.com/view/ms-frizzle-magic-school-bus-gif-5918600078252353803">Ms Frizzle Magic School Bus GIF</a>from <a href="https://tenor.com/search/ms+frizzle-gifs">Ms Frizzle GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<div class="tenor-gif-embed" data-postid="5918600078252353803" data-share-method="host" data-aspect-ratio="1.46296" data-width="100%"><a href="https://tenor.com/view/ms-frizzle-magic-school-bus-gif-5918600078252353803">Ms Frizzle Magic School Bus GIF</a>from <a href="https://tenor.com/search/ms+frizzle-gifs">Ms Frizzle GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>f
+- [Slides](../slides/02-scripts-notebooks.qmd)
 
 ##  🏋️ Practice your skills
 

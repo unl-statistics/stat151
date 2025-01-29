@@ -39,3 +39,5 @@ Where the results appear:
     - `python3 <file.py>`, `Ctrl/Cmd + Enter`, hit Enter, ...
 - What folder is the computer looking in? (working directory)
 - What program are you operating in? (RStudio, Cmd.exe, Terminal, etc.)
+
+

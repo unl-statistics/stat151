@@ -13,6 +13,10 @@
 
 - [ ] Do the examples in the textbook chapter on Scripts and Notebooks.
 
+## 🐪 Wednesday
+
+- [ ] [Slides](../slides/02-scripts-notebooks.qmd)
+
 ##  🏋️ Practice your skills
 
 - [ ] [Homework 1](../homework/01-scripts-notebooks.qmd)

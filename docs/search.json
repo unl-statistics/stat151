@@ -1011,7 +1011,7 @@
     "href": "weeks/week-02.html",
     "title": "Week 2: Scripts and Notebooks",
     "section": "",
-    "text": "RStudio’s Interface\nScripts and Notebooks\n\n\n\n\nWeek 2 Reading Quiz\n\n\n\n\n\n\nDo the examples in the textbook chapter on Scripts and Notebooks.\n\n\n\n\n\nHomework 1",
+    "text": "RStudio’s Interface\nScripts and Notebooks\n\n\n\n\nWeek 2 Reading Quiz\n\n\n\n\n\n\nDo the examples in the textbook chapter on Scripts and Notebooks.\n\n\n\n\n\nSlides\n\n\n\n\n\nHomework 1",
     "crumbs": [
       "Weekly materials",
       "Week 2 - Scripts & Notebooks"
@@ -1034,6 +1034,17 @@
     "title": "Week 2: Scripts and Notebooks",
     "section": "",
     "text": "Do the examples in the textbook chapter on Scripts and Notebooks.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2 - Scripts & Notebooks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-02.html#wednesday",
+    "href": "weeks/week-02.html#wednesday",
+    "title": "Week 2: Scripts and Notebooks",
+    "section": "",
+    "text": "Slides",
     "crumbs": [
       "Weekly materials",
       "Week 2 - Scripts & Notebooks"

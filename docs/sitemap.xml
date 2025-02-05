@@ -14,82 +14,42 @@
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-15.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.342Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-13.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.342Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-11.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.342Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-09.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-07.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-05.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-03.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-01.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.334Z</lastmod>
   </url>
   <url>
-    <loc>https://unl-statistics.github.io/stat151/slides/01-intro.html</loc>
-    <lastmod>2025-01-22T15:06:10.435Z</lastmod>
+    <loc>https://unl-statistics.github.io/stat151/slides/02-scripts-notebooks.html</loc>
+    <lastmod>2025-01-29T18:19:56.281Z</lastmod>
   </url>
   <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/11-reshape.html</loc>
-    <lastmod>2025-01-26T18:32:53.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/09-data-cleaning.html</loc>
-    <lastmod>2025-01-26T18:32:53.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/07-github.html</loc>
-    <lastmod>2025-01-22T15:05:59.171Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/05-vectors.html</loc>
-    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/04-cipher.html</loc>
-    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/02-finding-your-way.html</loc>
-    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/01-scripts-notebooks.html</loc>
-    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/03-data-types.html</loc>
-    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/05-tips-for-success.html</loc>
-    <lastmod>2025-01-26T18:32:53.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/06-fizzbuzz.html</loc>
-    <lastmod>2025-01-22T15:05:59.171Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/08-graphics.html</loc>
+    <loc>https://unl-statistics.github.io/stat151/homework/12-graphics2.html</loc>
     <lastmod>2025-01-26T18:32:53.731Z</lastmod>
   </url>
   <url>
@@ -97,44 +57,88 @@
     <lastmod>2025-01-26T18:32:53.731Z</lastmod>
   </url>
   <url>
-    <loc>https://unl-statistics.github.io/stat151/homework/12-graphics2.html</loc>
+    <loc>https://unl-statistics.github.io/stat151/homework/08-graphics.html</loc>
     <lastmod>2025-01-26T18:32:53.731Z</lastmod>
   </url>
   <url>
-    <loc>https://unl-statistics.github.io/stat151/slides/02-scripts-notebooks.html</loc>
-    <lastmod>2025-01-29T18:19:56.281Z</lastmod>
+    <loc>https://unl-statistics.github.io/stat151/homework/06-fizzbuzz.html</loc>
+    <lastmod>2025-01-22T15:05:59.171Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/05-tips-for-success.html</loc>
+    <lastmod>2025-01-26T18:32:53.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/03-data-types.html</loc>
+    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/01-scripts-notebooks.html</loc>
+    <lastmod>2025-02-05T15:15:01.742Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/02-finding-your-way.html</loc>
+    <lastmod>2025-02-05T15:23:07.310Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/04-cipher.html</loc>
+    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/05-vectors.html</loc>
+    <lastmod>2025-01-22T15:05:59.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/07-github.html</loc>
+    <lastmod>2025-01-22T15:05:59.171Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/09-data-cleaning.html</loc>
+    <lastmod>2025-01-26T18:32:53.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/homework/11-reshape.html</loc>
+    <lastmod>2025-01-26T18:32:53.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/slides/01-intro.html</loc>
+    <lastmod>2025-01-22T15:06:10.435Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat151/slides/03-intro.html</loc>
+    <lastmod>2025-02-05T15:11:08.038Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-02.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-04.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-06.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-08.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.338Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-10.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.342Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-12.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.342Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-14.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.342Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/weeks/week-16.html</loc>
-    <lastmod>2025-01-29T18:54:29.009Z</lastmod>
+    <lastmod>2025-02-05T15:27:42.342Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat151/syllabus.html</loc>

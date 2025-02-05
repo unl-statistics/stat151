@@ -14,7 +14,7 @@
 
 ## 🐪 Wednesday
 
-- Cues to look for to figure out how code is being run
+- [Cues to look for in Rstudio](../slides/03-intro.qmd)
 
 ##  🏋️ Practice your skills
 

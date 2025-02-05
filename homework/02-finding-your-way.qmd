@@ -18,10 +18,34 @@ Run the script [madlibs.py](https://raw.githubusercontent.com/srvanderplas/stat1
 
 Can you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens.
 
+### Reserved Words
+
+Does the madlibs.py script use any reserved words? How can you tell? 
+
+
+### Code Highlighting
+
+Are there any other words that stand out when you open up `madlibs.py` in RStudio? What do they do? How do they appear?
+
+
+
 ## Thinking Critically
 
-Consider the counting words examples in the [textbook](https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html#writing-code-for-people) (Your Turn -- Scripts and Terminals, Your Turn - Sourcing a Script, Your Turn - Words in quarto). Look at the code, and then at the steps provided for each example. What is different? What is the same?
+Look at the quarto file from Homework 1. What features does RStudio provide that would help you identify code? Comments? YAML markup (the header at the top of the file, where the document title/author/date/output format are specified)?
 
-Create a table comparing using a terminal interactively, sourcing a script (e.g. running the whole script using the Run button), and using a script or notebook interactively. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they're specified, and any differences in the output.
+How can you differentiate R code from python code in a quarto file?
 
-Hint: To create a table, change this to "Visual" mode (editor toolbar, under the save/render bar) and a menu option should appear that will help you add a table.
+How do links show up in the text editor? 
+
+
+### Learn More
+1. Skim the quarto documentation on [code cell options](https://quarto.org/docs/reference/cells/cells-knitr.html). Which 3 options do you think will be the most useful? 
+
+
+2. When would you consider using `#| eval: false` at the start of a chunk? 
+
+
+3. When might you use `#| echo: false`? 
+
+
+4. What about `#| output: false`?

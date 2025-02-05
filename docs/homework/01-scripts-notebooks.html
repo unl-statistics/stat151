@@ -370,7 +370,9 @@ window.Quarto = {
 <p><a href="https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/01-scripts-notebooks.qmd">Download the starter qmd file here</a></p>
 <section id="what-is-the-difference-between-a-script-and-a-notebook" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-the-difference-between-a-script-and-a-notebook">What is the difference between a script and a notebook?</h2>
-<p>Replace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use markdown formatting as described in <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">this cheat-sheet</a>. You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages.</p>
+<p>Replace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use <a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown formatting</a> as described in <a href="https://github.com/rstudio/cheatsheets/raw/main/rmarkdown.pdf">this cheat-sheet</a>.</p>
+<p>You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages.</p>
+<p>You can comment this prompt out, so that it does not show up in your document (but is still present in the qmd file) by highlighting the text and hitting Ctrl/Cmd + Shift + C.</p>
 </section>
 <section id="playing-with-code-in-notebooks" class="level2">
 <h2 class="anchored" data-anchor-id="playing-with-code-in-notebooks">Playing with Code in Notebooks</h2>
@@ -381,7 +383,7 @@ window.Quarto = {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">4</span><span class="sc">*</span>pi, .<span class="dv">01</span>) </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the distance from the origin of the spiral</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Needs to have the same length as theta</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="at">length.out =</span> <span class="fu">length</span>(theta))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> theta</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Now define x and y in cartesian coordinates</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> r <span class="sc">*</span> <span class="fu">cos</span>(theta)</span>
@@ -406,19 +408,17 @@ window.Quarto = {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">4</span> <span class="op">*</span> np.pi, <span class="fl">0.01</span>)</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the distance from the origin of the spiral</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Needs to have the same length as theta </span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># (get length of theta with theta.size, </span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  and then divide 5 by that to get the increment)</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">5</span><span class="op">/</span>theta.size)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Now define x and y in cartesian coordinates</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> r <span class="op">*</span> np.cos(theta)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> r <span class="op">*</span> np.sin(theta)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the axes</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the line</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> theta</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Now define x and y in cartesian coordinates</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> r <span class="op">*</span> np.cos(theta)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> r <span class="op">*</span> np.sin(theta)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the axes</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the line</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">

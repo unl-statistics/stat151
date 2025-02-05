@@ -8,7 +8,11 @@ output: html_document
 
 ## What is the difference between a script and a notebook?
 
-Replace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use markdown formatting as described in [this cheat-sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf). You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages.
+Replace this paragraph with 2-3 sentences describing your understanding of the difference between a script and a notebook. Your answer should be applicable to R or python (so if you discuss python notebooks, you should also discuss the equivalent in R). Use [markdown formatting](https://quarto.org/docs/authoring/markdown-basics.html) as described in [this cheat-sheet](https://github.com/rstudio/cheatsheets/raw/main/rmarkdown.pdf). 
+
+You may want to provide a table or itemized list, and you should use code formatting to indicate file extensions and programming languages.
+
+You can comment this prompt out, so that it does not show up in your document (but is still present in the qmd file) by highlighting the text and hitting Ctrl/Cmd + Shift + C. 
 
 
 ## Playing with Code in Notebooks
@@ -22,7 +26,7 @@ Using [this reference](https://mathworld.wolfram.com/ArchimedeanSpiral.html), mo
 theta <- seq(0, 4*pi, .01) 
 # Define the distance from the origin of the spiral
 # Needs to have the same length as theta
-r <- seq(0, 5, length.out = length(theta))
+r <- theta
 
 # Now define x and y in cartesian coordinates
 x <- r * cos(theta)
@@ -43,9 +47,7 @@ import matplotlib.pyplot as plt
 theta = np.arange(0, 4 * np.pi, 0.01)
 # Define the distance from the origin of the spiral
 # Needs to have the same length as theta 
-# (get length of theta with theta.size, 
-#  and then divide 5 by that to get the increment)
-r = np.arange(0, 5, 5/theta.size)
+r = theta
 
 # Now define x and y in cartesian coordinates
 x = r * np.cos(theta)

@@ -1,0 +1,46 @@
+---
+title: "Intro to Programming"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+---
+
+## Cues: Where am I?
+
+::: incremental
+-   What does the prompt look like? `>`, `$`, `>>>`, `%`
+
+    -   Indication of what language the computer expects
+    -   R, Terminal (BASH, ZSH, CMD, Powershell), Python
+
+-   How do you run the code?
+
+    -   `python3 <file.py>`, `Ctrl/Cmd + Enter`, hit Enter, ...
+
+-   What folder is the computer looking in? (working directory)
+
+-   What program are you operating in? (RStudio, Cmd.exe, Terminal, etc.)
+:::
+
+## Scripts
+
+Homework 2 will ask you to download and run a script in Python.
+
+    ![Right click -\> Save Page As... -\> `madlibs.py` ](images/clipboard-2196485650.png){fig-alt="A screenshot of the madlibs.py file linked in Homework 2, with the instructions on how to save the file: Right click, save page as, and give the file the name `madlibs.py`."}
+
+
+## Scripts
+
+- Navigate using the terminal so that you are in the same working directory as `madlibs.py`
+
+  - You can get the file path in Windows by navigating in the file browser to the file, and  Shift-Right click -> Copy as path
+  
+  - Mac should allow you to open a terminal in a folder with shift-click (I think)
+  
+## Scripts in RStudio
+
+- Then, open the script in RStudio
+
+- Can you run it in RStudio somehow?

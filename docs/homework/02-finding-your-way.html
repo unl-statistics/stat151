@@ -271,8 +271,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#madlibs" id="toc-madlibs" class="nav-link active" data-scroll-target="#madlibs">MadLibs</a>
   <ul class="collapse">
   <li><a href="#running-a-python-script-at-the-command-line" id="toc-running-a-python-script-at-the-command-line" class="nav-link" data-scroll-target="#running-a-python-script-at-the-command-line">Running a Python Script at the command line</a></li>
+  <li><a href="#reserved-words" id="toc-reserved-words" class="nav-link" data-scroll-target="#reserved-words">Reserved Words</a></li>
+  <li><a href="#code-highlighting" id="toc-code-highlighting" class="nav-link" data-scroll-target="#code-highlighting">Code Highlighting</a></li>
   </ul></li>
-  <li><a href="#thinking-critically" id="toc-thinking-critically" class="nav-link" data-scroll-target="#thinking-critically">Thinking Critically</a></li>
+  <li><a href="#thinking-critically" id="toc-thinking-critically" class="nav-link" data-scroll-target="#thinking-critically">Thinking Critically</a>
+  <ul class="collapse">
+  <li><a href="#learn-more" id="toc-learn-more" class="nav-link" data-scroll-target="#learn-more">Learn More</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat151/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -313,14 +318,31 @@ ul.task-list li input[type="checkbox"] {
 <pre><code># Paste your output here!</code></pre>
 <p>Can you run this same script in RStudio using the Source Script button? If you can, please describe any differences you note compared to using the terminal. If you cannot, tell me what happens.</p>
 </section>
+<section id="reserved-words" class="level3">
+<h3 class="anchored" data-anchor-id="reserved-words">Reserved Words</h3>
+<p>Does the madlibs.py script use any reserved words? How can you tell?</p>
+</section>
+<section id="code-highlighting" class="level3">
+<h3 class="anchored" data-anchor-id="code-highlighting">Code Highlighting</h3>
+<p>Are there any other words that stand out when you open up <code>madlibs.py</code> in RStudio? What do they do? How do they appear?</p>
+</section>
 </section>
 <section id="thinking-critically" class="level2">
 <h2 class="anchored" data-anchor-id="thinking-critically">Thinking Critically</h2>
-<p>Consider the counting words examples in the <a href="https://srvanderplas.github.io/stat-computing-r-python/part-tools/04-scripts-notebooks.html#writing-code-for-people">textbook</a> (Your Turn – Scripts and Terminals, Your Turn - Sourcing a Script, Your Turn - Words in quarto). Look at the code, and then at the steps provided for each example. What is different? What is the same?</p>
-<p>Create a table comparing using a terminal interactively, sourcing a script (e.g.&nbsp;running the whole script using the Run button), and using a script or notebook interactively. Address the specific differences in how the user interacts with the code, differences in any user inputs (if available) and how they’re specified, and any differences in the output.</p>
-<p>Hint: To create a table, change this to “Visual” mode (editor toolbar, under the save/render bar) and a menu option should appear that will help you add a table.</p>
+<p>Look at the quarto file from Homework 1. What features does RStudio provide that would help you identify code? Comments? YAML markup (the header at the top of the file, where the document title/author/date/output format are specified)?</p>
+<p>How can you differentiate R code from python code in a quarto file?</p>
+<p>How do links show up in the text editor?</p>
+<section id="learn-more" class="level3">
+<h3 class="anchored" data-anchor-id="learn-more">Learn More</h3>
+<ol type="1">
+<li><p>Skim the quarto documentation on <a href="https://quarto.org/docs/reference/cells/cells-knitr.html">code cell options</a>. Which 3 options do you think will be the most useful?</p></li>
+<li><p>When would you consider using <code>#| eval: false</code> at the start of a chunk?</p></li>
+<li><p>When might you use <code>#| echo: false</code>?</p></li>
+<li><p>What about <code>#| output: false</code>?</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

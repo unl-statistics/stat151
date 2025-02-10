@@ -1,0 +1,106 @@
+---
+title: "Building Blocks"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+---
+
+## Variables
+
+- Declare: set aside a space in memory for a variable
+
+- Assign: Set the value of a variable
+
+In modern languages (R, Python, etc.) these two steps are usually done simultaneously
+
+`x <- 3` or `y = "hello world"` in R and Python respectively
+
+## Naming Things
+
+- Variable names can't
+  - start with a number or symbol
+  - include `.` (Python only)
+  - be a reserved word
+  
+- Choose descriptive names
+  - Match the equation (if math)
+  - May want to include units `length_mm`
+  - Avoid single character names where possible    
+  `c` in particular is a bad name in R!
+  
+
+## Basic Variable Types
+
+- Integer - 2, 6, 109243
+- Double - 3.1415, 2.7, 9.0
+- String - "ABCDE", " ", "Eddie is a Jack Russell Terrorist"
+- Boolean - True, False
+
+
+## Testing Types
+
+Use a function to test if the type of `y` is `xxx
+
+R: `is.xxx(y)`
+
+Python: `isInstance(y, xxx)` 
+
+## Implicit Type Conversions
+
+R and Python will both try to work with types that don't match... to a point
+
+```{r}
+v1 <- 2L + 2.0
+v1
+is.integer(v1)
+is.double(v1)
+
+v2 <- TRUE + 3L
+v2
+is.logical(v2)
+is.integer(v2)
+is.double(v2)
+```
+
+Variables are converted to the least-complicated/least memory intensive compatible type.
+
+## Implicit Type Conversions
+
+R and Python will both try to work with types that don't match... to a point
+
+```{python}
+v1 = 2 + 2.0
+v1
+isinstance(v1, int)
+isinstance(v1, float)
+
+v2 = True + 3
+v2
+isinstance(v2, bool)
+isinstance(v2, int)
+isinstance(v2, float)
+```
+
+Variables are converted to the least-complicated/least memory intensive compatible type.
+
+## Explicit Type Conversions
+
+You can force things to be converted from one type to the other as well.
+
+```{python}
+int("3")
+int(3.14)
+int(3.84)
+
+bool(3.0)
+```
+
+```{r}
+as.integer("3")
+as.integer(3.14)
+as.integer(3.84)
+
+as.logical(3.0)
+```

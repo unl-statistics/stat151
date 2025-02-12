@@ -15,7 +15,7 @@
 
 ## 🐪 Wednesday
 
-- Data Types, Variables, and  Common Mistakes
+- [Data Types, Variables, and  Common Mistakes](../slides/04-building-blocks.qmd)
 - Debugging strategies
 
 ##  🏋️ Practice your skills

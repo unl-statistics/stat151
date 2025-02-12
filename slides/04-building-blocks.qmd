@@ -5,7 +5,23 @@ theme: ./libs/unl/inverse.scss
 includes:
   in_header: ./libs/unl/header.html
 lib_dir: ./libs
+execute:
+  echo: true
+  error: true
 ---
+
+## Husker POWER survey
+
+- Link sent out via Canvas/Email
+
+The Husker Student POWER survey is currently open to first year and new transfer students.
+
+The survey consists of 12 yes/no statements about academic, social, financial, and emotional well-being topics.  
+
+Staff and instructors with expertise use the survey responses to provide support and resources to students whose responses raise concerns.
+
+Take a minute and complete the survey if you haven't already!
+
 
 ## Variables
 
@@ -15,54 +31,168 @@ lib_dir: ./libs
 
 In modern languages (R, Python, etc.) these two steps are usually done simultaneously
 
-`x <- 3` or `y = "hello world"` in R and Python respectively
+`x <- 3` (R)   
+`y = "hello world"` (Python)
 
 ## Naming Things
 
 - Variable names can't
-  - start with a number or symbol
-  - include `.` (Python only)
+  - start with a number 
+  - start with a symbol (_ is ok in Python)
+  - include `.` (Python)
   - be a reserved word
   
-- Choose descriptive names
-  - Match the equation (if math)
-  - May want to include units `length_mm`
-  - Avoid single character names where possible    
-  `c` in particular is a bad name in R!
+```{r, error = T}
+#| echo: true
+_x <- 3
+```
+
+```{r, error = T}
+#| echo: true
+3x <- 3
+
+```
+
+```{r, error = T}
+#| echo: true
+if <- 3
+```
+## Naming Things
+
+- Variable names can't
+  - start with a number 
+  - start with a symbol (_ is ok in Python)
+  - include `.` (Python)
+  - be a reserved word
+
+```{python}
+#| eval: true
+#| echo: true
+#| error: true
+x.y = 3
+```
+
+```{python}
+#| eval: true
+#| echo: true
+#| error: true
+$y = 3
+```
+
+```{python}
+#| eval: true
+#| echo: true
+#| error: true
+3y = 3
+```
+
+```{python}
+#| eval: true
+#| echo: true
+#| error: true
+if = 3
+```
+
+
   
+## Naming Things
+
+When you create a variable:
+
+- Choose descriptive names
+  - Match the equation/formula (if math)
+  - May want to include units `length_mm`
+- Avoid single character names where possible    
+  `c` in particular is a bad name in R!
+- Balance length and clarity/information
 
 ## Basic Variable Types
 
 - Integer - 2, 6, 109243
-- Double - 3.1415, 2.7, 9.0
-- String - "ABCDE", " ", "Eddie is a Jack Russell Terrorist"
+  - R calls these 'integer', Python calls them 'int'
+- Floating point - 3.1415, 2.7, 9.0
+  - R calls these 'double', Python calls them 'float' ^[The difference between double and float  is technical and involves how many decimal places of precision are allocated in memory.]
+- String - "ABCDE", "&nbsp;" , "Eddie is a Jack Russell Terrorist"
+  - R calls these 'character', Python calls them 'str'
 - Boolean - True, False
+  - R calls these 'logical', Python calls them 'bool'
 
 
 ## Testing Types
 
-Use a function to test if the type of `y` is `xxx
+Use a function to test if the type of `y` is `xxx`
 
 R: `is.xxx(y)`
 
 Python: `isInstance(y, xxx)` 
 
+```{r}
+is.logical(3.14)
+is.character(3.14)
+is.character("3.14")
+is.integer(3.14)
+is.numeric("pi")
+is.numeric(pi)
+```
+
+
+## Testing Types
+
+Use a function to test if the type of `y` is `xxx`
+
+R: `is.xxx(y)`
+
+Python: `isinstance(y, xxx)` 
+
+```{python}
+pi = 3.14159
+isinstance(3.14, bool)
+isinstance(3.14, str)
+isinstance("3.14", str)
+isinstance(3.14, int)
+isinstance("pi", float)
+isinstance(pi, float)
+```
+
+
 ## Implicit Type Conversions
 
 R and Python will both try to work with types that don't match... to a point
 
+::: columns
+::: {.column width="25%"}
 ```{r}
-v1 <- 2L + 2.0
+v1 <- 1L + 2.0
 v1
 is.integer(v1)
 is.double(v1)
+```
+:::
 
+::: {.column width="25%"}
+```{r}
 v2 <- TRUE + 3L
 v2
 is.logical(v2)
 is.integer(v2)
 is.double(v2)
 ```
+:::
+
+::: {.column width="25%"}
+```{r}
+v3 <- "3" + 4
+```
+:::
+
+::: {.column width="25%"}
+```{r}
+v4 <- "3" + "4"
+```
+:::
+
+:::
+
 
 Variables are converted to the least-complicated/least memory intensive compatible type.
 
@@ -70,24 +200,54 @@ Variables are converted to the least-complicated/least memory intensive compatib
 
 R and Python will both try to work with types that don't match... to a point
 
+::: columns
+:::  {.column width="25%"}
 ```{python}
-v1 = 2 + 2.0
+v1 = 1 + 2.0
 v1
 isinstance(v1, int)
 isinstance(v1, float)
+```
+:::
 
+:::  {.column width="25%"}
+```{python}
 v2 = True + 3
 v2
 isinstance(v2, bool)
 isinstance(v2, int)
 isinstance(v2, float)
 ```
+:::
 
+:::  {.column width="25%"}
+```{python}
+v3 = "3" + 4
+```
+
+:::
+
+:::  {.column width="25%"}
+```{python}
+v4 = "3" + "4"
+v4
+```
+::: fragment
+[Python will **concatenate** (smush together) strings using `+`]{.emph .cerulean}
+:::
+:::
+
+:::
 Variables are converted to the least-complicated/least memory intensive compatible type.
 
 ## Explicit Type Conversions
 
 You can force things to be converted from one type to the other as well.
+
+::: columns
+
+::: column
+#### Python
 
 ```{python}
 int("3")
@@ -96,6 +256,10 @@ int(3.84)
 
 bool(3.0)
 ```
+:::
+
+::: column
+#### R
 
 ```{r}
 as.integer("3")
@@ -104,3 +268,59 @@ as.integer(3.84)
 
 as.logical(3.0)
 ```
+:::
+
+:::
+
+## Functions
+
+- A function is a sequence of commands that performs a task
+
+- Functions (sometimes) take **arguments** and (sometimes) **return** values 
+
+- We **call** a function by running code with the function name and values:
+
+![Function anatomy](images/function-anatomy-1.excalidraw.png){fig-alt="The `lm` function in R. The text 'lm(formula = y ~ x, data = mtcars)' is shown in blue, and each part of that sequence is annotated with additional information. A box around 'lm' is accompanied by text that says lm = linear model, function name. Boxes around formula and data have an annotation indicating that these are parameter names. Boxes around 'y ~ x' and 'mtcars' indicate that these are parameter values. The parentheses immediately after lm and at the end of the line are annotated with the information that function calls have parentheses around the arguments. The comma between 'y ~ x' and 'data' is annotated with the information that arguments are separated by commas."}
+
+## Functions
+
+- A function is a sequence of commands that performs a task
+
+- Functions (sometimes) take **arguments** and (sometimes) **return** values 
+
+- We **call** a function by running code with the function name and any necessary arguments
+
+![Function arguments](images/function-anatomy-2.excalidraw.png){fig-alt="The `lm` function in R. The text 'lm(formula = y ~ x, data = mtcars)' is shown in blue, with orange boxes around 'formula = y ~ x' and 'data = mtcars'. Orange text above the boxes reads 'arguments = values you pass in to the functions', and text below the boxes reads 'arguments may be named or unnamed'."}
+
+
+## Software Libraries
+
+- We often group commonly used, related functions into **packages** (R) or **modules** (Python)
+
+- You install a package with `install.packages("pkgname")` (R) or `pip install pkgname` (Python)
+
+- Packages/modules must be **loaded** before they can be used.     
+`library(pkgname)` (R)    
+`import pkgname` (Python)
+
+- In Python, you access the functions in a package by `pkgname.funcname`, even after you've imported it
+
+- In R, after the library is loaded, you access a function using `funcname`
+
+## Python Package Functions
+
+`pkgname.funcname` can make for wordy code
+
+`import pkgname as pn` allows you to use `pn.funcname` instead    
+[This creates an [alias]{.emph .cerulean} for the package]{.fragment}
+
+`from pkgname import func1 func2` allows you to use `func1()` and `func2()` directly, without the package name    
+[This directly imports ONLY the functions you need]{.fragment}
+
+::: fragment
+It is considered bad practice to use `from pkgname import *`, which exposes all functions in the package directly.
+
+  - This is bad because multiple packages could have the same function names inside
+  - This very quickly leads to bugs
+  
+:::

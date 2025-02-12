@@ -647,7 +647,7 @@
     "href": "homework/11-reshape.html",
     "title": "Homework: Data Transformations",
     "section": "",
-    "text": "Note: This assignment must be submitted in github classroom.\nThis week’s assignment uses data from Tidy Tuesday (link) and relates to food consumption and CO2 emissions.\n\n# Credit to Kasia and minorly edited to create output file and test plot\n# Blog post at https://r-tastic.co.uk/post/from-messy-to-tidy/\nlibrary(rvest)\nlibrary(dplyr)\n\nurl &lt;- \"https://web.archive.org/web/20191224072125/https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018\"\n\n# scrape the website\nurl_html &lt;- read_html(url)\n\n# extract the HTML table\nwhole_table &lt;- url_html %&gt;% \n  html_nodes('table') %&gt;%\n  html_table(fill = TRUE) %&gt;%\n  .[[2]]\n\nError in .[[2]]: subscript out of bounds\n\ntable_content &lt;- whole_table %&gt;%\n  select(-X1) %&gt;% # remove redundant column\n  filter(!dplyr::row_number() %in% 1:3) # remove redundant rows\n\nError in eval(expr, envir, enclos): object 'whole_table' not found\n\nraw_headers &lt;- url_html %&gt;%\n  html_nodes(\".thead-icon\") %&gt;%\n  html_attr('title')\n\ntidy_bottom_header &lt;- raw_headers[28:length(raw_headers)]\n# tidy_bottom_header[1:10]\n\nraw_middle_header &lt;- raw_headers[17:27]\n# raw_middle_header\n\ntidy_headers &lt;- c(\n  rep(raw_middle_header[1:7], each = 2),\n  \"animal_total\",\n  rep(raw_middle_header[8:length(raw_middle_header)], each = 2),\n  \"non_animal_total\",\n  \"country_total\")\n\n# tidy_headers\n\ncombined_colnames &lt;- paste(tidy_headers, tidy_bottom_header, sep = ';')\ncolnames(table_content) &lt;- c(\"Country\", combined_colnames)\n\nError: object 'table_content' not found\n\ntable_content &lt;- table_content %&gt;%\n  mutate_at(vars(2:26), as.numeric)\n\nError in eval(expr, envir, enclos): object 'table_content' not found\n\n\nThe code above reads the data in from the Wayback Machine’s archived version of the original webpage and gets it into tabular form.\nYour job is to complete the following tasks:\n\nDescribe the state of the data set, table_content.\n\nWhat are the variables in the data set?\n\nvar1\nvar2\n(add more as necessary)\n\nIs it in tidy form? What principles of tidy data does this violate?\nYour answer here\nWhat steps do you need to take to get it into tidy form?\n\n\n(add more steps as necessary)\n\n\nSketch out what the final (tidy) data set will look like. You can use markdown table syntax or a picture here, but if you use a picture, upload it to imgur and include the image link in this document USING PROPER MARKDOWN SYNTAX.\nWrite R or python code for each step in the process you identified in #1. Show what the data looks like at each step using head(). Each step should be in a different code chunk.\nFor each food type (you may have to remove total values), plot the relationship between Carbon output and Consumption (use facets to get separate plots for each type of food). What do you notice for each plot? If you want to reduce carbon emissions, what foods should you eat less of?\nLook at the plot above again. Do you have any concerns about the data? The data source?"
+    "text": "Note: This assignment must be submitted in github classroom.\nThis week’s assignment uses data from Tidy Tuesday (link) and relates to food consumption and CO2 emissions.\n\n# Credit to Kasia and minorly edited to create output file and test plot\n# Blog post at https://r-tastic.co.uk/post/from-messy-to-tidy/\nlibrary(rvest)\nlibrary(dplyr)\n\nurl &lt;- \"https://web.archive.org/web/20191224072125/https://www.nu3.de/blogs/nutrition/food-carbon-footprint-index-2018\"\n\n# scrape the website\nurl_html &lt;- read_html(url)\n\n# extract the HTML table\nwhole_table &lt;- url_html %&gt;% \n  html_nodes('table') %&gt;%\n  html_table(fill = TRUE) %&gt;%\n  .[[2]]\n\nError in .[[2]]: subscript out of bounds\n\ntable_content &lt;- whole_table %&gt;%\n  select(-X1) %&gt;% # remove redundant column\n  filter(!dplyr::row_number() %in% 1:3) # remove redundant rows\n\nError: object 'whole_table' not found\n\nraw_headers &lt;- url_html %&gt;%\n  html_nodes(\".thead-icon\") %&gt;%\n  html_attr('title')\n\ntidy_bottom_header &lt;- raw_headers[28:length(raw_headers)]\n# tidy_bottom_header[1:10]\n\nraw_middle_header &lt;- raw_headers[17:27]\n# raw_middle_header\n\ntidy_headers &lt;- c(\n  rep(raw_middle_header[1:7], each = 2),\n  \"animal_total\",\n  rep(raw_middle_header[8:length(raw_middle_header)], each = 2),\n  \"non_animal_total\",\n  \"country_total\")\n\n# tidy_headers\n\ncombined_colnames &lt;- paste(tidy_headers, tidy_bottom_header, sep = ';')\ncolnames(table_content) &lt;- c(\"Country\", combined_colnames)\n\nError: object 'table_content' not found\n\ntable_content &lt;- table_content %&gt;%\n  mutate_at(vars(2:26), as.numeric)\n\nError: object 'table_content' not found\n\n\nThe code above reads the data in from the Wayback Machine’s archived version of the original webpage and gets it into tabular form.\nYour job is to complete the following tasks:\n\nDescribe the state of the data set, table_content.\n\nWhat are the variables in the data set?\n\nvar1\nvar2\n(add more as necessary)\n\nIs it in tidy form? What principles of tidy data does this violate?\nYour answer here\nWhat steps do you need to take to get it into tidy form?\n\n\n(add more steps as necessary)\n\n\nSketch out what the final (tidy) data set will look like. You can use markdown table syntax or a picture here, but if you use a picture, upload it to imgur and include the image link in this document USING PROPER MARKDOWN SYNTAX.\nWrite R or python code for each step in the process you identified in #1. Show what the data looks like at each step using head(). Each step should be in a different code chunk.\nFor each food type (you may have to remove total values), plot the relationship between Carbon output and Consumption (use facets to get separate plots for each type of food). What do you notice for each plot? If you want to reduce carbon emissions, what foods should you eat less of?\nLook at the plot above again. Do you have any concerns about the data? The data source?"
   },
   {
     "objectID": "homework/09-data-cleaning.html",
@@ -773,7 +773,7 @@
     "href": "homework/04-cipher.html#part-one-setup",
     "title": "Homework 4: Cipher",
     "section": "Part One: Setup",
-    "text": "Part One: Setup\nEach of the following R chunks will cause an error and/or do the desired task incorrectly.\nFind the mistake, and correct it to complete the intended action.\nFor each error, write 1-2 sentences to reflect on what the mistake was and how you found it and fixed it.\n\nCreate vectors containing the upper case letters, lower case letters, and some punctuation marks.\n\n\nlower_case &lt;- c(\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"q\", \"r\", \"s\", \"t\", \"u\", \"v\", \"w\", \"x\", \"y\", \"z\")\n\nupper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\")\n\npunctuation &lt;- c(\".\", \",\", \"!\", \"?\", \"'\", \"\"\", \"(\", \")\", \" \", \"-\", \";\", \":\")\n\nError: &lt;text&gt;:3:56: unexpected string constant\n2: \n3: upper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\"\n                                                          ^\n\n\n\nMake one long vector containing all the symbols.\n\n\nmy_symbols &lt;- cbind(lower_case, upper_case, punctuation)\n\nError in eval(expr, envir, enclos): object 'lower_case' not found\n\n\n\nTurn the my_symbols vector into a data frame, with the variable name “Symbol”\n\n\nmy_symbols &lt;- dataframe(my_symbols)\n\nError in dataframe(my_symbols): could not find function \"dataframe\"\n\nnames(my_symbols) = Symbol\n\nError in eval(expr, envir, enclos): object 'Symbol' not found\n\n\n\nFind the total number of symbols we have in our data frame.\n\n\nlen &lt;- length(my_symbols)\n\nError in eval(expr, envir, enclos): object 'my_symbols' not found\n\n\n\nCreate a new variable in your dataframe that assigns a number to each symbol.\n\n\nmy_symbols%Num &lt;- 1:len\n\nError: &lt;text&gt;:1:11: unexpected input\n1: my_symbols%Num &lt;- 1:len\n              ^"
+    "text": "Part One: Setup\nEach of the following R chunks will cause an error and/or do the desired task incorrectly.\nFind the mistake, and correct it to complete the intended action.\nFor each error, write 1-2 sentences to reflect on what the mistake was and how you found it and fixed it.\n\nCreate vectors containing the upper case letters, lower case letters, and some punctuation marks.\n\n\nlower_case &lt;- c(\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"q\", \"r\", \"s\", \"t\", \"u\", \"v\", \"w\", \"x\", \"y\", \"z\")\n\nupper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\", \"J\", \"K\", \"L\", \"M\", \"N\", \"O\", \"P\", \"Q\", \"R\", \"S\", \"T\", \"U\", \"V\", \"W\", \"X\", \"Y\", \"Z\")\n\npunctuation &lt;- c(\".\", \",\", \"!\", \"?\", \"'\", \"\"\", \"(\", \")\", \" \", \"-\", \";\", \":\")\n\nError in parse(text = input): &lt;text&gt;:3:56: unexpected string constant\n2: \n3: upper_case &lt;- c(\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\" \"I\"\n                                                          ^\n\n\n\nMake one long vector containing all the symbols.\n\n\nmy_symbols &lt;- cbind(lower_case, upper_case, punctuation)\n\nError: object 'lower_case' not found\n\n\n\nTurn the my_symbols vector into a data frame, with the variable name “Symbol”\n\n\nmy_symbols &lt;- dataframe(my_symbols)\n\nError in dataframe(my_symbols): could not find function \"dataframe\"\n\nnames(my_symbols) = Symbol\n\nError: object 'Symbol' not found\n\n\n\nFind the total number of symbols we have in our data frame.\n\n\nlen &lt;- length(my_symbols)\n\nError: object 'my_symbols' not found\n\n\n\nCreate a new variable in your dataframe that assigns a number to each symbol.\n\n\nmy_symbols%Num &lt;- 1:len\n\nError in parse(text = input): &lt;text&gt;:1:11: unexpected input\n1: my_symbols%Num &lt;- 1:len\n              ^"
   },
   {
     "objectID": "homework/04-cipher.html#part-two-decoding-the-secret-message.",
@@ -976,7 +976,7 @@
     "href": "homework/10-strings.html#setup",
     "title": "Homework: Working with strings",
     "section": "Setup",
-    "text": "Setup\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(lubridate)\nmessage &lt;- read.csv(\"./message.txt\", stringsAsFactors = FALSE)$Word"
+    "text": "Setup\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(lubridate)\nmessage &lt;- read.csv(\"./message.txt\", stringsAsFactors = FALSE)$Word"
   },
   {
     "objectID": "homework/10-strings.html#warm-up-exercises",
@@ -1035,53 +1035,109 @@
     "text": "Key signals\n\nWhat does the prompt look like? &gt;, $, &gt;&gt;&gt;, %\n\nIndication of what language the computer expects\n\nHow do you run the code?\n\npython3 &lt;file.py&gt;, Ctrl/Cmd + Enter, hit Enter, …\n\nWhat folder is the computer looking in? (working directory)\nWhat program are you operating in? (RStudio, Cmd.exe, Terminal, etc.)"
   },
   {
+    "objectID": "slides/04-building-blocks.html#husker-power-survey",
+    "href": "slides/04-building-blocks.html#husker-power-survey",
+    "title": "Building Blocks",
+    "section": "Husker POWER survey",
+    "text": "Husker POWER survey\n\nLink sent out via Canvas/Email\n\nThe Husker Student POWER survey is currently open to first year and new transfer students.\nThe survey consists of 12 yes/no statements about academic, social, financial, and emotional well-being topics.\nStaff and instructors with expertise use the survey responses to provide support and resources to students whose responses raise concerns.\nTake a minute and complete the survey if you haven’t already!"
+  },
+  {
     "objectID": "slides/04-building-blocks.html#variables",
     "href": "slides/04-building-blocks.html#variables",
     "title": "Building Blocks",
     "section": "Variables",
-    "text": "Variables\n\nDeclare: set aside a space in memory for a variable\nAssign: Set the value of a variable\n\nIn modern languages (R, Python, etc.) these two steps are usually done simultaneously\nx &lt;- 3 or y = \"hello world\" in R and Python respectively"
+    "text": "Variables\n\nDeclare: set aside a space in memory for a variable\nAssign: Set the value of a variable\n\nIn modern languages (R, Python, etc.) these two steps are usually done simultaneously\nx &lt;- 3 (R)\ny = \"hello world\" (Python)"
   },
   {
     "objectID": "slides/04-building-blocks.html#naming-things",
     "href": "slides/04-building-blocks.html#naming-things",
     "title": "Building Blocks",
     "section": "Naming Things",
-    "text": "Naming Things\n\nVariable names can’t\n\nstart with a number or symbol\ninclude . (Python only)\nbe a reserved word\n\nChoose descriptive names\n\nMatch the equation (if math)\nMay want to include units length_mm\nAvoid single character names where possible\nc in particular is a bad name in R!"
+    "text": "Naming Things\n\nVariable names can’t\n\nstart with a number\nstart with a symbol (_ is ok in Python)\ninclude . (Python)\nbe a reserved word\n\n\n\n_x &lt;- 3\n\nError in parse(text = input): &lt;text&gt;:1:2: unexpected symbol\n1: _x\n     ^\n\n\n\n3x &lt;- 3\n\nError in parse(text = input): &lt;text&gt;:1:2: unexpected symbol\n1: 3x\n     ^\n\n\n\nif &lt;- 3\n\nError in parse(text = input): &lt;text&gt;:1:4: unexpected assignment\n1: if &lt;-\n       ^"
+  },
+  {
+    "objectID": "slides/04-building-blocks.html#naming-things-1",
+    "href": "slides/04-building-blocks.html#naming-things-1",
+    "title": "Building Blocks",
+    "section": "Naming Things",
+    "text": "Naming Things\n\nVariable names can’t\n\nstart with a number\nstart with a symbol (_ is ok in Python)\ninclude . (Python)\nbe a reserved word\n\n\n\nx.y = 3\n\nNameError: name 'x' is not defined\n\n\n\n$y = 3\n\ninvalid syntax (&lt;string&gt;, line 1)\n\n\n\n3y = 3\n\ninvalid decimal literal (&lt;string&gt;, line 1)\n\n\n\nif = 3\n\ninvalid syntax (&lt;string&gt;, line 1)"
+  },
+  {
+    "objectID": "slides/04-building-blocks.html#naming-things-2",
+    "href": "slides/04-building-blocks.html#naming-things-2",
+    "title": "Building Blocks",
+    "section": "Naming Things",
+    "text": "Naming Things\nWhen you create a variable:\n\nChoose descriptive names\n\nMatch the equation/formula (if math)\nMay want to include units length_mm\n\nAvoid single character names where possible\nc in particular is a bad name in R!\nBalance length and clarity/information"
   },
   {
     "objectID": "slides/04-building-blocks.html#basic-variable-types",
     "href": "slides/04-building-blocks.html#basic-variable-types",
     "title": "Building Blocks",
     "section": "Basic Variable Types",
-    "text": "Basic Variable Types\n\nInteger - 2, 6, 109243\nDouble - 3.1415, 2.7, 9.0\nString - “ABCDE”, ” “,”Eddie is a Jack Russell Terrorist”\nBoolean - True, False"
+    "text": "Basic Variable Types\n\nInteger - 2, 6, 109243\n\nR calls these ‘integer’, Python calls them ‘int’\n\nFloating point - 3.1415, 2.7, 9.0\n\nR calls these ‘double’, Python calls them ‘float’ 1\n\nString - “ABCDE”, “ ” , “Eddie is a Jack Russell Terrorist”\n\nR calls these ‘character’, Python calls them ‘str’\n\nBoolean - True, False\n\nR calls these ‘logical’, Python calls them ‘bool’\n\n\nThe difference between double and float is technical and involves how many decimal places of precision are allocated in memory."
   },
   {
     "objectID": "slides/04-building-blocks.html#testing-types",
     "href": "slides/04-building-blocks.html#testing-types",
     "title": "Building Blocks",
     "section": "Testing Types",
-    "text": "Testing Types\nUse a function to test if the type of y is `xxx\nR: is.xxx(y)\nPython: isInstance(y, xxx)"
+    "text": "Testing Types\nUse a function to test if the type of y is xxx\nR: is.xxx(y)\nPython: isInstance(y, xxx)\n\nis.logical(3.14)\n\n[1] FALSE\n\nis.character(3.14)\n\n[1] FALSE\n\nis.character(\"3.14\")\n\n[1] TRUE\n\nis.integer(3.14)\n\n[1] FALSE\n\nis.numeric(\"pi\")\n\n[1] FALSE\n\nis.numeric(pi)\n\n[1] TRUE"
+  },
+  {
+    "objectID": "slides/04-building-blocks.html#testing-types-1",
+    "href": "slides/04-building-blocks.html#testing-types-1",
+    "title": "Building Blocks",
+    "section": "Testing Types",
+    "text": "Testing Types\nUse a function to test if the type of y is xxx\nR: is.xxx(y)\nPython: isinstance(y, xxx)\n\npi = 3.14159\nisinstance(3.14, bool)\n\nFalse\n\nisinstance(3.14, str)\n\nFalse\n\nisinstance(\"3.14\", str)\n\nTrue\n\nisinstance(3.14, int)\n\nFalse\n\nisinstance(\"pi\", float)\n\nFalse\n\nisinstance(pi, float)\n\nTrue"
   },
   {
     "objectID": "slides/04-building-blocks.html#implicit-type-conversions",
     "href": "slides/04-building-blocks.html#implicit-type-conversions",
     "title": "Building Blocks",
     "section": "Implicit Type Conversions",
-    "text": "Implicit Type Conversions\nR and Python will both try to work with types that don’t match… to a point\n\n\n[1] 4\n\n\n[1] FALSE\n\n\n[1] TRUE\n\n\n[1] 4\n\n\n[1] FALSE\n\n\n[1] TRUE\n\n\n[1] FALSE\n\n\nVariables are converted to the least-complicated/least memory intensive compatible type."
+    "text": "Implicit Type Conversions\nR and Python will both try to work with types that don’t match… to a point\n\n\n\nv1 &lt;- 1L + 2.0\nv1\n\n[1] 3\n\nis.integer(v1)\n\n[1] FALSE\n\nis.double(v1)\n\n[1] TRUE\n\n\n\n\nv2 &lt;- TRUE + 3L\nv2\n\n[1] 4\n\nis.logical(v2)\n\n[1] FALSE\n\nis.integer(v2)\n\n[1] TRUE\n\nis.double(v2)\n\n[1] FALSE\n\n\n\n\nv3 &lt;- \"3\" + 4\n\nError in \"3\" + 4: non-numeric argument to binary operator\n\n\n\n\nv4 &lt;- \"3\" + \"4\"\n\nError in \"3\" + \"4\": non-numeric argument to binary operator\n\n\n\nVariables are converted to the least-complicated/least memory intensive compatible type."
   },
   {
     "objectID": "slides/04-building-blocks.html#implicit-type-conversions-1",
     "href": "slides/04-building-blocks.html#implicit-type-conversions-1",
     "title": "Building Blocks",
     "section": "Implicit Type Conversions",
-    "text": "Implicit Type Conversions\nR and Python will both try to work with types that don’t match… to a point\n\n\n4.0\n\n\nFalse\n\n\nTrue\n\n\n4\n\n\nFalse\n\n\nTrue\n\n\nFalse\n\n\nVariables are converted to the least-complicated/least memory intensive compatible type."
+    "text": "Implicit Type Conversions\nR and Python will both try to work with types that don’t match… to a point\n\n\n\nv1 = 1 + 2.0\nv1\n\n3.0\n\nisinstance(v1, int)\n\nFalse\n\nisinstance(v1, float)\n\nTrue\n\n\n\n\nv2 = True + 3\nv2\n\n4\n\nisinstance(v2, bool)\n\nFalse\n\nisinstance(v2, int)\n\nTrue\n\nisinstance(v2, float)\n\nFalse\n\n\n\n\nv3 = \"3\" + 4\n\nTypeError: can only concatenate str (not \"int\") to str\n\n\n\n\nv4 = \"3\" + \"4\"\nv4\n\n'34'\n\n\n\nPython will concatenate (smush together) strings using +\n\n\nVariables are converted to the least-complicated/least memory intensive compatible type."
   },
   {
     "objectID": "slides/04-building-blocks.html#explicit-type-conversions",
     "href": "slides/04-building-blocks.html#explicit-type-conversions",
     "title": "Building Blocks",
     "section": "Explicit Type Conversions",
-    "text": "Explicit Type Conversions\nYou can force things to be converted from one type to the other as well.\n\n\n3\n\n\n3\n\n\n3\n\n\nTrue\n\n\n\n\n[1] 3\n\n\n[1] 3\n\n\n[1] 3\n\n\n[1] TRUE"
+    "text": "Explicit Type Conversions\nYou can force things to be converted from one type to the other as well.\n\n\nPython\n\nint(\"3\")\n\n3\n\nint(3.14)\n\n3\n\nint(3.84)\n\n3\n\nbool(3.0)\n\nTrue\n\n\n\nR\n\nas.integer(\"3\")\n\n[1] 3\n\nas.integer(3.14)\n\n[1] 3\n\nas.integer(3.84)\n\n[1] 3\n\nas.logical(3.0)\n\n[1] TRUE"
+  },
+  {
+    "objectID": "slides/04-building-blocks.html#functions",
+    "href": "slides/04-building-blocks.html#functions",
+    "title": "Building Blocks",
+    "section": "Functions",
+    "text": "Functions\n\nA function is a sequence of commands that performs a task\nFunctions (sometimes) take arguments and (sometimes) return values\nWe call a function by running code with the function name and values:\n\n\nFunction anatomy"
+  },
+  {
+    "objectID": "slides/04-building-blocks.html#functions-1",
+    "href": "slides/04-building-blocks.html#functions-1",
+    "title": "Building Blocks",
+    "section": "Functions",
+    "text": "Functions\n\nA function is a sequence of commands that performs a task\nFunctions (sometimes) take arguments and (sometimes) return values\nWe call a function by running code with the function name and any necessary arguments\n\n\nFunction arguments"
+  },
+  {
+    "objectID": "slides/04-building-blocks.html#software-libraries",
+    "href": "slides/04-building-blocks.html#software-libraries",
+    "title": "Building Blocks",
+    "section": "Software Libraries",
+    "text": "Software Libraries\n\nWe often group commonly used, related functions into packages (R) or modules (Python)\nYou install a package with install.packages(\"pkgname\") (R) or pip install pkgname (Python)\nPackages/modules must be loaded before they can be used.\nlibrary(pkgname) (R)\nimport pkgname (Python)\nIn Python, you access the functions in a package by pkgname.funcname, even after you’ve imported it\nIn R, after the library is loaded, you access a function using funcname"
+  },
+  {
+    "objectID": "slides/04-building-blocks.html#python-package-functions",
+    "href": "slides/04-building-blocks.html#python-package-functions",
+    "title": "Building Blocks",
+    "section": "Python Package Functions",
+    "text": "Python Package Functions\npkgname.funcname can make for wordy code\nimport pkgname as pn allows you to use pn.funcname instead\nThis creates an alias for the package\nfrom pkgname import func1 func2 allows you to use func1() and func2() directly, without the package name\nThis directly imports ONLY the functions you need\n\nIt is considered bad practice to use from pkgname import *, which exposes all functions in the package directly.\n\nThis is bad because multiple packages could have the same function names inside\nThis very quickly leads to bugs"
   },
   {
     "objectID": "weeks/week-02.html",

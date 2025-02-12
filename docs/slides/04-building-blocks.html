@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.39">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-66ab7fd5e73b7f0a764e0d49b3e29ab1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.13">
 
   <title>Stat 151 - Spring 2025 – Building Blocks</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,6 +27,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-4374f734fb8e5747baf36fe2a09b260b.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -138,6 +203,16 @@
 </div>
 
 </section>
+<section id="husker-power-survey" class="slide level2">
+<h2>Husker POWER survey</h2>
+<ul>
+<li>Link sent out via Canvas/Email</li>
+</ul>
+<p>The Husker Student POWER survey is currently open to first year and new transfer students.</p>
+<p>The survey consists of 12 yes/no statements about academic, social, financial, and emotional well-being topics.</p>
+<p>Staff and instructors with expertise use the survey responses to provide support and resources to students whose responses raise concerns.</p>
+<p>Take a minute and complete the survey if you haven’t already!</p>
+</section>
 <section id="variables" class="slide level2">
 <h2>Variables</h2>
 <ul>
@@ -145,131 +220,393 @@
 <li><p>Assign: Set the value of a variable</p></li>
 </ul>
 <p>In modern languages (R, Python, etc.) these two steps are usually done simultaneously</p>
-<p><code>x &lt;- 3</code> or <code>y = "hello world"</code> in R and Python respectively</p>
+<p><code>x &lt;- 3</code> (R)<br>
+<code>y = "hello world"</code> (Python)</p>
 </section>
 <section id="naming-things" class="slide level2">
 <h2>Naming Things</h2>
 <ul>
 <li>Variable names can’t
 <ul>
-<li>start with a number or symbol</li>
-<li>include <code>.</code> (Python only)</li>
+<li>start with a number</li>
+<li>start with a symbol (_ is ok in Python)</li>
+<li>include <code>.</code> (Python)</li>
 <li>be a reserved word</li>
 </ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>_x <span class="ot">&lt;-</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in parse(text = input): &lt;text&gt;:1:2: unexpected symbol
+1: _x
+     ^</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="dv">3</span>x <span class="ot">&lt;-</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in parse(text = input): &lt;text&gt;:1:2: unexpected symbol
+1: 3x
+     ^</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="cf">if</span> <span class="ot">&lt;-</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in parse(text = input): &lt;text&gt;:1:4: unexpected assignment
+1: if &lt;-
+       ^</code></pre>
+</div>
+</div>
+</section>
+<section id="naming-things-1" class="slide level2">
+<h2>Naming Things</h2>
+<ul>
+<li>Variable names can’t
+<ul>
+<li>start with a number</li>
+<li>start with a symbol (_ is ok in Python)</li>
+<li>include <code>.</code> (Python)</li>
+<li>be a reserved word</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>x.y <span class="op">=</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>NameError: name 'x' is not defined</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>$y <span class="op">=</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>invalid syntax (&lt;string&gt;, line 1)</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="dv">3</span><span class="er">y</span> <span class="op">=</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>invalid decimal literal (&lt;string&gt;, line 1)</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="cf">if</span> <span class="op">=</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>invalid syntax (&lt;string&gt;, line 1)</code></pre>
+</div>
+</div>
+</section>
+<section id="naming-things-2" class="slide level2">
+<h2>Naming Things</h2>
+<p>When you create a variable:</p>
+<ul>
 <li>Choose descriptive names
 <ul>
-<li>Match the equation (if math)</li>
+<li>Match the equation/formula (if math)</li>
 <li>May want to include units <code>length_mm</code></li>
+</ul></li>
 <li>Avoid single character names where possible<br>
 <code>c</code> in particular is a bad name in R!</li>
-</ul></li>
+<li>Balance length and clarity/information</li>
 </ul>
 </section>
 <section id="basic-variable-types" class="slide level2">
 <h2>Basic Variable Types</h2>
 <ul>
-<li>Integer - 2, 6, 109243</li>
-<li>Double - 3.1415, 2.7, 9.0</li>
-<li>String - “ABCDE”, ” “,”Eddie is a Jack Russell Terrorist”</li>
-<li>Boolean - True, False</li>
+<li>Integer - 2, 6, 109243
+<ul>
+<li>R calls these ‘integer’, Python calls them ‘int’</li>
+</ul></li>
+<li>Floating point - 3.1415, 2.7, 9.0
+<ul>
+<li>R calls these ‘double’, Python calls them ‘float’ <sup>1</sup></li>
+</ul></li>
+<li>String - “ABCDE”, “&nbsp;” , “Eddie is a Jack Russell Terrorist”
+<ul>
+<li>R calls these ‘character’, Python calls them ‘str’</li>
+</ul></li>
+<li>Boolean - True, False
+<ul>
+<li>R calls these ‘logical’, Python calls them ‘bool’</li>
+</ul></li>
 </ul>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>The difference between double and float is technical and involves how many decimal places of precision are allocated in memory.</p></li></ol></aside></section>
 <section id="testing-types" class="slide level2">
 <h2>Testing Types</h2>
-<p>Use a function to test if the type of <code>y</code> is `xxx</p>
+<p>Use a function to test if the type of <code>y</code> is <code>xxx</code></p>
 <p>R: <code>is.xxx(y)</code></p>
 <p>Python: <code>isInstance(y, xxx)</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">is.logical</span>(<span class="fl">3.14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">is.character</span>(<span class="fl">3.14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">is.character</span>(<span class="st">"3.14"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">is.integer</span>(<span class="fl">3.14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">is.numeric</span>(<span class="st">"pi"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">is.numeric</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="testing-types-1" class="slide level2">
+<h2>Testing Types</h2>
+<p>Use a function to test if the type of <code>y</code> is <code>xxx</code></p>
+<p>R: <code>is.xxx(y)</code></p>
+<p>Python: <code>isinstance(y, xxx)</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span>
+<span id="cb27-2"><a></a><span class="bu">isinstance</span>(<span class="fl">3.14</span>, <span class="bu">bool</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="bu">isinstance</span>(<span class="fl">3.14</span>, <span class="bu">str</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a><span class="bu">isinstance</span>(<span class="st">"3.14"</span>, <span class="bu">str</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="bu">isinstance</span>(<span class="fl">3.14</span>, <span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a></a><span class="bu">isinstance</span>(<span class="st">"pi"</span>, <span class="bu">float</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a></a><span class="bu">isinstance</span>(pi, <span class="bu">float</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
 </section>
 <section id="implicit-type-conversions" class="slide level2">
 <h2>Implicit Type Conversions</h2>
 <p>R and Python will both try to work with types that don’t match… to a point</p>
+<div class="columns">
+<div class="column" style="width:25%;">
 <div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>v1 <span class="ot">&lt;-</span> <span class="dv">1</span>L <span class="sc">+</span> <span class="fl">2.0</span></span>
+<span id="cb39-2"><a></a>v1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<pre><code>[1] 3</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">is.integer</span>(v1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">is.double</span>(v1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>v2 <span class="ot">&lt;-</span> <span class="cn">TRUE</span> <span class="sc">+</span> <span class="dv">3</span>L</span>
+<span id="cb45-2"><a></a>v2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">is.logical</span>(v2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">is.integer</span>(v2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">is.double</span>(v2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div>
+</div><div class="column" style="width:25%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a>v3 <span class="ot">&lt;-</span> <span class="st">"3"</span> <span class="sc">+</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in "3" + 4: non-numeric argument to binary operator</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a>v4 <span class="ot">&lt;-</span> <span class="st">"3"</span> <span class="sc">+</span> <span class="st">"4"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in "3" + "4": non-numeric argument to binary operator</code></pre>
+</div>
+</div>
+</div></div>
 <p>Variables are converted to the least-complicated/least memory intensive compatible type.</p>
 </section>
 <section id="implicit-type-conversions-1" class="slide level2">
 <h2>Implicit Type Conversions</h2>
 <p>R and Python will both try to work with types that don’t match… to a point</p>
+<div class="columns">
+<div class="column" style="width:25%;">
 <div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a></a>v1 <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="fl">2.0</span></span>
+<span id="cb57-2"><a></a>v1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>4.0</code></pre>
+<pre><code>3.0</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a></a><span class="bu">isinstance</span>(v1, <span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>False</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a></a><span class="bu">isinstance</span>(v1, <span class="bu">float</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a></a>v2 <span class="op">=</span> <span class="va">True</span> <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb63-2"><a></a>v2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>4</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a></a><span class="bu">isinstance</span>(v2, <span class="bu">bool</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>False</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a></a><span class="bu">isinstance</span>(v2, <span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a></a><span class="bu">isinstance</span>(v2, <span class="bu">float</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>False</code></pre>
 </div>
 </div>
+</div><div class="column" style="width:25%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a></a>v3 <span class="op">=</span> <span class="st">"3"</span> <span class="op">+</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>TypeError: can only concatenate str (not "int") to str</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a></a>v4 <span class="op">=</span> <span class="st">"3"</span> <span class="op">+</span> <span class="st">"4"</span></span>
+<span id="cb73-2"><a></a>v4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'34'</code></pre>
+</div>
+</div>
+<div class="fragment">
+<p><span class="emph cerulean">Python will <strong>concatenate</strong> (smush together) strings using <code>+</code></span></p>
+</div>
+</div></div>
 <p>Variables are converted to the least-complicated/least memory intensive compatible type.</p>
 </section>
 <section id="explicit-type-conversions" class="slide level2">
 <h2>Explicit Type Conversions</h2>
 <p>You can force things to be converted from one type to the other as well.</p>
+<div class="columns">
+<div class="column">
+<h4 id="python">Python</h4>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a></a><span class="bu">int</span>(<span class="st">"3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a></a><span class="bu">int</span>(<span class="fl">3.14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a></a><span class="bu">int</span>(<span class="fl">3.84</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a></a><span class="bu">bool</span>(<span class="fl">3.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
 </div>
+</div><div class="column">
+<h4 id="r">R</h4>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a></a><span class="fu">as.integer</span>(<span class="st">"3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a></a><span class="fu">as.integer</span>(<span class="fl">3.14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a></a><span class="fu">as.integer</span>(<span class="fl">3.84</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a></a><span class="fu">as.logical</span>(<span class="fl">3.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
+</div></div>
+</section>
+<section id="functions" class="slide level2">
+<h2>Functions</h2>
+<ul>
+<li><p>A function is a sequence of commands that performs a task</p></li>
+<li><p>Functions (sometimes) take <strong>arguments</strong> and (sometimes) <strong>return</strong> values</p></li>
+<li><p>We <strong>call</strong> a function by running code with the function name and values:</p></li>
+</ul>
+
+<img data-src="images/function-anatomy-1.excalidraw.png" alt="The `lm` function in R. The text 'lm(formula = y ~ x, data = mtcars)' is shown in blue, and each part of that sequence is annotated with additional information. A box around 'lm' is accompanied by text that says lm = linear model, function name. Boxes around formula and data have an annotation indicating that these are parameter names. Boxes around 'y ~ x' and 'mtcars' indicate that these are parameter values. The parentheses immediately after lm and at the end of the line are annotated with the information that function calls have parentheses around the arguments. The comma between 'y ~ x' and 'data' is annotated with the information that arguments are separated by commas." class="r-stretch quarto-figure-center"><p class="caption">Function anatomy</p></section>
+<section id="functions-1" class="slide level2">
+<h2>Functions</h2>
+<ul>
+<li><p>A function is a sequence of commands that performs a task</p></li>
+<li><p>Functions (sometimes) take <strong>arguments</strong> and (sometimes) <strong>return</strong> values</p></li>
+<li><p>We <strong>call</strong> a function by running code with the function name and any necessary arguments</p></li>
+</ul>
+
+<img data-src="images/function-anatomy-2.excalidraw.png" alt="The `lm` function in R. The text 'lm(formula = y ~ x, data = mtcars)' is shown in blue, with orange boxes around 'formula = y ~ x' and 'data = mtcars'. Orange text above the boxes reads 'arguments = values you pass in to the functions', and text below the boxes reads 'arguments may be named or unnamed'." class="r-stretch quarto-figure-center"><p class="caption">Function arguments</p></section>
+<section id="software-libraries" class="slide level2">
+<h2>Software Libraries</h2>
+<ul>
+<li><p>We often group commonly used, related functions into <strong>packages</strong> (R) or <strong>modules</strong> (Python)</p></li>
+<li><p>You install a package with <code>install.packages("pkgname")</code> (R) or <code>pip install pkgname</code> (Python)</p></li>
+<li><p>Packages/modules must be <strong>loaded</strong> before they can be used.<br>
+<code>library(pkgname)</code> (R)<br>
+<code>import pkgname</code> (Python)</p></li>
+<li><p>In Python, you access the functions in a package by <code>pkgname.funcname</code>, even after you’ve imported it</p></li>
+<li><p>In R, after the library is loaded, you access a function using <code>funcname</code></p></li>
+</ul>
+</section>
+<section id="python-package-functions" class="slide level2">
+<h2>Python Package Functions</h2>
+<p><code>pkgname.funcname</code> can make for wordy code</p>
+<p><code>import pkgname as pn</code> allows you to use <code>pn.funcname</code> instead<br>
+<span class="fragment">This creates an <span class="emph cerulean">alias</span> for the package</span></p>
+<p><code>from pkgname import func1 func2</code> allows you to use <code>func1()</code> and <code>func2()</code> directly, without the package name<br>
+<span class="fragment">This directly imports ONLY the functions you need</span></p>
+<div class="fragment">
+<p>It is considered bad practice to use <code>from pkgname import *</code>, which exposes all functions in the package directly.</p>
+<ul>
+<li>This is bad because multiple packages could have the same function names inside</li>
+<li>This very quickly leads to bugs</li>
+</ul>
+</div>
 
 
 </section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

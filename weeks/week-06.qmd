@@ -12,6 +12,11 @@
 
 - [ ] Read [Homework 5 tips for success](../homework/05-tips-for-success.qmd) and make sure you understand local vs. global file paths
 
+## 🐪 Wednesday
+
+- For loops and if statements 
+- [Slides](../slides/06-if-statements.qmd)
+
 ##  🏋️ Practice your skills
 
 - [ ] [Homework 5](../homework/05-vectors.qmd)

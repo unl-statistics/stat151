@@ -1317,7 +1317,7 @@
     "href": "weeks/week-06.html",
     "title": "Week 6: Control Structures",
     "section": "",
-    "text": "Control Structures\n\n\n\n\nWeek 6 Reading Quiz\n\n\n\n\n\n\nRead Homework 5 tips for success and make sure you understand local vs. global file paths\n\n\n\n\n\nHomework 5",
+    "text": "Control Structures\n\n\n\n\nWeek 6 Reading Quiz\n\n\n\n\n\n\nRead Homework 5 tips for success and make sure you understand local vs. global file paths\n\n\n\n\n\nFor loops and if statements\nSlides\n\n\n\n\n\nHomework 5",
     "crumbs": [
       "Weekly materials",
       "Week 6 - Control Structures"
@@ -1340,6 +1340,17 @@
     "title": "Week 6: Control Structures",
     "section": "",
     "text": "Read Homework 5 tips for success and make sure you understand local vs. global file paths",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6 - Control Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-06.html#wednesday",
+    "href": "weeks/week-06.html#wednesday",
+    "title": "Week 6: Control Structures",
+    "section": "",
+    "text": "For loops and if statements\nSlides",
     "crumbs": [
       "Weekly materials",
       "Week 6 - Control Structures"

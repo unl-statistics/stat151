@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-66ab7fd5e73b7f0a764e0d49b3e29ab1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.13">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.39">
 
   <title>Stat 151 - Spring 2025 – Building Blocks</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -237,7 +237,7 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>_x <span class="ot">&lt;-</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in parse(text = input): &lt;text&gt;:1:2: unexpected symbol
+<pre><code>Error: &lt;text&gt;:1:2: unexpected symbol
 1: _x
      ^</code></pre>
 </div>
@@ -245,7 +245,7 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="dv">3</span>x <span class="ot">&lt;-</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in parse(text = input): &lt;text&gt;:1:2: unexpected symbol
+<pre><code>Error: &lt;text&gt;:1:2: unexpected symbol
 1: 3x
      ^</code></pre>
 </div>
@@ -253,7 +253,7 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="cf">if</span> <span class="ot">&lt;-</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in parse(text = input): &lt;text&gt;:1:4: unexpected assignment
+<pre><code>Error: &lt;text&gt;:1:4: unexpected assignment
 1: if &lt;-
        ^</code></pre>
 </div>
@@ -272,8 +272,8 @@
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>x.y <span class="op">=</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>NameError: name 'x' is not defined</code></pre>
+<div class="cell-output cell-output-error">
+<pre><code>Error: NameError: name 'x' is not defined</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -495,8 +495,8 @@
 </div><div class="column" style="width:25%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a></a>v3 <span class="op">=</span> <span class="st">"3"</span> <span class="op">+</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>TypeError: can only concatenate str (not "int") to str</code></pre>
+<div class="cell-output cell-output-error">
+<pre><code>Error: TypeError: can only concatenate str (not "int") to str</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:25%;">

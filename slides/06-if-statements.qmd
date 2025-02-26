@@ -10,3 +10,132 @@ execute:
   error: true
 ---
 
+## Controlling your program execution
+
+Two primary methods:
+
+- if/else statements
+- loops
+
+## If Statements
+
+::: columns
+
+::: column
+#### R
+
+```{r}
+set.seed(1432309)
+x <- sample(1:10, 1)
+y <- NA # NA is a good placeholder value
+
+if(x > 3) {
+  if (x > 5) {
+    y <- "above 5"
+  } else {
+    y <- "between 3 and 5"
+  }
+} else {
+  y <- "below 3"
+}
+
+print(paste("according to y, x is ", y))
+print(paste("x =", x))
+```
+
+:::
+
+::: column
+#### Python
+
+```{python}
+import random
+import numpy as np
+
+random.seed(1432309)
+x = random.randint(1, 11)
+y = np.nan # NA is a good placeholder value
+
+if x > 3:
+  if x > 5:
+    y = "above 5"
+  else :
+    y = "between 3 and 5"
+else :
+  y = "below 3"
+
+"according to y, x is " + y
+"x = " + str(x)
+```
+
+:::
+
+:::
+
+## Flow Charts
+
+Program Flow Diagrams or control diagrams are used to describe the logical steps followed by a program
+
+![](images/flow-chart-if-statements.png){fig-alt="A program flow diagram describing the program on the previous slide"}
+
+## Loops
+
+Loops do the same set of steps for multiple values (usually either in a sequence or in a vector/column). 
+
+
+::: columns
+
+::: column
+#### R
+
+```{r}
+set.seed(1432309)
+x <- sample(1:10, 5) # Sample 5 values, this time
+y <- rep(NA, length(x)) # NA is a good placeholder value
+
+for(i in 1:length(x)) { # First val in x, second, and so on...
+  if(x[i] > 3) {
+  if (x[i] > 5) {
+    y[i] <- "above 5"
+  } else {
+    y[i] <- "between 3 and 5"
+  }
+} else {
+  y[i] <- "below 3"
+}
+}
+
+
+print(paste0("according to y, x is ", y, " (x = ", x, ")"))
+```
+
+:::
+
+::: column
+#### Python
+
+```{python}
+import random
+import numpy as np
+
+random.seed(1432309)
+x = random.choices(range(1, 11), k = 5)
+y = np.full(shape=5, fill_value="*"*15) # NA is a good placeholder value
+
+for i, xval in enumerate(x):
+  if xval > 3:
+    if xval > 5:
+      y[i] = "above 5"
+    else :
+      y[i] = "between 3 and 5"
+  else :
+    y[i] = "below 3"
+
+
+# This is a "list comprehension" - an abbreviated for loop used to work with vectors
+["according to y, x is " + y[i] + " (x=" + str(x[i]) + ")" for i, xval in enumerate(x)]
+```
+
+:::
+
+:::

@@ -86,7 +86,13 @@ Export your map to a png, upload it to an image hosting site like imgur, and inc
 ### Part 2 - Writing the code
 
 
-You have two files, `hw4data-r.txt` and `hw4data-py.txt`. I have provided you with code to read the data in from these files (if they aren't in your current working directory, run the chunk in the Set-up section, which creates the files).
+You have two files, `hw5data-r.txt` and `hw5data-py.txt`. 
+I have provided you with code to read the data in from these files (if they aren't in your current working directory, run the chunk in the Set-up section, which creates the files).
+Edit the code below the comment in the following chunks, storing your answer in the `nx` and `nx2` variables. 
+Do NOT edit the text below the code chunk -- it demonstrates how you can use values from a code chunk in normal text in your document. 
+This is a *very* useful tool when writing reports and larger projects, as you can make your text depend on the data, producing customized documents that have the same structure for different data sets. 
+
+Please do NOT print your entire vector of sonar measurements out -- this takes a LOT to scroll through, and will make me very grumpy when I grade your assignment. 
 
 #### R 
 

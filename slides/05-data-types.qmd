@@ -1,0 +1,110 @@
+---
+title: "Data Types"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+execute:
+  echo: true
+  error: true
+---
+
+
+## Essential Data Types
+
+- List
+
+  - heterogeneous (can hold different things)
+  - no real other constraints
+  - in R, list components can be named
+  - in Python, list components are not named
+  
+  - indexed numerically (R and Python) and by names (R)
+
+## Essential Data Types
+
+- Data Frame
+
+  - heterogeneous (can hold different things)
+  - collection of vectors or lists of the **same length**
+  - access pieces 
+      - numerical indexing (R and Python) 
+      - by column names (R and Python)
+      - by row names (Python, mostly)
+
+A data frame is just a list with additional constraints (in R)
+
+
+## Creating Data Frames
+
+::: columns
+
+::: column
+
+```{r}
+mydf <- data.frame(a = 1:10, b = letters[1:10])
+head(mydf)
+```
+
+:::
+
+::: column
+
+```{python}
+import numpy as np
+import pandas as pd
+import string
+
+mydf = pd.DataFrame({
+  'a': np.array(range(0,10)), 
+  'b': list(string.ascii_lowercase[0:10])
+})
+
+mydf
+```
+
+:::
+
+:::
+
+## Indexing Data Frames
+
+Selecting a column by name:
+
+```{r}
+mydf$a # get column a as a vector
+
+mydf[["a"]]
+
+mydf["a"] # This gets a single-col data frame, not a vector
+```
+
+```{python}
+mydf["a"]
+
+mydf.a
+
+mydf.loc[:,"a"]
+```
+
+
+## Indexing Data Frames
+
+Selecting a column by position:
+
+```{r}
+mydf[,1] # get all rows, first col
+mydf[2:5, 2] # get rows 2-5, second col
+
+mydf[[1]]
+
+mydf[1] # This gets a data frame with the first column
+```
+
+```{python}
+mydf.iloc[:,0] # get all rows, first column
+
+mydf.iloc[1:5,1] # get rows 2-5 (1-4 by python indexing) 
+                 # in the second column (index = 1)
+```

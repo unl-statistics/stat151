@@ -1,0 +1,140 @@
+---
+title: "Functions ... Putting it all together"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+execute:
+  echo: true
+  error: true
+---
+## Why functions?
+
+
+```{css, echo=F}
+code.sourceCode {
+  font-size: 1.3em;
+  /* or try font-size: xx-large; */
+}
+```
+
+- DRY principle: Don't Repeat Yourself
+    - It's easier to fix/update code in one place than in 10
+    - Lazy programming = best programming
+
+- Use **parameters** to tweak function behavior (more customization)
+
+
+## Steps to make a function
+
+- Write code to do the task once
+
+- Modify code to make it more abstract
+    - replace variable names with understandable parameter names
+    - consider variations on the task and decide if you want to include them
+
+- Wrap it in a function -- define the function name and parameters
+
+- Add error handling - check inputs, necessary conditions
+
+## Example: Solve the Quadratic Formula
+### Write some code
+
+```{r}
+# Assume we have an equation ax^2 + bx + c = 0
+# Solve for x
+
+a = 1
+b = 5
+c = 2
+
+x1 = (-b + sqrt(b^2-4*a*c))/(2*a)
+x2 = (-b - sqrt(b^2-4*a*c))/(2*a)
+
+c(x1, x2)
+```
+
+## Example: Solve the Quadratic Formula
+### Abstract the code
+
+```{r}
+# Assume we have an equation ax^2 + bx + c = 0
+# Solve for x
+
+# Defined outside -- make more readable names
+x2coeff = 1
+xcoeff = 5
+intcoeff = 2
+
+## Extra parameter
+under_sqrt = xcoeff^2-4*x2coeff*intcoeff
+# need to check if under_sqrt is nonnegative
+if (under_sqrt < 0) {
+  print("Determinant is negative. Zeros will be imaginary.")
+}
+
+x1 = (-xcoeff + sqrt(under_sqrt))/(2*x2coeff)
+x2 = (-xcoeff - sqrt(under_sqrt))/(2*x2coeff)
+
+c(x1, x2)
+```
+
+## Example: Solve the Quadratic Formula
+### Wrap in a function
+
+```{r}
+# Assume we have an equation ax^2 + bx + c = 0
+# Solve for x
+quad_formula <- function(x2coeff, xcoeff, intcoeff) {
+  ## Extra parameter
+  under_sqrt = xcoeff^2-4*x2coeff*intcoeff
+  
+  # need to check if under_sqrt is nonnegative
+  if (under_sqrt < 0) {
+    print("Determinant is negative. Zeros will be imaginary.")
+  }
+  
+  x1 = (-xcoeff + sqrt(under_sqrt))/(2*x2coeff)
+  x2 = (-xcoeff - sqrt(under_sqrt))/(2*x2coeff)
+  
+  return(c(x1, x2))
+}
+
+# Test the function
+quad_formula(1, 5, 2)
+quad_formula(x2coeff = 1, xcoeff = 5, intcoeff = 2)
+
+```
+
+## Example: Solve the Quadratic Formula
+### Error Handling
+
+
+```{r}
+# Assume we have an equation ax^2 + bx + c = 0
+# Solve for x
+quad_formula <- function(x2coeff, xcoeff, intcoeff) {
+  # Ensure parameters are numeric before doing math with them
+  stopifnot(is.numeric(x2coeff) & is.numeric(xcoeff) & is.numeric(intcoeff))
+  
+  ## Extra parameter
+  under_sqrt = xcoeff^2-4*x2coeff*intcoeff
+  
+  # need to check if under_sqrt is nonnegative
+  if (under_sqrt < 0) {
+    print("Determinant is negative. Zeros will be imaginary.")
+  }
+  
+  x1 = (-xcoeff + sqrt(under_sqrt))/(2*x2coeff)
+  x2 = (-xcoeff - sqrt(under_sqrt))/(2*x2coeff)
+  
+  return(c(x1, x2))
+}
+
+# Test the function
+quad_formula(1, 5, 2)
+quad_formula(x2coeff = 1, xcoeff = 5, intcoeff = 2)
+quad_formula("A", "B", "C")
+```
+

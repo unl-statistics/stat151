@@ -1630,5 +1630,47 @@
       "Course information",
       "Description"
     ]
+  },
+  {
+    "objectID": "slides/07-functions.html#why-functions",
+    "href": "slides/07-functions.html#why-functions",
+    "title": "Functions … Putting it all together",
+    "section": "Why functions?",
+    "text": "Why functions?\n\n\n\n\nDRY principle: Don’t Repeat Yourself\n\nIt’s easier to fix/update code in one place than in 10\nLazy programming = best programming\n\nUse parameters to tweak function behavior (more customization)"
+  },
+  {
+    "objectID": "slides/07-functions.html#steps-to-make-a-function",
+    "href": "slides/07-functions.html#steps-to-make-a-function",
+    "title": "Functions … Putting it all together",
+    "section": "Steps to make a function",
+    "text": "Steps to make a function\n\nWrite code to do the task once\nModify code to make it more abstract\n\nreplace variable names with understandable parameter names\nconsider variations on the task and decide if you want to include them\n\nWrap it in a function – define the function name and parameters\nAdd error handling - check inputs, necessary conditions"
+  },
+  {
+    "objectID": "slides/07-functions.html#example-solve-the-quadratic-formula",
+    "href": "slides/07-functions.html#example-solve-the-quadratic-formula",
+    "title": "Functions … Putting it all together",
+    "section": "Example: Solve the Quadratic Formula",
+    "text": "Example: Solve the Quadratic Formula\nWrite some code\n\n# Assume we have an equation ax^2 + bx + c = 0\n# Solve for x\n\na = 1\nb = 5\nc = 2\n\nx1 = (-b + sqrt(b^2-4*a*c))/(2*a)\nx2 = (-b - sqrt(b^2-4*a*c))/(2*a)\n\nc(x1, x2)\n\n[1] -0.4384472 -4.5615528"
+  },
+  {
+    "objectID": "slides/07-functions.html#example-solve-the-quadratic-formula-1",
+    "href": "slides/07-functions.html#example-solve-the-quadratic-formula-1",
+    "title": "Functions … Putting it all together",
+    "section": "Example: Solve the Quadratic Formula",
+    "text": "Example: Solve the Quadratic Formula\nAbstract the code\n\n# Assume we have an equation ax^2 + bx + c = 0\n# Solve for x\n\n# Defined outside -- make more readable names\nx2coeff = 1\nxcoeff = 5\nintcoeff = 2\n\n## Extra parameter\nunder_sqrt = xcoeff^2-4*x2coeff*intcoeff\n# need to check if under_sqrt is nonnegative\nif (under_sqrt &lt; 0) {\n  print(\"Determinant is negative. Zeros will be imaginary.\")\n}\n\nx1 = (-xcoeff + sqrt(under_sqrt))/(2*x2coeff)\nx2 = (-xcoeff - sqrt(under_sqrt))/(2*x2coeff)\n\nc(x1, x2)\n\n[1] -0.4384472 -4.5615528"
+  },
+  {
+    "objectID": "slides/07-functions.html#example-solve-the-quadratic-formula-2",
+    "href": "slides/07-functions.html#example-solve-the-quadratic-formula-2",
+    "title": "Functions … Putting it all together",
+    "section": "Example: Solve the Quadratic Formula",
+    "text": "Example: Solve the Quadratic Formula\nWrap in a function\n\n# Assume we have an equation ax^2 + bx + c = 0\n# Solve for x\nquad_formula &lt;- function(x2coeff, xcoeff, intcoeff) {\n  ## Extra parameter\n  under_sqrt = xcoeff^2-4*x2coeff*intcoeff\n  \n  # need to check if under_sqrt is nonnegative\n  if (under_sqrt &lt; 0) {\n    print(\"Determinant is negative. Zeros will be imaginary.\")\n  }\n  \n  x1 = (-xcoeff + sqrt(under_sqrt))/(2*x2coeff)\n  x2 = (-xcoeff - sqrt(under_sqrt))/(2*x2coeff)\n  \n  return(c(x1, x2))\n}\n\n# Test the function\nquad_formula(1, 5, 2)\n\n[1] -0.4384472 -4.5615528\n\nquad_formula(x2coeff = 1, xcoeff = 5, intcoeff = 2)\n\n[1] -0.4384472 -4.5615528"
+  },
+  {
+    "objectID": "slides/07-functions.html#example-solve-the-quadratic-formula-3",
+    "href": "slides/07-functions.html#example-solve-the-quadratic-formula-3",
+    "title": "Functions … Putting it all together",
+    "section": "Example: Solve the Quadratic Formula",
+    "text": "Example: Solve the Quadratic Formula\nError Handling\n\n# Assume we have an equation ax^2 + bx + c = 0\n# Solve for x\nquad_formula &lt;- function(x2coeff, xcoeff, intcoeff) {\n  # Ensure parameters are numeric before doing math with them\n  stopifnot(is.numeric(x2coeff) & is.numeric(xcoeff) & is.numeric(intcoeff))\n  \n  ## Extra parameter\n  under_sqrt = xcoeff^2-4*x2coeff*intcoeff\n  \n  # need to check if under_sqrt is nonnegative\n  if (under_sqrt &lt; 0) {\n    print(\"Determinant is negative. Zeros will be imaginary.\")\n  }\n  \n  x1 = (-xcoeff + sqrt(under_sqrt))/(2*x2coeff)\n  x2 = (-xcoeff - sqrt(under_sqrt))/(2*x2coeff)\n  \n  return(c(x1, x2))\n}\n\n# Test the function\nquad_formula(1, 5, 2)\n\n[1] -0.4384472 -4.5615528\n\nquad_formula(x2coeff = 1, xcoeff = 5, intcoeff = 2)\n\n[1] -0.4384472 -4.5615528\n\nquad_formula(\"A\", \"B\", \"C\")\n\nError in quad_formula(\"A\", \"B\", \"C\"): is.numeric(x2coeff) & is.numeric(xcoeff) & is.numeric(intcoeff) is not TRUE"
   }
 ]

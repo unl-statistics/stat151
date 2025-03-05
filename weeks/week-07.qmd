@@ -14,6 +14,11 @@
 This provides me with helpful feedback and lets me calibrate the course for the 2nd half of the semester. 
 - [ ] Homework resubmission deadline is next week! Be sure to finish up any homework you’d like to resubmit.
 
+## 🐪 Wednesday
+
+- [Slides](../slides/07-functions.qmd)
+- [Exam Topics](../slides/08-exam-review.qmd)
+
 ##  🏋️ Practice your skills
 
 - [ ] [Homework 6](../homework/06-fizzbuzz.qmd)

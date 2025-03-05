@@ -9,6 +9,7 @@ execute:
   echo: true
   error: true
 ---
+
 ## Why functions?
 
 

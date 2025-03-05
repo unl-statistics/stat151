@@ -1,0 +1,74 @@
+---
+title: "Exam Review"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+execute:
+  echo: true
+  error: true
+---
+
+## General Rules
+
+- In class
+- Open note and book
+- NOT open internet
+
+- Expect to be in class for the full 2h period
+
+- Bring a pencil and your computer (charged, please!)
+- I will supply scratch paper
+
+## Grading
+
+- Your goal is to demonstrate that you can do specific tasks in R and/or python
+
+- Demonstrating the task in one language = 75% credit, both languages = 100% credit
+
+- In most (but not all) cases, you'll have multiple tries at a task
+
+- Hints can be obtained by sacrificing some credit on a task
+
+- If you can't get through a task, you can ask for the solution,     
+sacrificing credit for that task attempt
+  - This allows you to attempt the next part of the problem
+
+## Format
+
+- Two multi-part problems
+
+- Each part demonstrates a skill
+
+Ideally, you will have multiple chances to demonstrate a skill.
+
+## Tasks
+
+Programming: 
+
+- Install packages (wk 2-3)
+- Load packages and/or functions from packages (wk 3-5)
+- Use functions someone else wrote (wk 3-4)
+- Logical Indexing (wk 5)
+- Create Vectors and Data Frames (wk 5)
+- Index Vectors and Data Frames (wk 5)
+- Basic String operations (print, repeat, paste)
+- If Statements (wk 6)
+- Writing Functions (wk 7)
+- Checking types/Validating user input (wk 7)
+
+## Tasks
+
+Computational Thinking: 
+
+- Program Flow maps (wk 6)
+- Combining sub-problems (wk 6-7)
+
+
+Reproducibility:
+
+- Use quarto
+- Edit code chunks or write new ones
+- Format non-code content appropriately
+- Compile your document

@@ -3,6 +3,8 @@
 ## 🥣 Prepare for class
 
 - [ ] Study for your midterm exam!
+  - [ ] [Midterm from 2024](../homework/08-practice-midterm.qmd)
+  - [ ] [Sample solutions to 2024 midterm](../homework/08-practice-midterm-key.qmd)
 
 ##  🏋️ Practice your skills
 

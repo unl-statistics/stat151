@@ -1,0 +1,207 @@
+---
+title: 2024 Stat 151 Midterm Exam
+format: html
+---
+
+Note: This exam was given as a take-home exam - students had about 2 days to complete the exam. 
+
+Your exam will be different - you will have to work in both R and python. 
+
+This exam did not cover functions, because of differences in where spring break fell relative to the semester start. 
+
+If the exam had covered functions, I would probably have asked you to write a function that did this task: 
+
+> Write a function that takes the year and a data frame, and calculates the proportion of very happy 20 year olds for that year.
+
+Then, I would have had you use that function to assemble the summary data frame. 
+
+## Instructions
+
+
+1.  Create a folder for this exam on your computer. Name it `midterm-lastname-firstname`
+
+2.  Save this file into that folder.
+
+3.  When you are finished with the exam, compile this file. Make sure all of your code runs!
+
+4.  Zip the folder you created (with any necessary file dependencies) and upload this zip file to  Canvas.
+
+
+## Ground Rules
+
+-   You may use the textbook and the internet (but the normal rules apply - you must be able to explain your answer!)
+
+-   You may NOT confer with other people or AI entities - including posting on StackOverflow, Reddit, etc.
+
+-   You may ask clarifying questions of the instructor or TA by email/zoom or in person
+
+-   You may use R or Python for any of these tasks, but your code must be reproducible - I must be able to run your quarto file on my machine. I have provided R chunks in the correct locations in this file - change them to Python if you wish.
+
+-   You should have at least one code chunk for each numbered task below.
+
+
+## Data Description
+
+
+The data for this exam are taken from the `happy` dataset in the `classdata` R package. I've exported the data to CSV for you at this link: https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv
+
+Note: You can use this link directly when you read in the data - most commands in R and python will accept URLs as well as file names. 
+
+### Description
+
+The data is a small sample of variables related to happiness from the general social survey (GSS). The GSS is a yearly cross-sectional survey of Americans, run since 1972. We combine data for more than 25 years to yield over 60 thousand observations, and of the over 5,000 variables, we select some variables that are related to happiness:
+
+### Format
+
+A data frame with 62466 rows and 11 variables
+
+### Details
+
+-   year. year of the response, 1972 to 2018.
+
+-   age. age in years: 18–89 (89 stands for all 89 year olds and older).
+
+-   degree. highest education: lt high school, high school, junior college, bachelor, graduate.
+
+-   finrela. how is your financial status compared to others: far below, below average, average, above average, far above.
+
+-   happy. happiness: very happy, pretty happy, not too happy.
+
+-   health. health: excellent, good, fair, poor.
+
+-   marital. marital status: married, never married, divorced, widowed, separated.
+
+-   sex. sex: female, male.
+
+-   polviews. from extremely conservative to extremely liberal.
+
+-   partyid. party identification: strong republican, not str republican, ind near rep, independent, ind near dem, not str democrat, strong democrat, other party.
+
+-   wtssall. probability weight. 0.39–8.74
+
+
+## Tasks
+
+
+### Reading in the data
+Read the CSV file using R or python. Store the resulting data in an object named `gss`.
+
+```{r}
+
+```
+
+### Missing Data
+
+
+Some data may be missing. Write code to create a `gss_clean` data frame that does not have any NAs in the `year`, `age`, or `happy` columns. 
+
+The `na.omit` and `DataFrame.dropna()` functions in R and python may be useful, but you will have to use non-default options; you can also solve this using `is.na` or `isna` in R and python plus more basic data frame manipulations.
+
+```{r}
+
+```
+
+Hint: Your data frame should have 57523 rows and 13 columns if you've done this correctly. 
+
+### Truncate age
+Create a new column variable, `age_dec`, in your data frame. This variable must be a column in the `gss_clean` data frame. 
+
+- Take the respondent's age and truncate it to the decade, so that 72 becomes 70 and 89 becomes 1980. A series of logical statements is one way to accomplish this, but it may be more effective to find a numerical function or combination of functions that will do a mathematical calculation instead. `floor()` and `np.floor()` in R and python respectively are good places to start.
+        
+```{r}
+
+```
+
+- Create a scatterplot (use `geom_point`) of age vs decade to show that your approach succeeded.
+
+```{r}
+
+```
+
+
+  
+### Very Happy
+
+- Create a column in the `gss_clean` data frame, `very_happy`, that is TRUE (or 1) if the respondent reports being very happy. 
+
+```{r}
+
+```
+
+- How might you use this column to calculate the proportion of very happy people? Explain.
+
+Replace this line with your explanation
+
+
+
+### Happiness of 20-somethings over time
+
+Suppose that we want to examine how the happiness of 20-somethings changes over time. To do this, we need to have a data set that has the following structure: 
+
+year | very_happy | count
+---- | ------------- | ---------
+1972 |  0.279 | 369
+1973 |  0.288 | 347
+1974 |  0.304 | 349
+
+(these numbers are accurate, so you can use them to check whether you got the correct answer).
+
+
+- How could you get only responses from 20 year olds? Write code below to generate `gss_20`, a data frame containing only responses from 20 year olds, across all years of `gss_clean`.
+
+```{r}
+
+```
+
+Hint: Your data frame should have 11170 rows and 14 columns.
+
+
+- How could you get only responses from a single year of the `gss_clean` data? Write code below  to generate `gss_20_1972`, a data frame containing only responses from 20 year olds in 1972. 
+
+```{r}
+
+```
+
+Hint: Your data frame should have 369 rows and 14 columns.
+
+- If you had a dataset of only responses from 20-year-olds in 1972, how would you calculate `very_happy`? Using only a simple mathematical function, is it possible to take the work you've done so far and calculate this value directly?
+
+```{r}
+
+```
+
+
+- Use a for loop to iterate through each year, calculating the proportion of very happy 20 year olds.
+
+```{r}
+
+```
+
+
+- Modify your for loop so that you are also calculating the total number of responses from 20 year olds in each year. Copy the code you wrote above into the code chunk here, and modify it in this code chunk (so that I can see what changed).
+
+```{r}
+
+```
+
+
+
+- Modfiy your for loop so that at the end of each iteration you create a new data structure with one row for the current year, containing values `year`, `very_happy`, and `count`. Copy the code you wrote above into the code chunk here, and modify it in this code chunk (so that I can see what changed).
+
+```{r}
+
+```
+
+
+- Modify your code so that each iteration of the loop appends (sticks on to) the current year's summary data to an empty data frame created before the loop starts. You can create an empty data frame that you can add new rows to using `data.frame()` in R or `pd.DataFrame()` in python.
+
+```{r}
+
+```
+
+- Using your summary data frame, plot the proportion of very happy 20 year olds for each year in which gss data was collected.
+
+```{r}
+
+```
+

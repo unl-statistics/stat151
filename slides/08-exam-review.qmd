@@ -41,7 +41,7 @@ sacrificing credit for that task attempt
 
 - Each part demonstrates a skill
 
-Ideally, you will have multiple chances to demonstrate a skill.
+You will have multiple chances to demonstrate some (but not all) skills
 
 ## Tasks
 
@@ -62,6 +62,7 @@ Programming:
 
 Computational Thinking: 
 
+- Planning your code
 - Program Flow maps (wk 6)
 - Combining sub-problems (wk 6-7)
 

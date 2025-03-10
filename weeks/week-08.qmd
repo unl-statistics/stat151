@@ -3,7 +3,9 @@
 ## 🥣 Prepare for class
 
 - [ ] Study for your midterm exam!
-  - [ ] [Midterm from 2024](../homework/08-practice-midterm.qmd)
+- [Exam Review slides](../slides/08-exam-review.qmd)
+- Exam Review, Monday 1:15 – 2:45, Zoom (link in Canvas) – video posted later (hopefully)
+  - [ ] [Midterm from 2024](../homework/08-practice-midterm.qmd) 
   - [ ] [Sample solutions to 2024 midterm](../homework/08-practice-midterm-key.qmd)
 
 ##  🏋️ Practice your skills

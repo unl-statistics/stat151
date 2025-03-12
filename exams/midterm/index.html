@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Your Name">
+
+<title>Stat 151 Exam 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap-032e220be364433605a2bb7b2b296306.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stat 151 Exam 1</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="instructions" class="level1 unnumbered">
+<h1 class="unnumbered">Instructions</h1>
+<ul>
+<li><p>The exam is designed to assess both your fluency and your competency with the skills in Stat 151.</p>
+<ul>
+<li>You may not finish within 2 hours – that is ok.</li>
+<li>There is redundancy built in</li>
+</ul></li>
+<li><p>There are two sections on this exam.</p>
+<ul>
+<li>Each section is broken down into a number of skills that should be attempted in order.</li>
+<li>Attempt Section 1 before you start Section 2</li>
+<li>Complete a section in one language before attempting it in the other.</li>
+<li>Both sections are designed to be equally easy in R or Python.</li>
+</ul></li>
+<li><p>If you get stuck:</p>
+<ul>
+<li>Two pre-written hints for each section/skill combination can be obtained for 30% of the value of that question each.</li>
+<li>If the hints do not help, you can get a solution that will allow you to attempt the next skill, but you will not receive credit for the skill.</li>
+</ul></li>
+</ul>
+<p>Allowed resources:</p>
+<ul>
+<li>notes</li>
+<li>homework</li>
+<li>Statistical Computing in R and Python (the course textbook)</li>
+</ul>
+<p>Use of any other resources will result in a 0 on the exam and an academic misconduct report.</p>
+<p>Your code is expected to run on my machine when I grade this exam. You will receive reduced credit for code which does not work correctly, whether or not it produces explicit errors.</p>
+</section>
+<section id="prime-factorization" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Prime Factorization</h1>
+<p>In this problem, you will work towards building code that will decompose a number into its prime factors.</p>
+<p>We’ll start by installing a package that helps work with prime numbers… <code>primes</code> in R, <code>SymPy</code> in Python.</p>
+<section id="skill-install-packages" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="skill-install-packages"><span class="header-section-number">1.1</span> Skill: Install Packages</h2>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
+<p>Write code to install the <code>primes</code> package in R. Run the code.</p>
+</section>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+<p>Write code to install the <code>SymPy</code> package in Python. If you choose to install the package via the terminal, place your code in the bash chunk; otherwise, place your code in the python chunk.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="thinking-criticially" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-criticially">Thinking Criticially</h3>
+<p>You must complete this question for either R or Python above.</p>
+<ol type="1">
+<li><p>Add <code>, eval = F</code> to the code chunk header to stop that code from running every time the document is executed.</p></li>
+<li><p>What is another way to keep the code in the quarto document but prevent it from running?</p></li>
+</ol>
+</section>
+</section>
+<section id="skill-loading-packages" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="skill-loading-packages"><span class="header-section-number">1.2</span> Skill: Loading packages</h2>
+<p>Load the packages you just installed in R and Python using the chunks below.</p>
+<section id="r-1" class="level3">
+<h3 class="anchored" data-anchor-id="r-1">R</h3>
+</section>
+<section id="python-1" class="level3">
+<h3 class="anchored" data-anchor-id="python-1">Python</h3>
+<p>Hint: SymPy should be typed as <code>sympy</code> when loading the package.</p>
+</section>
+</section>
+<section id="skill-using-prewritten-functions" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="skill-using-prewritten-functions"><span class="header-section-number">1.3</span> Skill: Using prewritten functions</h2>
+<section id="r-2" class="level3">
+<h3 class="anchored" data-anchor-id="r-2">R</h3>
+<p>Use the <code>generate_primes(min, max)</code> function to generate all the primes between 1 and 47, inclusive. Store these numbers in a variable called <code>myprimes</code>.</p>
+</section>
+<section id="python-2" class="level3">
+<h3 class="anchored" data-anchor-id="python-2">Python</h3>
+<p>Use the <code>primerange(a, b)</code> function in <code>SymPy</code> to get all primes between 1 and 47, inclusive. Store these numbers in a variable called <code>myprimes</code>.</p>
+<p>You may have to convert the output of <code>primerange</code> to a <code>list</code> by wrapping the function call in <code>list()</code>. It may be convenient to then convert your list into a numpy array using <code>np.array(list(...))</code>. If you choose to do this, you will also need to import the numpy library.</p>
+</section>
+<section id="comparison" class="level3">
+<h3 class="anchored" data-anchor-id="comparison">Comparison</h3>
+<p>Do the function parameters you used in R and python differ? Why?</p>
+<!-- Your answer goes between these lines -->
+<!-- ------------------------------------ -->
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reminder: Modular Division
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember that modular division gives you the remainder when dividing a number by another number. <code>x %% 3</code> (R) or <code>x % 3</code> (Python) will give you the remainder when <code>x</code> is divided by 3.</p>
+<p>If <code>x</code> is an integer and the divisor is an integer, the result of modular division will also be an integer.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="skill-indexing-and-subsets" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="skill-indexing-and-subsets"><span class="header-section-number">1.4</span> Skill: Indexing and Subsets</h2>
+<p>Using your <code>primes</code> variables (in both R and python), determine which primes are a factor of a second variable, <code>x</code>. You may want to test your code on values like <code>x=18</code>, <code>x=25</code>, <code>x = 34</code>, <code>x=43</code>, Your code should output only the prime factors of <code>x</code>.</p>
+<section id="r-3" class="level3">
+<h3 class="anchored" data-anchor-id="r-3">R</h3>
+</section>
+<section id="python-3" class="level3">
+<h3 class="anchored" data-anchor-id="python-3">Python</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reminder: Logs with different bases
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The operation <span class="math inline">\(\log_a(x) = b\)</span> is defined the number <span class="math inline">\(b\)</span> such that <span class="math inline">\(a^b = x\)</span> for fixed <span class="math inline">\(a\)</span> and <span class="math inline">\(x\)</span>. You can use this information to determine the maximum number of times a factor could be repeated when calculating the prime factorization of a number.</p>
+<p>You will need to load the <code>math</code> library in Python to access the <code>math.log(a, Base)</code> function. In R, the <code>log(x, base)</code> function is built in.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="skill-writing-functions" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="skill-writing-functions"><span class="header-section-number">1.5</span> Skill: Writing Functions</h2>
+<p>In the previous section, you determined which primes were factors of a given number. Of course, it is possible to have a number which has multiple occurrences of the same prime factor.</p>
+<p>In R and python, write a function, <code>prime_n(x, prime)</code>, which will determine how many times a single, pre-specified prime number <code>prime</code> can be evenly divided into a number <code>x</code>. You may want to calculate an upper bound for this possibility to help you in your search. Your function should take parameters <code>x</code> and <code>prime</code> and return the integer number of times <code>prime</code> occurs in the prime factorization of <code>x</code>.</p>
+<section id="r-4" class="level3">
+<h3 class="anchored" data-anchor-id="r-4">R</h3>
+</section>
+<section id="python-4" class="level3">
+<h3 class="anchored" data-anchor-id="python-4">Python</h3>
+</section>
+</section>
+<section id="skill-data-frames-loops" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="skill-data-frames-loops"><span class="header-section-number">1.6</span> Skill: Data Frames, Loops</h2>
+<p>Putting the pieces together, use your function and your list of prime factors to determine the prime factorization of a given number. Store your factorization as a data frame with two columns: factor and power, where factor contains the factor and power contains the number of times that factor appears in the prime factorization.</p>
+<p>For instance, your result for <code>x=18</code> should be a data frame that looks like this:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>factor</th>
+<th>power</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Hint:</p>
+<ul>
+<li>R: <code>rbind(df, row)</code> will add <code>row</code> to the bottom of <code>df</code> if <code>df</code> is a data frame</li>
+<li>Python: <code>pandas.concat([df, row])</code> will add <code>row</code> to the bottom of <code>df</code> if <code>df</code> is a data frame.</li>
+</ul>
+<section id="planning" class="level3">
+<h3 class="anchored" data-anchor-id="planning">Planning</h3>
+<p>Using the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you’ve already written fits together to solve this problem. Identify any bits of logic you need to write to solve the problem.</p>
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+<p>My solution is sketched out on sheet ___</p>
+<!-- ---------------------------------------------------------------------- -->
+</section>
+<section id="r-5" class="level3">
+<h3 class="anchored" data-anchor-id="r-5">R</h3>
+</section>
+<section id="python-5" class="level3">
+<h3 class="anchored" data-anchor-id="python-5">Python</h3>
+</section>
+</section>
+<section id="skill-string-operations" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="skill-string-operations"><span class="header-section-number">1.7</span> Skill: String Operations</h2>
+<p>Take the data frame you created in the previous problem and write a <code>format_factorization(df)</code> function that will output the results of that data frame as a string, so that the data frame containing the prime factorization of 18 that is shown above would return “2^1 x 3^2”.</p>
+<section id="r-6" class="level3">
+<h3 class="anchored" data-anchor-id="r-6">R</h3>
+</section>
+<section id="python-6" class="level3">
+<h3 class="anchored" data-anchor-id="python-6">Python</h3>
+</section>
+</section>
+<section id="skill-control-statements" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="skill-control-statements"><span class="header-section-number">1.8</span> Skill: Control Statements</h2>
+<p>Take the code you wrote in the previous part and use it to create a function <code>prime_factorize</code> that will return the prime factorization of a number. If the number provided is a prime, your function should return “<number> is prime” instead of returning that the factorization is <number>^1 (which is not as clear).</number></number></p>
+<section id="planning-1" class="level3">
+<h3 class="anchored" data-anchor-id="planning-1">Planning</h3>
+<p>What modifications will you need to make to handle any number? e.g.&nbsp;what if the number is greater than 47?</p>
+<!-- Your answer goes between these lines -->
+<!-- ------------------------------------ -->
+<p>What modifications will you need to make to handle prime numbers?</p>
+<!-- Your answer goes between these lines -->
+<!-- ------------------------------------ -->
+<!-- If you want to sketch this out, please clearly indicate on your scratch paper that you're adding a solution (draw a horizontal line across the page and write Control Statements below the line) -- or use a new sheet of paper. Tell me in the section below where to find your sketch. -->
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+<!-- Uncomment the line below if you used scratch paper -->
+<!-- My solution is sketched out on sheet ___ -->
+<!-- ---------------------------------------------------------------------- -->
+<p>How can you use previously written code and functions to accomplish this task? <!-- Your answer goes between these lines --></p>
+<!-- ------------------------------------ -->
+<p>What additional code do you need to write?</p>
+<!-- Your answer goes between these lines -->
+<!-- ------------------------------------ -->
+</section>
+<section id="r-7" class="level3">
+<h3 class="anchored" data-anchor-id="r-7">R</h3>
+</section>
+<section id="python-7" class="level3">
+<h3 class="anchored" data-anchor-id="python-7">Python</h3>
+</section>
+</section>
+<section id="skill-user-proofing-your-function" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="skill-user-proofing-your-function"><span class="header-section-number">1.9</span> Skill: User-proofing your function</h2>
+<p>It is never safe to assume that your user knows what they are doing. Can you make your function from the previous part more robust by testing the user input to ensure that it conforms to your expectations?</p>
+<section id="planning-2" class="level3">
+<h3 class="anchored" data-anchor-id="planning-2">Planning</h3>
+<p>What assumptions does your previous answer make about parameters? <!-- Your answer goes between these lines --></p>
+<!-- ------------------------------------ -->
+<p>What do you need to test to ensure those assumptions are met? <!-- Your answer goes between these lines --></p>
+<!-- ------------------------------------ -->
+</section>
+<section id="r-8" class="level3">
+<h3 class="anchored" data-anchor-id="r-8">R</h3>
+</section>
+<section id="python-8" class="level3">
+<h3 class="anchored" data-anchor-id="python-8">Python</h3>
+</section>
+</section>
+</section>
+<section id="numerical-integration" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Numerical Integration</h1>
+<p>This section will walk you through implementing numerical integration of a function.</p>
+<section id="skill-installing-packages" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="skill-installing-packages"><span class="header-section-number">2.1</span> Skill: Installing Packages</h2>
+<ol type="1">
+<li>Write code to install the <code>SciPy</code> package in Python. It contains functions you will need for the remainder of this exam. If you choose to install the package via the terminal, place your code in the bash chunk; otherwise, place your code in the python chunk.</li>
+</ol>
+<section id="python-9" class="level3">
+<h3 class="anchored" data-anchor-id="python-9">Python</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="skill-loading-packages-1" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="skill-loading-packages-1"><span class="header-section-number">2.2</span> Skill: Loading packages</h2>
+<p>Load the packages you just installed in Python using the chunk below. If you did not manage to install the package, write the code you think you should use to load the packages.</p>
+<p>Hint: Scipy should be typed as <code>scipy</code> when loading the package. You will only need the <code>norm</code> function in the scipy package, so you may want to be selective as to how you load the package.</p>
+<section id="python-10" class="level3">
+<h3 class="anchored" data-anchor-id="python-10">Python</h3>
+</section>
+<section id="thinking-critically" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-critically">Thinking Critically</h3>
+<p>There are multiple ways to load python packages. If I want to use the ‘bar’ function from the package ‘foo’, explain how you would load the package in order for the following code to be valid. If there is no valid way to load the package and use the function as listed, then state that.</p>
+<ol type="1">
+<li><code>foo.bar()</code> <!-- Your answer goes between these lines --></li>
+</ol>
+<!-- ------------------------------------ -->
+<ol start="2" type="1">
+<li><code>bar()</code> <!-- Your answer goes between these lines --></li>
+</ol>
+<!-- ------------------------------------ -->
+<ol start="3" type="1">
+<li><code>f.bar()</code> <!-- Your answer goes between these lines --></li>
+</ol>
+<!-- ------------------------------------ -->
+<ol start="4" type="1">
+<li><code>bar.foo()</code> <!-- Your answer goes between these lines --></li>
+</ol>
+<!-- ------------------------------------ -->
+</section>
+</section>
+<section id="skill-using-prewritten-functions-1" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="skill-using-prewritten-functions-1"><span class="header-section-number">2.3</span> Skill: Using Prewritten Functions</h2>
+<p>The <code>dnorm(x, mean = 0, sd = 1)</code> function provides the value of the normal probability distribution density function in R. The <code>rv = scipy.stats.norm(x, location = 0, scale = 1)</code> function defines a normal random variable, and then <code>rv.pdf()</code> can be used to get the probability density function in Python.</p>
+<p>In R and Python, define a sequence of <code>x = -3, ..., 3</code> that has length 100. Calculate <code>y = f(x)</code>, where <code>f</code> is the normal PDF.</p>
+<section id="r-9" class="level3">
+<h3 class="anchored" data-anchor-id="r-9">R</h3>
+</section>
+<section id="python-11" class="level3">
+<h3 class="anchored" data-anchor-id="python-11">Python</h3>
+</section>
+<section id="plot-your-data" class="level3">
+<h3 class="anchored" data-anchor-id="plot-your-data">Plot your data</h3>
+<p>Create a line or scatter plot showing the relationship between x and <span class="math inline">\(y = f(x)\)</span>.</p>
+</section>
+</section>
+<section id="skill-combining-sub-problems" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="skill-combining-sub-problems"><span class="header-section-number">2.4</span> Skill: Combining Sub Problems</h2>
+<p>Integrating the normal PDF to calculate <span class="math inline">\(P(x \leq a)\)</span> is extremely difficult to do by hand. For a long time before computers were common, statisticians used tables that contained the value of <span class="math inline">\(P(x \leq a)\)</span> for many different values of <span class="math inline">\(a\)</span>. Luckily, with computers, we can avoid that!</p>
+<p>The simplest method for numerical integration involves approximating <span class="math inline">\(f(x)\)</span> using a step function - essentially, evaluating <span class="math inline">\(f(x)\)</span> at evenly spaced <span class="math inline">\(x\)</span> values, and then assuming that <span class="math inline">\(f(x) \approx f(x_i)\)</span> for <span class="math inline">\(x \in \left[x_i, x_{i+1}\right)\)</span>. Then, it is possible to turn <span class="math inline">\(\int_a^b f(x) dx\)</span> into <span class="math inline">\(\displaystyle\sum_{x = x_0}^{x_n} f(x_i)\cdot (x_{i+1}-x_i)\)</span></p>
+<p>Write code to calculate the approximate integral of the normal distribution PDF from -3 to 3, <strong>using the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> you created previously.</strong></p>
+<section id="r-10" class="level3">
+<h3 class="anchored" data-anchor-id="r-10">R</h3>
+</section>
+<section id="python-12" class="level3">
+<h3 class="anchored" data-anchor-id="python-12">Python</h3>
+</section>
+</section>
+<section id="skill-writing-functions-1" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="skill-writing-functions-1"><span class="header-section-number">2.5</span> Skill: Writing Functions</h2>
+<p>Write a function that takes arguments <code>a</code>, <code>b</code>, and <code>delta</code> and returns the step function approximation to the integral of the normal pdf representing <span class="math inline">\(P(a \leq x &lt; b)\)</span>, calculated over the sequence of numbers from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> in <code>delta</code>-sized increments.</p>
+<p>Hint:</p>
+<ul>
+<li>R: <code>seq(from, to, by)</code></li>
+<li>Python: <code>arange(start, stop, step)</code> from the <code>numpy</code> package</li>
+</ul>
+<section id="planning-3" class="level3">
+<h3 class="anchored" data-anchor-id="planning-3">Planning</h3>
+<p>Using the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you’ve already written can be used to solve this problem. Identify any bits of logic you need to write to solve the problem.</p>
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+<p>My solution is sketched out on sheet ___</p>
+<!-- ---------------------------------------------------------------------- -->
+</section>
+<section id="r-11" class="level3">
+<h3 class="anchored" data-anchor-id="r-11">R</h3>
+</section>
+<section id="python-13" class="level3">
+<h3 class="anchored" data-anchor-id="python-13">Python</h3>
+</section>
+</section>
+<section id="skill-data-frames-loops-1" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="skill-data-frames-loops-1"><span class="header-section-number">2.6</span> Skill: Data Frames, Loops</h2>
+<p>Using your function, generate a table showing <span class="math inline">\(P(x &lt; b)\)</span> for each value of <span class="math inline">\(b\)</span> between -2 and 2, at 0.1 increments. (e.g.&nbsp;<span class="math inline">\(b = \{-2, -1.9, -1.8, ..., 0, 0.1, ..., 1.9, 2\}\)</span>)</p>
+<p>You may assume that <span class="math inline">\(a=-\infty\)</span> or a value sufficiently negative that <span class="math inline">\(P(x&lt;a) \approx 0\)</span> (-4 is probably good enough).</p>
+<section id="r-12" class="level3">
+<h3 class="anchored" data-anchor-id="r-12">R</h3>
+</section>
+<section id="python-14" class="level3">
+<h3 class="anchored" data-anchor-id="python-14">Python</h3>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

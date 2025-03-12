@@ -1,0 +1,598 @@
+---
+title: "Stat 151 Exam 1"
+author: "Your Name"
+number-depth: 2
+number-sections: true
+format: 
+  html:
+    page-layout: full
+  pdf: 
+    page-layout: full
+---
+
+# Instructions {-}
+
+- The exam is designed to assess both your fluency and your competency with the skills in Stat 151. 
+
+  - You may not finish within 2 hours -- that is ok.
+  - There is redundancy built in
+
+- There are two sections on this exam. 
+
+  - Each section is broken down into a number of skills that should be attempted in order.
+  - Attempt Section 1 before you start Section 2
+  - Complete a section in one language before attempting it in the other.
+  - Both sections are designed to be equally easy in R or Python.
+
+- If you get stuck:
+  
+  - Two pre-written hints for each section/skill combination can be obtained for 30% of the value of that question each.
+  - If the hints do not help, you can get a solution that will allow you to attempt the next skill, but you will not receive credit for the skill.
+  
+
+
+Allowed resources:
+
+  - notes
+  - homework
+  - Statistical Computing in R and Python (the course textbook)
+  
+Use of any other resources will result in a 0 on the exam and an academic misconduct report. 
+
+Your code is expected to run on my machine when I grade this exam. 
+You will receive reduced credit for code which does not work correctly, whether or not it produces explicit errors. 
+
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+# Prime Factorization
+
+In this problem, you will work towards building code that will decompose a number into its prime factors. 
+
+We'll start by installing a package that helps work with prime numbers... `primes` in R, `SymPy` in Python.
+
+## Skill: Install Packages
+
+### R
+
+Write code to install the `primes` package in R. Run the code. 
+
+```{r install-primes-r}
+
+```
+
+### Python
+
+Write code to install the `SymPy` package in Python. 
+If you choose to install the package via the terminal, place your code in the bash chunk; otherwise, place your code in the python chunk. 
+
+```{bash}
+
+```
+
+```{python install-sympy}
+
+```
+
+
+### Thinking Criticially
+You must complete this question for either R or Python above.
+
+
+1. Add `, eval = F` to the code chunk header to stop that code from running every time the document is executed. 
+
+2. What is another way to keep the code in the quarto document but prevent it from running?
+
+
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+## Skill: Loading packages
+
+Load the packages you just installed in R and Python using the chunks below.
+
+### R
+
+```{r load-prime-r}
+
+```
+
+### Python
+
+Hint: SymPy should be typed as `sympy` when loading the package. 
+
+```{python load-prime-py}
+
+```
+
+
+## Skill: Using prewritten functions
+
+### R
+
+Use the `generate_primes(min, max)` function to generate all the primes between 1 and 47, inclusive.
+Store these numbers in a variable called `myprimes`.
+
+```{r use-prime-fn-r}
+
+```
+
+
+### Python
+
+Use the `primerange(a, b)` function in `SymPy` to get all primes between 1 and 47, inclusive. 
+Store these numbers in a variable called `myprimes`.
+
+You may have to convert the output of `primerange` to a `list` by wrapping the function call in `list()`. 
+It may be convenient to then convert your list into a numpy array using `np.array(list(...))`. 
+If you choose to do this, you will also need to import the numpy library. 
+
+```{python use-prime-fn-py}
+
+```
+
+
+### Thinking Critically
+
+Do the function parameters you used in R and python differ? Why?
+
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+
+::: callout-note
+
+### Reminder: Modular Division
+
+Remember that modular division gives you the remainder when dividing a number by another number. 
+`x %% 3` (R) or `x % 3` (Python) will give you the remainder when `x` is divided by 3. 
+
+If `x` is an integer and the divisor is an integer, the result of modular division will also be an integer. 
+
+:::
+
+
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+## Skill: Indexing and Subsets
+
+Using your `primes` variables (in both R and python), 
+determine which primes are a factor of a second variable, `x`. 
+You may want to test your code on values like `x=18`, `x=25`, `x = 34`, `x=43`, 
+Your code should output only the prime factors of `x`. 
+
+### R
+
+```{r determine-prime-factors-r}
+
+```
+
+```{r test-prime-factors-r}
+prime_factorize(34253) # should output "34253 is a prime number"
+prime_factorize(prod(2:10)) # should output "2^8 x 3^4 x 5^2 x 7^1"
+```
+
+
+### Python
+
+```{python determine-prime-factors-py}
+
+```
+
+```{python test-prime-factors-r}
+prime_factorize(34253) # should output "34253 is a prime number"
+prime_factorize(3628800) # should output "2^8 x 3^4 x 5^2 x 7^1"
+```
+
+
+::: callout-note
+
+### Reminder: Logs with different bases
+
+The operation $\log_a(x) = b$ is defined the number $b$ such that $a^b = x$ for fixed $a$ and $x$. 
+You can use this information to determine the maximum number of times a factor could be repeated when calculating the prime factorization of a number.
+
+You will need to load the `math` library in Python to access the `math.log(a, Base)` function. In R, the `log(x, base)` function is built in. 
+
+:::
+
+## Skill: Writing Functions
+
+In the previous section, you determined which primes were factors of a given number.
+Of course, it is possible to have a number which has multiple occurrences of the same prime factor.
+
+In R and python, write a function, `prime_n(x, prime)`, which will determine how many times a single, pre-specified prime number `prime` can be evenly divided into a number `x`. 
+You may want to calculate an upper bound for this possibility to help you in your search.
+Your function should take parameters `x` and `prime` and return the integer number of times `prime` occurs in the prime factorization of `x`. 
+
+### R
+
+```{r prime-factor-r}
+
+```
+
+### Python
+
+```{python prime-factor-py}
+
+```
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+## Skill: Data Frames, Loops
+
+Putting the pieces together, use your function and your list of prime factors to determine the prime factorization of a given number. 
+Store your factorization as a data frame with two columns: factor and power, where factor contains the factor and power contains the number of times that factor appears in the prime factorization.
+
+For instance, your result for `x=18` should be a data frame that looks like this:
+
+factor | power
+------ | ------
+     2 |     1
+     3 |     2
+
+
+Hint: 
+
+- R: `rbind(df, row)` will add `row` to the bottom of `df` if `df` is a data frame
+- Python: `pandas.concat([df, row])` will add `row` to the bottom of `df` if `df` is a data frame.
+
+
+### Planning
+
+Using the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you've already written fits together to solve this problem. 
+Identify any bits of logic you need to write to solve the problem.
+
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+
+My solution is sketched out on sheet ___
+
+<!-- ---------------------------------------------------------------------- -->
+
+
+### R
+
+```{r combine-prime-factors-r}
+
+```
+
+### Python
+
+```{python combine-prime-factors-py}
+
+```
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+
+## Skill: String Operations
+
+Take the data frame you created in the previous problem and 
+write a `format_factorization(df)` function that will 
+output the results of that data frame as a string, 
+so that the data frame containing the prime factorization 
+of 18 that is shown above would return "2^1 x 3^2". 
+
+Hint: 
+
+- Python: in a DataFrame, you can convert the whole column to a string using `df.colname.astype("str")` (replace df, colname with appropriate data frame name and column name)
+
+### R
+
+```{r string-ops-r}
+
+```
+
+### Python
+
+```{python string-ops-py}
+
+```
+
+
+## Skill: Control Statements
+
+Take the code you wrote in the previous part and use it to create a function 
+`prime_factorize` that will return the prime factorization of a number. 
+If the number provided is a prime, your function should return "<number> is prime" 
+instead of returning that the factorization is <number>^1 (which is not as clear). 
+
+### Planning
+
+What modifications will you need to make to handle any number? 
+e.g. what if the number is greater than 47?
+
+
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+
+
+What modifications will you need to make to handle prime numbers? 
+
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+<!-- If you want to sketch this out, please clearly indicate on your scratch paper that you're adding a solution (draw a horizontal line across the page and write Control Statements below the line) -- or use a new sheet of paper. Tell me in the section below where to find your sketch. -->
+
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+<!-- Uncomment the line below if you used scratch paper -->
+<!-- My solution is sketched out on sheet ___ -->
+<!-- ---------------------------------------------------------------------- -->
+
+
+How can you use previously written code and functions to accomplish this task?
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+
+What additional code do you need to write?
+
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+### R
+
+```{r prime-factorize-r}
+
+```
+
+
+### Python
+
+```{python prime-factorize-py}
+
+```
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+## Skill: User-proofing your function
+
+It is never safe to assume that your user knows what they are doing. 
+Can you make your function from the previous part more robust by testing the user input to ensure that it conforms to your expectations?
+
+
+### Planning
+
+What assumptions does your previous answer make about parameters? 
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+What do you need to test to ensure those assumptions are met?
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+
+
+### R
+
+```{r prime-factorize-checks-r}
+
+```
+
+
+### Python
+
+```{python prime-factorize-checks-py}
+
+```
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+
+# Numerical Integration
+
+This section will walk you through implementing numerical integration of a function. 
+
+## Skill: Installing Packages
+
+1. Write code to install the `SciPy` package in Python. It contains functions you will need for the remainder of this exam.
+If you choose to install the package via the terminal, place your code in the bash chunk; otherwise, place your code in the python chunk. 
+
+### Python
+
+```{bash install-scipy-terminal, eval = F}
+
+```
+
+```{python install-scipy, eval=F}
+
+```
+
+## Skill: Loading packages
+
+Load the packages you just installed in Python using the chunk below.
+If you did not manage to install the package, write the code you think you should use to load the packages.
+
+Hint: Scipy should be typed as `scipy` when loading the package. You will only need the `norm` function in the scipy package, so you may want to be selective as to how you load the package. 
+
+### Python
+
+```{python load-scipy-py}
+
+```
+
+
+
+### Thinking Critically
+
+There are multiple ways to load python packages. 
+If I want to use the 'bar' function from the package 'foo', explain how you would load the package in order for the following code to be valid. 
+If there is no valid way to load the package and use the function as listed, then state that. 
+
+1. `foo.bar()`
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+2. `bar()`
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+3. `f.bar()`
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+4. `bar.foo()`
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+
+## Skill: Using Prewritten Functions
+
+
+The `dnorm(x, mean = 0, sd = 1)` function provides the value of the normal probability distribution density function in R.
+The `rv = scipy.stats.norm(x, location = 0, scale = 1)` function defines a normal random variable, and then `rv.pdf()` can be used to get the probability density function in Python. 
+
+In R and Python, define a sequence of `x = -3, ..., 3` that has length 100. Calculate `y = f(x)`, where `f` is the normal PDF. 
+
+### R
+
+```{r normal-fn-values-r}
+
+```
+
+### Python
+
+```{python normal-fn-values-py}
+
+```
+
+
+### Plot your data
+
+Create a line or scatter plot showing the relationship between x and $y = f(x)$ in R or Python. 
+
+```{r num-int-plot-r}
+
+```
+
+```{python num-int-plot-py}
+
+```
+
+
+
+
+
+## Skill: Mathematical Operations
+
+Integrating the normal PDF to calculate $P(x \leq a)$ is extremely difficult to do by hand. 
+For a long time before computers were common, statisticians used tables that contained the value of $P(x \leq a)$ for many different values of $a$.
+Luckily, with computers, we can avoid that!
+
+The simplest method for numerical integration involves approximating $f(x)$ using a step function - essentially, evaluating $f(x)$ at evenly spaced $x$ values, and then assuming that $f(x) \approx f(x_i)$ for $x \in \left[x_i, x_{i+1}\right)$.
+Then, it is possible to turn $\int_a^b f(x) dx$ into $\displaystyle\sum_{x = x_0}^{x_n} f(x_i)\cdot (x_{i+1}-x_i)$
+
+Write code to calculate the approximate integral of the normal distribution PDF from -3 to 3, **using the $x$ and $y$ you created previously.**
+
+
+### R
+
+```{r}
+
+```
+
+### Python
+
+```{python}
+
+```
+
+::: {.content-visible when-format="pdf"}
+\clearpage
+:::
+
+## Skill: Writing Functions
+
+Write a function that takes arguments `a`, `b`, and `delta` and returns the step function approximation to the integral of the normal pdf representing $P(a \leq x < b)$, calculated over the sequence of numbers from $a$ to $b$ in `delta`-sized increments. 
+
+Hint:
+
+- R: `seq(from, to, by)`
+- Python: `arange(start, stop, step)` from the `numpy` package
+
+### Planning
+
+Using the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you've already written can be used to solve this problem. 
+Identify any bits of logic you need to write to solve the problem.
+
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+
+My solution is sketched out on sheet ___
+
+<!-- ---------------------------------------------------------------------- -->
+
+### R
+
+```{r function-ab-int-approx-r}
+
+```
+
+### Python
+
+```{python function-ab-int-approx-py}
+
+```
+
+## Skill: Data Frames, Loops
+
+Using your function, generate a table showing $P(x < b)$ for each value of $b$ between -3 and 3, at 0.1 increments. (e.g. $b = \{-3, -2.9, -2.8, ..., 0, 0.1, ..., 2.9, 3.0 \}$)
+
+You may assume that $a=-\infty$ or a value sufficiently negative that $P(x<a) \approx 0$ (-4 is probably good enough). 
+
+### R
+
+```{r integration-df-r}
+
+```
+
+
+### Python
+
+```{python integration-df-py}
+
+```
+
+

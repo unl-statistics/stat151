@@ -1,0 +1,906 @@
+[
+  {
+    "objectID": "exams/midterm/index.html",
+    "href": "exams/midterm/index.html",
+    "title": "Stat 151 Exam 1",
+    "section": "",
+    "text": "The exam is designed to assess both your fluency and your competency with the skills in Stat 151.\n\nYou may not finish within 2 hours – that is ok.\nThere is redundancy built in\n\nThere are two sections on this exam.\n\nEach section is broken down into a number of skills that should be attempted in order.\nAttempt Section 1 before you start Section 2\nComplete a section in one language before attempting it in the other.\nBoth sections are designed to be equally easy in R or Python.\n\nIf you get stuck:\n\nTwo pre-written hints for each section/skill combination can be obtained for 30% of the value of that question each.\nIf the hints do not help, you can get a solution that will allow you to attempt the next skill, but you will not receive credit for the skill.\n\n\nAllowed resources:\n\nnotes\nhomework\nStatistical Computing in R and Python (the course textbook)\n\nUse of any other resources will result in a 0 on the exam and an academic misconduct report.\nYour code is expected to run on my machine when I grade this exam. You will receive reduced credit for code which does not work correctly, whether or not it produces explicit errors."
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-install-packages",
+    "href": "exams/midterm/index.html#skill-install-packages",
+    "title": "Stat 151 Exam 1",
+    "section": "1.1 Skill: Install Packages",
+    "text": "1.1 Skill: Install Packages\n\nR\nWrite code to install the primes package in R. Run the code.\n\n\nPython\nWrite code to install the SymPy package in Python. If you choose to install the package via the terminal, place your code in the bash chunk; otherwise, place your code in the python chunk.\n\n\n\n\n\nThinking Criticially\nYou must complete this question for either R or Python above.\n\nAdd , eval = F to the code chunk header to stop that code from running every time the document is executed.\nWhat is another way to keep the code in the quarto document but prevent it from running?"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-loading-packages",
+    "href": "exams/midterm/index.html#skill-loading-packages",
+    "title": "Stat 151 Exam 1",
+    "section": "1.2 Skill: Loading packages",
+    "text": "1.2 Skill: Loading packages\nLoad the packages you just installed in R and Python using the chunks below.\n\nR\n\n\nPython\nHint: SymPy should be typed as sympy when loading the package."
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-using-prewritten-functions",
+    "href": "exams/midterm/index.html#skill-using-prewritten-functions",
+    "title": "Stat 151 Exam 1",
+    "section": "1.3 Skill: Using prewritten functions",
+    "text": "1.3 Skill: Using prewritten functions\n\nR\nUse the generate_primes(min, max) function to generate all the primes between 1 and 47, inclusive. Store these numbers in a variable called myprimes.\n\n\nPython\nUse the primerange(a, b) function in SymPy to get all primes between 1 and 47, inclusive. Store these numbers in a variable called myprimes.\nYou may have to convert the output of primerange to a list by wrapping the function call in list(). It may be convenient to then convert your list into a numpy array using np.array(list(...)). If you choose to do this, you will also need to import the numpy library.\n\n\nThinking Critically\nDo the function parameters you used in R and python differ? Why?\n\n\n\n\n\n\n\n\nReminder: Modular Division\n\n\n\nRemember that modular division gives you the remainder when dividing a number by another number. x %% 3 (R) or x % 3 (Python) will give you the remainder when x is divided by 3.\nIf x is an integer and the divisor is an integer, the result of modular division will also be an integer."
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-indexing-and-subsets",
+    "href": "exams/midterm/index.html#skill-indexing-and-subsets",
+    "title": "Stat 151 Exam 1",
+    "section": "1.4 Skill: Indexing and Subsets",
+    "text": "1.4 Skill: Indexing and Subsets\nUsing your primes variables (in both R and python), determine which primes are a factor of a second variable, x. You may want to test your code on values like x=18, x=25, x = 34, x=43, Your code should output only the prime factors of x.\n\nR\n\nprime_factorize(34253) # should output \"34253 is a prime number\"\n\nError in prime_factorize(34253): could not find function \"prime_factorize\"\n\nprime_factorize(prod(2:10)) # should output \"2^8 x 3^4 x 5^2 x 7^1\"\n\nError in prime_factorize(prod(2:10)): could not find function \"prime_factorize\"\n\n\n\n\nPython\n\nprime_factorize(34253) # should output \"34253 is a prime number\"\n\nError: NameError: name 'prime_factorize' is not defined\n\nprime_factorize(3628800) # should output \"2^8 x 3^4 x 5^2 x 7^1\"\n\nError: NameError: name 'prime_factorize' is not defined\n\n\n\n\n\n\n\n\nReminder: Logs with different bases\n\n\n\nThe operation \\(\\log_a(x) = b\\) is defined the number \\(b\\) such that \\(a^b = x\\) for fixed \\(a\\) and \\(x\\). You can use this information to determine the maximum number of times a factor could be repeated when calculating the prime factorization of a number.\nYou will need to load the math library in Python to access the math.log(a, Base) function. In R, the log(x, base) function is built in."
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-writing-functions",
+    "href": "exams/midterm/index.html#skill-writing-functions",
+    "title": "Stat 151 Exam 1",
+    "section": "1.5 Skill: Writing Functions",
+    "text": "1.5 Skill: Writing Functions\nIn the previous section, you determined which primes were factors of a given number. Of course, it is possible to have a number which has multiple occurrences of the same prime factor.\nIn R and python, write a function, prime_n(x, prime), which will determine how many times a single, pre-specified prime number prime can be evenly divided into a number x. You may want to calculate an upper bound for this possibility to help you in your search. Your function should take parameters x and prime and return the integer number of times prime occurs in the prime factorization of x.\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-data-frames-loops",
+    "href": "exams/midterm/index.html#skill-data-frames-loops",
+    "title": "Stat 151 Exam 1",
+    "section": "1.6 Skill: Data Frames, Loops",
+    "text": "1.6 Skill: Data Frames, Loops\nPutting the pieces together, use your function and your list of prime factors to determine the prime factorization of a given number. Store your factorization as a data frame with two columns: factor and power, where factor contains the factor and power contains the number of times that factor appears in the prime factorization.\nFor instance, your result for x=18 should be a data frame that looks like this:\n\n\n\nfactor\npower\n\n\n\n\n2\n1\n\n\n3\n2\n\n\n\nHint:\n\nR: rbind(df, row) will add row to the bottom of df if df is a data frame\nPython: pandas.concat([df, row]) will add row to the bottom of df if df is a data frame.\n\n\nPlanning\nUsing the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you’ve already written fits together to solve this problem. Identify any bits of logic you need to write to solve the problem.\n\nMy solution is sketched out on sheet ___\n\n\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-string-operations",
+    "href": "exams/midterm/index.html#skill-string-operations",
+    "title": "Stat 151 Exam 1",
+    "section": "1.7 Skill: String Operations",
+    "text": "1.7 Skill: String Operations\nTake the data frame you created in the previous problem and write a format_factorization(df) function that will output the results of that data frame as a string, so that the data frame containing the prime factorization of 18 that is shown above would return “2^1 x 3^2”.\nHint:\n\nPython: in a DataFrame, you can convert the whole column to a string using df.colname.astype(\"str\") (replace df, colname with appropriate data frame name and column name)\n\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-control-statements",
+    "href": "exams/midterm/index.html#skill-control-statements",
+    "title": "Stat 151 Exam 1",
+    "section": "1.8 Skill: Control Statements",
+    "text": "1.8 Skill: Control Statements\nTake the code you wrote in the previous part and use it to create a function prime_factorize that will return the prime factorization of a number. If the number provided is a prime, your function should return “ is prime” instead of returning that the factorization is ^1 (which is not as clear).\n\nPlanning\nWhat modifications will you need to make to handle any number? e.g. what if the number is greater than 47?\n\n\nWhat modifications will you need to make to handle prime numbers?\n\n\n\n\n\n\n\nHow can you use previously written code and functions to accomplish this task? \n\nWhat additional code do you need to write?\n\n\n\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-user-proofing-your-function",
+    "href": "exams/midterm/index.html#skill-user-proofing-your-function",
+    "title": "Stat 151 Exam 1",
+    "section": "1.9 Skill: User-proofing your function",
+    "text": "1.9 Skill: User-proofing your function\nIt is never safe to assume that your user knows what they are doing. Can you make your function from the previous part more robust by testing the user input to ensure that it conforms to your expectations?\n\nPlanning\nWhat assumptions does your previous answer make about parameters? \n\nWhat do you need to test to ensure those assumptions are met? \n\n\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-installing-packages",
+    "href": "exams/midterm/index.html#skill-installing-packages",
+    "title": "Stat 151 Exam 1",
+    "section": "2.1 Skill: Installing Packages",
+    "text": "2.1 Skill: Installing Packages\n\nWrite code to install the SciPy package in Python. It contains functions you will need for the remainder of this exam. If you choose to install the package via the terminal, place your code in the bash chunk; otherwise, place your code in the python chunk.\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-loading-packages-1",
+    "href": "exams/midterm/index.html#skill-loading-packages-1",
+    "title": "Stat 151 Exam 1",
+    "section": "2.2 Skill: Loading packages",
+    "text": "2.2 Skill: Loading packages\nLoad the packages you just installed in Python using the chunk below. If you did not manage to install the package, write the code you think you should use to load the packages.\nHint: Scipy should be typed as scipy when loading the package. You will only need the norm function in the scipy package, so you may want to be selective as to how you load the package.\n\nPython\n\n\nThinking Critically\nThere are multiple ways to load python packages. If I want to use the ‘bar’ function from the package ‘foo’, explain how you would load the package in order for the following code to be valid. If there is no valid way to load the package and use the function as listed, then state that.\n\nfoo.bar() \n\n\n\nbar() \n\n\n\nf.bar() \n\n\n\nbar.foo()"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-using-prewritten-functions-1",
+    "href": "exams/midterm/index.html#skill-using-prewritten-functions-1",
+    "title": "Stat 151 Exam 1",
+    "section": "2.3 Skill: Using Prewritten Functions",
+    "text": "2.3 Skill: Using Prewritten Functions\nThe dnorm(x, mean = 0, sd = 1) function provides the value of the normal probability distribution density function in R. The rv = scipy.stats.norm(x, location = 0, scale = 1) function defines a normal random variable, and then rv.pdf() can be used to get the probability density function in Python.\nIn R and Python, define a sequence of x = -3, ..., 3 that has length 100. Calculate y = f(x), where f is the normal PDF.\n\nR\n\n\nPython\n\n\nPlot your data\nCreate a line or scatter plot showing the relationship between x and \\(y = f(x)\\) in R or Python."
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-mathematical-operations",
+    "href": "exams/midterm/index.html#skill-mathematical-operations",
+    "title": "Stat 151 Exam 1",
+    "section": "2.4 Skill: Mathematical Operations",
+    "text": "2.4 Skill: Mathematical Operations\nIntegrating the normal PDF to calculate \\(P(x \\leq a)\\) is extremely difficult to do by hand. For a long time before computers were common, statisticians used tables that contained the value of \\(P(x \\leq a)\\) for many different values of \\(a\\). Luckily, with computers, we can avoid that!\nThe simplest method for numerical integration involves approximating \\(f(x)\\) using a step function - essentially, evaluating \\(f(x)\\) at evenly spaced \\(x\\) values, and then assuming that \\(f(x) \\approx f(x_i)\\) for \\(x \\in \\left[x_i, x_{i+1}\\right)\\). Then, it is possible to turn \\(\\int_a^b f(x) dx\\) into \\(\\displaystyle\\sum_{x = x_0}^{x_n} f(x_i)\\cdot (x_{i+1}-x_i)\\)\nWrite code to calculate the approximate integral of the normal distribution PDF from -3 to 3, using the \\(x\\) and \\(y\\) you created previously.\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-writing-functions-1",
+    "href": "exams/midterm/index.html#skill-writing-functions-1",
+    "title": "Stat 151 Exam 1",
+    "section": "2.5 Skill: Writing Functions",
+    "text": "2.5 Skill: Writing Functions\nWrite a function that takes arguments a, b, and delta and returns the step function approximation to the integral of the normal pdf representing \\(P(a \\leq x &lt; b)\\), calculated over the sequence of numbers from \\(a\\) to \\(b\\) in delta-sized increments.\nHint:\n\nR: seq(from, to, by)\nPython: arange(start, stop, step) from the numpy package\n\n\nPlanning\nUsing the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you’ve already written can be used to solve this problem. Identify any bits of logic you need to write to solve the problem.\n\nMy solution is sketched out on sheet ___\n\n\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "exams/midterm/index.html#skill-data-frames-loops-1",
+    "href": "exams/midterm/index.html#skill-data-frames-loops-1",
+    "title": "Stat 151 Exam 1",
+    "section": "2.6 Skill: Data Frames, Loops",
+    "text": "2.6 Skill: Data Frames, Loops\nUsing your function, generate a table showing \\(P(x &lt; b)\\) for each value of \\(b\\) between -3 and 3, at 0.1 increments. (e.g. \\(b = \\{-3, -2.9, -2.8, ..., 0, 0.1, ..., 2.9, 3.0 \\}\\))\nYou may assume that \\(a=-\\infty\\) or a value sufficiently negative that \\(P(x&lt;a) \\approx 0\\) (-4 is probably good enough).\n\nR\n\n\nPython"
+  },
+  {
+    "objectID": "weeks/week-16.html",
+    "href": "weeks/week-16.html",
+    "title": "Week 16: Finals",
+    "section": "",
+    "text": "Final Exam (May 15, 1-3 PM, regular classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Finals"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#exam",
+    "href": "weeks/week-16.html#exam",
+    "title": "Week 16: Finals",
+    "section": "",
+    "text": "Final Exam (May 15, 1-3 PM, regular classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Finals"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html",
+    "href": "weeks/week-14.html",
+    "title": "Week 14: Good Charts",
+    "section": "",
+    "text": "Creating Good Charts\n\n\n\n\nWeek 14 Reading Quiz\n\n\n\n\n\n\nFind an example of a terrible chart in the media\n\n\n\n\n\nBad Chart day!\n\n\n\n\n\nHomework 12 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14 - Creating Good Charts"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html#reading",
+    "href": "weeks/week-14.html#reading",
+    "title": "Week 14: Good Charts",
+    "section": "",
+    "text": "Creating Good Charts\n\n\n\n\nWeek 14 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14 - Creating Good Charts"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html#prepare-for-class",
+    "href": "weeks/week-14.html#prepare-for-class",
+    "title": "Week 14: Good Charts",
+    "section": "",
+    "text": "Find an example of a terrible chart in the media",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14 - Creating Good Charts"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html#wednesday",
+    "href": "weeks/week-14.html#wednesday",
+    "title": "Week 14: Good Charts",
+    "section": "",
+    "text": "Bad Chart day!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14 - Creating Good Charts"
+    ]
+  },
+  {
+    "objectID": "weeks/week-14.html#practice-your-skills",
+    "href": "weeks/week-14.html#practice-your-skills",
+    "title": "Week 14: Good Charts",
+    "section": "",
+    "text": "Homework 12 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 14 - Creating Good Charts"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html",
+    "href": "weeks/week-12.html",
+    "title": "Week 12: Strings",
+    "section": "",
+    "text": "Working with Strings - Read only sections Basic Operations, Converting to Numbers, Separating and Joining Columns.\n\n\n\n\nWeek 12 Reading Quiz\n\n\n\n\n\n\nTry out each of the different ways to manipulate strings and clean up data\n\n\n\n\n\nWorking with Strings\n\n\n\n\n\nHomework 10 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - Strings"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#reading",
+    "href": "weeks/week-12.html#reading",
+    "title": "Week 12: Strings",
+    "section": "",
+    "text": "Working with Strings - Read only sections Basic Operations, Converting to Numbers, Separating and Joining Columns.\n\n\n\n\nWeek 12 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - Strings"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#prepare-for-class",
+    "href": "weeks/week-12.html#prepare-for-class",
+    "title": "Week 12: Strings",
+    "section": "",
+    "text": "Try out each of the different ways to manipulate strings and clean up data",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - Strings"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#wednesday",
+    "href": "weeks/week-12.html#wednesday",
+    "title": "Week 12: Strings",
+    "section": "",
+    "text": "Working with Strings",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - Strings"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#practice-your-skills",
+    "href": "weeks/week-12.html#practice-your-skills",
+    "title": "Week 12: Strings",
+    "section": "",
+    "text": "Homework 10 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - Strings"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 10: Graphics",
+    "section": "",
+    "text": "Basic Data Visualization\nData Visualization - Read Intro, Why, and Thinking Critically. You can skip or skim the other sections.\n\n\n\n\nWeek 10 Reading Quiz\n\n\n\n\n\n\nGraphics\n\n\n\n\n\nHomework 8 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Data Visualization"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#reading",
+    "href": "weeks/week-10.html#reading",
+    "title": "Week 10: Graphics",
+    "section": "",
+    "text": "Basic Data Visualization\nData Visualization - Read Intro, Why, and Thinking Critically. You can skip or skim the other sections.\n\n\n\n\nWeek 10 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Data Visualization"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#wednesday",
+    "href": "weeks/week-10.html#wednesday",
+    "title": "Week 10: Graphics",
+    "section": "",
+    "text": "Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Data Visualization"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#practice-your-skills",
+    "href": "weeks/week-10.html#practice-your-skills",
+    "title": "Week 10: Graphics",
+    "section": "",
+    "text": "Homework 8 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Data Visualization"
+    ]
+  },
+  {
+    "objectID": "weeks/week-08.html",
+    "href": "weeks/week-08.html",
+    "title": "Week 8: Midterm",
+    "section": "",
+    "text": "Study for your midterm exam!\nExam Review slides\nExam Review, Monday 1:15 – 2:45, Zoom (link in Canvas) – video posted later (hopefully)\n\nMidterm from 2024\nSample solutions to 2024 midterm\n\n\n\n\n\nEnjoy your spring break!\n\n\n\nMidterm Exam (In class)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8 - Midterm"
+    ]
+  },
+  {
+    "objectID": "weeks/week-08.html#prepare-for-class",
+    "href": "weeks/week-08.html#prepare-for-class",
+    "title": "Week 8: Midterm",
+    "section": "",
+    "text": "Study for your midterm exam!\nExam Review slides\nExam Review, Monday 1:15 – 2:45, Zoom (link in Canvas) – video posted later (hopefully)\n\nMidterm from 2024\nSample solutions to 2024 midterm",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8 - Midterm"
+    ]
+  },
+  {
+    "objectID": "weeks/week-08.html#practice-your-skills",
+    "href": "weeks/week-08.html#practice-your-skills",
+    "title": "Week 8: Midterm",
+    "section": "",
+    "text": "Enjoy your spring break!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8 - Midterm"
+    ]
+  },
+  {
+    "objectID": "weeks/week-08.html#exam",
+    "href": "weeks/week-08.html#exam",
+    "title": "Week 8: Midterm",
+    "section": "",
+    "text": "Midterm Exam (In class)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 8 - Midterm"
+    ]
+  },
+  {
+    "objectID": "weeks/week-06.html",
+    "href": "weeks/week-06.html",
+    "title": "Week 6: Control Structures",
+    "section": "",
+    "text": "Control Structures\n\n\n\n\nWeek 6 Reading Quiz\n\n\n\n\n\n\nRead Homework 5 tips for success and make sure you understand local vs. global file paths\n\n\n\n\n\nFor loops and if statements\nSlides\n\n\n\n\n\nHomework 5",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6 - Control Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-06.html#reading",
+    "href": "weeks/week-06.html#reading",
+    "title": "Week 6: Control Structures",
+    "section": "",
+    "text": "Control Structures\n\n\n\n\nWeek 6 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6 - Control Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-06.html#prepare-for-class",
+    "href": "weeks/week-06.html#prepare-for-class",
+    "title": "Week 6: Control Structures",
+    "section": "",
+    "text": "Read Homework 5 tips for success and make sure you understand local vs. global file paths",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6 - Control Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-06.html#wednesday",
+    "href": "weeks/week-06.html#wednesday",
+    "title": "Week 6: Control Structures",
+    "section": "",
+    "text": "For loops and if statements\nSlides",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6 - Control Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-06.html#practice-your-skills",
+    "href": "weeks/week-06.html#practice-your-skills",
+    "title": "Week 6: Control Structures",
+    "section": "",
+    "text": "Homework 5",
+    "crumbs": [
+      "Weekly materials",
+      "Week 6 - Control Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-04.html",
+    "href": "weeks/week-04.html",
+    "title": "Week 4: Building Blocks",
+    "section": "",
+    "text": "Variables and Basic Data Types\nUsing Functions and Libraries\n\n\n\n\nWeek 4 Reading Quiz\n\n\n\n\n\n\nDownload and read through the homework assignment\n\n\n\n\n\nData Types, Variables, and Common Mistakes\nDebugging strategies\n\n\n\n\n\nHomework 3",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4 - Building Blocks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-04.html#reading",
+    "href": "weeks/week-04.html#reading",
+    "title": "Week 4: Building Blocks",
+    "section": "",
+    "text": "Variables and Basic Data Types\nUsing Functions and Libraries\n\n\n\n\nWeek 4 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4 - Building Blocks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-04.html#prepare-for-class",
+    "href": "weeks/week-04.html#prepare-for-class",
+    "title": "Week 4: Building Blocks",
+    "section": "",
+    "text": "Download and read through the homework assignment",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4 - Building Blocks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-04.html#wednesday",
+    "href": "weeks/week-04.html#wednesday",
+    "title": "Week 4: Building Blocks",
+    "section": "",
+    "text": "Data Types, Variables, and Common Mistakes\nDebugging strategies",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4 - Building Blocks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-04.html#practice-your-skills",
+    "href": "weeks/week-04.html#practice-your-skills",
+    "title": "Week 4: Building Blocks",
+    "section": "",
+    "text": "Homework 3",
+    "crumbs": [
+      "Weekly materials",
+      "Week 4 - Building Blocks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-02.html",
+    "href": "weeks/week-02.html",
+    "title": "Week 2: Scripts and Notebooks",
+    "section": "",
+    "text": "RStudio’s Interface\nScripts and Notebooks\n\n\n\n\nWeek 2 Reading Quiz\n\n\n\n\n\n\nDo the examples in the textbook chapter on Scripts and Notebooks.\n\n\n\n\n\nSlides\n\n\n\n\n\nHomework 1",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2 - Scripts & Notebooks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-02.html#reading",
+    "href": "weeks/week-02.html#reading",
+    "title": "Week 2: Scripts and Notebooks",
+    "section": "",
+    "text": "RStudio’s Interface\nScripts and Notebooks\n\n\n\n\nWeek 2 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2 - Scripts & Notebooks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-02.html#prepare-for-class",
+    "href": "weeks/week-02.html#prepare-for-class",
+    "title": "Week 2: Scripts and Notebooks",
+    "section": "",
+    "text": "Do the examples in the textbook chapter on Scripts and Notebooks.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2 - Scripts & Notebooks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-02.html#wednesday",
+    "href": "weeks/week-02.html#wednesday",
+    "title": "Week 2: Scripts and Notebooks",
+    "section": "",
+    "text": "Slides",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2 - Scripts & Notebooks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-02.html#practice-your-skills",
+    "href": "weeks/week-02.html#practice-your-skills",
+    "title": "Week 2: Scripts and Notebooks",
+    "section": "",
+    "text": "Homework 1",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2 - Scripts & Notebooks"
+    ]
+  },
+  {
+    "objectID": "weeks/week-01.html",
+    "href": "weeks/week-01.html",
+    "title": "Week 1: Setting Up",
+    "section": "",
+    "text": "Syllabus\nComputer Basics\nSetting Up Your Computer\n\n\n\n\nReading Quiz 0 – Syllabus and Introductory Material\nWeek 1 Reading Quiz\n\n\n\n\n\n\nTry to set up your computer with R, RStudio, Python, and quarto\n\n\n\n\n\nSyllabus\nIntroductions\nClass Picture (for Dr. Vanderplas’s face blindness)\nSet up your laptop!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1 - Setting Up"
+    ]
+  },
+  {
+    "objectID": "weeks/week-01.html#reading",
+    "href": "weeks/week-01.html#reading",
+    "title": "Week 1: Setting Up",
+    "section": "",
+    "text": "Syllabus\nComputer Basics\nSetting Up Your Computer\n\n\n\n\nReading Quiz 0 – Syllabus and Introductory Material\nWeek 1 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1 - Setting Up"
+    ]
+  },
+  {
+    "objectID": "weeks/week-01.html#prepare-for-class",
+    "href": "weeks/week-01.html#prepare-for-class",
+    "title": "Week 1: Setting Up",
+    "section": "",
+    "text": "Try to set up your computer with R, RStudio, Python, and quarto",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1 - Setting Up"
+    ]
+  },
+  {
+    "objectID": "weeks/week-01.html#wednesday",
+    "href": "weeks/week-01.html#wednesday",
+    "title": "Week 1: Setting Up",
+    "section": "",
+    "text": "Syllabus\nIntroductions\nClass Picture (for Dr. Vanderplas’s face blindness)\nSet up your laptop!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1 - Setting Up"
+    ]
+  },
+  {
+    "objectID": "weeks/week-03.html",
+    "href": "weeks/week-03.html",
+    "title": "Week 3: Intro to Programming",
+    "section": "",
+    "text": "Introduction to Programming\n\n\n\n\nWeek 3 Reading Quiz\n\n\n\n\n\n\nDownload and read through the homework assignment\n\n\n\n\n\nCues to look for in Rstudio\n\n\n\n\n\nHomework 2",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3 - Intro to Programming"
+    ]
+  },
+  {
+    "objectID": "weeks/week-03.html#reading",
+    "href": "weeks/week-03.html#reading",
+    "title": "Week 3: Intro to Programming",
+    "section": "",
+    "text": "Introduction to Programming\n\n\n\n\nWeek 3 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3 - Intro to Programming"
+    ]
+  },
+  {
+    "objectID": "weeks/week-03.html#prepare-for-class",
+    "href": "weeks/week-03.html#prepare-for-class",
+    "title": "Week 3: Intro to Programming",
+    "section": "",
+    "text": "Download and read through the homework assignment",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3 - Intro to Programming"
+    ]
+  },
+  {
+    "objectID": "weeks/week-03.html#wednesday",
+    "href": "weeks/week-03.html#wednesday",
+    "title": "Week 3: Intro to Programming",
+    "section": "",
+    "text": "Cues to look for in Rstudio",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3 - Intro to Programming"
+    ]
+  },
+  {
+    "objectID": "weeks/week-03.html#practice-your-skills",
+    "href": "weeks/week-03.html#practice-your-skills",
+    "title": "Week 3: Intro to Programming",
+    "section": "",
+    "text": "Homework 2",
+    "crumbs": [
+      "Weekly materials",
+      "Week 3 - Intro to Programming"
+    ]
+  },
+  {
+    "objectID": "weeks/week-05.html",
+    "href": "weeks/week-05.html",
+    "title": "Week 5: Data Structures",
+    "section": "",
+    "text": "Data Structures\n\n\n\n\nWeek 5 Reading Quiz\n\n\n\n\n\n\nDownload and read through the homework assignment\n\n\n\n\n\nData Structures and Indexing\n\n\n\n\n\nHomework 4",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5 - Data Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-05.html#reading",
+    "href": "weeks/week-05.html#reading",
+    "title": "Week 5: Data Structures",
+    "section": "",
+    "text": "Data Structures\n\n\n\n\nWeek 5 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5 - Data Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-05.html#prepare-for-class",
+    "href": "weeks/week-05.html#prepare-for-class",
+    "title": "Week 5: Data Structures",
+    "section": "",
+    "text": "Download and read through the homework assignment",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5 - Data Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-05.html#wednesday",
+    "href": "weeks/week-05.html#wednesday",
+    "title": "Week 5: Data Structures",
+    "section": "",
+    "text": "Data Structures and Indexing",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5 - Data Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-05.html#practice-your-skills",
+    "href": "weeks/week-05.html#practice-your-skills",
+    "title": "Week 5: Data Structures",
+    "section": "",
+    "text": "Homework 4",
+    "crumbs": [
+      "Weekly materials",
+      "Week 5 - Data Structures"
+    ]
+  },
+  {
+    "objectID": "weeks/week-07.html",
+    "href": "weeks/week-07.html",
+    "title": "Week 7: Functions",
+    "section": "",
+    "text": "Writing Functions\n\n\n\n\nWeek 7 Reading Quiz\n\n\n\n\n\n\nTake the Mid semester Survey on Canvas\nThis provides me with helpful feedback and lets me calibrate the course for the 2nd half of the semester.\nHomework resubmission deadline is next week! Be sure to finish up any homework you’d like to resubmit.\n\n\n\n\n\nSlides\nExam Topics\n\n\n\n\n\nHomework 6",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7 - Functions"
+    ]
+  },
+  {
+    "objectID": "weeks/week-07.html#reading",
+    "href": "weeks/week-07.html#reading",
+    "title": "Week 7: Functions",
+    "section": "",
+    "text": "Writing Functions\n\n\n\n\nWeek 7 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7 - Functions"
+    ]
+  },
+  {
+    "objectID": "weeks/week-07.html#prepare-for-class",
+    "href": "weeks/week-07.html#prepare-for-class",
+    "title": "Week 7: Functions",
+    "section": "",
+    "text": "Take the Mid semester Survey on Canvas\nThis provides me with helpful feedback and lets me calibrate the course for the 2nd half of the semester.\nHomework resubmission deadline is next week! Be sure to finish up any homework you’d like to resubmit.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7 - Functions"
+    ]
+  },
+  {
+    "objectID": "weeks/week-07.html#wednesday",
+    "href": "weeks/week-07.html#wednesday",
+    "title": "Week 7: Functions",
+    "section": "",
+    "text": "Slides\nExam Topics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7 - Functions"
+    ]
+  },
+  {
+    "objectID": "weeks/week-07.html#practice-your-skills",
+    "href": "weeks/week-07.html#practice-your-skills",
+    "title": "Week 7: Functions",
+    "section": "",
+    "text": "Homework 6",
+    "crumbs": [
+      "Weekly materials",
+      "Week 7 - Functions"
+    ]
+  },
+  {
+    "objectID": "weeks/week-09.html",
+    "href": "weeks/week-09.html",
+    "title": "Week 9: Version Control",
+    "section": "",
+    "text": "Git and Github\n\n\n\n\nWeek 9 Reading Quiz\n\n\n\n\n\n\nSign up for a GitHub account. You can use any email address, but make your username professionally appropriate so that you can use this account throughout your undergraduate career to host portfolios, projects, etc.\n\n\n\n\n\nUsing git and github\n\n\n\n\n\nHomework 7 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 9 - Version Control"
+    ]
+  },
+  {
+    "objectID": "weeks/week-09.html#reading",
+    "href": "weeks/week-09.html#reading",
+    "title": "Week 9: Version Control",
+    "section": "",
+    "text": "Git and Github\n\n\n\n\nWeek 9 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 9 - Version Control"
+    ]
+  },
+  {
+    "objectID": "weeks/week-09.html#prepare-for-class",
+    "href": "weeks/week-09.html#prepare-for-class",
+    "title": "Week 9: Version Control",
+    "section": "",
+    "text": "Sign up for a GitHub account. You can use any email address, but make your username professionally appropriate so that you can use this account throughout your undergraduate career to host portfolios, projects, etc.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 9 - Version Control"
+    ]
+  },
+  {
+    "objectID": "weeks/week-09.html#wednesday",
+    "href": "weeks/week-09.html#wednesday",
+    "title": "Week 9: Version Control",
+    "section": "",
+    "text": "Using git and github",
+    "crumbs": [
+      "Weekly materials",
+      "Week 9 - Version Control"
+    ]
+  },
+  {
+    "objectID": "weeks/week-09.html#practice-your-skills",
+    "href": "weeks/week-09.html#practice-your-skills",
+    "title": "Week 9: Version Control",
+    "section": "",
+    "text": "Homework 7 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 9 - Version Control"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "Week 11: Data Cleaning",
+    "section": "",
+    "text": "Data Cleaning and Manipulation\n\n\n\n\nWeek 11 Reading Quiz\n\n\n\n\n\n\nMake yourself a cheat sheet of which functions to use for different R and python data manipulation tasks.\n\n\n\n\n\nData Cleaning Verbs\nThinking through data processing tasks\n\n\n\n\n\nHomework 9 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11 - Data Cleaning"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html#reading",
+    "href": "weeks/week-11.html#reading",
+    "title": "Week 11: Data Cleaning",
+    "section": "",
+    "text": "Data Cleaning and Manipulation\n\n\n\n\nWeek 11 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11 - Data Cleaning"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html#prepare-for-class",
+    "href": "weeks/week-11.html#prepare-for-class",
+    "title": "Week 11: Data Cleaning",
+    "section": "",
+    "text": "Make yourself a cheat sheet of which functions to use for different R and python data manipulation tasks.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11 - Data Cleaning"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html#wednesday",
+    "href": "weeks/week-11.html#wednesday",
+    "title": "Week 11: Data Cleaning",
+    "section": "",
+    "text": "Data Cleaning Verbs\nThinking through data processing tasks",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11 - Data Cleaning"
+    ]
+  },
+  {
+    "objectID": "weeks/week-11.html#practice-your-skills",
+    "href": "weeks/week-11.html#practice-your-skills",
+    "title": "Week 11: Data Cleaning",
+    "section": "",
+    "text": "Homework 9 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 11 - Data Cleaning"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html",
+    "href": "weeks/week-13.html",
+    "title": "Week 13: Reshaping Data",
+    "section": "",
+    "text": "Reshaping Data\n\n\n\n\nWeek 13 Reading Quiz\n\n\n\n\n\n\nManually try to convert data from wide-to-long and long-to-wide in Excel with copy/paste.\n\n\n\n\n\nWide to long and long to wide operations\nDrawing pictures to help with planning code\n\n\n\n\n\nHomework 11 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Reshaping Data"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#reading",
+    "href": "weeks/week-13.html#reading",
+    "title": "Week 13: Reshaping Data",
+    "section": "",
+    "text": "Reshaping Data\n\n\n\n\nWeek 13 Reading Quiz",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Reshaping Data"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#prepare-for-class",
+    "href": "weeks/week-13.html#prepare-for-class",
+    "title": "Week 13: Reshaping Data",
+    "section": "",
+    "text": "Manually try to convert data from wide-to-long and long-to-wide in Excel with copy/paste.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Reshaping Data"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#wednesday",
+    "href": "weeks/week-13.html#wednesday",
+    "title": "Week 13: Reshaping Data",
+    "section": "",
+    "text": "Wide to long and long to wide operations\nDrawing pictures to help with planning code",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Reshaping Data"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#practice-your-skills",
+    "href": "weeks/week-13.html#practice-your-skills",
+    "title": "Week 13: Reshaping Data",
+    "section": "",
+    "text": "Homework 11 (Submitted via Github classroom)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Reshaping Data"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html",
+    "href": "weeks/week-15.html",
+    "title": "Week 15: Review",
+    "section": "",
+    "text": "Come with a list of questions for the review session\n\n\n\n\n\nIn-class exam review",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - Review"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#prepare-for-class",
+    "href": "weeks/week-15.html#prepare-for-class",
+    "title": "Week 15: Review",
+    "section": "",
+    "text": "Come with a list of questions for the review session",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - Review"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#wednesday",
+    "href": "weeks/week-15.html#wednesday",
+    "title": "Week 15: Review",
+    "section": "",
+    "text": "In-class exam review",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - Review"
+    ]
+  }
+]

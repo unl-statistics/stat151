@@ -176,7 +176,7 @@ Your code should output only the prime factors of `x`.
 
 ```
 
-```{r test-prime-factors-r}
+```{r test-prime-factors-r, error = T}
 prime_factorize(34253) # should output "34253 is a prime number"
 prime_factorize(prod(2:10)) # should output "2^8 x 3^4 x 5^2 x 7^1"
 ```
@@ -188,7 +188,7 @@ prime_factorize(prod(2:10)) # should output "2^8 x 3^4 x 5^2 x 7^1"
 
 ```
 
-```{python test-prime-factors-py}
+```{python test-prime-factors-py, error = T}
 prime_factorize(34253) # should output "34253 is a prime number"
 prime_factorize(3628800) # should output "2^8 x 3^4 x 5^2 x 7^1"
 ```

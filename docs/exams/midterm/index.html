@@ -406,17 +406,23 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#r-10" id="toc-r-10" class="nav-link" data-scroll-target="#r-10">R</a></li>
   <li><a href="#python-12" id="toc-python-12" class="nav-link" data-scroll-target="#python-12">Python</a></li>
+  <li><a href="#thinking-critically-2" id="toc-thinking-critically-2" class="nav-link" data-scroll-target="#thinking-critically-2">Thinking Critically</a></li>
   </ul></li>
-  <li><a href="#skill-writing-functions-1" id="toc-skill-writing-functions-1" class="nav-link" data-scroll-target="#skill-writing-functions-1"><span class="header-section-number">2.5</span> Skill: Writing Functions</a>
+  <li><a href="#skill-writing-functions-data-frames" id="toc-skill-writing-functions-data-frames" class="nav-link" data-scroll-target="#skill-writing-functions-data-frames"><span class="header-section-number">2.5</span> Skill: Writing Functions, Data Frames</a>
   <ul class="collapse">
   <li><a href="#planning-3" id="toc-planning-3" class="nav-link" data-scroll-target="#planning-3">Planning</a></li>
   <li><a href="#r-11" id="toc-r-11" class="nav-link" data-scroll-target="#r-11">R</a></li>
   <li><a href="#python-13" id="toc-python-13" class="nav-link" data-scroll-target="#python-13">Python</a></li>
   </ul></li>
-  <li><a href="#skill-data-frames-loops-1" id="toc-skill-data-frames-loops-1" class="nav-link" data-scroll-target="#skill-data-frames-loops-1"><span class="header-section-number">2.6</span> Skill: Data Frames, Loops</a>
+  <li><a href="#skill-functions-mathematical-operations" id="toc-skill-functions-mathematical-operations" class="nav-link" data-scroll-target="#skill-functions-mathematical-operations"><span class="header-section-number">2.6</span> Skill: Functions, Mathematical Operations</a>
   <ul class="collapse">
   <li><a href="#r-12" id="toc-r-12" class="nav-link" data-scroll-target="#r-12">R</a></li>
   <li><a href="#python-14" id="toc-python-14" class="nav-link" data-scroll-target="#python-14">Python</a></li>
+  </ul></li>
+  <li><a href="#skill-data-frames-loops-1" id="toc-skill-data-frames-loops-1" class="nav-link" data-scroll-target="#skill-data-frames-loops-1"><span class="header-section-number">2.7</span> Skill: Data Frames, Loops</a>
+  <ul class="collapse">
+  <li><a href="#r-13" id="toc-r-13" class="nav-link" data-scroll-target="#r-13">R</a></li>
+  <li><a href="#python-15" id="toc-python-15" class="nav-link" data-scroll-target="#python-15">Python</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -775,14 +781,18 @@ Reminder: Logs with different bases
 <section id="python-12" class="level3">
 <h3 class="anchored" data-anchor-id="python-12">Python</h3>
 </section>
+<section id="thinking-critically-2" class="level3">
+<h3 class="anchored" data-anchor-id="thinking-critically-2">Thinking Critically</h3>
+<p>Is your answer reasonable? Approximately what value would you expect when integrating the standard normal PDF from -3 to 3?</p>
 </section>
-<section id="skill-writing-functions-1" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="skill-writing-functions-1"><span class="header-section-number">2.5</span> Skill: Writing Functions</h2>
-<p>Write a function that takes arguments <code>a</code>, <code>b</code>, and <code>delta</code> and returns the step function approximation to the integral of the normal pdf representing <span class="math inline">\(P(a \leq x &lt; b)\)</span>, calculated over the sequence of numbers from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> in <code>delta</code>-sized increments.</p>
+</section>
+<section id="skill-writing-functions-data-frames" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="skill-writing-functions-data-frames"><span class="header-section-number">2.5</span> Skill: Writing Functions, Data Frames</h2>
+<p>Write a function, <code>norm_step</code> that takes arguments <code>a</code>, <code>b</code>, and <code>delta</code> and returns a data frame containing columns <code>x</code> and <code>y</code> that define the transition points (in <code>delta</code> increments) along the step function approximation to the normal pdf.</p>
 <p>Hint:</p>
 <ul>
-<li>R: <code>seq(from, to, by)</code></li>
-<li>Python: <code>arange(start, stop, step)</code> from the <code>numpy</code> package</li>
+<li>R: <code>seq(from, to, length.out = ...)</code> or <code>seq(from, to, by=...)</code></li>
+<li>Python: <code>linspace(start, stop, num)</code> from the <code>numpy</code> package, or <code>arange(start, stop, step)</code> from the <code>numpy</code> package</li>
 </ul>
 <section id="planning-3" class="level3">
 <h3 class="anchored" data-anchor-id="planning-3">Planning</h3>
@@ -798,15 +808,25 @@ Reminder: Logs with different bases
 <h3 class="anchored" data-anchor-id="python-13">Python</h3>
 </section>
 </section>
-<section id="skill-data-frames-loops-1" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="skill-data-frames-loops-1"><span class="header-section-number">2.6</span> Skill: Data Frames, Loops</h2>
-<p>Using your function, generate a table showing <span class="math inline">\(P(x &lt; b)\)</span> for each value of <span class="math inline">\(b\)</span> between -3 and 3, at 0.1 increments. (e.g.&nbsp;<span class="math inline">\(b = \{-3, -2.9, -2.8, ..., 0, 0.1, ..., 2.9, 3.0 \}\)</span>)</p>
-<p>You may assume that <span class="math inline">\(a=-\infty\)</span> or a value sufficiently negative that <span class="math inline">\(P(x&lt;a) \approx 0\)</span> (-4 is probably good enough).</p>
+<section id="skill-functions-mathematical-operations" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="skill-functions-mathematical-operations"><span class="header-section-number">2.6</span> Skill: Functions, Mathematical Operations</h2>
+<p>Using your <code>norm_step</code> function, define a function <code>norm_int</code> that calculates the integral from <code>a</code> to <code>b</code> using step size <code>step</code>. Your function should call your <code>norm_step</code> function and should return a single numerical value.</p>
 <section id="r-12" class="level3">
 <h3 class="anchored" data-anchor-id="r-12">R</h3>
 </section>
 <section id="python-14" class="level3">
 <h3 class="anchored" data-anchor-id="python-14">Python</h3>
+</section>
+</section>
+<section id="skill-data-frames-loops-1" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="skill-data-frames-loops-1"><span class="header-section-number">2.7</span> Skill: Data Frames, Loops</h2>
+<p>Using your function, generate a table (data frame) showing <span class="math inline">\(P(x &lt; b)\)</span> for each value of <span class="math inline">\(b\)</span> between -3 and 3, at 0.1 increments. (e.g.&nbsp;<span class="math inline">\(b = \{-3, -2.9, -2.8, ..., 0, 0.1, ..., 2.9, 3.0 \}\)</span>)</p>
+<p>You may assume that <span class="math inline">\(a=-\infty\)</span> or a value sufficiently negative that <span class="math inline">\(P(x&lt;a) \approx 0\)</span> (-10 is probably good enough).</p>
+<section id="r-13" class="level3">
+<h3 class="anchored" data-anchor-id="r-13">R</h3>
+</section>
+<section id="python-15" class="level3">
+<h3 class="anchored" data-anchor-id="python-15">Python</h3>
 
 
 </section>

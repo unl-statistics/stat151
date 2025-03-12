@@ -540,18 +540,23 @@ Write code to calculate the approximate integral of the normal distribution PDF 
 
 ```
 
+### Thinking Critically
+
+Is your answer reasonable? Approximately what value would you expect when integrating the standard normal PDF from -3 to 3?
+
+
 ::: {.content-visible when-format="pdf"}
 \clearpage
 :::
 
-## Skill: Writing Functions
+## Skill: Writing Functions, Data Frames
 
-Write a function that takes arguments `a`, `b`, and `delta` and returns the step function approximation to the integral of the normal pdf representing $P(a \leq x < b)$, calculated over the sequence of numbers from $a$ to $b$ in `delta`-sized increments. 
+Write a function, `norm_step` that takes arguments `a`, `b`, and `delta` and returns a data frame containing columns `x` and `y` that define the transition points (in `delta` increments) along the step function approximation to the normal pdf.
 
 Hint:
 
-- R: `seq(from, to, by)`
-- Python: `arange(start, stop, step)` from the `numpy` package
+- R: `seq(from, to, length.out = ...)` or `seq(from, to, by=...)`
+- Python: `linspace(start, stop, num)` from the `numpy` package, or `arange(start, stop, step)` from the `numpy` package
 
 ### Planning
 
@@ -566,6 +571,23 @@ My solution is sketched out on sheet ___
 
 ### R
 
+```{r function-ab-step-r}
+
+```
+
+### Python
+
+```{python function-ab-step-py}
+
+```
+
+## Skill: Functions, Mathematical Operations
+
+Using your `norm_step` function, define a function `norm_int` that calculates the integral from `a` to `b` using step size `step`. Your function should call your `norm_step` function and should return a single numerical value. 
+
+
+### R
+
 ```{r function-ab-int-approx-r}
 
 ```
@@ -576,11 +598,12 @@ My solution is sketched out on sheet ___
 
 ```
 
+
 ## Skill: Data Frames, Loops
 
-Using your function, generate a table showing $P(x < b)$ for each value of $b$ between -3 and 3, at 0.1 increments. (e.g. $b = \{-3, -2.9, -2.8, ..., 0, 0.1, ..., 2.9, 3.0 \}$)
+Using your function, generate a table (data frame) showing $P(x < b)$ for each value of $b$ between -3 and 3, at 0.1 increments. (e.g. $b = \{-3, -2.9, -2.8, ..., 0, 0.1, ..., 2.9, 3.0 \}$)
 
-You may assume that $a=-\infty$ or a value sufficiently negative that $P(x<a) \approx 0$ (-4 is probably good enough). 
+You may assume that $a=-\infty$ or a value sufficiently negative that $P(x<a) \approx 0$ (-10 is probably good enough). 
 
 ### R
 

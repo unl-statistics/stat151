@@ -12,6 +12,7 @@ project:
     - ./course-links.qmd
     - ./course-overview.qmd
     - ./course-support.qmd
+    - ./exams/midterm/index.qmd
   post-render:
     - code/nojekyll
 

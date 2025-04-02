@@ -11,7 +11,7 @@
 
 ## 🐪 Wednesday
 
-- Graphics
+- [Graphics](../slides/09-graphics.qmd)
 
 ##  🏋️ Practice your skills
 

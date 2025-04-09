@@ -1,0 +1,120 @@
+---
+title: "Data Wrangling"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+execute:
+  echo: true
+  error: true
+title-slide-attributes:
+  data-background-image: https://srvanderplas.github.io/stat-computing-r-python/images/wrangling/data_cowboy.png
+  data-background-size: contain
+  data-background-opacity: "0.5"
+
+---
+
+
+## We read...
+
+[![](images/data-cleaning-screenshot.png){fig-alt="Screenshot of https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html"}](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html)
+
+## Tidy Data
+
+![](https://srvanderplas.github.io/stat-computing-r-python/images/wrangling/tidydata_1.jpg){fig-alt="Stylized text providing an overview of Tidy Data. The top reads “Tidy data is a standard way of mapping the meaning of a dataset to its structure. - Hadley Wickham.” On the left reads “In tidy data: each variable forms a column; each observation forms a row; each cell is a single measurement.” There is an example table on the lower right with columns ‘id’, ‘name’ and ‘color’ with observations for different cats, illustrating tidy data structure."}
+
+
+## Messy Data
+
+![](https://srvanderplas.github.io/stat-computing-r-python/images/wrangling/tidydata_2.jpg){fig-alt="There are two sets of anthropomorphized data tables. The top group of three tables are all rectangular and smiling, with a shared speech bubble reading “our columns are variables and our rows are observations!”. Text to the left of that group reads “The standard structure of tidy data means that “tidy datasets are all alike…” The lower group of four tables are all different shapes, look ragged and concerned, and have different speech bubbles reading (from left to right) “my column are values and my rows are variables”, “I have variables in columns AND in rows”, “I have multiple variables in a single column”, and “I don’t even KNOW what my deal is.” Next to the frazzled data tables is text “...but every messy dataset is messy in its own way. -Hadley Wickham.”"}
+
+## Common Data Cleaning Tasks
+
+- Pick out rows: 
+  - R: `df |> filter(...)` or 
+  - Python: `df.query(...)`
+  - `...` replaced by a logical condition involving a variable
+  - keep only rows where that condition is true
+
+- Create new variables: 
+  - R: `df |> mutate(newvar= XXX(...))` or 
+  - Python: `df['newvar']=df.XXX(...)`
+  - XXX may be `transform`, `replace`, or another function
+  - `...` provides arguments to the function
+  
+- Group by + summarize: 
+  - R: `df |> group_by(varname) |> summarize(newvar = XXX(...))` or 
+  - Python: `dfsum = df.groupby(varname).agg({newvar:XXX})`
+  - `.agg` syntax can be tricky. Don't be afraid to google for help!
+
+
+
+## Homework
+
+- Replicate a graph in R and a graph in python
+
+- Hard part -- DO NOT SPEED THROUGH!! -- Figure out what form your data needs to be in. Sketch on paper!
+
+- New part -- clean the data to get it into that form
+
+- Easy part -- make the chart
+
+## Example
+
+Consider this plot of five games with at least 100 months of data that have the lowest average number of players at the same time. 
+
+```{r sample-plot}
+#| echo: false
+games <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv')
+library(dplyr)
+library(readr)
+library(tidyr)
+library(ggplot2)
+
+games_time_sum <- games |> 
+  group_by(gamename) |> 
+  summarize(n=n(), avg = mean(avg)) |> 
+  arrange(avg) |>
+  filter(n > 100) |>
+  filter(row_number()<=5)
+
+filter(games, gamename %in% games_time_sum$gamename) |>
+  mutate(monthnum = factor(month, levels = month.name, ordered = T) |> as.numeric()) |>
+  mutate(monthnum = (monthnum-0.5)/12,
+         time = year + monthnum) |>
+  ggplot(aes(x = time, y = avg, color = gamename)) + geom_line()
+```
+
+## Example
+
+What steps do we need to perform?
+
+
+## Example
+
+Plot x = time, y = avg for the 5 games identified. 
+
+Steps: 
+
+1. Compute average number of players for each game over all available data    
+[`group_by(game) |> summarize(avg = mean(avg))`]{.large}
+
+2. Compute months of data       
+[`group_by(game) |> summarize(n = n(), avg = mean(avg))`]{.large}
+
+3. Keep only rows with 100 months of data     
+[`filter(n>=100)`]{.large}
+
+4. Sort (increasing by average) to get lowest 5 games    
+[`arrange(avg) |> filter(row_number() <= 5)`]{.large}
+
+5. Save the names of those 5 games and use to filter main dataset    
+[`games |> filter(gamename %in% my_games)`]{.large}
+
+6. Convert month to a number (1-12)      
+[`games |> mutate(monthnum = factor(month, levels = month.name, ordered = T) |> as.numeric())`]{.large}
+
+7. Take numerical month and use it to compute time as year + fractional year     
+[`games |> mutate(time = year + (month-0.5)/12)`]{.large}
+

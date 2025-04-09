@@ -14,7 +14,7 @@
 
 ## 🐪 Wednesday
 
-- Data Cleaning Verbs
+- [Data Cleaning Verbs](../slides/10-wrangling.qmd)
 - Thinking through data processing tasks
 
 ##  🏋️ Practice your skills

@@ -1,0 +1,65 @@
+---
+title: Working With Strings
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+execute:
+  echo: true
+  error: true
+---
+
+## Reading and Resources
+
+::: columns
+::: column
+
+[![](images/strings-screenshot.png){fig-alt="Screenshot of the first section of the textbook chapter, found at https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/04-strings.html"}](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/04-strings.html)
+
+
+
+:::
+
+::: column
+::: r-fit-text
+Other useful things:
+
+- [stringr cheatsheet](https://rstudio.github.io/cheatsheets/strings.pdf)
+
+- [Python string manipulation cheatsheet](https://www.kdnuggets.com/publications/sheets/Python-String-Processing-Cheatsheet-KDnuggets.pdf)
+
+- [Reshaping Data](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/05-data-reshape.html) (Next week!)
+:::
+:::
+
+:::
+
+# Homework 10 {.scrollable}
+
+-   Use github classroom to accept the assignment
+-   Don't forget to commit and push your changes!
+    - You don't have to wait until the assignment is complete to push!
+    - Push early and often!
+
+## Hints and Clarifications {.scrollable}
+
+-   Regular expressions are not necessary all the time
+
+-   `stringr` functions are handy
+
+-   `str_view()` vs `str_view_all()`
+
+-   Step 3: Any time you see the word "ugh", with any number of h's, followed by a punctuation mark, delete this.
+
+    -   `ugh, ugh! ughh! ughhhh` should be deleted but `ughhhhh` should not
+
+-   Step 4: Replace all instances of **exactly 2 a's** with exactly 2 e's.
+
+    -   "baa" –\> "bee" but nothing should happen to "baaa"
+
+-   Step 6 Every word that ends in b, change that to a y. *Hint: punctuation!*
+
+    -   either "b!" or "b" is changed to y, no need to keep punctuation
+
+-   By the end of step 7, you should see individual words that make sense.

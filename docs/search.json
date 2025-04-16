@@ -1991,5 +1991,19 @@
       "Course information",
       "FAQ"
     ]
+  },
+  {
+    "objectID": "slides/12-strings.html#hints-and-clarifications",
+    "href": "slides/12-strings.html#hints-and-clarifications",
+    "title": "Working With Strings",
+    "section": "Hints and Clarifications",
+    "text": "Hints and Clarifications\n\nRegular expressions are not necessary all the time\nstringr functions are handy\nstr_view() vs str_view_all()\nStep 3: Any time you see the word “ugh”, with any number of h’s, followed by a punctuation mark, delete this.\n\nugh, ugh! ughh! ughhhh should be deleted but ughhhhh should not\n\nStep 4: Replace all instances of exactly 2 a’s with exactly 2 e’s.\n\n“baa” –&gt; “bee” but nothing should happen to “baaa”\n\nStep 6 Every word that ends in b, change that to a y. Hint: punctuation!\n\neither “b!” or “b” is changed to y, no need to keep punctuation\n\nBy the end of step 7, you should see individual words that make sense."
+  },
+  {
+    "objectID": "slides/12-strings.html#reading-and-resources",
+    "href": "slides/12-strings.html#reading-and-resources",
+    "title": "Working With Strings",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n\n\n\n\n\nOther useful things:\n\nstringr cheatsheet\nPython string manipulation cheatsheet\nReshaping Data (Next week!)"
   }
 ]

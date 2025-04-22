@@ -2005,5 +2005,54 @@
       "Course information",
       "FAQ"
     ]
+  },
+  {
+    "objectID": "slides/13-reshaping.html#reading-and-resources",
+    "href": "slides/13-reshaping.html#reading-and-resources",
+    "title": "Reshaping Data",
+    "section": "Reading and Resources",
+    "text": "Reading and Resources\n\n\n\n\n\nOther useful things:\n\ntidyr cheatsheet\nPython wrangling cheatsheet (pivot, melt)"
+  },
+  {
+    "objectID": "slides/13-reshaping.html#creating-data-sketches",
+    "href": "slides/13-reshaping.html#creating-data-sketches",
+    "title": "Reshaping Data",
+    "section": "Creating Data Sketches",
+    "text": "Creating Data Sketches\n Create a plot of per capita cases by year for each country"
+  },
+  {
+    "objectID": "slides/13-reshaping.html#creating-data-sketches-1",
+    "href": "slides/13-reshaping.html#creating-data-sketches-1",
+    "title": "Reshaping Data",
+    "section": "Creating Data Sketches",
+    "text": "Creating Data Sketches"
+  },
+  {
+    "objectID": "slides/13-reshaping.html#creating-data-sketches-2",
+    "href": "slides/13-reshaping.html#creating-data-sketches-2",
+    "title": "Reshaping Data",
+    "section": "Creating Data Sketches",
+    "text": "Creating Data Sketches"
+  },
+  {
+    "objectID": "slides/13-reshaping.html#hints-and-clarifications",
+    "href": "slides/13-reshaping.html#hints-and-clarifications",
+    "title": "Reshaping Data",
+    "section": "Hints and Clarifications",
+    "text": "Hints and Clarifications\n\nDraw your data structures before you start writing code!!\n\nWhat columns do you need? (generally – you don’t have to list them all)\nWhat row identifiers should be there?\nWhat observations are in each cell?\n\nThink in steps: how do you get from what you have to what you want?\nAt the end… think critically about the data. Does it look like you’d expect?"
+  },
+  {
+    "objectID": "slides/13-reshaping.html#coming-up",
+    "href": "slides/13-reshaping.html#coming-up",
+    "title": "Reshaping Data",
+    "section": "Coming Up",
+    "text": "Coming Up\n\nNext week: Creating good (and bad) charts\nLast week of classes:\n\nHomework resubmission deadline is May 5th\nIn Class Exam Review - May 7th\n\nWork through practice exam together"
+  },
+  {
+    "objectID": "slides/13-reshaping.html#creating-data-sketches-3",
+    "href": "slides/13-reshaping.html#creating-data-sketches-3",
+    "title": "Reshaping Data",
+    "section": "Creating Data Sketches",
+    "text": "Creating Data Sketches"
   }
 ]

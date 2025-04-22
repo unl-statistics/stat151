@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.39">
 
-  <title>Stat 151 - Spring 2025 – Data Wrangling</title>
+  <title>Stat 151 - Spring 2025 – Introduction to Graphics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -120,9 +120,9 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Data Wrangling – Stat 151 - Spring 2025">
+<meta property="og:title" content="Introduction to Graphics – Stat 151 - Spring 2025">
 <meta property="og:site_name" content="Stat 151 - Spring 2025">
-<meta name="twitter:title" content="Data Wrangling – Stat 151 - Spring 2025">
+<meta name="twitter:title" content="Introduction to Graphics – Stat 151 - Spring 2025">
 <meta name="twitter:image" content="https://unl-statistics.github.io/stat151/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@srvanderplas">
 <meta name="twitter:card" content="summary_large_image">
@@ -131,8 +131,8 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://srvanderplas.github.io/stat-computing-r-python/images/wrangling/data_cowboy.png" data-background-opacity="0.5" data-background-size="contain" class="quarto-title-block center">
-  <h1 class="title">Data Wrangling</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Introduction to Graphics</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -140,79 +140,84 @@
 </section>
 <section id="we-read" class="slide level2">
 <h2>We read…</h2>
-<p><a href="https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html"><img data-src="images/data-cleaning-screenshot.png" alt="Screenshot of https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/03-data-cleaning.html"></a></p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/datavis-basics-chapter.png" alt="Screenshot of the data visualization basics chapter of the textbook, found at https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html."></p>
+<figcaption><a href="https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html">Data Visualiztion Basics</a></figcaption>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/datavis-full.png" alt="Screenshot of the data visualization basics chapter of the textbook, found at https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html."></p>
+<figcaption><a href="https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html">Data Visualiztion</a></figcaption>
+</figure>
+</div>
+</div></div>
 </section>
-<section id="tidy-data" class="slide level2">
-<h2>Tidy Data</h2>
+<section id="syntax-basics" class="slide level2 large">
+<h2>Syntax basics</h2>
+<div class="columns">
+<div class="column">
+<pre><code>ggplot(data = &lt;DATA&gt;) +
+  &lt;GEOM&gt;(mapping = aes(&lt;MAPPINGS&gt;), 
+         position = &lt;POSITION&gt;,
+         stat = &lt;STAT&gt;) +
+  &lt;FACET&gt; +
+  &lt;COORD&gt; +
+  &lt;THEME&gt;</code></pre>
+</div><div class="column">
+<pre><code>import seaborn as sns
+import matplotlib.pyplot as plt
 
-<img data-src="https://srvanderplas.github.io/stat-computing-r-python/images/wrangling/tidydata_1.jpg" alt="Stylized text providing an overview of Tidy Data. The top reads “Tidy data is a standard way of mapping the meaning of a dataset to its structure. - Hadley Wickham.” On the left reads “In tidy data: each variable forms a column; each observation forms a row; each cell is a single measurement.” There is an example table on the lower right with columns ‘id’, ‘name’ and ‘color’ with observations for different cats, illustrating tidy data structure." class="r-stretch"></section>
-<section id="messy-data" class="slide level2">
-<h2>Messy Data</h2>
+plot = sns.&lt;plottype&gt;(&lt;MAPPINGS&gt;)
 
-<img data-src="https://srvanderplas.github.io/stat-computing-r-python/images/wrangling/tidydata_2.jpg" alt="There are two sets of anthropomorphized data tables. The top group of three tables are all rectangular and smiling, with a shared speech bubble reading “our columns are variables and our rows are observations!”. Text to the left of that group reads “The standard structure of tidy data means that “tidy datasets are all alike…” The lower group of four tables are all different shapes, look ragged and concerned, and have different speech bubbles reading (from left to right) “my column are values and my rows are variables”, “I have variables in columns AND in rows”, “I have multiple variables in a single column”, and “I don’t even KNOW what my deal is.” Next to the frazzled data tables is text “...but every messy dataset is messy in its own way. -Hadley Wickham.”" class="r-stretch"></section>
-<section id="common-data-cleaning-tasks" class="slide level2">
-<h2>Common Data Cleaning Tasks</h2>
-<ul>
-<li>Pick out rows:
-<ul>
-<li>R: <code>df |&gt; filter(...)</code> or</li>
-<li>Python: <code>df.query(...)</code></li>
-<li><code>...</code> replaced by a logical condition involving a variable</li>
-<li>keep only rows where that condition is true</li>
-</ul></li>
-<li>Create new variables:
-<ul>
-<li>R: <code>df |&gt; mutate(newvar= XXX(...))</code> or</li>
-<li>Python: <code>df['newvar']=df.XXX(...)</code></li>
-<li>XXX may be <code>transform</code>, <code>replace</code>, or another function</li>
-<li><code>...</code> provides arguments to the function</li>
-</ul></li>
-<li>Group by + summarize:
-<ul>
-<li>R: <code>df |&gt; group_by(varname) |&gt; summarize(newvar = XXX(...))</code> or</li>
-<li>Python: <code>dfsum = df.groupby(varname).agg({newvar:XXX})</code></li>
-<li><code>.agg</code> syntax can be tricky. Don’t be afraid to google for help!</li>
-</ul></li>
+plt.show() # Show the plot (for quarto)
+</code></pre>
+</div></div>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+
+<img data-src="10-graphics_files/figure-revealjs/unnamed-chunk-1-1.png" width="768" class="r-stretch"><ul>
+<li>What type of plot is it?</li>
+<li>Which variables are mapped to x, y, and fill?</li>
+<li>What is the main message of the plot: what is your main finding, i.e.&nbsp;what do you want viewers to learn from the plot?</li>
+<li>Are there any anomalies or outliers?</li>
+<li>(Extra question) Could you make this plot more effective? How?</li>
 </ul>
+</section>
+<section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="10-graphics_files/figure-revealjs/unnamed-chunk-2-1.png" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<ul>
+<li>What type of plot is it?</li>
+<li>Which variables are mapped to x, y, and fill?</li>
+<li>What is the main message of the plot: what is your main finding, i.e.&nbsp;what do you want viewers to learn from the plot?</li>
+<li>Are there any anomalies or outliers?</li>
+<li>(Extra question) Could you make this plot more effective? How?</li>
+</ul>
+</div></div>
 </section>
 <section id="homework" class="slide level2">
 <h2>Homework</h2>
 <ul>
-<li><p>Replicate a graph in R and a graph in python</p></li>
-<li><p>Hard part – DO NOT SPEED THROUGH!! – Figure out what form your data needs to be in. Sketch on paper!</p></li>
-<li><p>New part – clean the data to get it into that form</p></li>
-<li><p>Easy part – make the chart</p></li>
+<li>Use github classroom to accept the assignment</li>
+<li>Don’t forget committing and pushing the changes!</li>
 </ul>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<p>Consider this plot of five games with at least 100 months of data that have the lowest average number of players at the same time.</p>
-
-<img data-src="10-wrangling_files/figure-revealjs/sample-plot-1.png" width="960" class="r-stretch"></section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
-<p>What steps do we need to perform?</p>
-</section>
-<section id="example-2" class="slide level2">
-<h2>Example</h2>
-<p>Plot x = time, y = avg for the 5 games identified.</p>
-<p>Steps:</p>
-<ol type="1">
-<li><p>Compute average number of players for each game over all available data<br>
-<span class="large"><code>group_by(game) |&gt; summarize(avg = mean(avg))</code></span></p></li>
-<li><p>Compute months of data<br>
-<span class="large"><code>group_by(game) |&gt; summarize(n = n(), avg = mean(avg))</code></span></p></li>
-<li><p>Keep only rows with 100 months of data<br>
-<span class="large"><code>filter(n&gt;=100)</code></span></p></li>
-<li><p>Sort (increasing by average) to get lowest 5 games<br>
-<span class="large"><code>arrange(avg) |&gt; filter(row_number() &lt;= 5)</code></span></p></li>
-<li><p>Save the names of those 5 games and use to filter main dataset<br>
-<span class="large"><code>games |&gt; filter(gamename %in% my_games)</code></span></p></li>
-<li><p>Convert month to a number (1-12)<br>
-<span class="large"><code>games |&gt; mutate(monthnum = factor(month, levels = month.name, ordered = T) |&gt; as.numeric())</code></span></p></li>
-<li><p>Take numerical month and use it to compute time as year + fractional year<br>
-<span class="large"><code>games |&gt; mutate(time = year + (month-0.5)/12)</code></span></p></li>
-</ol>
 
 
 </section>

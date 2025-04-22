@@ -16,6 +16,7 @@
 
 - Wide to long and long to wide operations
 - Drawing pictures to help with planning code
+- [Slides](../slides/13-reshaping.qmd)
 
 ##  🏋️ Practice your skills
 

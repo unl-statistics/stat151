@@ -14,7 +14,7 @@
 
 ## 🐪 Wednesday
 
-- Working with Strings
+- [Working with Strings](../slides/12-strings)
 
 ##  🏋️ Practice your skills
 

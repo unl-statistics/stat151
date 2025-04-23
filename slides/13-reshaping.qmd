@@ -81,5 +81,5 @@ Create a plot of per capita cases by year for each country
   - Homework resubmission deadline is May 5th
   - In Class Exam Review - May 7th 
       - Work through practice exam together
-  - Final Exam - May 12th, 1-3 pm, Hardin 163
+  - Final Exam - May 15th, 1-3 pm, Hardin 163
   

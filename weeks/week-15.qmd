@@ -8,3 +8,7 @@
 
 - In-class exam review
 
+##  🏋️ Practice your skills
+
+- [ ] [Homework 13](../homework/13-practice-final.qmd) (Submitted via Github classroom)
+

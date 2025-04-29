@@ -20,3 +20,12 @@
 [submodule "homework-repos/10-reshape"]
 	path = homework-repos/reshape-carbon
 	url = git@github.com:unl-stat151/10-reshape.git
+[submodule "homework-repos/practice-final"]
+	path = homework-repos/practice-final
+	url = git@github.com:unl-stat151-2025a/practice-final.git
+[submodule "exams/practice-final"]
+	path = exams/practice-final
+	url = git@github.com:unl-stat151-2025a/practice-final.git
+[submodule "exams/final-exam"]
+	path = exams/final-exam
+	url = git@github.com:unl-stat151-2025a/final-exam.git

@@ -1,0 +1,118 @@
+---
+title: Creating Good Graphics
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+execute:
+  echo: true
+  error: true
+---
+
+## Course Evaluations
+
+- Please complete your course evaluation
+
+- Constructive suggestions for how to change things are welcome
+
+- This class is NOT supposed to be easy - that it is hard is OK, but it should feel do-able
+
+- The main goal of Stat 151 is to convince you that you can use R/python to do things with data
+
+## Reading and Resources
+
+::: columns
+::: column
+
+[![](images/textbook-good-graphics.png){fig-alt="Screenshot of the first section of the [textbook chapter on good graphics](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02c-good-graphics.html)."}](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02c-good-graphics.html)
+
+
+
+:::
+
+::: column
+::: r-fit-text
+Other useful things:
+
+- [ggplot2 cheat sheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
+
+- ![Seaborn cheat sheet](images/seaborn-cheat-sheet.png){fig-alt="A comprehensive Seaborn cheat sheet for Python data visualization, covering data import, plotting methods, customization, and saving plots. [Link to cheat sheet on github.](https://github.com/jramshur/Coding-Cheat-Sheets/blob/master/Python%20for%20Data%20Science%20-%20Cheat%20Sheet%20-%20Seaborn.pdf)." longdesc="seaborn-img-desc.qmd"}
+
+:::
+:::
+
+:::
+
+## Motivation and Inspiration
+
+::: columns
+
+::: column
+
+![[Source](https://bsky.app/profile/nrennie.bsky.social/post/3lnwt3d24xj2a)](images/bad-chart-bsky.png){fig-alt="The image is a screenshot of a Bluesky post by Nicola Rennie. At the top, there is a text post explaining the creation of a chart for the Extraterrestrial prompt on Day 29 of the #30DayChartChallenge. The chart is humorously described as being designed by an extraterrestrial unfamiliar with good data visualization practices. The chart is colorful and chaotic, featuring numerous overlapping elements. It includes bright pink, blue, and white shapes against a dark background with vertical grid lines. The chart background is orange, and the text at the top humorously states it's a \"bad chart\" and challenges viewers to spot as many \"chart crimes\" as possible. Along the axes are distorted and hard-to-read labels, contributing to the chart\'s deliberately confusing nature. Data: World Inequality Database (WID). Processed by: Our World in Data Graphics. @fosstodon.org/@nrendine @nrennie" width="80%"}
+
+<!-- {{< bsky 3lnwt3d24xj2a >}} -->
+:::
+
+::: {.column .r-fit-text .fragment}
+- fonts are unreadable (and don't match!)
+- why use an orange background?? sub-optimal color contrast
+- dual y-axis
+- log scales on both y axes
+- plotting the standard deviation (not ideal)
+- x-axis labels aren't legible 
+- x-axis gridlines dominate the whole plot
+- x-axis appears to be categorical?
+  - Line chart (bottom set of data) isn't appropriate
+  - scatterplot with categorical x-axis not optimal (sometimes ok)
+
+- Bottom set of data: points make the lines hard to see
+- Top set of data (points) have different colors but no legend
+- Poor color contrast between some of the point colors
+- Can't tell which set of data goes with which axis
+
+I'm sure there are more...
+
+:::
+
+:::
+
+# Homework 12 {.scrollable}
+
+-   Use github classroom to accept the assignment
+-   Don't forget to commit and push your changes!
+    - You don't have to wait until the assignment is complete to push!
+    - Push early and often!
+
+## Hints and Clarifications {.scrollable}
+
+- The goal is to customize a ggplot or seaborn plot as much as possible
+
+- Have fun with it!
+
+- The most important part of this is your explanation of why your choices make the chart bad
+  - Back up the explanation with things discussed in the textbook
+
+## Coming Up
+
+- Next week: In-class practice exam live coding demonstration
+
+  - Complete the practice exam as Homework 13
+  - Points on the assignment would be how I would grade it if it were an exam
+  - The homework assignment is still only 10 points
+  - No resubmission option for HW 13
+
+## Coming Up
+
+- Finishing Up:
+  - Homework resubmission deadline is May 5th (Monday)
+  
+  - Final Exam - May 15th, 1-3 pm, Hardin 163
+  
+  - Oral Final Exams 
+      - I will message you via Canvas by 8pm on May 15
+      - You must schedule your appointment by 8am on May 16
+      - Appointment must be before 2pm on May 16
+      - Make sure you have at least 2 30-minute slots available between 8am and 2pm on May 16 
+  

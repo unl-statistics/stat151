@@ -1,0 +1,21 @@
+---
+title: "Seaborn Cheat Sheet Description"
+---
+
+The image is a colorful and informative cheat sheet for using Python's data visualization library, Seaborn, tailored for data science purposes. At the top, the title "Python For Data Science Cheat Sheet" and "Seaborn" is highlighted in green and yellow. It covers sections on statistical data visualization with Seaborn, plotting with different grids and plots, further customizations, figure aesthetics, and saving/closing plots.
+
+The sheet is divided into several sections, each marked numerically and color-coded for easy navigation:
+
+- Data: This section introduces necessary imports, including pandas, numpy, matplotlib, and instructions to load datasets like "titanic" and "iris".
+
+- Figure Aesthetics: Offers configurations for figure size and Seaborn styles. Suggestions for changing contexts and palettes are included.
+
+- Plotting With Seaborn: Discusses axis grids, categorical plots, regression plots, distribution plots, and matrix plots with examples of code snippets.
+
+- Further Customizations: Describes how to work with axis grid objects and plot customizations.
+
+- Show or Save Plot: Provides commands to display, save, and export plots.
+
+- Close & Clear: Outlines commands for closing and clearing plot windows.
+
+At the bottom are sections indicating where to "Learn Python Data Science" with a reference to DataCamp's website. The layout consists of multiple panels with brief descriptions, key command snippets, and method explanations.

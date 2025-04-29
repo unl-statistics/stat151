@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stat 151 - Introduction to Statistical Computing – Stat 151 - Spring 2025</title>
+<title>Seaborn Cheat Sheet Description – Stat 151 - Spring 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./course-links.html" rel="next">
-<link href="./syllabus.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0661b0ae8ef739895651fa72b0b2a708.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-87fc215c53e5aea831ab29c796e90a6c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-0661b0ae8ef739895651fa72b0b2a708.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-87fc215c53e5aea831ab29c796e90a6c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,26 +67,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
-<script src="site_libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
-<link href="site_libs/dt-core-bootstrap-1.13.6/css/dataTables.bootstrap.min.css" rel="stylesheet">
-<link href="site_libs/dt-core-bootstrap-1.13.6/css/dataTables.bootstrap.extra.css" rel="stylesheet">
-<script src="site_libs/dt-core-bootstrap-1.13.6/js/jquery.dataTables.min.js"></script>
-<script src="site_libs/dt-core-bootstrap-1.13.6/js/dataTables.bootstrap.min.js"></script>
-<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
 
-<meta property="og:title" content="Stat 151 - Introduction to Statistical Computing – Stat 151 - Spring 2025">
+<meta property="og:title" content="Seaborn Cheat Sheet Description – Stat 151 - Spring 2025">
+<meta property="og:description" content="Homepage for STAT 151 - Introduction to Statistical Computing">
 <meta property="og:site_name" content="Stat 151 - Spring 2025">
-<meta name="twitter:title" content="Stat 151 - Introduction to Statistical Computing – Stat 151 - Spring 2025">
-<meta name="twitter:image" content="https://unl-statistics.github.io/stat151/images/twitter-card.png">
+<meta name="twitter:title" content="Seaborn Cheat Sheet Description – Stat 151 - Spring 2025">
+<meta name="twitter:description" content="Homepage for STAT 151 - Introduction to Statistical Computing">
+<meta name="twitter:image" content="https://unl-statistics.github.io/stat151/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@srvanderplas">
-<meta name="twitter:image-height" content="600">
-<meta name="twitter:image-width" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -101,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./syllabus.html">Course information</a></li><li class="breadcrumb-item"><a href="./index.html">Schedule</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Seaborn Cheat Sheet Description</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -112,8 +99,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
     <a href="https://classroom.github.com/classrooms/195160117-unl-stat151-2025a-classroom-97fc1e" title="GitHub Classroom" class="quarto-navigation-tool px-1" aria-label="GitHub Classroom"><i class="bi bi-github"></i></a>
@@ -133,31 +120,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../course-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Description</span></a>
   </div>
 </li>
@@ -174,97 +161,97 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-01.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1 - Setting Up</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-02.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2 - Scripts &amp; Notebooks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-03.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3 - Intro to Programming</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-04.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4 - Building Blocks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-05.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-05.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5 - Data Structures</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-06.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-06.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6 - Control Structures</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-07.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-07.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 7 - Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-08.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-08.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8 - Midterm</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-09.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9 - Version Control</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 10 - Data Visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-11.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 11 - Data Cleaning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-12.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-12.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 12 - Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-13.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-13.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 13 - Reshaping Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-14.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-14.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 14 - Creating Good Charts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-15.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-15.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 15 - Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./weeks/week-16.html" class="sidebar-item-text sidebar-link">
+  <a href="../weeks/week-16.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Finals</span></a>
   </div>
 </li>
@@ -281,9 +268,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./syllabus.html">Course information</a></li><li class="breadcrumb-item"><a href="./index.html">Schedule</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stat 151 - Introduction to Statistical Computing</h1>
+<h1 class="title">Seaborn Cheat Sheet Description</h1>
 </div>
 
 
@@ -300,12 +287,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="cell">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-acb7391683a092b4c4ba" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-acb7391683a092b4c4ba">{"x":{"style":"bootstrap","filter":"none","vertical":false,"data":[[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],["<a href='https://unl-statistics.github.io/stat151/weeks/week-01.html'> Setting Up <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-02.html'> Scripts and Notebooks <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-03.html'> Intro to Programming <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-04.html'> Building Blocks <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-05.html'> Data Structures <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-06.html'> Control Structures <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-07.html'> Functions <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-08.html'> Midterm <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-09.html'> Version Control <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-10.html'> Graphics <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-11.html'> Data Cleaning <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-12.html'> Strings <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-13.html'> Reshaping Data <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-14.html'> Good Charts <\/a>","<a href='https://unl-statistics.github.io/stat151/weeks/week-15.html'> Review <\/a>","Finals"],["","","","","","","","HW Resub Deadline: Mar 10 (11:59pm)<br>Midterm Exam: Mar 12 (In Class)","","","","","","","HW Resub Deadline: May 05 (11:59pm)","Final Exam: May 15 (1-3 pm)"]],"container":"<table class=\"table table-striped table-hover row-border order-column display\">\n  <thead>\n    <tr>\n      <th>Week<\/th>\n      <th>Topic<\/th>\n      <th>Important Notes<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"searching":false,"ordering":false,"columnDefs":[{"className":"dt-right","targets":0},{"name":"Week","targets":0},{"name":"Topic","targets":1},{"name":"Important Notes","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
+<p>The image is a colorful and informative cheat sheet for using Python’s data visualization library, Seaborn, tailored for data science purposes. At the top, the title “Python For Data Science Cheat Sheet” and “Seaborn” is highlighted in green and yellow. It covers sections on statistical data visualization with Seaborn, plotting with different grids and plots, further customizations, figure aesthetics, and saving/closing plots.</p>
+<p>The sheet is divided into several sections, each marked numerically and color-coded for easy navigation:</p>
+<ul>
+<li><p>Data: This section introduces necessary imports, including pandas, numpy, matplotlib, and instructions to load datasets like “titanic” and “iris”.</p></li>
+<li><p>Figure Aesthetics: Offers configurations for figure size and Seaborn styles. Suggestions for changing contexts and palettes are included.</p></li>
+<li><p>Plotting With Seaborn: Discusses axis grids, categorical plots, regression plots, distribution plots, and matrix plots with examples of code snippets.</p></li>
+<li><p>Further Customizations: Describes how to work with axis grid objects and plot customizations.</p></li>
+<li><p>Show or Save Plot: Provides commands to display, save, and export plots.</p></li>
+<li><p>Close &amp; Clear: Outlines commands for closing and clearing plot windows.</p></li>
+</ul>
+<p>At the bottom are sections indicating where to “Learn Python Data Science” with a reference to DataCamp’s website. The layout consists of multiple panels with brief descriptions, key command snippets, and method explanations.</p>
 
 
 
@@ -871,18 +863,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./syllabus.html" class="pagination-link" aria-label="Syllabus">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Syllabus</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./course-links.html" class="pagination-link" aria-label="Course Resources">
-        <span class="nav-page-text">Course Resources</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

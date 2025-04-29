@@ -14,7 +14,7 @@
 
 ## 🐪 Wednesday
 
-- Bad Chart day!
+- [Bad Chart day!](../slides/14-graphics.qmd)
 
 ##  🏋️ Practice your skills
 

@@ -660,6 +660,41 @@
     "text": "Example\nPlot x = time, y = avg for the 5 games identified.\nSteps:\n\nCompute average number of players for each game over all available data\ngroup_by(game) |&gt; summarize(avg = mean(avg))\nCompute months of data\ngroup_by(game) |&gt; summarize(n = n(), avg = mean(avg))\nKeep only rows with 100 months of data\nfilter(n&gt;=100)\nSort (increasing by average) to get lowest 5 games\narrange(avg) |&gt; filter(row_number() &lt;= 5)\nSave the names of those 5 games and use to filter main dataset\ngames |&gt; filter(gamename %in% my_games)\nConvert month to a number (1-12)\ngames |&gt; mutate(monthnum = factor(month, levels = month.name, ordered = T) |&gt; as.numeric())\nTake numerical month and use it to compute time as year + fractional year\ngames |&gt; mutate(time = year + (month-0.5)/12)"
   },
   {
+    "objectID": "slides/10-graphics.html#we-read",
+    "href": "slides/10-graphics.html#we-read",
+    "title": "Introduction to Graphics",
+    "section": "We read…",
+    "text": "We read…\n\n\n\n\n\nData Visualiztion Basics\n\n\n\n\n\n\nData Visualiztion"
+  },
+  {
+    "objectID": "slides/10-graphics.html#syntax-basics",
+    "href": "slides/10-graphics.html#syntax-basics",
+    "title": "Introduction to Graphics",
+    "section": "Syntax basics",
+    "text": "Syntax basics\n\n\nggplot(data = &lt;DATA&gt;) +\n  &lt;GEOM&gt;(mapping = aes(&lt;MAPPINGS&gt;), \n         position = &lt;POSITION&gt;,\n         stat = &lt;STAT&gt;) +\n  &lt;FACET&gt; +\n  &lt;COORD&gt; +\n  &lt;THEME&gt;\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nplot = sns.&lt;plottype&gt;(&lt;MAPPINGS&gt;)\n\nplt.show() # Show the plot (for quarto)"
+  },
+  {
+    "objectID": "slides/10-graphics.html#practice",
+    "href": "slides/10-graphics.html#practice",
+    "title": "Introduction to Graphics",
+    "section": "Practice",
+    "text": "Practice\n\n\nWhat type of plot is it?\nWhich variables are mapped to x, y, and fill?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n(Extra question) Could you make this plot more effective? How?"
+  },
+  {
+    "objectID": "slides/10-graphics.html#practice-1",
+    "href": "slides/10-graphics.html#practice-1",
+    "title": "Introduction to Graphics",
+    "section": "Practice",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat type of plot is it?\nWhich variables are mapped to x, y, and fill?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n(Extra question) Could you make this plot more effective? How?"
+  },
+  {
+    "objectID": "slides/10-graphics.html#homework",
+    "href": "slides/10-graphics.html#homework",
+    "title": "Introduction to Graphics",
+    "section": "Homework",
+    "text": "Homework\n\nUse github classroom to accept the assignment\nDon’t forget committing and pushing the changes!"
+  },
+  {
     "objectID": "slides/08-exam-review.html#general-rules",
     "href": "slides/08-exam-review.html#general-rules",
     "title": "Exam Review",
@@ -979,7 +1014,7 @@
     "href": "homework/08-practice-midterm-key.html#solutions",
     "title": "2024 Stat 151 Midterm Exam",
     "section": "Solutions",
-    "text": "Solutions\nCopy the list of tasks here and put your code for each task below the task description. Your code should be well commented.\nIf you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.\nIf your code does not compile, add , error = T to the chunk header so that the rest of the document will still compile.\n\nRead in the data and create a data frame\n\n# reads in csv file to dataframe happy\nhappy &lt;- read.csv(\"https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv\")\n\n\n\nCreate a new variable, decade\n\n\nlibrary(ggplot2)\n\n# adds new column and processes by taking year and subtracting last digit through modular operator\nhappy$decade &lt;- (happy$year - happy$year %% 10)\n\n# plots year against decade column from dataframe df\np &lt;- ggplot(happy, aes(year, decade)) + geom_point()\n\n# see plot\np\n\n\n\n\n\n\n\n\n\n\nHappy People per Year\n\n\n# Create dataframe with happiness and year\ndf &lt;- data.frame(isHappy = happy$happy,\n                 year = happy$year)\n\n# change isHappy values into 1s (success) and 0s (failure) based on if it is \"very happy\" or not\ndf[df == \"not too happy\" | df == \"pretty happy\"] = 0\ndf[df == \"very happy\"] = 1\ndf$isHappy = as.numeric(df$isHappy)\n\n# creates empty dataframe df_proportions\ndf_proportions &lt;- data.frame(year = NULL, proportion = NULL)\n\n# Goes through unique years, creates subsets, and finds the proportion of people who are happy using the sum of 1s (successes) and divides by the length of the column (total)\nfor (i in unique(df$year)) {\n  sub_df = subset(df, year == i)\n  sum(sub_df$isHappy)\n  df_proportions = rbind(df_proportions, data.frame(year = i, proportion = sum(sub_df$isHappy/length(sub_df$isHappy), na.rm = T)))\n}\n\n# shows the dataframe of proportions\ndf_proportions\n\n   year proportion\n1  1972  0.3013019\n2  1973  0.3577128\n3  1974  0.3780323\n4  1975  0.3275168\n5  1976  0.3408939\n6  1977  0.3477124\n7  1978  0.3400783\n8  1980  0.3378747\n9  1982  0.3048387\n10 1983  0.3064415\n11 1984  0.3408011\n12 1985  0.2855280\n13 1986  0.3183673\n14 1987  0.2847719\n15 1988  0.3362593\n16 1989  0.3240078\n17 1990  0.3316327\n18 1991  0.3078444\n19 1993  0.3150685\n20 1994  0.2864305\n21 1996  0.3019972\n22 1998  0.3146186\n23 2000  0.3127441\n24 2002  0.1500904\n25 2004  0.1490043\n26 2006  0.2039911\n27 2008  0.2960949\n28 2010  0.2632094\n29 2012  0.3004053\n30 2014  0.3096927\n31 2016  0.2811301\n\n# creates scatter plot of proportions incremented by year\np &lt;- ggplot(df_proportions, aes(year, proportion)) + geom_point()\n\n# shows scatter plot\np"
+    "text": "Solutions\nCopy the list of tasks here and put your code for each task below the task description. Your code should be well commented.\nIf you cannot figure out how to do a task, provide a list of steps that you think are necessary to accomplish that task and provide as much detail in terms of how you would accomplish that in code as possible.\nIf your code does not compile, add , error = T to the chunk header so that the rest of the document will still compile.\n\nRead in the data and create a data frame\n\n# reads in csv file to dataframe happy\nhappy &lt;- read.csv(\"https://raw.githubusercontent.com/srvanderplas/stat151-homework/main/happy.csv\")\n\n\n\nCreate a new variable, decade\n\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n# adds new column and processes by taking year and subtracting last digit through modular operator\nhappy$decade &lt;- (happy$year - happy$year %% 10)\n\n# plots year against decade column from dataframe df\np &lt;- ggplot(happy, aes(year, decade)) + geom_point()\n\n# see plot\np\n\n\n\n\n\n\n\n\n\n\nHappy People per Year\n\n\n# Create dataframe with happiness and year\ndf &lt;- data.frame(isHappy = happy$happy,\n                 year = happy$year)\n\n# change isHappy values into 1s (success) and 0s (failure) based on if it is \"very happy\" or not\ndf[df == \"not too happy\" | df == \"pretty happy\"] = 0\ndf[df == \"very happy\"] = 1\ndf$isHappy = as.numeric(df$isHappy)\n\n# creates empty dataframe df_proportions\ndf_proportions &lt;- data.frame(year = NULL, proportion = NULL)\n\n# Goes through unique years, creates subsets, and finds the proportion of people who are happy using the sum of 1s (successes) and divides by the length of the column (total)\nfor (i in unique(df$year)) {\n  sub_df = subset(df, year == i)\n  sum(sub_df$isHappy)\n  df_proportions = rbind(df_proportions, data.frame(year = i, proportion = sum(sub_df$isHappy/length(sub_df$isHappy), na.rm = T)))\n}\n\n# shows the dataframe of proportions\ndf_proportions\n\n   year proportion\n1  1972  0.3013019\n2  1973  0.3577128\n3  1974  0.3780323\n4  1975  0.3275168\n5  1976  0.3408939\n6  1977  0.3477124\n7  1978  0.3400783\n8  1980  0.3378747\n9  1982  0.3048387\n10 1983  0.3064415\n11 1984  0.3408011\n12 1985  0.2855280\n13 1986  0.3183673\n14 1987  0.2847719\n15 1988  0.3362593\n16 1989  0.3240078\n17 1990  0.3316327\n18 1991  0.3078444\n19 1993  0.3150685\n20 1994  0.2864305\n21 1996  0.3019972\n22 1998  0.3146186\n23 2000  0.3127441\n24 2002  0.1500904\n25 2004  0.1490043\n26 2006  0.2039911\n27 2008  0.2960949\n28 2010  0.2632094\n29 2012  0.3004053\n30 2014  0.3096927\n31 2016  0.2811301\n\n# creates scatter plot of proportions incremented by year\np &lt;- ggplot(df_proportions, aes(year, proportion)) + geom_point()\n\n# shows scatter plot\np"
   },
   {
     "objectID": "homework/07-github.html",
@@ -1042,7 +1077,7 @@
     "href": "homework/05-vectors.html",
     "title": "Homework 5: Vectors and Control Structures",
     "section": "",
-    "text": "Download the starter qmd file here"
+    "text": "Warning: package 'reticulate' was built under R version 4.4.3\nDownload the starter qmd file here"
   },
   {
     "objectID": "homework/05-vectors.html#set-up",
@@ -1161,7 +1196,7 @@
     "href": "homework/03-data-types.html#debugging-practice",
     "title": "Homework 3: Basic Data Types",
     "section": "Debugging practice",
-    "text": "Debugging practice\nLook at the data frame below, which contains 3 columns: Name, Salary, and Hire.Year. You’ve read in this data from the data file online and ideally, you want to plot Hire.Year on the x-axis and Salary on the y-axis (code to do this is provided).\nUnfortunately, the data isn’t reading in properly. Identify the problem, propose a solution, and try to implement your solution using functions on the R reference card.\nSome things you may want to consider:\n\ngsub\nYou can access columns in a data frame using $: df$col1 will get you col1 of the df object. (We will talk about data frames more next week, but for now, just try to use them)\nYou can access items in a vector using []: x[1] will get you the first item in x\n\nNote: You should be able to identify the problem given what you know about R from this chapter. You may not be able to implement a solution without some additional research, so if you don’t get that far that’s ok.\n\n# This line reads in a tab-separated data file with a header naming the columns\nsalary &lt;- read.table(\"https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/03-data.tsv\",\n                     sep = \"\\t\", header = T)\n\n# This code plots labels for each individual at location (x, y)\nlibrary(ggplot2)\nggplot(salary, aes(x = Hire.Year, y = Salary, label = Name)) +\n  geom_label()\n\n\n\n\n\n\n\n# This displays the salary object\nsalary\n\n            Name     Salary Hire.Year\n1  Michael Scott $67,872.00      1995\n2 Dwight Schrute      54000      2001\n3     Pam Beesly      26309      2003\n4    Jim Halpert      59083      1998\n\n\n\nThe problem with the data is:\nHere is how I solved the problem:\n\n# Your implementation code goes here"
+    "text": "Debugging practice\nLook at the data frame below, which contains 3 columns: Name, Salary, and Hire.Year. You’ve read in this data from the data file online and ideally, you want to plot Hire.Year on the x-axis and Salary on the y-axis (code to do this is provided).\nUnfortunately, the data isn’t reading in properly. Identify the problem, propose a solution, and try to implement your solution using functions on the R reference card.\nSome things you may want to consider:\n\ngsub\nYou can access columns in a data frame using $: df$col1 will get you col1 of the df object. (We will talk about data frames more next week, but for now, just try to use them)\nYou can access items in a vector using []: x[1] will get you the first item in x\n\nNote: You should be able to identify the problem given what you know about R from this chapter. You may not be able to implement a solution without some additional research, so if you don’t get that far that’s ok.\n\n# This line reads in a tab-separated data file with a header naming the columns\nsalary &lt;- read.table(\"https://raw.githubusercontent.com/srvanderplas/unl-stat151/main/homework/03-data.tsv\",\n                     sep = \"\\t\", header = T)\n\n# This code plots labels for each individual at location (x, y)\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\nggplot(salary, aes(x = Hire.Year, y = Salary, label = Name)) +\n  geom_label()\n\n\n\n\n\n\n\n# This displays the salary object\nsalary\n\n            Name     Salary Hire.Year\n1  Michael Scott $67,872.00      1995\n2 Dwight Schrute      54000      2001\n3     Pam Beesly      26309      2003\n4    Jim Halpert      59083      1998\n\n\n\nThe problem with the data is:\nHere is how I solved the problem:\n\n# Your implementation code goes here"
   },
   {
     "objectID": "homework/05-tips-for-success.html",
@@ -1259,7 +1294,7 @@
     "href": "homework/08-graphics.html#swiss-banknotes",
     "title": "Homework: Graphics with Banknotes",
     "section": "Swiss Banknotes",
-    "text": "Swiss Banknotes\nThe R package mclust contains a data set called banknote, consisting of (physical) measurements on 200 Swiss bank notes, 100 of which are genuine, while the other half is counterfeit. Load this data set (you might have to install the package) using the code below.\n\n# install.packages(\"mclust\")\nlibrary(mclust) # if this throws an error of the form 'there is no package called mclust', uncomment the line above, run it once, then comment the line out again and run the code chunk again.\n## Package 'mclust' version 6.1.1\n## Type 'citation(\"mclust\")' for citing this R package in publications.\ndata(banknote)\nbanknote$Status &lt;- factor(banknote$Status)\n\n\nbanknote = r.banknote # Copy data from R\n\nFor each of the three figures you create below, write a summary paragraph describing the structure of the plot:\n\nWhat type of plot is it?\nWhich variables are mapped to x, to y, and to the (fill) color?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n\n\nUse ggplot2 or plotnine to draw a barchart of Status. Map Status to the fill color of the barchart. This will be a relatively boring chart (but that is ok)\nUse ggplot2 or plotnine to draw a histogram of one of the variables in the dataset that shows a distinction between genuine and counterfeit banknotes. Use fill color to show this difference.\nUse ggplot2 or plotnine to draw a scatterplot of two (continuous) measurements, color by Status. Try to find a pair of measurements that allow you to separate perfectly between genuine and counterfeit banknotes."
+    "text": "Swiss Banknotes\nThe R package mclust contains a data set called banknote, consisting of (physical) measurements on 200 Swiss bank notes, 100 of which are genuine, while the other half is counterfeit. Load this data set (you might have to install the package) using the code below.\n\n# install.packages(\"mclust\")\nlibrary(mclust) # if this throws an error of the form 'there is no package called mclust', uncomment the line above, run it once, then comment the line out again and run the code chunk again.\n## Warning: package 'mclust' was built under R version 4.4.3\n## Package 'mclust' version 6.1.1\n## Type 'citation(\"mclust\")' for citing this R package in publications.\ndata(banknote)\nbanknote$Status &lt;- factor(banknote$Status)\n\n\nbanknote = r.banknote # Copy data from R\n\nFor each of the three figures you create below, write a summary paragraph describing the structure of the plot:\n\nWhat type of plot is it?\nWhich variables are mapped to x, to y, and to the (fill) color?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n\n\nUse ggplot2 or plotnine to draw a barchart of Status. Map Status to the fill color of the barchart. This will be a relatively boring chart (but that is ok)\nUse ggplot2 or plotnine to draw a histogram of one of the variables in the dataset that shows a distinction between genuine and counterfeit banknotes. Use fill color to show this difference.\nUse ggplot2 or plotnine to draw a scatterplot of two (continuous) measurements, color by Status. Try to find a pair of measurements that allow you to separate perfectly between genuine and counterfeit banknotes."
   },
   {
     "objectID": "homework/08-practice-midterm.html",
@@ -1308,7 +1343,7 @@
     "href": "homework/10-strings.html#setup",
     "title": "Homework: Working with strings",
     "section": "Setup",
-    "text": "Setup\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(lubridate)\nmessage &lt;- read.csv(\"./message.txt\", stringsAsFactors = FALSE)$Word"
+    "text": "Setup\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.3\n\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n\nWarning: package 'tibble' was built under R version 4.4.3\n\n\nWarning: package 'tidyr' was built under R version 4.4.3\n\n\nWarning: package 'readr' was built under R version 4.4.3\n\n\nWarning: package 'purrr' was built under R version 4.4.3\n\n\nWarning: package 'dplyr' was built under R version 4.4.3\n\n\nWarning: package 'stringr' was built under R version 4.4.3\n\n\nWarning: package 'forcats' was built under R version 4.4.3\n\n\nWarning: package 'lubridate' was built under R version 4.4.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(lubridate)\nmessage &lt;- read.csv(\"./message.txt\", stringsAsFactors = FALSE)$Word"
   },
   {
     "objectID": "homework/10-strings.html#warm-up-exercises",
@@ -1336,7 +1371,7 @@
     "href": "homework/12-graphics2.html#take-everything-you-know-and-use-it-for-evil",
     "title": "Homework: Awesomely Bad Graphics",
     "section": "Take everything you know, and use it for evil",
-    "text": "Take everything you know, and use it for evil\nThe textbook spent lots of time showing you how to create different types of graphics, but I spent a lot less time showing you all of the different ways you could customize graphics ggplot2 or plotnine. In this problem, I want you to create the ugliest version of the following graphs you can, and then explain why, exactly, you made the decisions you did, and which principles of good graphics you’ve intentionally violated.\nUgliness is subjective, so the goal here is for you to explore the different ways you can customize the finer details of graphics. Make sure your finished masterpiece has appropriate axis labels and a title (after all, even ugly plots need to be correctly labeled!). You are free to add additional variables and layers, modify the aesthetics used, and leverage other packages. I have provided this code as a starting point, not as a way to limit your creativity.\nI have provided some basic code to get you started. We’ll use the palmerpenguins package, which has fantastic documentation with really awesome artwork.\n\nif (!\"palmerpenguins\" %in% installed.packages()) {\n  remotes::install_github(\"allisonhorst/palmerpenguins\")\n}\nlibrary(palmerpenguins)\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw\n\nlibrary(ggplot2)\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\nggplot(penguins, aes(x = body_mass_g, y = bill_length_mm, color = species)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\npenguins = r.penguins\n\n\nUseful References\n\nCustomizing ggplot2 graphics\nA group-created slideshow of awful graphics\nAn example of customizing plots in plotnine"
+    "text": "Take everything you know, and use it for evil\nThe textbook spent lots of time showing you how to create different types of graphics, but I spent a lot less time showing you all of the different ways you could customize graphics ggplot2 or plotnine. In this problem, I want you to create the ugliest version of the following graphs you can, and then explain why, exactly, you made the decisions you did, and which principles of good graphics you’ve intentionally violated.\nUgliness is subjective, so the goal here is for you to explore the different ways you can customize the finer details of graphics. Make sure your finished masterpiece has appropriate axis labels and a title (after all, even ugly plots need to be correctly labeled!). You are free to add additional variables and layers, modify the aesthetics used, and leverage other packages. I have provided this code as a starting point, not as a way to limit your creativity.\nI have provided some basic code to get you started. We’ll use the palmerpenguins package, which has fantastic documentation with really awesome artwork.\n\nif (!\"palmerpenguins\" %in% installed.packages()) {\n  remotes::install_github(\"allisonhorst/palmerpenguins\")\n}\nlibrary(palmerpenguins)\n\nWarning: package 'palmerpenguins' was built under R version 4.4.3\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\nggplot(penguins, aes(x = body_mass_g, y = bill_length_mm, color = species)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\npenguins = r.penguins\n\n\nUseful References\n\nCustomizing ggplot2 graphics\nA group-created slideshow of awful graphics\nAn example of customizing plots in plotnine"
   },
   {
     "objectID": "slides/01-intro.html#stat-151",
@@ -1350,7 +1385,7 @@
     "href": "slides/01-intro.html#about-me",
     "title": "Welcome to Stat 151!",
     "section": "About Me",
-    "text": "About Me\n\n\n\nAssociate Professor in Statistics\nResearch:\n\nData Visualization\nStatistical Algorithms for Forensics\nReproducibility\nData Science pipelines\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\nAlex (left), Ryan (right), and Zoey (top)\n\n\n\n\n \n\n\n\n\n\n\nVideo\nEdison (Eddie)\n\n\n\n\n\n\nVideo\nIvy"
+    "text": "About Me\n\n\n\nAssociate Professor in Statistics\nResearch:\n\nData Visualization\nStatistical Algorithms for Forensics\nReproducibility\nData Science pipelines\n\n\n\n\n\n\n \n\n\n\n\n\nAlex (left), Ryan (right), and Zoey (top)\n\n\n\n\n \n\n\n\n\n\n\nVideo\nEdison (Eddie)\n\n\n\n\n\n\nVideo\nIvy"
   },
   {
     "objectID": "slides/01-intro.html#about-me-1",
@@ -1441,7 +1476,7 @@
     "href": "slides/03-intro.html#cues-where-am-i",
     "title": "Intro to Programming",
     "section": "Cues: Where am I?",
-    "text": "Cues: Where am I?\n\n\nWhat does the prompt look like? &gt;, $, &gt;&gt;&gt;, %\n\nIndication of what language the computer expects\nR, Terminal (BASH, ZSH, CMD, Powershell), Python\n\nHow do you run the code?\n\npython3 &lt;file.py&gt;, Ctrl/Cmd + Enter, hit Enter, …\n\nWhat folder is the computer looking in? (working directory)\nWhat program are you operating in? (RStudio, Cmd.exe, Terminal, etc.)"
+    "text": "Cues: Where am I?\n\nWhat does the prompt look like? &gt;, $, &gt;&gt;&gt;, %\n\nIndication of what language the computer expects\nR, Terminal (BASH, ZSH, CMD, Powershell), Python\n\nHow do you run the code?\n\npython3 &lt;file.py&gt;, Ctrl/Cmd + Enter, hit Enter, …\n\nWhat folder is the computer looking in? (working directory)\nWhat program are you operating in? (RStudio, Cmd.exe, Terminal, etc.)"
   },
   {
     "objectID": "slides/03-intro.html#scripts",
@@ -1542,39 +1577,95 @@
     "text": "Example: Solve the Quadratic Formula\nError Handling\n\n# Assume we have an equation ax^2 + bx + c = 0\n# Solve for x\nquad_formula &lt;- function(x2coeff, xcoeff, intcoeff) {\n  # Ensure parameters are numeric before doing math with them\n  stopifnot(is.numeric(x2coeff) & is.numeric(xcoeff) & is.numeric(intcoeff))\n  \n  ## Extra parameter\n  under_sqrt = xcoeff^2-4*x2coeff*intcoeff\n  \n  # need to check if under_sqrt is nonnegative\n  if (under_sqrt &lt; 0) {\n    print(\"Determinant is negative. Zeros will be imaginary.\")\n  }\n  \n  x1 = (-xcoeff + sqrt(under_sqrt))/(2*x2coeff)\n  x2 = (-xcoeff - sqrt(under_sqrt))/(2*x2coeff)\n  \n  return(c(x1, x2))\n}\n\n# Test the function\nquad_formula(1, 5, 2)\n\n[1] -0.4384472 -4.5615528\n\nquad_formula(x2coeff = 1, xcoeff = 5, intcoeff = 2)\n\n[1] -0.4384472 -4.5615528\n\nquad_formula(\"A\", \"B\", \"C\")\n\nError in quad_formula(\"A\", \"B\", \"C\"): is.numeric(x2coeff) & is.numeric(xcoeff) & is.numeric(intcoeff) is not TRUE"
   },
   {
-    "objectID": "slides/10-graphics.html#we-read",
-    "href": "slides/10-graphics.html#we-read",
+    "objectID": "slides/09-graphics.html#we-read",
+    "href": "slides/09-graphics.html#we-read",
     "title": "Introduction to Graphics",
     "section": "We read…",
     "text": "We read…\n\n\n\n\n\nData Visualiztion Basics\n\n\n\n\n\n\nData Visualiztion"
   },
   {
-    "objectID": "slides/10-graphics.html#syntax-basics",
-    "href": "slides/10-graphics.html#syntax-basics",
+    "objectID": "slides/09-graphics.html#syntax-basics",
+    "href": "slides/09-graphics.html#syntax-basics",
     "title": "Introduction to Graphics",
     "section": "Syntax basics",
     "text": "Syntax basics\n\n\nggplot(data = &lt;DATA&gt;) +\n  &lt;GEOM&gt;(mapping = aes(&lt;MAPPINGS&gt;), \n         position = &lt;POSITION&gt;,\n         stat = &lt;STAT&gt;) +\n  &lt;FACET&gt; +\n  &lt;COORD&gt; +\n  &lt;THEME&gt;\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nplot = sns.&lt;plottype&gt;(&lt;MAPPINGS&gt;)\n\nplt.show() # Show the plot (for quarto)"
   },
   {
-    "objectID": "slides/10-graphics.html#practice",
-    "href": "slides/10-graphics.html#practice",
+    "objectID": "slides/09-graphics.html#practice",
+    "href": "slides/09-graphics.html#practice",
     "title": "Introduction to Graphics",
     "section": "Practice",
     "text": "Practice\n\n\nWhat type of plot is it?\nWhich variables are mapped to x, y, and fill?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n(Extra question) Could you make this plot more effective? How?"
   },
   {
-    "objectID": "slides/10-graphics.html#practice-1",
-    "href": "slides/10-graphics.html#practice-1",
+    "objectID": "slides/09-graphics.html#practice-1",
+    "href": "slides/09-graphics.html#practice-1",
     "title": "Introduction to Graphics",
     "section": "Practice",
     "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat type of plot is it?\nWhich variables are mapped to x, y, and fill?\nWhat is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot?\nAre there any anomalies or outliers?\n(Extra question) Could you make this plot more effective? How?"
   },
   {
-    "objectID": "slides/10-graphics.html#homework",
-    "href": "slides/10-graphics.html#homework",
+    "objectID": "slides/09-graphics.html#homework",
+    "href": "slides/09-graphics.html#homework",
     "title": "Introduction to Graphics",
     "section": "Homework",
     "text": "Homework\n\nUse github classroom to accept the assignment\nDon’t forget committing and pushing the changes!"
+  },
+  {
+    "objectID": "slides/10-wrangling.html#we-read",
+    "href": "slides/10-wrangling.html#we-read",
+    "title": "Data Wrangling",
+    "section": "We read…",
+    "text": "We read…"
+  },
+  {
+    "objectID": "slides/10-wrangling.html#tidy-data",
+    "href": "slides/10-wrangling.html#tidy-data",
+    "title": "Data Wrangling",
+    "section": "Tidy Data",
+    "text": "Tidy Data"
+  },
+  {
+    "objectID": "slides/10-wrangling.html#messy-data",
+    "href": "slides/10-wrangling.html#messy-data",
+    "title": "Data Wrangling",
+    "section": "Messy Data",
+    "text": "Messy Data"
+  },
+  {
+    "objectID": "slides/10-wrangling.html#common-data-cleaning-tasks",
+    "href": "slides/10-wrangling.html#common-data-cleaning-tasks",
+    "title": "Data Wrangling",
+    "section": "Common Data Cleaning Tasks",
+    "text": "Common Data Cleaning Tasks\n\nPick out rows:\n\nR: df |&gt; filter(...) or\nPython: df.query(...)\n... replaced by a logical condition involving a variable\nkeep only rows where that condition is true\n\nCreate new variables:\n\nR: df |&gt; mutate(newvar= XXX(...)) or\nPython: df['newvar']=df.XXX(...)\nXXX may be transform, replace, or another function\n... provides arguments to the function\n\nGroup by + summarize:\n\nR: df |&gt; group_by(varname) |&gt; summarize(newvar = XXX(...)) or\nPython: dfsum = df.groupby(varname).agg({newvar:XXX})\n.agg syntax can be tricky. Don’t be afraid to google for help!"
+  },
+  {
+    "objectID": "slides/10-wrangling.html#homework",
+    "href": "slides/10-wrangling.html#homework",
+    "title": "Data Wrangling",
+    "section": "Homework",
+    "text": "Homework\n\nReplicate a graph in R and a graph in python\nHard part – DO NOT SPEED THROUGH!! – Figure out what form your data needs to be in. Sketch on paper!\nNew part – clean the data to get it into that form\nEasy part – make the chart"
+  },
+  {
+    "objectID": "slides/10-wrangling.html#example",
+    "href": "slides/10-wrangling.html#example",
+    "title": "Data Wrangling",
+    "section": "Example",
+    "text": "Example\nConsider this plot of five games with at least 100 months of data that have the lowest average number of players at the same time."
+  },
+  {
+    "objectID": "slides/10-wrangling.html#example-1",
+    "href": "slides/10-wrangling.html#example-1",
+    "title": "Data Wrangling",
+    "section": "Example",
+    "text": "Example\nWhat steps do we need to perform?"
+  },
+  {
+    "objectID": "slides/10-wrangling.html#example-2",
+    "href": "slides/10-wrangling.html#example-2",
+    "title": "Data Wrangling",
+    "section": "Example",
+    "text": "Example\nPlot x = time, y = avg for the 5 games identified.\nSteps:\n\nCompute average number of players for each game over all available data\ngroup_by(game) |&gt; summarize(avg = mean(avg))\nCompute months of data\ngroup_by(game) |&gt; summarize(n = n(), avg = mean(avg))\nKeep only rows with 100 months of data\nfilter(n&gt;=100)\nSort (increasing by average) to get lowest 5 games\narrange(avg) |&gt; filter(row_number() &lt;= 5)\nSave the names of those 5 games and use to filter main dataset\ngames |&gt; filter(gamename %in% my_games)\nConvert month to a number (1-12)\ngames |&gt; mutate(monthnum = factor(month, levels = month.name, ordered = T) |&gt; as.numeric())\nTake numerical month and use it to compute time as year + fractional year\ngames |&gt; mutate(time = year + (month-0.5)/12)"
   },
   {
     "objectID": "slides/12-strings.html#reading-and-resources",

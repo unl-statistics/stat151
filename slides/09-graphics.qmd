@@ -1,0 +1,125 @@
+---
+title: "Introduction to Graphics"
+format: revealjs
+theme: ./libs/unl/inverse.scss
+includes:
+  in_header: ./libs/unl/header.html
+lib_dir: ./libs
+execute:
+  echo: true
+  error: true
+---
+
+
+## We read...
+
+::: columns
+
+::: column
+
+![[Data Visualiztion Basics](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html)](images/datavis-basics-chapter.png){fig-alt="Screenshot of the data visualization basics chapter of the textbook, found at https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02-basic-data-vis.html."}
+
+:::
+
+
+::: column
+
+
+![[Data Visualiztion](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html)](images/datavis-full.png){fig-alt="Screenshot of the data visualization basics chapter of the textbook, found at https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/02b-graphics.html."}
+
+:::
+
+:::
+
+
+## Syntax basics {.large}
+
+::: columns
+
+::: column
+
+
+```
+ggplot(data = <DATA>) +
+  <GEOM>(mapping = aes(<MAPPINGS>), 
+         position = <POSITION>,
+         stat = <STAT>) +
+  <FACET> +
+  <COORD> +
+  <THEME>
+```
+:::
+
+::: column
+
+```
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plot = sns.<plottype>(<MAPPINGS>)
+
+plt.show() # Show the plot (for quarto)
+
+```
+:::
+
+:::
+
+## Practice
+
+```{r}
+#| fig-width: 8
+#| fig-height: 3
+#| echo: false
+
+
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+
+ggplot(penguins, aes(x = bill_length_mm, fill = species)) + geom_histogram() + facet_wrap(~species) + guides(fill = "none") + xlab("Bill Length, mm") + ylab("Count")
+```
+  - What type of plot is it? 
+  - Which variables are mapped to x, y, and fill? 
+  - What is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot? 
+  - Are there any anomalies or outliers?
+  - (Extra question) Could you make this plot more effective? How?
+  
+
+
+## Practice
+
+::: columns
+
+::: column
+
+```{r}
+#| fig-width: 4
+#| fig-height: 4
+#| echo: false
+
+
+library(palmerpenguins)
+library(ggplot2)
+data(penguins)
+
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) + geom_point()  + xlab("Bill Length, mm") + ylab("Bill Depth, mm") + theme(legend.position = "bottom") + scale_color_discrete("Species")
+```
+
+:::
+
+::: column
+  - What type of plot is it? 
+  - Which variables are mapped to x, y, and fill? 
+  - What is the main message of the plot: what is your main finding, i.e. what do you want viewers to learn from the plot? 
+  - Are there any anomalies or outliers?
+  - (Extra question) Could you make this plot more effective? How?
+  
+:::
+
+:::
+
+## Homework
+
+-   Use github classroom to accept the assignment
+-   Don't forget committing and pushing the changes!
